@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getLobbies, getPoliticians, fmtMoney } from '@/lib/data';
+import { getLobbies, getPoliticians } from '@/lib/data';
+import { fmtMoney } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'U.S. Lobbying Groups & Special Interests',

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getLobby, getLobbies, getLobbyRecipients, fmtMoney, riskLabel, partyShort } from '@/lib/data';
+import { getLobby, getLobbies, getLobbyRecipients } from '@/lib/data';
+import { fmtMoney, riskLabel, partyShort } from '@/lib/utils';
 
 export async function generateStaticParams() {
   const lobbies = await getLobbies();

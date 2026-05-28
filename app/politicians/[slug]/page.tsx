@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getPolitician, getPoliticianSlugs, getLobbies, fmtMoney, partyColor, partyShort, riskLabel } from '@/lib/data';
+import { getPolitician, getPoliticianSlugs, getLobbies } from '@/lib/data';
+import { fmtMoney, partyColor, partyShort, riskLabel } from '@/lib/utils';
 import type { Politician } from '@/lib/types';
 
 // Static generation — one HTML file per politician, built at deploy time

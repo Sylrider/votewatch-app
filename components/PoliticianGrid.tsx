@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import type { Politician } from '@/lib/types';
-import { fmtMoney, partyColor, partyShort, riskLabel } from '@/lib/data';
+import { fmtMoney, partyColor, partyShort, riskLabel } from '@/lib/utils';
 
 const PAGE_SIZE = 24;
 
