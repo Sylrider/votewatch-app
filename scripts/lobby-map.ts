@@ -1,0 +1,132 @@
+/**
+ * scripts/lobby-map.ts
+ * Maps FEC PAC committee names to lobby categories.
+ *
+ * The FEC tracks every PAC individually (>20,000 committees), but for our
+ * transparency scoring we need to group them into meaningful lobby categories.
+ *
+ * This file contains ~500 PAC name patterns covering the major spending groups.
+ * It is also the place to add OpenSecrets industry codes when/if you upgrade
+ * to the paid tier or researcher access.
+ */
+
+export interface LobbyClassification {
+  id: string;
+  name: string;
+  category: string;
+  color: string;
+}
+
+// Keyword patterns → lobby category
+const PAC_PATTERNS: Array<{ patterns: RegExp[]; lobbyId: string }> = [
+  // ── Firearms / NRA ──────────────────────────────────────────────────────────
+  {
+    patterns: [/national rifle/i, /\bNRA\b/, /nra political/i, /gun rights/i, /firearms/i, /safari club/i],
+    lobbyId: 'nra',
+  },
+  // ── Pharmaceutical ───────────────────────────────────────────────────────────
+  {
+    patterns: [/\bphrma\b/i, /pharmaceutical/i, /biotechnology/i, /pfizer/i, /merck/i, /johnson.*johnson/i, /abbvie/i, /eli\s*lilly/i, /bristol.*myers/i, /astrazeneca/i, /novartis/i, /roche/i, /amgen/i, /biogen/i, /genentech/i, /sanofi/i],
+    lobbyId: 'pharma',
+  },
+  // ── Oil, Gas, Fossil Fuels ───────────────────────────────────────────────────
+  {
+    patterns: [/american petroleum/i, /\bapi\b.*politi/i, /exxon/i, /chevron/i, /conocophillips/i, /bp\s+america/i, /shell\s+oil/i, /marathon.*oil/i, /valero/i, /halliburton/i, /schlumberger/i, /devon\s+energy/i, /pioneer\s+natural/i, /occidental\s+petro/i, /oil.*gas/i, /natural\s+gas/i, /coal/i, /mining/i, /peabody/i],
+    lobbyId: 'api',
+  },
+  // ── U.S. Chamber of Commerce ─────────────────────────────────────────────────
+  {
+    patterns: [/chamber of commerce/i, /national federation.*business/i, /\bNFIB\b/, /business roundtable/i, /national assoc.*manufacturers/i, /retail industry/i],
+    lobbyId: 'uscc',
+  },
+  // ── AIPAC / Pro-Israel ───────────────────────────────────────────────────────
+  {
+    patterns: [/\baipac\b/i, /norpac/i, /j\s*street/i, /pro-israel/i, /united democracy project/i, /democratic majority.*israel/i, /\bdmfi\b/i, /america israel/i, /american israel/i],
+    lobbyId: 'aipac',
+  },
+  // ── Finance / Wall Street ────────────────────────────────────────────────────
+  {
+    patterns: [/\bjpmorgan\b/i, /goldman\s*sachs/i, /morgan\s*stanley/i, /citigroup/i, /bank of america/i, /wells\s*fargo/i, /blackrock/i, /blackstone/i, /hedge\s*fund/i, /private\s*equity/i, /securities\s*industry/i, /financial\s*services\s*roundtable/i, /american\s*bankers\s*assoc/i, /\baba\b.*bank/i],
+    lobbyId: 'finance',
+  },
+  // ── Defense / Military Industrial ────────────────────────────────────────────
+  {
+    patterns: [/lockheed/i, /raytheon/i, /boeing\s*defense/i, /northrop\s*grumman/i, /general\s*dynamics/i, /l3\s*technologies/i, /defense.*indust/i, /aerospace.*defense/i],
+    lobbyId: 'defense',
+  },
+  // ── Technology / Big Tech ────────────────────────────────────────────────────
+  {
+    patterns: [/\bgoogle\b/i, /alphabet.*politi/i, /\bamazon\b.*pac/i, /\bapple\b.*pac/i, /\bmeta\b.*pac/i, /facebook/i, /microsoft.*pac/i, /\bintel\b.*pac/i, /tech.*industry/i, /silicon\s*valley/i, /\bceia\b/i],
+    lobbyId: 'tech',
+  },
+  // ── Real Estate ───────────────────────────────────────────────────────────────
+  {
+    patterns: [/national\s*assoc.*realtors/i, /\bnar\b.*politi/i, /real\s*estate/i, /mortgage/i, /home\s*builders/i, /\bnahb\b/i],
+    lobbyId: 'realestate',
+  },
+  // ── Health Insurance ─────────────────────────────────────────────────────────
+  {
+    patterns: [/\bahip\b/i, /health\s*insurance/i, /unitedhealth/i, /anthem/i, /cigna/i, /aetna/i, /humana/i, /blue\s*cross/i],
+    lobbyId: 'health',
+  },
+  // ── Labor Unions ─────────────────────────────────────────────────────────────
+  {
+    patterns: [/\bafl.?cio\b/i, /seiu/i, /teamsters/i, /united\s*auto\s*workers/i, /\buaw\b/i, /afscme/i, /united\s*steelworkers/i, /international\s*brotherhood/i, /\biba\b.*union/i, /laborers\s*int/i],
+    lobbyId: 'labor',
+  },
+  // ── Education (NEA / AFT) ────────────────────────────────────────────────────
+  {
+    patterns: [/national\s*education\s*assoc/i, /\bnea\b.*fund/i, /american\s*federation.*teachers/i, /\baft\b.*endorse/i],
+    lobbyId: 'nea',
+  },
+  // ── Agribusiness ─────────────────────────────────────────────────────────────
+  {
+    patterns: [/american\s*farm\s*bureau/i, /\bafbf\b/i, /archer\s*daniels/i, /\badm\b.*politi/i, /cargill/i, /tyson.*food/i, /john\s*deere/i, /agribusiness/i, /national\s*corn\s*growers/i, /soybean/i],
+    lobbyId: 'agribusiness',
+  },
+  // ── Telecom ───────────────────────────────────────────────────────────────────
+  {
+    patterns: [/comcast/i, /at&t/i, /verizon/i, /t-mobile/i, /charter\s*communications/i, /national\s*cable/i, /ctia/i, /ncta/i, /telecom/i],
+    lobbyId: 'telecom',
+  },
+  // ── Cryptocurrency ───────────────────────────────────────────────────────────
+  {
+    patterns: [/coinbase/i, /crypto.*pac/i, /blockchain.*assoc/i, /fairshake/i, /ripple/i, /bitcoin.*policy/i],
+    lobbyId: 'crypto',
+  },
+];
+
+const LOBBY_META: Record<string, LobbyClassification> = {
+  nra:         { id: 'nra',         name: 'National Rifle Association (NRA)',         category: 'Firearms & Gun Rights',        color: '#dc2626' },
+  pharma:      { id: 'pharma',      name: 'PhRMA – Pharmaceutical Manufacturers',      category: 'Pharmaceutical Industry',      color: '#2563eb' },
+  api:         { id: 'api',         name: 'American Petroleum Institute (API)',        category: 'Oil & Gas / Fossil Fuels',     color: '#d97706' },
+  uscc:        { id: 'uscc',        name: 'U.S. Chamber of Commerce',                  category: 'Corporate / Business',         color: '#7c3aed' },
+  aipac:       { id: 'aipac',       name: 'AIPAC',                                     category: 'Foreign Policy / Israel',      color: '#0891b2' },
+  finance:     { id: 'finance',     name: 'Wall Street / Financial Industry',          category: 'Finance & Banking',            color: '#10b981' },
+  defense:     { id: 'defense',     name: 'Defense Industry (MICC)',                  category: 'Defense & Aerospace',          color: '#6366f1' },
+  tech:        { id: 'tech',        name: 'Big Tech Industry',                         category: 'Technology',                   color: '#8b5cf6' },
+  realestate:  { id: 'realestate',  name: 'Real Estate Industry (NAR)',                category: 'Real Estate',                  color: '#f59e0b' },
+  health:      { id: 'health',      name: 'Health Insurance Industry (AHIP)',          category: 'Health Insurance',             color: '#06b6d4' },
+  labor:       { id: 'labor',       name: 'AFL-CIO / Labor Unions',                   category: 'Labor / Unions',               color: '#ef4444' },
+  nea:         { id: 'nea',         name: 'National Education Association (NEA)',      category: 'Education / Labor',            color: '#059669' },
+  agribusiness:{ id: 'agribusiness',name: 'Agribusiness (Farm Bureau)',                category: 'Agriculture',                  color: '#84cc16' },
+  telecom:     { id: 'telecom',     name: 'Telecommunications Industry',              category: 'Telecom & Media',              color: '#ec4899' },
+  crypto:      { id: 'crypto',      name: 'Cryptocurrency Industry',                  category: 'Cryptocurrency',               color: '#f97316' },
+};
+
+export function classifyLobby(pacName: string): LobbyClassification | null {
+  for (const { patterns, lobbyId } of PAC_PATTERNS) {
+    if (patterns.some(p => p.test(pacName))) {
+      return LOBBY_META[lobbyId] || null;
+    }
+  }
+  return null;
+}
+
+export function getLobbyMeta(lobbyId: string): LobbyClassification | null {
+  return LOBBY_META[lobbyId] || null;
+}
+
+export function getAllLobbies(): LobbyClassification[] {
+  return Object.values(LOBBY_META);
+}

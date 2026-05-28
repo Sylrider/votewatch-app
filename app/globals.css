@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-bebas: 'Bebas Neue';
+  --font-barlow-condensed: 'Barlow Condensed';
+  --font-barlow: 'Barlow';
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #080a0f;
+  color: #e2e8f0;
+  font-family: 'Barlow', system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* ── Typography ────────────────────────────────────────────────────────────── */
+.font-display  { font-family: 'Bebas Neue', Impact, sans-serif; letter-spacing: 0.05em; }
+.font-cond     { font-family: 'Barlow Condensed', sans-serif; }
+
+/* ── Hero ──────────────────────────────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(175deg, #0c0f1c 0%, #080a0f 100%);
+  border-bottom: 1px solid #252a3a;
+  padding: 56px 24px 44px;
+  text-align: center;
+}
+.hero-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #f59e0b;
+  margin-bottom: 14px;
+}
+.hero-h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(44px, 6.5vw, 84px);
+  letter-spacing: 0.05em;
+  line-height: 0.94;
+  color: #e2e8f0;
+  margin-bottom: 18px;
+}
+.hero-h1 em { color: #f59e0b; font-style: normal; }
+.hero-desc {
+  color: #64748b;
+  font-size: 15px;
+  max-width: 520px;
+  margin: 0 auto 28px;
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* ── Stats Row ─────────────────────────────────────────────────────────────── */
+.stats-row {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #252a3a;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 680px;
+  margin: 0 auto;
+  background: #0f1117;
+}
+.stat-item {
+  flex: 1;
+  padding: 14px;
+  text-align: center;
+  border-right: 1px solid #252a3a;
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  color: #f59e0b;
+  display: block;
+}
+.stat-lbl {
+  font-size: 10px;
+  color: #64748b;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+/* ── Cards ─────────────────────────────────────────────────────────────────── */
+.card {
+  background: #0f1117;
+  border: 1px solid #252a3a;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.18s, transform 0.18s, box-shadow 0.18s;
+}
+.card:hover {
+  border-color: #f59e0b;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 36px rgba(0,0,0,.5);
+}
+
+/* ── Party Badges ──────────────────────────────────────────────────────────── */
+.badge-rep {
+  background: rgba(239,68,68,.13);
+  color: #ef4444;
+  border: 1px solid rgba(239,68,68,.28);
+}
+.badge-dem {
+  background: rgba(59,130,246,.13);
+  color: #3b82f6;
+  border: 1px solid rgba(59,130,246,.28);
+}
+.badge-ind {
+  background: rgba(168,85,247,.13);
+  color: #a855f7;
+  border: 1px solid rgba(168,85,247,.28);
+}
+
+/* ── Score circles ─────────────────────────────────────────────────────────── */
+.score-critical { color: #ef4444; border-color: #ef4444; }
+.score-high     { color: #f97316; border-color: #f97316; }
+.score-elevated { color: #eab308; border-color: #eab308; }
+.score-low      { color: #22c55e; border-color: #22c55e; }
+
+/* ── Tables ────────────────────────────────────────────────────────────────── */
+.data-table {
+  background: #0f1117;
+  border: 1px solid #252a3a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.data-table-head {
+  background: #171b24;
+  padding: 9px 18px;
+  border-bottom: 1px solid #252a3a;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #64748b;
+}
+.data-row {
+  border-bottom: 1px solid #252a3a;
+  padding: 13px 18px;
+  transition: background 0.15s;
+}
+.data-row:last-child { border-bottom: none; }
+.data-row:hover { background: #171b24; }
+
+/* ── Vote badges ───────────────────────────────────────────────────────────── */
+.vote-yea {
+  background: rgba(34,197,94,.14);
+  color: #22c55e;
+  border: 1px solid rgba(34,197,94,.28);
+}
+.vote-nay {
+  background: rgba(239,68,68,.14);
+  color: #ef4444;
+  border: 1px solid rgba(239,68,68,.28);
+}
+
+/* ── Donor flag ────────────────────────────────────────────────────────────── */
+.donor-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: rgba(245,158,11,.12);
+  color: #f59e0b;
+  border: 1px solid rgba(245,158,11,.28);
+  font-weight: 700;
+  margin-top: 3px;
+}
+
+/* ── Conflict flag ─────────────────────────────────────────────────────────── */
+.conflict-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: rgba(239,68,68,.12);
+  color: #ef4444;
+  border: 1px solid rgba(239,68,68,.28);
+  font-weight: 700;
+  margin-top: 3px;
+}
+
+/* ── Section titles ────────────────────────────────────────────────────────── */
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #252a3a;
+}
+
+/* ── Summary blockquote ────────────────────────────────────────────────────── */
+.summary-box {
+  background: #0f1117;
+  border: 1px solid #252a3a;
+  border-left: 4px solid #f59e0b;
+  border-radius: 0 8px 8px 0;
+  padding: 18px 22px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #b8c4d4;
+  font-style: italic;
+}
+
+/* ── Disclaimer bar ────────────────────────────────────────────────────────── */
+.disc-bar {
+  background: #1a110a;
+  border-bottom: 1px solid #3d2a0a;
+  padding: 5px 24px;
+  font-size: 11px;
+  color: #b8892a;
+  text-align: center;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .stats-row { flex-wrap: wrap; }
+  .stat-item { min-width: 33%; }
+  .hero { padding: 40px 16px 32px; }
+}
