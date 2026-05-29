@@ -124,7 +124,7 @@ export async function buildLobbyContributions(
     lobbyTotals.set(lobby.id, existing + donor.total);
   }
 
-  for (const [lobbyId, total] of lobbyTotals.entries()) {
+  for (const [lobbyId, total] of Array.from(lobbyTotals.entries())) {
     const lobby = getLobbyById(lobbyId);
     if (!lobby) continue;
 
