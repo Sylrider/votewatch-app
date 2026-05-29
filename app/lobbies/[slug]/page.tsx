@@ -99,9 +99,7 @@ export default async function LobbyPage({ params }: { params: { slug: string } }
                 const pc = p.party.startsWith('R') ? '#ef4444' : p.party.startsWith('D') ? '#3b82f6' : '#a855f7';
                 return (
                   <Link key={p.id} href={`/politicians/${p.id}`} style={{ textDecoration: 'none' }}>
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 14, padding: '13px 18px', borderBottom: '1px solid #252a3a', cursor: 'pointer', transition: 'background 0.15s' }}
-                      onMouseEnter={e => (e.currentTarget.style.background = '#171b24')}
-                      onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
+                    <div className="data-row" style={{ display: 'flex', alignItems: 'flex-start', gap: 14, cursor: 'pointer' }}>
                       <div style={{ flex: 1 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 3 }}>
                           <span style={{ fontWeight: 700, fontSize: 15, color: '#e2e8f0' }}>{p.name}</span>
