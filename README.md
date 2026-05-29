@@ -1,10 +1,10 @@
-# VoteWatch 🗳️
+# WatchGov 🗳️
 **U.S. Political Transparency Tracker**
 
 Track lobbying money, stock trading conflicts, lawsuits, and donor-vote alignment
 for every U.S. Senator, Representative, Governor, Mayor, and President.
 
-Live site: **https://votewatch.pages.dev** (or your custom domain after setup)
+Live site: **https://watchgov.org** (or your custom domain after setup)
 
 ---
 
@@ -35,11 +35,11 @@ Live site: **https://votewatch.pages.dev** (or your custom domain after setup)
 
 1. Go to **https://cloudflare.com** → click **Sign Up**
 2. Enter email + password
-3. You'll get a free subdomain: `votewatch.pages.dev`
+3. You'll get a free subdomain: `watchgov.org`
 
 **Optional — Buy a domain (~$10/year):**
 - Cloudflare Registrar sells `.org` domains at **cost price** (~$9.77/year, no markup)
-- In Cloudflare dashboard → **Domain Registration** → search `votewatch.org`
+- In Cloudflare dashboard → **Domain Registration** → search `watchgov.org`
 - Cloudflare Registrar is genuinely the cheapest place to buy domains
 
 ---
@@ -106,7 +106,7 @@ npm run dev
 
 # Push to GitHub
 git add .
-git commit -m "Initial VoteWatch deployment"
+git commit -m "Initial WatchGov deployment"
 git push origin main
 ```
 
@@ -125,7 +125,7 @@ git push origin main
    - **Build output directory**: `out`
 7. Click **Save and Deploy**
 
-Your site will be live at `https://votewatch.pages.dev` in ~2 minutes! 🎉
+Your site will be live at `https://watchgov.org` in ~2 minutes! 🎉
 
 ---
 
@@ -143,7 +143,7 @@ You need to add secrets so it can authenticate:
 | `FEC_API_KEY` | From Step 3 above |
 | `CLOUDFLARE_API_TOKEN` | Cloudflare dashboard → My Profile → API Tokens → Create Token → "Edit Cloudflare Pages" template |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare dashboard → right sidebar |
-| `NEXT_PUBLIC_SITE_URL` | `https://votewatch.pages.dev` (or your custom domain) |
+| `NEXT_PUBLIC_SITE_URL | `https://watchgov.org`
 
 ---
 
@@ -152,7 +152,7 @@ You need to add secrets so it can authenticate:
 If you bought a domain at Cloudflare:
 1. Cloudflare Pages → your project → **Custom Domains**
 2. Click **Set up a custom domain**
-3. Enter `votewatch.org`
+3. Enter `watchgov.org`
 4. Done — Cloudflare handles SSL automatically
 
 ---
@@ -185,8 +185,8 @@ Cost to you:   $0 (all free tiers)
 | Senate/House Stock Watcher | **$0** |
 | CourtListener | **$0** |
 | OpenSecrets (researcher) | **$0** |
-| Domain (votewatch.pages.dev) | **$0** |
-| Domain (votewatch.org) | **~$9.77/year** optional |
+| Domain (watchgov.org) | **$0** |
+| Domain (watchgov.org) | **~$9.77/year** optional |
 | **Total** | **$0–$10/year** |
 
 ---
@@ -266,11 +266,11 @@ votewatch/
 
 Dear OpenSecrets Team,
 
-I am writing to request researcher API access for VoteWatch, an open-source
+I am writing to request researcher API access for WatchGov, an open-source
 civic transparency project that tracks lobbying contributions, voting records,
 and financial conflicts of interest for U.S. elected officials.
 
-**Project:** VoteWatch (https://votewatch.pages.dev)
+**Project:** WatchGov (https://watchgov.org)
 **Purpose:** Nonpartisan, educational civic transparency — helping voters
 understand the relationship between campaign donations and legislative votes.
 
@@ -297,7 +297,7 @@ Thank you for considering this request.
 
 [YOUR NAME]
 [YOUR EMAIL]
-VoteWatch Project
+WatchGov Project
 
 ---
 
@@ -336,6 +336,6 @@ This is an open-source civic project. Pull requests welcome for:
 
 ---
 
-*VoteWatch is nonpartisan and not affiliated with any political party or organization.
+*WatchGov is nonpartisan and not affiliated with any political party or organization.
 A high Transparency Risk Score reflects statistical overlap between donor money and votes —
 it is not a determination of illegal activity. All data is from public government disclosures.*

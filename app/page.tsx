@@ -4,7 +4,7 @@ import { fmtMoney } from '@/lib/utils';
 import PoliticianGrid from '@/components/PoliticianGrid';
 
 export const metadata: Metadata = {
-  title: 'VoteWatch — U.S. Political Transparency Tracker',
+  title: 'WatchGov — U.S. Political Transparency Tracker',
   description:
     'Track lobbying money, stock trading conflicts, lawsuits, and donor-vote alignment for every U.S. Senator, Representative, Governor, and President. Transparency scores based on disclosed records, not declarations.',
   keywords: [
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     'US representatives', 'governors', 'campaign finance', 'special interests',
   ].join(', '),
   openGraph: {
-    title: 'VoteWatch — Who Does Your Politician Really Work For?',
+    title: 'WatchGov — Who Does Your Politician Really Work For?',
     description: 'Independent transparency tracking for all U.S. elected officials. Scores based on lobby money, votes, stock trades, and legal records.',
     type: 'website',
-    url: 'https://votewatch.us',
+    url: 'https://watchgov.org',
   },
   twitter: { card: 'summary_large_image' },
   robots: { index: true, follow: true },
@@ -26,12 +26,12 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'VoteWatch',
+  name: 'WatchGov',
   description: 'U.S. Political Transparency Tracker',
-  url: 'https://votewatch.us',
+  url: 'https://watchgov.org',
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://votewatch.us/search?q={search_term_string}',
+    target: 'https://watchgov.org/search?q={search_term_string}',
     'query-input': 'required name=search_term_string',
   },
 };
@@ -64,7 +64,7 @@ export default async function HomePage() {
       <header className="hero">
         <p className="hero-eyebrow">Civic Transparency Initiative</p>
         <h1 className="hero-h1">
-          Who Does Your <em>Politician</em> Really Work For?
+          Who Does Your <em>Government</em> Really Work For?
         </h1>
         <p className="hero-desc">
           Track lobbying money, stock trading conflicts, lawsuits, and

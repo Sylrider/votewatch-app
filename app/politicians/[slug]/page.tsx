@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     description: desc.slice(0, 160),
     keywords: `${p.name}, ${p.state}, ${p.chamber}, lobby contributions, voting record, stock trades, transparency score`,
     openGraph: {
-      title: `${p.name} | VoteWatch`,
+      title: `${p.name} | WatchGov`,
       description: desc.slice(0, 160),
       type: 'profile',
     },

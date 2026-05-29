@@ -3,16 +3,16 @@ import Link from 'next/link';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://votewatch.pages.dev'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://watchgov.org'),
   title: {
-    default: 'VoteWatch — U.S. Political Transparency',
-    template: '%s | VoteWatch',
+    default: 'WatchGov — U.S. Political Transparency',
+    template: '%s | WatchGov',
   },
   description: 'Independent transparency tracker for all U.S. elected officials. Scores based on lobby money, votes, stock trades, and legal records.',
   robots: { index: true, follow: true },
-  authors: [{ name: 'VoteWatch' }],
+  authors: [{ name: 'WatchGov' }],
   openGraph: {
-    siteName: 'VoteWatch',
+    siteName: 'WatchGov',
     type: 'website',
     locale: 'en_US',
   },
@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href={process.env.NEXT_PUBLIC_SITE_URL || 'https://votewatch.pages.dev'} />
+        <link rel="canonical" href={process.env.NEXT_PUBLIC_SITE_URL || 'https://watchgov.org'} />
       </head>
       <body>
         {/* Navigation */}
@@ -36,9 +36,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             href="/"
             className="font-display text-[26px] tracking-widest"
             style={{ color: '#f59e0b' }}
-            aria-label="VoteWatch home"
+            aria-label="WatchGov home"
           >
-            Vote<span style={{ color: '#e2e8f0' }}>Watch</span>
+            Watch<span style={{ color: '#e2e8f0' }}>Gov</span>
           </Link>
 
           <div className="flex gap-1" role="menubar">
@@ -65,7 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="font-display text-2xl tracking-widest mb-3" style={{ color: '#f59e0b' }}>
-                VoteWatch
+                WatchGov
               </div>
               <p className="text-sm" style={{ color: '#64748b', lineHeight: 1.7 }}>
                 An independent civic transparency project.
@@ -113,7 +113,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
 
           <div className="max-w-5xl mx-auto mt-8 pt-8 border-t text-xs text-center" style={{ borderColor: '#252a3a', color: '#64748b' }}>
-            VoteWatch is an independent, nonpartisan project. A high Transparency Risk Score does not constitute proof of illegal activity.
+            WatchGov is an independent, nonpartisan project. A high Transparency Risk Score does not constitute proof of illegal activity.
             All data is sourced from public government disclosures.
           </div>
         </footer>

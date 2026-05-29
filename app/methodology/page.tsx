@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Methodology — How We Score Politicians',
-  description: 'How VoteWatch calculates the Transparency Risk Score using lobby money, voter-donor alignment, stock trading conflicts, and legal history.',
+  description: 'How WatchGov calculates the Transparency Risk Score using lobby money, voter-donor alignment, stock trading conflicts, and legal history.',
 };
 
 export default function MethodologyPage() {
   return (
     <article className="max-w-3xl mx-auto px-6 py-10" itemScope itemType="https://schema.org/WebPage">
       <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 50, letterSpacing: 2, marginBottom: 6, color: '#e2e8f0' }}>
-        About <em style={{ color: '#f59e0b', fontStyle: 'normal' }}>VoteWatch</em>
+        About <em style={{ color: '#f59e0b', fontStyle: 'normal' }}>WatchGov</em>
       </h1>
       <p style={{ fontSize: 14, color: '#b0bcd4', lineHeight: 1.75, marginBottom: 20 }} itemProp="description">
         An independent civic transparency tool that tracks lobbying money, stock trading conflicts, lawsuits,
@@ -73,7 +73,7 @@ export default function MethodologyPage() {
 
       <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 17, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#64748b', margin: '26px 0 9px' }}>Open Source</h2>
       <p style={{ fontSize: 14, color: '#b0bcd4', lineHeight: 1.75 }}>
-        VoteWatch is fully open source.{' '}
+        WatchGov is fully open source.{' '}
         <a href="https://github.com/Sylrider/votewatch-app" target="_blank" rel="noopener noreferrer" style={{ color: '#3b82f6' }}>
           View the code on GitHub ↗
         </a>
