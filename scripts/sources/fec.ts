@@ -22,12 +22,29 @@ async function get(path: string, apiKey: string, params: Record<string, string |
   url.searchParams.set('api_key', apiKey);
   Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, String(v)));
 
-  const res = await fetch(url.toString());
-  if (!res.ok) throw new Error(`FEC ${path} ÃÂ¢ÃÂÃÂ HTTP ${res.status}: ${await res.text()}`);
-  return res.json();
+  // Retry on rate-limit (429) and transient 5xx with exponential backoff.
+  const MAX_ATTEMPTS = 6;
+  let attempt = 0;
+  while (true) {
+    attempt++;
+    const res = await fetch(url.toString());
+    if (res.ok) return res.json();
+    if ((res.status === 429 || res.status >= 500) && attempt < MAX_ATTEMPTS) {
+      const retryAfter = Number(res.headers.get('retry-after'));
+      const waitMs = Number.isFinite(retryAfter) && retryAfter > 0
+        ? retryAfter * 1000
+        : Math.min(60000, 2000 * Math.pow(2, attempt - 1));
+      console.warn(
+        `[fec] HTTP ${res.status} on ${path} - backoff ${Math.round(waitMs / 1000)}s (attempt ${attempt}/${MAX_ATTEMPTS})`,
+      );
+      await new Promise((r) => setTimeout(r, waitMs));
+      continue;
+    }
+    throw new Error(`FEC ${path} - HTTP ${res.status}: ${await res.text()}`);
+  }
 }
 
-// ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Find FEC candidate ID ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+// ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Find FEC candidate ID ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ
 
 const STATE_CODES: Record<string, string> = {
   'alabama': 'AL', 'alaska': 'AK', 'arizona': 'AZ', 'arkansas': 'AR', 'california': 'CA',
@@ -85,12 +102,12 @@ export async function findCandidateId(
     });
     results = data.results || [];
   } catch (err) {
-    console.warn(`  ÃÂ¢ÃÂÃÂ  FEC candidate search failed for "${name}" (${state}/${office}): ${(err as Error).message} ÃÂ¢ÃÂÃÂ no donor data for this official.`);
+    console.warn(`  ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ  FEC candidate search failed for "${name}" (${state}/${office}): ${(err as Error).message} ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ no donor data for this official.`);
     return null;
   }
 
   if (results.length === 0) {
-    console.warn(`  ÃÂ¢ÃÂÃÂ  FEC: no candidates returned for "${name}" (${state}/${office}) ÃÂ¢ÃÂÃÂ no donor data.`);
+    console.warn(`  ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ  FEC: no candidates returned for "${name}" (${state}/${office}) ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ no donor data.`);
     return null;
   }
 
@@ -107,7 +124,7 @@ export async function findCandidateId(
   if (!match && results.length === 1) match = results[0];
 
   if (!match) {
-    console.warn(`  ÃÂ¢ÃÂÃÂ  FEC: no name match for "${name}" (${state}/${office}) among ${results.length} candidates ÃÂ¢ÃÂÃÂ no donor data.`);
+    console.warn(`  ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ  FEC: no name match for "${name}" (${state}/${office}) among ${results.length} candidates ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ no donor data.`);
     return null;
   }
 
@@ -130,7 +147,7 @@ export async function fetchCandidateFinance(
     const totalReceipts = row && typeof row.receipts === 'number' ? row.receipts : 0;
     return { totalReceipts, topDonors: [] };
   } catch (err) {
-    console.warn(`  â  FEC finance fetch failed for ${candidateId}: ${(err as Error).message} â receipts unavailable.`);
+    console.warn(`  Ã¢ÂÂ  FEC finance fetch failed for ${candidateId}: ${(err as Error).message} Ã¢ÂÂ receipts unavailable.`);
     return { totalReceipts: 0, topDonors: [] };
   }
 }
@@ -224,10 +241,10 @@ export async function buildLobbyContributions(
 function getLobbyById(id: string): { name: string; defaultIntent: string } | null {
   const LOBBY_INFO: Record<string, { name: string; defaultIntent: string }> = {
     nra: { name: 'National Rifle Association (NRA)', defaultIntent: 'Block gun safety legislation, promote firearms deregulation' },
-    pharma: { name: 'PhRMA ÃÂ¢ÃÂÃÂ Pharmaceutical Manufacturers', defaultIntent: 'Block drug price negotiation, protect pharmaceutical patents' },
+    pharma: { name: 'PhRMA ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Pharmaceutical Manufacturers', defaultIntent: 'Block drug price negotiation, protect pharmaceutical patents' },
     api: { name: 'American Petroleum Institute (API)', defaultIntent: 'Block climate legislation, support fossil fuel subsidies and deregulation' },
     uscc: { name: 'U.S. Chamber of Commerce', defaultIntent: 'Reduce corporate taxes, oppose labor regulations, support deregulation' },
-    aipac: { name: 'AIPAC ÃÂ¢ÃÂÃÂ American Israel Public Affairs Committee', defaultIntent: 'Support unconditional military aid to Israel, oppose arms embargo conditions' },
+    aipac: { name: 'AIPAC ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ American Israel Public Affairs Committee', defaultIntent: 'Support unconditional military aid to Israel, oppose arms embargo conditions' },
     finance: { name: 'Wall Street / Financial Industry', defaultIntent: 'Oppose financial regulation, support bank deregulation' },
     defense: { name: 'Defense Industry (MICC)', defaultIntent: 'Support defense budget increases, weapons procurement contracts' },
     tech: { name: 'Big Tech Industry', defaultIntent: 'Oppose antitrust enforcement, limit platform liability regulations' },
