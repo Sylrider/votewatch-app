@@ -1,7 +1,7 @@
 #!/usr/bin/env tsx
 /**
  * scripts/pipeline.ts
- * Master ETL pipeline — run this to generate data/politicians.json
+ * Master ETL pipeline â run this to generate data/politicians.json
  *
  * Usage:
  *   npx tsx scripts/pipeline.ts
@@ -10,14 +10,14 @@
  *   npx tsx scripts/pipeline.ts --id=B001230        (single bioguide ID)
  *
  * Required env vars (.env.local):
- *   CONGRESS_API_KEY   — from api.congress.gov/sign-up/
- *   FEC_API_KEY        — from api.data.gov/signup/
+ *   CONGRESS_API_KEY   â from api.congress.gov/sign-up/
+ *   FEC_API_KEY        â from api.data.gov/signup/
  *
  * Optional env vars:
- *   COURTLISTENER_TOKEN — from courtlistener.com (higher rate limits)
+ *   COURTLISTENER_TOKEN â from courtlistener.com (higher rate limits)
  *
- * Runtime: ~45–90 minutes for all ~535 federal members
- * Output:  data/politicians.json  (~8–15 MB)
+ * Runtime: ~45â90 minutes for all ~535 federal members
+ * Output:  data/politicians.json  (~8â15 MB)
  *          data/pipeline-log.json (run metadata)
  */
 
@@ -29,8 +29,10 @@ import { fetchSenateTrades, fetchHouseTrades, getTradesForPolitician } from './s
 import { searchLawsuits } from './sources/lawsuits';
 import { calculateScore, annotateVoteAlignment } from './score';
 import type { Politician, PipelineRun, Chamber } from '../lib/types';
+import { readFile } from 'fs/promises';
+import { execSync } from 'child_process';
 
-// ─── Config ───────────────────────────────────────────────────────────────────
+// âââ Config âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 const CONGRESS_API_KEY = process.env.CONGRESS_API_KEY || '';
 const FEC_API_KEY      = process.env.FEC_API_KEY || '';
@@ -45,11 +47,11 @@ const args = Object.fromEntries(
     .map(a => a.slice(2).split('=') as [string, string])
 );
 
-// ─── Main ─────────────────────────────────────────────────────────────────────
+// âââ Main âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 async function main() {
   if (!CONGRESS_API_KEY || !FEC_API_KEY) {
-    console.error('❌ Missing API keys. Set CONGRESS_API_KEY and FEC_API_KEY in .env.local');
+    console.error('â Missing API keys. Set CONGRESS_API_KEY and FEC_API_KEY in .env.local');
     console.error('   Congress.gov: https://api.congress.gov/sign-up/');
     console.error('   FEC API:       https://api.data.gov/signup/');
     process.exit(1);
@@ -64,18 +66,18 @@ async function main() {
     errors: [],
   };
 
-  console.log('\n🗳  VoteWatch Data Pipeline');
-  console.log('━'.repeat(50));
+  console.log('\nð³  VoteWatch Data Pipeline');
+  console.log('â'.repeat(50));
   console.log(`Started: ${run.startedAt}`);
   console.log('');
 
   // Pre-fetch bulk trade data (one request fetches all trades at once)
-  console.log('📈 Pre-fetching stock trade disclosures...');
+  console.log('ð Pre-fetching stock trade disclosures...');
   await fetchSenateTrades();
   await fetchHouseTrades();
 
   // Fetch all current Congress members
-  console.log('\n🏛  Fetching Congress members from Congress.gov...');
+  console.log('\nð  Fetching Congress members from Congress.gov...');
   let members = await fetchAllMembers(CONGRESS_API_KEY);
   console.log(`   Found ${members.length} current members`);
 
@@ -94,9 +96,56 @@ async function main() {
     console.log(`   Limited to first ${members.length} members (testing mode)`);
   }
 
-  console.log('\n🔄 Processing politicians...\n');
+  console.log('\nð Processing politicians...\n');
 
   const politicians: Politician[] = [];
+
+  // --- Incremental prod commits: merge into existing data, commit every BATCH_SIZE officials ---
+  const BATCH_SIZE = 25;
+  const SHOULD_PUSH = process.env.PIPELINE_PUSH !== '0' && !args.id;
+  const existingById = new Map<string, Politician>();
+  try {
+    const prevRaw = await readFile(path.join(OUT_DIR, 'politicians.json'), 'utf8');
+    const prev = JSON.parse(prevRaw) as Politician[];
+    for (const p of prev) existingById.set(p.id, p);
+    console.log(`Loaded ${existingById.size} existing officials for incremental merge.`);
+  } catch {
+    console.log('No existing politicians.json - starting fresh.');
+  }
+  let gitReady = false;
+  function ensureGit() {
+    if (gitReady) return;
+    try {
+      execSync('git config user.email "pipeline@votewatch.org"');
+      execSync('git config user.name "VoteWatch Pipeline Bot"');
+      gitReady = true;
+    } catch (e) {
+      console.warn(`[git] config failed: ${(e as Error).message}`);
+    }
+  }
+  let lastCommitted = 0;
+  async function flushAndCommit(label: string, force = false) {
+    if (!force && politicians.length - lastCommitted < BATCH_SIZE) return;
+    for (const p of politicians) existingById.set(p.id, p);
+    const merged = Array.from(existingById.values());
+    await writeFile(
+      path.join(OUT_DIR, 'politicians.json'),
+      JSON.stringify(merged, null, 2),
+    );
+    lastCommitted = politicians.length;
+    if (!SHOULD_PUSH) return;
+    ensureGit();
+    try {
+      execSync('git add data/politicians.json');
+      execSync(
+        `git diff --staged --quiet || git commit -m "data: ${label} (${merged.length} officials)"`,
+      );
+      execSync('git push');
+      console.log(`[git] pushed: ${label} -> ${merged.length} officials live`);
+    } catch (e) {
+      console.warn(`[git] commit/push failed (${label}): ${(e as Error).message}`);
+    }
+  }
 
   for (let i = 0; i < members.length; i++) {
     const member = members[i];
@@ -170,26 +219,27 @@ async function main() {
       politician.score = calculateScore(politician);
 
       politicians.push(politician);
+      // Commit to prod every BATCH_SIZE officials added.
+      await flushAndCommit(`batch through ${i + 1}/${members.length}`);
       run.politiciansProcessed++;
 
       const { total, label } = scoreLabel(politician.score.total);
-      process.stdout.write(` ✓ score=${total} (${label})\n`);
+      process.stdout.write(` â score=${total} (${label})\n`);
 
     } catch (err) {
       const msg = `${member.name}: ${(err as Error).message}`;
       run.errors.push(msg);
-      process.stdout.write(` ✗ ERROR: ${(err as Error).message}\n`);
+      process.stdout.write(` â ERROR: ${(err as Error).message}\n`);
     }
   }
 
   // Write output
-  console.log('\n💾 Writing output files...');
+  console.log('\nð¾ Writing output files...');
 
-  await fs.writeFile(
-    path.join(OUT_DIR, 'politicians.json'),
-    JSON.stringify(politicians, null, 2),
-    'utf-8'
-  );
+  // (politicians.json is written by flushAndCommit below, with merged data.)
+
+  // Final flush: commit any remaining officials (< BATCH_SIZE).
+  await flushAndCommit('final batch', true);
 
   run.completedAt = new Date().toISOString();
   await fs.writeFile(
@@ -202,19 +252,19 @@ async function main() {
     (new Date(run.completedAt).getTime() - new Date(run.startedAt).getTime()) / 1000
   );
 
-  console.log('\n' + '━'.repeat(50));
-  console.log(`✅ Pipeline complete`);
+  console.log('\n' + 'â'.repeat(50));
+  console.log(`â Pipeline complete`);
   console.log(`   Politicians processed: ${run.politiciansProcessed}`);
   console.log(`   Errors: ${run.errors.length}`);
   console.log(`   Duration: ${Math.floor(duration / 60)}m ${duration % 60}s`);
   console.log(`   Output: data/politicians.json`);
   if (run.errors.length > 0) {
-    console.log('\n⚠️  Errors:');
+    console.log('\nâ ï¸  Errors:');
     run.errors.forEach(e => console.log(`   - ${e}`));
   }
 }
 
-// ─── Helpers ─────────────────────────────────────────────────────────────────
+// âââ Helpers âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 function generateId(name: string, state: string, chamber: string): string {
   const prefix = chamber === 'Senate' ? 'sen' : 'rep';
@@ -230,7 +280,7 @@ function generateId(name: string, state: string, chamber: string): string {
 }
 
 function formatName(name: string): string {
-  // Congress.gov returns "LAST, FIRST M." — convert to "First Last"
+  // Congress.gov returns "LAST, FIRST M." â convert to "First Last"
   const parts = name.split(',').map(s => s.trim());
   if (parts.length === 2) {
     const first = parts[1].split(' ')[0];
@@ -249,6 +299,6 @@ function sleep(ms: number) {
 }
 
 main().catch(err => {
-  console.error('\n❌ Fatal pipeline error:', err);
+  console.error('\nâ Fatal pipeline error:', err);
   process.exit(1);
 });
