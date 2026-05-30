@@ -32,33 +32,63 @@ async function get(path: string, apiKey: string, params: Record<string, string |
 export async function findCandidateId(
   name: string,
   state: string,
-  office: 'S' | 'H' | 'P',       // Senate / House / President
+  office: 'S' | 'H' | 'P',      // Senate / House / President
   apiKey: string
 ): Promise<string | null> {
+  // Normalize a name for comparison: uppercase, drop punctuation/suffixes, collapse spaces.
+  const norm = (s: string) =>
+    s.toUpperCase()
+      .replace(/[.,]/g, ' ')
+      .replace(/\b(JR|SR|II|III|IV)\b/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+  // Congress.gov gives "Last, First M." -> derive last + first tokens.
+  const parts = name.split(',');
+  const lastName = norm(parts[0] || '');
+  const firstName = norm(parts[1] || '');
+  const firstToken = firstName.split(' ')[0] || '';
+
+  let results: FECCandidate[] = [];
   try {
     const data = await get('/candidates/search/', apiKey, {
-      q: name,
+      q: parts[0]?.trim() || name,
       state,
       office,
       is_active_candidate: 'true',
-      per_page: 5,
+      sort: '-first_file_date',
+      per_page: 20,
     });
-
-    const results: FECCandidate[] = data.results || [];
-
-    // Best match: name contains a significant part of search name
-    const nameLower = name.toLowerCase();
-    const match = results.find(c =>
-      c.name.toLowerCase().includes(nameLower.split(',')[0].toLowerCase())
-    );
-
-    return match?.candidate_id || results[0]?.candidate_id || null;
-  } catch {
+    results = data.results || [];
+  } catch (err) {
+    console.warn(`  ⚠ FEC candidate search failed for "${name}" (${state}/${office}): ${(err as Error).message} — no donor data for this official.`);
     return null;
   }
-}
 
-// ─── Get total receipts and top donors ───────────────────────────────────────
+  if (results.length === 0) {
+    console.warn(`  ⚠ FEC: no candidates returned for "${name}" (${state}/${office}) — no donor data.`);
+    return null;
+  }
+
+  // Prefer a candidate whose normalized name matches BOTH last and first name.
+  let match = results.find(c => {
+    const n = norm(c.name || '');
+    return n.includes(lastName) && (firstToken ? n.includes(firstToken) : true);
+  });
+
+  // Next best: last-name match only.
+  if (!match) match = results.find(c => norm(c.name || '').includes(lastName));
+
+  // If the office+state filter already narrowed to a single candidate, trust it.
+  if (!match && results.length === 1) match = results[0];
+
+  if (!match) {
+    console.warn(`  ⚠ FEC: no name match for "${name}" (${state}/${office}) among ${results.length} candidates — no donor data.`);
+    return null;
+  }
+
+  return match.candidate_id || null;
+}
 
 export async function fetchCandidateFinance(
   candidateId: string,
