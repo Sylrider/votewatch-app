@@ -140,6 +140,7 @@ async function main() {
       execSync(
         `git diff --staged --quiet || git commit -m "data: ${label} (${merged.length} officials)"`,
       );
+      execSync('git pull --rebase origin main', { stdio: 'pipe' });
       execSync('git push');
       console.log(`[git] pushed: ${label} -> ${merged.length} officials live`);
     } catch (e) {
