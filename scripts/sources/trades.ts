@@ -18,40 +18,49 @@ import type { StockTrade, StockWatcherTrade } from '../../lib/types';
 let senateTradesCache: StockWatcherTrade[] | null = null;
 
 export async function fetchSenateTrades(): Promise<StockWatcherTrade[]> {
-  if (senateTradesCache) return senateTradesCache;
-
-  console.log('  Fetching Senate stock trades (senatestockwatcher.com)...');
-  const res = await fetch('https://senatestockwatcher.com/api/stocks', {
-    headers: { 'User-Agent': 'VoteWatch/1.0 (civic-transparency project)' },
-  });
-
-  if (!res.ok) throw new Error(`Senate Stock Watcher → HTTP ${res.status}`);
-  const data = await res.json();
-  senateTradesCache = data.data || data || [];
-  console.log(`    Loaded ${senateTradesCache!.length} Senate trades`);
-  return senateTradesCache!;
+  // Senate Stock Watcher (senatestockwatcher.com) is currently offline (NXDOMAIN).
+  // Treat this source as optional: log a warning and continue with no trade data
+  // rather than crashing the whole pipeline.
+  const url = process.env.SENATE_TRADES_URL;
+  if (!url) {
+    console.warn('  ⚠ Senate stock trade source unavailable — skipping (no SENATE_TRADES_URL set). Continuing without Senate trades.');
+    return [];
+  }
+  try {
+    const res = await fetch(url, { headers: { 'User-Agent': 'WatchGov/1.0' } });
+    if (!res.ok) {
+      console.warn(`  ⚠ Senate trades fetch returned ${res.status} — continuing without Senate trades.`);
+      return [];
+    }
+    const data = await res.json();
+    return Array.isArray(data) ? data : [];
+  } catch (err) {
+    console.warn(`  ⚠ Senate trades fetch failed (${(err as Error).message}) — continuing without Senate trades.`);
+    return [];
+  }
 }
-
-// ─── House ────────────────────────────────────────────────────────────────────
-
-let houseTradesCache: StockWatcherTrade[] | null = null;
 
 export async function fetchHouseTrades(): Promise<StockWatcherTrade[]> {
-  if (houseTradesCache) return houseTradesCache;
-
-  console.log('  Fetching House stock trades (housestockwatcher.com)...');
-  const res = await fetch('https://housestockwatcher.com/api/transactions_all', {
-    headers: { 'User-Agent': 'VoteWatch/1.0 (civic-transparency project)' },
-  });
-
-  if (!res.ok) throw new Error(`House Stock Watcher → HTTP ${res.status}`);
-  const data = await res.json();
-  houseTradesCache = data.data || data || [];
-  console.log(`    Loaded ${houseTradesCache!.length} House trades`);
-  return houseTradesCache!;
+  // House Stock Watcher (housestockwatcher.com) is currently offline (NXDOMAIN).
+  // Optional source: warn and continue rather than failing the pipeline.
+  const url = process.env.HOUSE_TRADES_URL;
+  if (!url) {
+    console.warn('  ⚠ House stock trade source unavailable — skipping (no HOUSE_TRADES_URL set). Continuing without House trades.');
+    return [];
+  }
+  try {
+    const res = await fetch(url, { headers: { 'User-Agent': 'WatchGov/1.0' } });
+    if (!res.ok) {
+      console.warn(`  ⚠ House trades fetch returned ${res.status} — continuing without House trades.`);
+      return [];
+    }
+    const data = await res.json();
+    return Array.isArray(data) ? data : [];
+  } catch (err) {
+    console.warn(`  ⚠ House trades fetch failed (${(err as Error).message}) — continuing without House trades.`);
+    return [];
+  }
 }
-
-// ─── Match trades to politician ───────────────────────────────────────────────
 
 export async function getTradesForPolitician(
   name: string,
