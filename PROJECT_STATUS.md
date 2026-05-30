@@ -1,12 +1,12 @@
-# WatchGov — PROJECT STATUS (Shared Source of Truth)
+# WatchGov â PROJECT STATUS (Shared Source of Truth)
 
-> ⚠️ **MANDATORY PROTOCOL FOR EVERY CLAUDE SESSION (Chrome extension, Desktop, web — all of them):**
+> â ï¸ **MANDATORY PROTOCOL FOR EVERY CLAUDE SESSION (Chrome extension, Desktop, web â all of them):**
 >
 > 1. **BEFORE doing ANY work on WatchGov:** read this entire file from the repo first.
->    (`github.com/Sylrider/votewatch-app` → `PROJECT_STATUS.md`). Do not act on stale
->    memory — this file is the only current truth.
-> 2. **AFTER doing ANY work:** update this file — tick items in §12, add a dated line to
->    the §13 changelog, update the "Last updated" stamp — and commit/push it to the repo
+>    (`github.com/Sylrider/votewatch-app` â `PROJECT_STATUS.md`). Do not act on stale
+>    memory â this file is the only current truth.
+> 2. **AFTER doing ANY work:** update this file â tick items in Â§12, add a dated line to
+>    the Â§13 changelog, update the "Last updated" stamp â and commit/push it to the repo
 >    so the next session sees it.
 > 3. If you cannot read or update the repo in this session, say so to the user explicitly
 >    and ask them to carry the update across.
@@ -15,19 +15,19 @@
 > memory. This file is the bridge. The repo is the shared state; this file is the memory.
 > Read first, write last, every time.
 >
-> Last updated: 2026-05-29 — by: main chat session
+> Last updated: 2026-05-29 â by: main chat session
 
 ---
 
 ## 1. WHAT THIS IS
 A nonpartisan U.S. political transparency website. Each elected official gets a profile
 showing votes, lobbying money received (with the lobby's intent), stock trades (conflict-
-flagged), lawsuits/ethics issues, an "Independent View" summary, and a 0–100 Transparency
+flagged), lawsuits/ethics issues, an "Independent View" summary, and a 0â100 Transparency
 Risk Score. Each lobby gets a page (mission, key positions, funded politicians).
 
 - **Live at:** https://watchgov.org (also votewatch-app.pages.dev)
-- **Host:** Cloudflare Pages — auto-deploys on every push via Cloudflare's NATIVE GitHub
-  integration (NOT the GitHub Actions workflow — see §6).
+- **Host:** Cloudflare Pages â auto-deploys on every push via Cloudflare's NATIVE GitHub
+  integration (NOT the GitHub Actions workflow â see Â§6).
 - **Repo:** github.com/Sylrider/votewatch-app (PUBLIC; repo name stays votewatch-app)
 - **Stack:** Next.js (static export `output:'export'`), Tailwind, dark theme.
 - **Brand:** "WatchGov" (logo: Watch + Gov). Rebranded from "VoteWatch".
@@ -35,96 +35,100 @@ Risk Score. Each lobby gets a page (mission, key positions, funded politicians).
 ---
 
 ## 2. CURRENT STATE (what's done vs not)
-- ✅ Site built, deployed, live at watchgov.org on custom domain
-- ✅ All pages working: home, politician profile, lobbies list, lobby page, methodology
-- ✅ 9 lobbies seeded (see §4)
-- ✅ GitHub secrets set: CONGRESS_API_KEY, FEC_API_KEY, NEXT_PUBLIC_SITE_URL
-- ⛔ Site currently shows ONLY SEED DATA: 1 politician (Trump) + 9 lobbies
-- ⛔ `data/politicians.json` does NOT exist yet → the big remaining task
-- ⛔ GitHub Actions pipeline workflow still not running (see §6)
-- ❌ CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID secrets NOT set (only needed if the
-  Actions workflow itself deploys — currently not required since Cloudflare auto-deploys)
+- [x] Site built, deployed, live at watchgov.org on custom domain
+- [x] All pages working: home, politician profile, lobbies list, lobby page, methodology
+- [x] 9 lobbies seeded (see S4)
+- [x] GitHub secrets set: CONGRESS_API_KEY, FEC_API_KEY, NEXT_PUBLIC_SITE_URL
+- [x] deploy.yml FIXED & pipeline now RUNS end-to-end on the Actions runner
+- [x] FEC integration FIXED: name matching, state->2-letter code, /totals endpoint
+- [x] Dead Stock Watcher sources made NON-FATAL (no longer crash pipeline)
+- [ ] data/politicians.json still NOT committed (runs cancelled before commit step)
+- [ ] Composite Transparency Risk Scores still 0 -> need Option B (donor->lobby) data
+- [ ] CLOUDFLARE secrets NOT set (not required; Cloudflare auto-deploys on commit)
 
 ---
 
-## 3. THE GOAL ROSTER (~900–950 officials, 5 categories)
+## 3. THE GOAL ROSTER (~900â950 officials, 5 categories)
 The `chamber` field is one of: Executive | Senate | House | Governor | Mayor.
 Home page already has filter tabs for each.
 
 | Chamber    | Count   | Data source                                              |
 |------------|---------|----------------------------------------------------------|
-| Executive  | ~handful| President, VP, Cabinet — manual + FEC for federal money   |
+| Executive  | ~handful| President, VP, Cabinet â manual + FEC for federal money   |
 | Senate     | 100     | FULLY automatable via federal APIs                        |
 | House      | 435     | FULLY automatable via federal APIs                        |
-| Governor   | 50      | NO unified free API — hand-curate / per-state portals     |
-| Mayor      | ~335    | Mayors of cities >100k pop. NO free API — hand-curate     |
+| Governor   | 50      | NO unified free API â hand-curate / per-state portals     |
+| Mayor      | ~335    | Mayors of cities >100k pop. NO free API â hand-curate     |
 
 **Key nuance:** Free APIs only fully cover FEDERAL officials (Executive/Senate/House).
-Governors & mayors have no unified free data source — port from the earlier hand-built
+Governors & mayors have no unified free data source â port from the earlier hand-built
 dataset (the original "us-transparency" React build had ~310 mayors + senators/reps/govs)
 and supplement manually. Non-federal officials use a MODIFIED score (no congressional
-vote-alignment component — they have no roll-call record).
+vote-alignment component â they have no roll-call record).
 
 ---
 
 ## 4. THE 9 SEED LOBBIES (in data/lobbies.json)
 IDs: `nra`, `pharma`, `api` (oil/gas), `uscc` (US Chamber of Commerce), `aipac`,
 `finance` (Wall St), `defense`, `labor` (AFL-CIO), `nea` (teachers).
-The pipeline maps FEC industry/PAC codes → these IDs to link politicians ↔ lobbies.
+The pipeline maps FEC industry/PAC codes â these IDs to link politicians â lobbies.
 
 ---
 
-## 5. APIS — WHAT & HOW
-1. **Congress.gov** — Senate+House only. Key `CONGRESS_API_KEY`. Base
+## 5. APIS â WHAT & HOW
+1. **Congress.gov** â Senate+House only. Key `CONGRESS_API_KEY`. Base
    `https://api.congress.gov/v3/`. Endpoints: `/member`, `/member/{id}`,
    `/member/{id}/sponsored-legislation`, committees, votes. Append `?api_key=`. ~5k/hr.
-   → identity, party, state, chamber, committees, bills, votes.
-2. **FEC / OpenFEC** — federal campaign money. Key `FEC_API_KEY` (api.data.gov). Base
+   â identity, party, state, chamber, committees, bills, votes.
+2. **FEC / OpenFEC** â federal campaign money. Key `FEC_API_KEY` (api.data.gov). Base
    `https://api.open.fec.gov/v1/`. Endpoints: `/candidates/search`,
-   `/candidate/{id}/totals`, `/schedules/schedule_a`, `/committee/{id}`. ~1k/hr — CACHE.
-   → feeds lobbyScore; links donors to lobby IDs.
-3. **Senate/House Stock Watcher** — Congress only. No key. Full JSON at
-   senatestockwatcher.com & housestockwatcher.com. → feeds stockScore + conflict flags.
-4. **CourtListener** — lawsuits, federal + state. No key (optional token). Base
-   `https://www.courtlistener.com/api/rest/v4/`, `/search/?q={name}`. → feeds legalScore.
-5. **OpenSecrets** — SKIP v1 (paid/application). Approximate lobby intent from FEC codes.
+   `/candidate/{id}/totals`, `/schedules/schedule_a`, `/committee/{id}`. ~1k/hr â CACHE.
+   â feeds lobbyScore; links donors to lobby IDs.
+3. **Senate/House Stock Watcher** â Congress only. No key. Full JSON at
+   senatestockwatcher.com & housestockwatcher.com. â feeds stockScore + conflict flags.
+4. **CourtListener** â lawsuits, federal + state. No key (optional token). Base
+   `https://www.courtlistener.com/api/rest/v4/`, `/search/?q={name}`. â feeds legalScore.
+5. **OpenSecrets** â SKIP v1 (paid/application). Approximate lobby intent from FEC codes.
 
-Pipeline per federal politician: Congress.gov (identity+votes) → FEC (money) →
-Stock Watchers (trades) → CourtListener (lawsuits) → map donors to lobbies → compute
-score → write record to `data/politicians.json`.
+Pipeline per federal politician: Congress.gov (identity+votes) â FEC (money) â
+Stock Watchers (trades) â CourtListener (lawsuits) â map donors to lobbies â compute
+score â write record to `data/politicians.json`.
 
 **Constraint:** pipeline MUST run where there's internet + keys (GitHub Actions
 workflow_dispatch, or local Node). It CANNOT run in a no-network sandbox.
 
 ---
 
-## 6. GITHUB ACTIONS PIPELINE — UNFINISHED, KNOWN ISSUES
-The `.github/workflows/deploy.yml` has been failing. Root causes identified:
-- `workflow_dispatch:` was nested under `schedule:` (wrong indent) → no "Run workflow" button
-- Workflow used `npm ci` but there's NO package-lock.json → must use `npm install`
-- Build job `needs: [pipeline]` ran the full pipeline on every push → slow/failing
+## 6. GITHUB ACTIONS PIPELINE - FIXED & RUNNING (2026-05-30)
+The .github/workflows/deploy.yml now runs the data pipeline end-to-end. Fixes applied:
+1. deploy.yml: moved workflow_dispatch to top-level trigger (was nested under schedule),
+   made it pipeline-only, added permissions: contents: write, commit on all triggers.
+2. trades.ts (fc9ac31): Stock Watcher domains are DEAD (NXDOMAIN). fetchSenateTrades/
+   fetchHouseTrades now wrapped in try/catch -> return [] + warn. Non-fatal.
+3. fec.ts findCandidateId (961121a): added name normalization + console.warn on every
+   failure path (was silently catching -> all scores 0 with no clue why).
+4. fec.ts state bug (7c81b6c): FEC /candidates/search needs 2-letter state ('MD' not
+   'Maryland'). Added STATE_CODES map + toStateCode() helper.
+5. fec.ts finance (50b640f): removed broken /schedules/schedule_b call (HTTP 422, wrong
+   endpoint anyway). Now uses /candidate/{id}/totals for totalReceipts. topDonors:[] for now.
 
-**Correct design:** The site deploys via Cloudflare's native integration, so the workflow
-should ONLY run the data pipeline (on workflow_dispatch + weekly schedule) and commit
-`data/politicians.json` back to the repo. The committed data then triggers Cloudflare's
-auto-rebuild. No build/deploy jobs needed in the workflow.
-
-**Status:** A corrected workflow was drafted but NOT successfully committed yet (GitHub
-Desktop "Commit to main" was greyed out; browser-edit attempt was interrupted).
-**Also note:** the pipeline scripts in `/scripts` have NEVER successfully run end-to-end,
-so they may contain their own bugs to debug once the workflow triggers them.
+**Status:** Pipeline RUNS clean (finFailCount 0, only genuine no-match candidates warn).
+BUT data/politicians.json is NOT yet committed - both full runs were cancelled before
+the 'Commit refreshed data' step. Next full run must be allowed to COMPLETE so it commits.
+**FEC quirks for Option B:** /schedules/schedule_a needs a committee_id (cannot query by
+candidate_id alone). Rate limit ~1000/hr. Plan: candidate -> principal committee -> schedule_a.
 
 ---
 
-## 7. TRANSPARENCY RISK SCORE (0–100)
+## 7. TRANSPARENCY RISK SCORE (0â100)
 `Total = min(100, lobbyScore + alignScore + stockScore + legalScore)`
-- lobbyScore = min(25, totalLobbyMoney / 100,000 × 1.2)
-- alignScore = (donorAlignedVotes / totalVotes) × 35   [SKIP for non-federal; reweight]
-- stockScore = min(25, conflictTrades × 5 + (10 if any single trade ≥ $500K))
-- legalScore = min(15, Σ severity: high=7, medium=4, low=1)
+- lobbyScore = min(25, totalLobbyMoney / 100,000 Ã 1.2)
+- alignScore = (donorAlignedVotes / totalVotes) Ã 35   [SKIP for non-federal; reweight]
+- stockScore = min(25, conflictTrades Ã 5 + (10 if any single trade â¥ $500K))
+- legalScore = min(15, Î£ severity: high=7, medium=4, low=1)
 
-Bands: CRITICAL 75–100 (#ef4444) · HIGH 50–74 (#f97316) · ELEVATED 25–49 (#eab308) ·
-LOW 0–24 (#22c55e).
+Bands: CRITICAL 75â100 (#ef4444) Â· HIGH 50â74 (#f97316) Â· ELEVATED 25â49 (#eab308) Â·
+LOW 0â24 (#22c55e).
 Disclaimer (must appear on methodology page + near scores): a high score flags where money
 and power statistically overlap; it does NOT assert illegal activity.
 
@@ -148,11 +152,11 @@ and power statistically overlap; it does NOT assert illegal activity.
 
 ---
 
-## 9. CRITICAL TECH RULES (these caused past build failures — DO NOT REPEAT)
+## 9. CRITICAL TECH RULES (these caused past build failures â DO NOT REPEAT)
 - `lib/data.ts` uses Node `fs` = SERVER ONLY. Never import into a `'use client'` component.
 - Pure helpers (fmtMoney, partyColor, partyShort, riskLabel) live in `lib/utils.ts` =
   client-safe. Client components import from utils, never from data.
-- No event handlers (onClick/onMouseEnter) in server components — use CSS hover.
+- No event handlers (onClick/onMouseEnter) in server components â use CSS hover.
 - tsconfig.json needs `"target":"es2017"`, `"downlevelIteration":true`,
   `"exclude":["node_modules","scripts"]`.
 - Workflow: `npm install` not `npm ci`; `workflow_dispatch:` at top level of `on:`.
@@ -160,17 +164,17 @@ and power statistically overlap; it does NOT assert illegal activity.
 ---
 
 ## 10. PAGES
-- `app/page.tsx` — hero + stats + searchable/filterable grid (client: components/PoliticianGrid.tsx)
-- `app/politicians/[slug]/page.tsx` — full profile, generateStaticParams from JSON
-- `app/lobbies/page.tsx` + `app/lobbies/[slug]/page.tsx` — lobby list + detail
-- `app/methodology/page.tsx` — score formula, bands, sources, disclaimer
+- `app/page.tsx` â hero + stats + searchable/filterable grid (client: components/PoliticianGrid.tsx)
+- `app/politicians/[slug]/page.tsx` â full profile, generateStaticParams from JSON
+- `app/lobbies/page.tsx` + `app/lobbies/[slug]/page.tsx` â lobby list + detail
+- `app/methodology/page.tsx` â score formula, bands, sources, disclaimer
 
 ---
 
 ## 11. ENVIRONMENT / WHO CAN DO WHAT
 - **Main chat session (no network):** can write/fix code, generate JSON from knowledge
   (must verify via web search), produce ZIPs. CANNOT call live APIs or run the pipeline.
-- **Claude-in-Chrome extension:** can drive the browser — edit files on GitHub, click
+- **Claude-in-Chrome extension:** can drive the browser â edit files on GitHub, click
   "Run workflow", navigate Cloudflare. Subject to tab-connection quirks.
 - **User (Sylrider):** non-technical, Mac, Chrome, uses GitHub Desktop. Does commits,
   enters API keys/secrets, makes purchases, anything requiring credentials.
@@ -179,17 +183,22 @@ and power statistically overlap; it does NOT assert illegal activity.
 ---
 
 ## 12. NEXT STEPS (priority order)
-1. [ ] Fix & commit the corrected deploy.yml (pipeline-only, workflow_dispatch, npm install)
-2. [ ] Trigger "Run workflow" → debug pipeline scripts until they produce politicians.json
-       for the ~540 FEDERAL officials (Executive/Senate/House)
-3. [ ] Port the earlier hand-built dataset (~310 mayors + govs/senators) into JSON for the
-       Governor + Mayor categories; supplement to reach ~335 mayors of 100k+ cities
-4. [ ] Verify all non-API figures against real public sources (no fabricated numbers)
-5. [ ] Confirm scores compute + all ~950 pages generate; check live site
-6. [ ] (Optional) OpenSecrets researcher application for richer lobby intent
+1. [x] Fix & commit corrected deploy.yml (pipeline-only, workflow_dispatch, npm install)
+2. [x] Trigger Run workflow -> pipeline runs clean for ~540 federal officials
+3. [ ] OPTION A FINISH: run pipeline to COMPLETION (do not cancel) so it commits
+       data/politicians.json. Verify a sample (e.g. Booker S4NJ00185) has real totalReceipts.
+4. [ ] OPTION B (in progress): build committee_id -> /schedules/schedule_a -> lobby-category
+       donor mapping in fec.ts; populate topDonors + lobby contributions; compute real scores.
+5. [ ] Port hand-built Governor + Mayor dataset into JSON (non-federal, no API).
+6. [ ] Verify all non-API figures against real public sources (no fabricated numbers).
+7. [ ] Confirm scores compute + all ~950 pages generate; check live site.
 
 ---
 
 ## 13. CHANGELOG (each session: add a dated line here after doing work)
 - 2026-05-29 (main chat): Created this file. Site live at watchgov.org with seed data.
   Pipeline workflow still unfinished. politicians.json not yet built.
+- 2026-05-30 (chrome ext): Fixed deploy.yml + trades.ts (fc9ac31) + fec.ts matching
+  (961121a) + state codes (7c81b6c) + finance/totals (50b640f). Pipeline now runs clean
+  end-to-end (finFailCount 0). politicians.json NOT yet committed - runs were cancelled.
+  Starting Option B: donor->lobby mapping via committee_id -> schedule_a.
