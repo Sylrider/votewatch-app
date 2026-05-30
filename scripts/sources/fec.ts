@@ -23,11 +23,11 @@ async function get(path: string, apiKey: string, params: Record<string, string |
   Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, String(v)));
 
   const res = await fetch(url.toString());
-  if (!res.ok) throw new Error(`FEC ${path} Ã¢ÂÂ HTTP ${res.status}: ${await res.text()}`);
+  if (!res.ok) throw new Error(`FEC ${path} ÃÂ¢ÃÂÃÂ HTTP ${res.status}: ${await res.text()}`);
   return res.json();
 }
 
-// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ Find FEC candidate ID Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Find FEC candidate ID ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
 
 const STATE_CODES: Record<string, string> = {
   'alabama': 'AL', 'alaska': 'AK', 'arizona': 'AZ', 'arkansas': 'AR', 'california': 'CA',
@@ -85,12 +85,12 @@ export async function findCandidateId(
     });
     results = data.results || [];
   } catch (err) {
-    console.warn(`  Ã¢ÂÂ  FEC candidate search failed for "${name}" (${state}/${office}): ${(err as Error).message} Ã¢ÂÂ no donor data for this official.`);
+    console.warn(`  ÃÂ¢ÃÂÃÂ  FEC candidate search failed for "${name}" (${state}/${office}): ${(err as Error).message} ÃÂ¢ÃÂÃÂ no donor data for this official.`);
     return null;
   }
 
   if (results.length === 0) {
-    console.warn(`  Ã¢ÂÂ  FEC: no candidates returned for "${name}" (${state}/${office}) Ã¢ÂÂ no donor data.`);
+    console.warn(`  ÃÂ¢ÃÂÃÂ  FEC: no candidates returned for "${name}" (${state}/${office}) ÃÂ¢ÃÂÃÂ no donor data.`);
     return null;
   }
 
@@ -107,7 +107,7 @@ export async function findCandidateId(
   if (!match && results.length === 1) match = results[0];
 
   if (!match) {
-    console.warn(`  Ã¢ÂÂ  FEC: no name match for "${name}" (${state}/${office}) among ${results.length} candidates Ã¢ÂÂ no donor data.`);
+    console.warn(`  ÃÂ¢ÃÂÃÂ  FEC: no name match for "${name}" (${state}/${office}) among ${results.length} candidates ÃÂ¢ÃÂÃÂ no donor data.`);
     return null;
   }
 
@@ -130,54 +130,104 @@ export async function fetchCandidateFinance(
     const totalReceipts = row && typeof row.receipts === 'number' ? row.receipts : 0;
     return { totalReceipts, topDonors: [] };
   } catch (err) {
-    console.warn(`  ⚠ FEC finance fetch failed for ${candidateId}: ${(err as Error).message} — receipts unavailable.`);
+    console.warn(`  â  FEC finance fetch failed for ${candidateId}: ${(err as Error).message} â receipts unavailable.`);
     return { totalReceipts: 0, topDonors: [] };
   }
 }
 
 export async function buildLobbyContributions(
   candidateId: string,
-  apiKey: string
+  apiKey: string,
 ): Promise<LobbyContribution[]> {
-  const { topDonors } = await fetchCandidateFinance(candidateId, apiKey);
-
-  const contributions: LobbyContribution[] = [];
-  const lobbyTotals = new Map<string, number>();
-
-  for (const donor of topDonors) {
-    const lobby = classifyLobby(donor.name);
-    if (!lobby) continue;
-
-    const existing = lobbyTotals.get(lobby.id) || 0;
-    lobbyTotals.set(lobby.id, existing + donor.total);
-  }
-
-  for (const [lobbyId, total] of Array.from(lobbyTotals.entries())) {
-    const lobby = getLobbyById(lobbyId);
-    if (!lobby) continue;
-
-    contributions.push({
-      lobbyId,
-      lobbyName: lobby.name,
-      amount: Math.round(total),
-      intent: lobby.defaultIntent,
-      cycle: 'career',
-      source: 'FEC',
+  const CYCLE = 2024;
+  // 1. Resolve the candidate's principal campaign committee.
+  let committeeId: string | null = null;
+  try {
+    const cm = await get(`/candidate/${candidateId}/committees/`, apiKey, {
+      designation: 'P',
+      per_page: 5,
     });
+    const list = (cm && cm.results) || [];
+    if (list.length > 0) committeeId = list[0].committee_id;
+  } catch (e) {
+    console.warn(`[fec] committee lookup failed for ${candidateId}: ${(e as Error).message}`);
+  }
+  if (!committeeId) {
+    console.warn(`[fec] no principal committee for ${candidateId} - no lobby money`);
+    return [];
   }
 
-  return contributions.sort((a, b) => b.amount - a.amount);
-}
+  // 2. Page through committee/organization contributions (skip individuals),
+  //    sorted by amount desc so the meaningful PAC money surfaces first.
+  const totals: Record<string, { name: string; amount: number }> = {};
+  const MAX_PAGES = 8; // up to 800 largest org/PAC contributions
+  let lastIndex: string | null = null;
+  let lastAmount: string | null = null;
+  for (let page = 0; page < MAX_PAGES; page++) {
+    let data: any;
+    try {
+      const params: Record<string, string | number> = {
+        committee_id: committeeId,
+        two_year_transaction_period: CYCLE,
+        is_individual: 'false',
+        per_page: 100,
+        sort: '-contribution_receipt_amount',
+        sort_hide_null: 'true',
+      };
+      if (lastIndex && lastAmount) {
+        params.last_index = lastIndex;
+        params.last_contribution_receipt_amount = lastAmount;
+      }
+      data = await get('/schedules/schedule_a/', apiKey, params);
+    } catch (e) {
+      console.warn(`[fec] schedule_a page ${page} failed for ${candidateId}: ${(e as Error).message}`);
+      break;
+    }
+    const rows = (data && data.results) || [];
+    if (rows.length === 0) break;
+    for (const row of rows) {
+      const donor = row.contributor_name as string | null;
+      const amt = Number(row.contribution_receipt_amount) || 0;
+      if (!donor || amt <= 0) continue;
+      const hit = classifyLobby(donor);
+      if (!hit) continue;
+      if (!totals[hit.id]) totals[hit.id] = { name: hit.name, amount: 0 };
+      totals[hit.id].amount += amt;
+    }
+    const pg = (data.pagination && data.pagination.last_indexes) || null;
+    if (!pg) break;
+    const nextIndex = pg.last_index ?? pg.last_index_value ?? null;
+    const nextAmount =
+      pg.last_contribution_receipt_amount ??
+      pg.last_contribution_receipt_amount_value ??
+      null;
+    if (nextIndex == null || nextAmount == null) break;
+    lastIndex = String(nextIndex);
+    lastAmount = String(nextAmount);
+  }
 
-// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ Internal helpers Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+  // 3. Shape into LobbyContribution[] (rounded whole dollars).
+  const out: LobbyContribution[] = Object.entries(totals)
+    .map(([lobbyId, v]) => ({
+      lobbyId,
+      lobbyName: v.name,
+      amount: Math.round(v.amount),
+      intent: 'support',
+      cycle: String(CYCLE),
+      source: 'FEC schedule_a (itemized committee contributions)',
+    }))
+    .filter((c) => c.amount > 0)
+    .sort((a, b) => b.amount - a.amount);
+  return out;
+}
 
 function getLobbyById(id: string): { name: string; defaultIntent: string } | null {
   const LOBBY_INFO: Record<string, { name: string; defaultIntent: string }> = {
     nra: { name: 'National Rifle Association (NRA)', defaultIntent: 'Block gun safety legislation, promote firearms deregulation' },
-    pharma: { name: 'PhRMA Ã¢ÂÂ Pharmaceutical Manufacturers', defaultIntent: 'Block drug price negotiation, protect pharmaceutical patents' },
+    pharma: { name: 'PhRMA ÃÂ¢ÃÂÃÂ Pharmaceutical Manufacturers', defaultIntent: 'Block drug price negotiation, protect pharmaceutical patents' },
     api: { name: 'American Petroleum Institute (API)', defaultIntent: 'Block climate legislation, support fossil fuel subsidies and deregulation' },
     uscc: { name: 'U.S. Chamber of Commerce', defaultIntent: 'Reduce corporate taxes, oppose labor regulations, support deregulation' },
-    aipac: { name: 'AIPAC Ã¢ÂÂ American Israel Public Affairs Committee', defaultIntent: 'Support unconditional military aid to Israel, oppose arms embargo conditions' },
+    aipac: { name: 'AIPAC ÃÂ¢ÃÂÃÂ American Israel Public Affairs Committee', defaultIntent: 'Support unconditional military aid to Israel, oppose arms embargo conditions' },
     finance: { name: 'Wall Street / Financial Industry', defaultIntent: 'Oppose financial regulation, support bank deregulation' },
     defense: { name: 'Defense Industry (MICC)', defaultIntent: 'Support defense budget increases, weapons procurement contracts' },
     tech: { name: 'Big Tech Industry', defaultIntent: 'Oppose antitrust enforcement, limit platform liability regulations' },
