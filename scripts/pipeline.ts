@@ -29,7 +29,7 @@ import { fetchSenateTrades, fetchHouseTrades, getTradesForPolitician } from './s
 import { searchLawsuits } from './sources/lawsuits';
 import { calculateScore, annotateVoteAlignment } from './score';
 import type { Politician, PipelineRun, Chamber } from '../lib/types';
-import { readFile } from 'fs/promises';
+import { readFile, writeFile } from 'fs/promises';
 import { execSync } from 'child_process';
 
 // âââ Config âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
