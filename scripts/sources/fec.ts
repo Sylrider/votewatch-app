@@ -23,11 +23,34 @@ async function get(path: string, apiKey: string, params: Record<string, string |
   Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, String(v)));
 
   const res = await fetch(url.toString());
-  if (!res.ok) throw new Error(`FEC ${path} → HTTP ${res.status}: ${await res.text()}`);
+  if (!res.ok) throw new Error(`FEC ${path} â HTTP ${res.status}: ${await res.text()}`);
   return res.json();
 }
 
-// ─── Find FEC candidate ID ────────────────────────────────────────────────────
+// âââ Find FEC candidate ID ââââââââââââââââââââââââââââââââââââââââââââââââââââ
+
+const STATE_CODES: Record<string, string> = {
+  'alabama': 'AL', 'alaska': 'AK', 'arizona': 'AZ', 'arkansas': 'AR', 'california': 'CA',
+  'colorado': 'CO', 'connecticut': 'CT', 'delaware': 'DE', 'florida': 'FL', 'georgia': 'GA',
+  'hawaii': 'HI', 'idaho': 'ID', 'illinois': 'IL', 'indiana': 'IN', 'iowa': 'IA',
+  'kansas': 'KS', 'kentucky': 'KY', 'louisiana': 'LA', 'maine': 'ME', 'maryland': 'MD',
+  'massachusetts': 'MA', 'michigan': 'MI', 'minnesota': 'MN', 'mississippi': 'MS', 'missouri': 'MO',
+  'montana': 'MT', 'nebraska': 'NE', 'nevada': 'NV', 'new hampshire': 'NH', 'new jersey': 'NJ',
+  'new mexico': 'NM', 'new york': 'NY', 'north carolina': 'NC', 'north dakota': 'ND', 'ohio': 'OH',
+  'oklahoma': 'OK', 'oregon': 'OR', 'pennsylvania': 'PA', 'rhode island': 'RI', 'south carolina': 'SC',
+  'south dakota': 'SD', 'tennessee': 'TN', 'texas': 'TX', 'utah': 'UT', 'vermont': 'VT',
+  'virginia': 'VA', 'washington': 'WA', 'west virginia': 'WV', 'wisconsin': 'WI', 'wyoming': 'WY',
+  'district of columbia': 'DC', 'puerto rico': 'PR', 'guam': 'GU', 'american samoa': 'AS',
+  'virgin islands': 'VI', 'northern mariana islands': 'MP',
+};
+
+// FEC stores state as a 2-letter postal code. Congress.gov often returns the full name.
+function toStateCode(state: string): string {
+  if (!state) return '';
+  const s = state.trim();
+  if (s.length === 2) return s.toUpperCase();
+  return STATE_CODES[s.toLowerCase()] || s.toUpperCase();
+}
 
 export async function findCandidateId(
   name: string,
@@ -48,12 +71,13 @@ export async function findCandidateId(
   const lastName = norm(parts[0] || '');
   const firstName = norm(parts[1] || '');
   const firstToken = firstName.split(' ')[0] || '';
+  const stateCode = toStateCode(state);
 
   let results: FECCandidate[] = [];
   try {
     const data = await get('/candidates/search/', apiKey, {
       q: parts[0]?.trim() || name,
-      state,
+      state: stateCode,
       office,
       is_active_candidate: 'true',
       sort: '-first_file_date',
@@ -61,12 +85,12 @@ export async function findCandidateId(
     });
     results = data.results || [];
   } catch (err) {
-    console.warn(`  ⚠ FEC candidate search failed for "${name}" (${state}/${office}): ${(err as Error).message} — no donor data for this official.`);
+    console.warn(`  â  FEC candidate search failed for "${name}" (${state}/${office}): ${(err as Error).message} â no donor data for this official.`);
     return null;
   }
 
   if (results.length === 0) {
-    console.warn(`  ⚠ FEC: no candidates returned for "${name}" (${state}/${office}) — no donor data.`);
+    console.warn(`  â  FEC: no candidates returned for "${name}" (${state}/${office}) â no donor data.`);
     return null;
   }
 
@@ -83,7 +107,7 @@ export async function findCandidateId(
   if (!match && results.length === 1) match = results[0];
 
   if (!match) {
-    console.warn(`  ⚠ FEC: no name match for "${name}" (${state}/${office}) among ${results.length} candidates — no donor data.`);
+    console.warn(`  â  FEC: no name match for "${name}" (${state}/${office}) among ${results.length} candidates â no donor data.`);
     return null;
   }
 
@@ -135,7 +159,7 @@ export async function fetchCandidateFinance(
   }
 }
 
-// ─── Build LobbyContributions from FEC donor data ────────────────────────────
+// âââ Build LobbyContributions from FEC donor data ââââââââââââââââââââââââââââ
 
 export async function buildLobbyContributions(
   candidateId: string,
@@ -171,15 +195,15 @@ export async function buildLobbyContributions(
   return contributions.sort((a, b) => b.amount - a.amount);
 }
 
-// ─── Internal helpers ─────────────────────────────────────────────────────────
+// âââ Internal helpers âââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 function getLobbyById(id: string): { name: string; defaultIntent: string } | null {
   const LOBBY_INFO: Record<string, { name: string; defaultIntent: string }> = {
     nra: { name: 'National Rifle Association (NRA)', defaultIntent: 'Block gun safety legislation, promote firearms deregulation' },
-    pharma: { name: 'PhRMA – Pharmaceutical Manufacturers', defaultIntent: 'Block drug price negotiation, protect pharmaceutical patents' },
+    pharma: { name: 'PhRMA â Pharmaceutical Manufacturers', defaultIntent: 'Block drug price negotiation, protect pharmaceutical patents' },
     api: { name: 'American Petroleum Institute (API)', defaultIntent: 'Block climate legislation, support fossil fuel subsidies and deregulation' },
     uscc: { name: 'U.S. Chamber of Commerce', defaultIntent: 'Reduce corporate taxes, oppose labor regulations, support deregulation' },
-    aipac: { name: 'AIPAC – American Israel Public Affairs Committee', defaultIntent: 'Support unconditional military aid to Israel, oppose arms embargo conditions' },
+    aipac: { name: 'AIPAC â American Israel Public Affairs Committee', defaultIntent: 'Support unconditional military aid to Israel, oppose arms embargo conditions' },
     finance: { name: 'Wall Street / Financial Industry', defaultIntent: 'Oppose financial regulation, support bank deregulation' },
     defense: { name: 'Defense Industry (MICC)', defaultIntent: 'Support defense budget increases, weapons procurement contracts' },
     tech: { name: 'Big Tech Industry', defaultIntent: 'Oppose antitrust enforcement, limit platform liability regulations' },
