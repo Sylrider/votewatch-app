@@ -96,7 +96,6 @@ export async function findCandidateId(
       q: parts[0]?.trim() || name,
       state: stateCode,
       office,
-      is_active_candidate: 'true',
       sort: '-first_file_date',
       per_page: 20,
     });
