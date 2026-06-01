@@ -77,8 +77,8 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
-    "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -89,7 +89,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:41:48.083Z"
+      "lastUpdated": "2026-06-01T23:31:26.937Z"
     }
   },
   {
@@ -141,7 +141,7 @@
     "lawsuits": [],
     "votes": [],
     "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -152,7 +152,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:42:35.022Z"
+      "lastUpdated": "2026-06-01T23:31:51.378Z"
     }
   },
   {
@@ -228,7 +228,7 @@
     "lawsuits": [],
     "votes": [],
     "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 3,
       "lobbyScore": 3,
@@ -239,7 +239,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:43:27.543Z"
+      "lastUpdated": "2026-06-01T23:32:34.665Z"
     }
   },
   {
@@ -255,8 +255,8 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
-    "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -267,7 +267,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:43:29.157Z"
+      "lastUpdated": "2026-06-01T23:32:36.896Z"
     }
   },
   {
@@ -285,8 +285,8 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
-    "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -297,7 +297,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:43:30.929Z"
+      "lastUpdated": "2026-06-01T23:32:38.883Z"
     }
   },
   {
@@ -315,8 +315,8 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
-    "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -327,7 +327,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:43:32.743Z"
+      "lastUpdated": "2026-06-01T23:32:40.906Z"
     }
   },
   {
@@ -862,7 +862,7 @@
     "lawsuits": [],
     "votes": [],
     "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -873,7 +873,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:49:15.417Z"
+      "lastUpdated": "2026-06-01T23:32:46.423Z"
     }
   },
   {
@@ -949,7 +949,7 @@
     "lawsuits": [],
     "votes": [],
     "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 1,
       "lobbyScore": 1,
@@ -960,7 +960,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:49:23.019Z"
+      "lastUpdated": "2026-06-01T23:32:53.796Z"
     }
   },
   {
@@ -1076,7 +1076,7 @@
     "lawsuits": [],
     "votes": [],
     "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 9,
       "lobbyScore": 9,
@@ -1087,7 +1087,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:49:30.990Z"
+      "lastUpdated": "2026-06-01T23:33:01.556Z"
     }
   },
   {
@@ -1139,7 +1139,7 @@
     "lawsuits": [],
     "votes": [],
     "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 3,
       "lobbyScore": 3,
@@ -1150,7 +1150,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:49:59.236Z"
+      "lastUpdated": "2026-06-01T23:33:31.337Z"
     }
   },
   {
@@ -1194,7 +1194,7 @@
     "lawsuits": [],
     "votes": [],
     "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -1205,7 +1205,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:50:12.886Z"
+      "lastUpdated": "2026-06-01T23:33:37.219Z"
     }
   },
   {
@@ -1233,7 +1233,7 @@
     "lawsuits": [],
     "votes": [],
     "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -1244,7 +1244,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:51:54.810Z"
+      "lastUpdated": "2026-06-01T23:34:36.956Z"
     }
   },
   {
@@ -1288,7 +1288,7 @@
     "lawsuits": [],
     "votes": [],
     "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -1299,7 +1299,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:53:02.589Z"
+      "lastUpdated": "2026-06-01T23:35:17.766Z"
     }
   },
   {
@@ -1317,8 +1317,8 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
-    "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -1329,7 +1329,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:53:04.405Z"
+      "lastUpdated": "2026-06-01T23:35:20.261Z"
     }
   },
   {
@@ -1381,7 +1381,7 @@
     "lawsuits": [],
     "votes": [],
     "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -1392,7 +1392,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:53:11.023Z"
+      "lastUpdated": "2026-06-01T23:36:08.792Z"
     }
   },
   {
@@ -1404,24 +1404,66 @@
     "title": "Senator",
     "since": 2021,
     "bioguideId": "T000278",
+    "fecCandidateId": "S0AL00230",
     "imageUrl": "https://www.congress.gov/img/member/t000278_200.jpg",
-    "lobbyMoney": [],
+    "lobbyMoney": [
+      {
+        "lobbyId": "pharma",
+        "lobbyName": "PhRMA – Pharmaceutical Manufacturers",
+        "amount": 5000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 3000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "agribusiness",
+        "lobbyName": "Agribusiness (Farm Bureau)",
+        "amount": 2500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
+        "amount": 2000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 250,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
     "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 0,
+      "totalMoney": 12750,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:53:12.600Z"
+      "lastUpdated": "2026-06-01T23:36:15.254Z"
     }
   },
   {
@@ -1433,24 +1475,98 @@
     "title": "Senator",
     "since": 2015,
     "bioguideId": "T000476",
+    "fecCandidateId": "S4NC00162",
     "imageUrl": "https://www.congress.gov/img/member/t000476_200.jpg",
-    "lobbyMoney": [],
+    "lobbyMoney": [
+      {
+        "lobbyId": "pharma",
+        "lobbyName": "PhRMA – Pharmaceutical Manufacturers",
+        "amount": 38500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 21000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 11000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "tech",
+        "lobbyName": "Big Tech Industry",
+        "amount": 7500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "agribusiness",
+        "lobbyName": "Agribusiness (Farm Bureau)",
+        "amount": 7000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 6000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 5000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
     "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 1,
+      "lobbyScore": 1,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 0,
+      "totalMoney": 98000,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:53:14.107Z"
+      "lastUpdated": "2026-06-01T23:36:22.861Z"
     }
   },
   {
@@ -1518,7 +1634,7 @@
     "lawsuits": [],
     "votes": [],
     "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 1,
       "lobbyScore": 1,
@@ -1529,7 +1645,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:53:20.520Z"
+      "lastUpdated": "2026-06-01T23:36:29.492Z"
     }
   },
   {
@@ -1605,7 +1721,7 @@
     "lawsuits": [],
     "votes": [],
     "profileComplete": true,
-    "dataVersion": "2026-06-01T13:41:38.611Z",
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 1,
       "lobbyScore": 1,
@@ -1616,7 +1732,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:58:22.081Z"
+      "lastUpdated": "2026-06-01T23:36:36.142Z"
     }
   },
   {
