@@ -150,6 +150,25 @@ async function main() {
 
   for (let i = 0; i < members.length; i++) {
     const member = members[i];
+
+    // [resume] Skip officials already in the dataset WITH real data; only re-process
+    // empties/broken records, then continue forward into new officials. The per-25
+    // commit of politicians.json is the durable checkpoint, so a timeout/crash resumes.
+    {
+      const __mid = generateId(member.name, member.state, member.chamber);
+      const __ex = existingById.get(__mid);
+      const __hasData = !!__ex && (
+        (Array.isArray(__ex.lobbyMoney) && __ex.lobbyMoney.length > 0) ||
+        (Array.isArray(__ex.stockTrades) && __ex.stockTrades.length > 0) ||
+        (Array.isArray(__ex.lawsuits) && __ex.lawsuits.length > 0) ||
+        (!!__ex.score && (__ex.score.totalMoney || 0) > 0)
+      );
+      if (__hasData && process.env.FORCE_REPROCESS !== "1") {
+        politicians.push(__ex);
+        console.log(`  [${i + 1}/${members.length}] ${member.name} — already complete, skipped`);
+        continue;
+      }
+    }
     const progress = `[${i + 1}/${members.length}]`;
 
     try {
@@ -206,7 +225,7 @@ async function main() {
         stockTrades,
         lawsuits,
         votes,
-        profileComplete: true,
+        profileComplete: Boolean((Array.isArray(lobbyMoney)&&lobbyMoney.length>0)||(Array.isArray(stockTrades)&&stockTrades.length>0)||(Array.isArray(lawsuits)&&lawsuits.length>0)),
         dataVersion: run.startedAt,
         score: {
           total: 0, lobbyScore: 0, alignScore: 0, stockScore: 0, legalScore: 0,
