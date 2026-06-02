@@ -2255,34 +2255,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 3056970,
-      "largeDonorMoney": 1395810,
-      "smallDonorMoney": 1110322,
-      "pacMoney": 492249,
+      "periodYear": "2024",
+      "totalRaised": 1464674,
+      "largeDonorMoney": 769481,
+      "smallDonorMoney": 371196,
+      "pacMoney": 303750,
       "partyMoney": 0,
-      "transferMoney": 592,
-      "bigMoneyShare": 0.618,
-      "smallDonorShare": 0.363,
+      "transferMoney": 0,
+      "otherMoney": 20248,
+      "bigMoneyShare": 0.733,
+      "smallDonorShare": 0.253,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Tina Smith raised $3.1M in reported campaign funds (through 2026). About 62% came from large donors, PACs and committee transfers ($1.4M itemized, $492K PAC), while 36% ($1.1M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $35K.",
+    "viewSummary": "Tina Smith raised $1.5M in reported campaign funds (through 2024). About 73% came from large donors, PACs and committee transfers ($769K itemized, $304K PAC), while 25% ($371K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $35K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 15,
-      "lobbyScore": 15,
+      "total": 9,
+      "lobbyScore": 9,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 3056970,
+      "totalMoney": 1464674,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:45:52.452Z"
+      "lastUpdated": "2026-06-02T23:11:43.715Z"
     }
   },
   {
@@ -2327,34 +2328,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 4378579,
-      "largeDonorMoney": 1535239,
-      "smallDonorMoney": 2611624,
-      "pacMoney": 13000,
-      "partyMoney": 0,
-      "transferMoney": 2847,
-      "bigMoneyShare": 0.354,
-      "smallDonorShare": 0.596,
+      "periodYear": "2024",
+      "totalRaised": 51937060,
+      "largeDonorMoney": 29741707,
+      "smallDonorMoney": 16845959,
+      "pacMoney": 1198587,
+      "partyMoney": 58507,
+      "transferMoney": 3828527,
+      "otherMoney": 263772,
+      "bigMoneyShare": 0.671,
+      "smallDonorShare": 0.324,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Elissa Slotkin raised $4.4M in reported campaign funds (through 2026). About 35% came from large donors, PACs and committee transfers ($1.5M itemized, $13K PAC), while 60% ($2.6M) came from small grassroots donors. This funding mix is grassroots-leaning, a lower influence-risk signal. Tracked industry/PAC contributions identified so far total $45K.",
+    "viewSummary": "Elissa Slotkin raised $51.9M in reported campaign funds (through 2024). About 67% came from large donors, PACs and committee transfers ($29.7M itemized, $1.2M PAC), while 32% ($16.8M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $45K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 10,
-      "lobbyScore": 10,
+      "total": 21,
+      "lobbyScore": 21,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 4378579,
+      "totalMoney": 51937060,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:49:58.854Z"
+      "lastUpdated": "2026-06-02T23:20:22.066Z"
     }
   },
   {
@@ -2374,34 +2376,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 1418620,
-      "largeDonorMoney": 745505,
-      "smallDonorMoney": 264064,
-      "pacMoney": 395375,
-      "partyMoney": 7600,
-      "transferMoney": 80638,
-      "bigMoneyShare": 0.866,
-      "smallDonorShare": 0.186,
+      "periodYear": "2024",
+      "totalRaised": 30015786,
+      "largeDonorMoney": 13869698,
+      "smallDonorMoney": 7906401,
+      "pacMoney": 1317450,
+      "partyMoney": 63109,
+      "transferMoney": 3277560,
+      "otherMoney": 3581569,
+      "bigMoneyShare": 0.617,
+      "smallDonorShare": 0.263,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Tim Sheehy raised $1.4M in reported campaign funds (through 2026). About 87% came from large donors, PACs and committee transfers ($746K itemized, $395K PAC), while 19% ($264K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal.",
+    "viewSummary": "Tim Sheehy raised $30.0M in reported campaign funds (through 2024). About 62% came from large donors, PACs and committee transfers ($13.9M itemized, $1.3M PAC), while 26% ($7.9M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal.",
     "profileComplete": false,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 11,
-      "lobbyScore": 11,
+      "total": 20,
+      "lobbyScore": 20,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 1418620,
+      "totalMoney": 30015786,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:50:55.599Z"
+      "lastUpdated": "2026-06-02T23:21:53.110Z"
     }
   },
   {
@@ -2478,34 +2481,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 2666350,
-      "largeDonorMoney": 1409852,
-      "smallDonorMoney": 490063,
-      "pacMoney": 584652,
-      "partyMoney": 250,
+      "periodYear": "2024",
+      "totalRaised": 1190934,
+      "largeDonorMoney": 751021,
+      "smallDonorMoney": 108402,
+      "pacMoney": 303375,
+      "partyMoney": 0,
       "transferMoney": 0,
-      "bigMoneyShare": 0.748,
-      "smallDonorShare": 0.184,
+      "otherMoney": 28136,
+      "bigMoneyShare": 0.885,
+      "smallDonorShare": 0.091,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Jeanne Shaheen raised $2.7M in reported campaign funds (through 2026). About 75% came from large donors, PACs and committee transfers ($1.4M itemized, $585K PAC), while 18% ($490K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $55K.",
+    "viewSummary": "Jeanne Shaheen raised $1.2M in reported campaign funds (through 2024). About 89% came from large donors, PACs and committee transfers ($751K itemized, $303K PAC), while 9% ($108K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $55K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 17,
-      "lobbyScore": 17,
+      "total": 10,
+      "lobbyScore": 10,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 2666350,
+      "totalMoney": 1190934,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:51:16.634Z"
+      "lastUpdated": "2026-06-02T23:22:41.951Z"
     }
   },
   {
@@ -2606,34 +2610,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 1458780,
-      "largeDonorMoney": 207651,
-      "smallDonorMoney": 170714,
-      "pacMoney": 68250,
-      "partyMoney": 0,
-      "transferMoney": 429958,
-      "bigMoneyShare": 0.484,
-      "smallDonorShare": 0.117,
+      "periodYear": "2024",
+      "totalRaised": 36696093,
+      "largeDonorMoney": 3327273,
+      "smallDonorMoney": 2229367,
+      "pacMoney": 991223,
+      "partyMoney": 52800,
+      "transferMoney": 8562714,
+      "otherMoney": 21532716,
+      "bigMoneyShare": 0.352,
+      "smallDonorShare": 0.061,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Rick Scott raised $1.5M in reported campaign funds (through 2026). About 48% came from large donors, PACs and committee transfers ($208K itemized, $68K PAC), while 12% ($171K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $502K.",
+    "viewSummary": "Rick Scott raised $36.7M in reported campaign funds (through 2024). About 35% came from large donors, PACs and committee transfers ($3.3M itemized, $991K PAC), while 6% ($2.2M) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $502K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 2,
-      "lobbyScore": 2,
+      "total": 17,
+      "lobbyScore": 17,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 1458780,
+      "totalMoney": 36696093,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:51:51.056Z"
+      "lastUpdated": "2026-06-02T23:23:16.875Z"
     }
   },
   {
@@ -2702,34 +2707,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 23263532,
-      "largeDonorMoney": 11943077,
-      "smallDonorMoney": 7914405,
-      "pacMoney": 883700,
+      "periodYear": "2024",
+      "totalRaised": 18856383,
+      "largeDonorMoney": 9650686,
+      "smallDonorMoney": 6525384,
+      "pacMoney": 730400,
       "partyMoney": 0,
-      "transferMoney": 1345829,
-      "bigMoneyShare": 0.609,
-      "smallDonorShare": 0.34,
+      "transferMoney": 951728,
+      "otherMoney": 998185,
+      "bigMoneyShare": 0.601,
+      "smallDonorShare": 0.346,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Tim Scott raised $23.3M in reported campaign funds (through 2026). About 61% came from large donors, PACs and committee transfers ($11.9M itemized, $884K PAC), while 34% ($7.9M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $120K.",
+    "viewSummary": "Tim Scott raised $18.9M in reported campaign funds (through 2024). About 60% came from large donors, PACs and committee transfers ($9.7M itemized, $730K PAC), while 35% ($6.5M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $120K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
       "total": 20,
       "lobbyScore": 20,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 23263532,
+      "totalMoney": 18856383,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:52:39.711Z"
+      "lastUpdated": "2026-06-02T23:24:31.365Z"
     }
   },
   {
@@ -2758,34 +2764,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 3591476,
-      "largeDonorMoney": 1256952,
-      "smallDonorMoney": 1615736,
-      "pacMoney": 285175,
+      "periodYear": "2024",
+      "totalRaised": 2790889,
+      "largeDonorMoney": 945643,
+      "smallDonorMoney": 1399703,
+      "pacMoney": 202800,
       "partyMoney": 0,
       "transferMoney": 24646,
-      "bigMoneyShare": 0.436,
-      "smallDonorShare": 0.45,
+      "otherMoney": 218097,
+      "bigMoneyShare": 0.42,
+      "smallDonorShare": 0.502,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Charles Schumer raised $3.6M in reported campaign funds (through 2026). About 44% came from large donors, PACs and committee transfers ($1.3M itemized, $285K PAC), while 45% ($1.6M) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $3K.",
+    "viewSummary": "Charles Schumer raised $2.8M in reported campaign funds (through 2024). About 42% came from large donors, PACs and committee transfers ($946K itemized, $203K PAC), while 50% ($1.4M) came from small grassroots donors. This funding mix is grassroots-leaning, a lower influence-risk signal. Tracked industry/PAC contributions identified so far total $3K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 11,
-      "lobbyScore": 11,
+      "total": 8,
+      "lobbyScore": 8,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 3591476,
+      "totalMoney": 2790889,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:53:02.866Z"
+      "lastUpdated": "2026-06-02T23:24:50.739Z"
     }
   },
   {
@@ -2886,34 +2893,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 4687829,
-      "largeDonorMoney": 2007173,
-      "smallDonorMoney": 1116348,
-      "pacMoney": 623316,
+      "periodYear": "2024",
+      "totalRaised": 1957980,
+      "largeDonorMoney": 807652,
+      "smallDonorMoney": 438694,
+      "pacMoney": 442316,
       "partyMoney": 0,
-      "transferMoney": 920275,
-      "bigMoneyShare": 0.757,
-      "smallDonorShare": 0.238,
+      "transferMoney": 248599,
+      "otherMoney": 20718,
+      "bigMoneyShare": 0.765,
+      "smallDonorShare": 0.224,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Eric Schmitt raised $4.7M in reported campaign funds (through 2026). About 76% came from large donors, PACs and committee transfers ($2.0M itemized, $623K PAC), while 24% ($1.1M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $61K.",
+    "viewSummary": "Eric Schmitt raised $2.0M in reported campaign funds (through 2024). About 77% came from large donors, PACs and committee transfers ($808K itemized, $442K PAC), while 22% ($439K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $61K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 22,
-      "lobbyScore": 22,
+      "total": 11,
+      "lobbyScore": 11,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 4687829,
+      "totalMoney": 1957980,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:53:08.287Z"
+      "lastUpdated": "2026-06-02T23:25:16.659Z"
     }
   },
   {
@@ -2966,34 +2974,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 1710751,
-      "largeDonorMoney": 1068455,
-      "smallDonorMoney": 86422,
-      "pacMoney": 388147,
+      "periodYear": "2024",
+      "totalRaised": 525033,
+      "largeDonorMoney": 285123,
+      "smallDonorMoney": 33892,
+      "pacMoney": 127100,
       "partyMoney": 0,
       "transferMoney": 0,
-      "bigMoneyShare": 0.851,
-      "smallDonorShare": 0.051,
+      "otherMoney": 78918,
+      "bigMoneyShare": 0.785,
+      "smallDonorShare": 0.065,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Brian Schatz raised $1.7M in reported campaign funds (through 2026). About 85% came from large donors, PACs and committee transfers ($1.1M itemized, $388K PAC), while 5% ($86K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $18K.",
+    "viewSummary": "Brian Schatz raised $525K in reported campaign funds (through 2024). About 79% came from large donors, PACs and committee transfers ($285K itemized, $127K PAC), while 7% ($34K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $18K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 13,
-      "lobbyScore": 13,
+      "total": 4,
+      "lobbyScore": 4,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 1710751,
+      "totalMoney": 525033,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:53:15.579Z"
+      "lastUpdated": "2026-06-02T23:25:23.592Z"
     }
   },
   {
@@ -3046,34 +3055,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 23468954,
-      "largeDonorMoney": 5725984,
-      "smallDonorMoney": 16744406,
-      "pacMoney": 27,
+      "periodYear": "2024",
+      "totalRaised": 8207886,
+      "largeDonorMoney": 3401435,
+      "smallDonorMoney": 3839816,
+      "pacMoney": 89133,
       "partyMoney": 0,
       "transferMoney": 0,
-      "bigMoneyShare": 0.244,
-      "smallDonorShare": 0.713,
+      "otherMoney": 877503,
+      "bigMoneyShare": 0.425,
+      "smallDonorShare": 0.468,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Bernard Sanders raised $23.5M in reported campaign funds (through 2026). About 24% came from large donors, PACs and committee transfers ($5.7M itemized, $27 PAC), while 71% ($16.7M) came from small grassroots donors. This funding mix is grassroots-leaning, a lower influence-risk signal. Tracked industry/PAC contributions identified so far total $12K.",
+    "viewSummary": "Bernard Sanders raised $8.2M in reported campaign funds (through 2024). About 43% came from large donors, PACs and committee transfers ($3.4M itemized, $89K PAC), while 47% ($3.8M) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $12K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 15,
-      "lobbyScore": 15,
+      "total": 18,
+      "lobbyScore": 18,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 23468954,
+      "totalMoney": 8207886,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:54:17.232Z"
+      "lastUpdated": "2026-06-02T23:28:53.916Z"
     }
   },
   {
@@ -3158,34 +3168,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 3983663,
-      "largeDonorMoney": 1499832,
-      "smallDonorMoney": 75880,
-      "pacMoney": 1872950,
-      "partyMoney": 62000,
-      "transferMoney": 235377,
-      "bigMoneyShare": 0.921,
-      "smallDonorShare": 0.019,
+      "periodYear": "2024",
+      "totalRaised": 1084384,
+      "largeDonorMoney": 319746,
+      "smallDonorMoney": 22461,
+      "pacMoney": 535150,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 207027,
+      "bigMoneyShare": 0.788,
+      "smallDonorShare": 0.021,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Mike Rounds raised $4.0M in reported campaign funds (through 2026). About 92% came from large donors, PACs and committee transfers ($1.5M itemized, $1.9M PAC), while 2% ($76K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $59K.",
+    "viewSummary": "Mike Rounds raised $1.1M in reported campaign funds (through 2024). About 79% came from large donors, PACs and committee transfers ($320K itemized, $535K PAC), while 2% ($22K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $59K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 24,
-      "lobbyScore": 24,
+      "total": 8,
+      "lobbyScore": 8,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 3983663,
+      "totalMoney": 1084384,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:54:22.874Z"
+      "lastUpdated": "2026-06-02T23:29:03.870Z"
     }
   },
   {
@@ -3294,34 +3305,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 1201412,
-      "largeDonorMoney": 434285,
-      "smallDonorMoney": 429221,
-      "pacMoney": 123000,
-      "partyMoney": 0,
-      "transferMoney": 5068,
-      "bigMoneyShare": 0.468,
-      "smallDonorShare": 0.357,
+      "periodYear": "2024",
+      "totalRaised": 43915245,
+      "largeDonorMoney": 21275258,
+      "smallDonorMoney": 12494366,
+      "pacMoney": 2574528,
+      "partyMoney": 57800,
+      "transferMoney": 6088217,
+      "otherMoney": 1425076,
+      "bigMoneyShare": 0.683,
+      "smallDonorShare": 0.285,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Jacky Rosen raised $1.2M in reported campaign funds (through 2026). About 47% came from large donors, PACs and committee transfers ($434K itemized, $123K PAC), while 36% ($429K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $290K.",
+    "viewSummary": "Jacky Rosen raised $43.9M in reported campaign funds (through 2024). About 68% came from large donors, PACs and committee transfers ($21.3M itemized, $2.6M PAC), while 28% ($12.5M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $290K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 4,
-      "lobbyScore": 4,
+      "total": 21,
+      "lobbyScore": 21,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 1201412,
+      "totalMoney": 43915245,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:56:15.789Z"
+      "lastUpdated": "2026-06-02T23:30:03.547Z"
     }
   },
   {
@@ -3382,34 +3394,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 3937857,
-      "largeDonorMoney": 2145836,
-      "smallDonorMoney": 199256,
-      "pacMoney": 1113629,
-      "partyMoney": 62000,
-      "transferMoney": 110288,
-      "bigMoneyShare": 0.871,
-      "smallDonorShare": 0.051,
+      "periodYear": "2024",
+      "totalRaised": 632240,
+      "largeDonorMoney": 268344,
+      "smallDonorMoney": 41933,
+      "pacMoney": 220000,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 101963,
+      "bigMoneyShare": 0.772,
+      "smallDonorShare": 0.066,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "James Risch raised $3.9M in reported campaign funds (through 2026). About 87% came from large donors, PACs and committee transfers ($2.1M itemized, $1.1M PAC), while 5% ($199K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $9K.",
+    "viewSummary": "James Risch raised $632K in reported campaign funds (through 2024). About 77% came from large donors, PACs and committee transfers ($268K itemized, $220K PAC), while 7% ($42K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $9K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 23,
-      "lobbyScore": 23,
+      "total": 4,
+      "lobbyScore": 4,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 3937857,
+      "totalMoney": 632240,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:56:19.468Z"
+      "lastUpdated": "2026-06-02T23:30:06.581Z"
     }
   },
   {
@@ -3429,34 +3442,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 4866649,
-      "largeDonorMoney": 1589227,
-      "smallDonorMoney": 164226,
-      "pacMoney": 1315603,
-      "partyMoney": 62000,
-      "transferMoney": 1610304,
-      "bigMoneyShare": 0.941,
-      "smallDonorShare": 0.034,
+      "periodYear": "2024",
+      "totalRaised": 5876228,
+      "largeDonorMoney": 1555200,
+      "smallDonorMoney": 143680,
+      "pacMoney": 1384794,
+      "partyMoney": 0,
+      "transferMoney": 2617233,
+      "otherMoney": 175320,
+      "bigMoneyShare": 0.946,
+      "smallDonorShare": 0.024,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Pete Ricketts raised $4.9M in reported campaign funds (through 2026). About 94% came from large donors, PACs and committee transfers ($1.6M itemized, $1.3M PAC), while 3% ($164K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal.",
+    "viewSummary": "Pete Ricketts raised $5.9M in reported campaign funds (through 2024). About 95% came from large donors, PACs and committee transfers ($1.6M itemized, $1.4M PAC), while 2% ($144K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal.",
     "profileComplete": false,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
       "total": 24,
       "lobbyScore": 24,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 4866649,
+      "totalMoney": 5876228,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:56:21.983Z"
+      "lastUpdated": "2026-06-02T23:30:10.538Z"
     }
   },
   {
@@ -3533,34 +3547,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 3689883,
-      "largeDonorMoney": 2257033,
-      "smallDonorMoney": 41737,
-      "pacMoney": 1230335,
+      "periodYear": "2024",
+      "totalRaised": 566042,
+      "largeDonorMoney": 321615,
+      "smallDonorMoney": 7654,
+      "pacMoney": 163900,
       "partyMoney": 0,
-      "transferMoney": 27738,
-      "bigMoneyShare": 0.953,
-      "smallDonorShare": 0.011,
+      "transferMoney": 0,
+      "otherMoney": 72873,
+      "bigMoneyShare": 0.858,
+      "smallDonorShare": 0.014,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Jack Reed raised $3.7M in reported campaign funds (through 2026). About 95% came from large donors, PACs and committee transfers ($2.3M itemized, $1.2M PAC), while 1% ($42K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $13K.",
+    "viewSummary": "Jack Reed raised $566K in reported campaign funds (through 2024). About 86% came from large donors, PACs and committee transfers ($322K itemized, $164K PAC), while 1% ($8K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $13K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 24,
-      "lobbyScore": 24,
+      "total": 4,
+      "lobbyScore": 4,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 3689883,
+      "totalMoney": 566042,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:57:50.431Z"
+      "lastUpdated": "2026-06-02T23:35:12.644Z"
     }
   },
   {
@@ -3645,34 +3660,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 7792496,
-      "largeDonorMoney": 3269101,
-      "smallDonorMoney": 2262047,
-      "pacMoney": 1447829,
+      "periodYear": "2024",
+      "totalRaised": 3241786,
+      "largeDonorMoney": 1527492,
+      "smallDonorMoney": 711843,
+      "pacMoney": 880509,
       "partyMoney": 0,
-      "transferMoney": 523777,
-      "bigMoneyShare": 0.673,
-      "smallDonorShare": 0.29,
+      "transferMoney": 105800,
+      "otherMoney": 16142,
+      "bigMoneyShare": 0.775,
+      "smallDonorShare": 0.22,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Gary Peters raised $7.8M in reported campaign funds (through 2026). About 67% came from large donors, PACs and committee transfers ($3.3M itemized, $1.4M PAC), while 29% ($2.3M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $96K.",
+    "viewSummary": "Gary Peters raised $3.2M in reported campaign funds (through 2024). About 78% came from large donors, PACs and committee transfers ($1.5M itemized, $881K PAC), while 22% ($712K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $96K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
       "total": 21,
       "lobbyScore": 21,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 7792496,
+      "totalMoney": 3241786,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:58:19.933Z"
+      "lastUpdated": "2026-06-02T23:35:46.489Z"
     }
   },
   {
@@ -3725,34 +3741,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 11803636,
-      "largeDonorMoney": 5305284,
-      "smallDonorMoney": 5229334,
-      "pacMoney": 183446,
+      "periodYear": "2024",
+      "totalRaised": 8490873,
+      "largeDonorMoney": 3365118,
+      "smallDonorMoney": 4357686,
+      "pacMoney": 97900,
       "partyMoney": 0,
-      "transferMoney": 362423,
-      "bigMoneyShare": 0.496,
-      "smallDonorShare": 0.443,
+      "transferMoney": 177723,
+      "otherMoney": 492446,
+      "bigMoneyShare": 0.429,
+      "smallDonorShare": 0.513,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Rand Paul raised $11.8M in reported campaign funds (through 2026). About 50% came from large donors, PACs and committee transfers ($5.3M itemized, $183K PAC), while 44% ($5.2M) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $27K.",
+    "viewSummary": "Rand Paul raised $8.5M in reported campaign funds (through 2024). About 43% came from large donors, PACs and committee transfers ($3.4M itemized, $98K PAC), while 51% ($4.4M) came from small grassroots donors. This funding mix is grassroots-leaning, a lower influence-risk signal. Tracked industry/PAC contributions identified so far total $27K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
       "total": 18,
       "lobbyScore": 18,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 11803636,
+      "totalMoney": 8490873,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:58:59.280Z"
+      "lastUpdated": "2026-06-02T23:36:29.565Z"
     }
   },
   {
@@ -3805,34 +3822,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 2049291,
-      "largeDonorMoney": 567027,
-      "smallDonorMoney": 651413,
-      "pacMoney": 355055,
-      "partyMoney": 3500,
-      "transferMoney": 443502,
-      "bigMoneyShare": 0.668,
-      "smallDonorShare": 0.318,
+      "periodYear": "2024",
+      "totalRaised": 754151,
+      "largeDonorMoney": 288699,
+      "smallDonorMoney": 119765,
+      "pacMoney": 221050,
+      "partyMoney": 0,
+      "transferMoney": 95924,
+      "otherMoney": 28713,
+      "bigMoneyShare": 0.803,
+      "smallDonorShare": 0.159,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Alex Padilla raised $2.0M in reported campaign funds (through 2026). About 67% came from large donors, PACs and committee transfers ($567K itemized, $355K PAC), while 32% ($651K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $19K.",
+    "viewSummary": "Alex Padilla raised $754K in reported campaign funds (through 2024). About 80% came from large donors, PACs and committee transfers ($289K itemized, $221K PAC), while 16% ($120K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $19K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 8,
-      "lobbyScore": 8,
+      "total": 5,
+      "lobbyScore": 5,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 2049291,
+      "totalMoney": 754151,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:59:08.230Z"
+      "lastUpdated": "2026-06-02T23:36:38.845Z"
     }
   },
   {
@@ -3869,34 +3887,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 81146109,
-      "largeDonorMoney": 28672553,
-      "smallDonorMoney": 43352271,
-      "pacMoney": 958547,
-      "partyMoney": 7319,
-      "transferMoney": 6528488,
-      "bigMoneyShare": 0.446,
-      "smallDonorShare": 0.534,
+      "periodYear": "2024",
+      "totalRaised": 7199991,
+      "largeDonorMoney": 2801320,
+      "smallDonorMoney": 3999800,
+      "pacMoney": 3500,
+      "partyMoney": 0,
+      "transferMoney": 276500,
+      "otherMoney": 118872,
+      "bigMoneyShare": 0.428,
+      "smallDonorShare": 0.556,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Jon Ossoff raised $81.1M in reported campaign funds (through 2026). About 45% came from large donors, PACs and committee transfers ($28.7M itemized, $959K PAC), while 53% ($43.4M) came from small grassroots donors. This funding mix is grassroots-leaning, a lower influence-risk signal. Tracked industry/PAC contributions identified so far total $35K.",
+    "viewSummary": "Jon Ossoff raised $7.2M in reported campaign funds (through 2024). About 43% came from large donors, PACs and committee transfers ($2.8M itemized, $4K PAC), while 56% ($4.0M) came from small grassroots donors. This funding mix is grassroots-leaning, a lower influence-risk signal. Tracked industry/PAC contributions identified so far total $35K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
       "total": 18,
       "lobbyScore": 18,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 81146109,
+      "totalMoney": 7199991,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T02:00:44.154Z"
+      "lastUpdated": "2026-06-02T23:37:43.076Z"
     }
   },
   {
@@ -3941,34 +3960,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 4327823,
-      "largeDonorMoney": 2254470,
-      "smallDonorMoney": 1441024,
-      "pacMoney": 499700,
+      "periodYear": "2024",
+      "totalRaised": 2095534,
+      "largeDonorMoney": 941376,
+      "smallDonorMoney": 754106,
+      "pacMoney": 284000,
       "partyMoney": 0,
       "transferMoney": 20000,
-      "bigMoneyShare": 0.641,
-      "smallDonorShare": 0.333,
+      "otherMoney": 96052,
+      "bigMoneyShare": 0.594,
+      "smallDonorShare": 0.36,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Patty Murray raised $4.3M in reported campaign funds (through 2026). About 64% came from large donors, PACs and committee transfers ($2.3M itemized, $500K PAC), while 33% ($1.4M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $23K.",
+    "viewSummary": "Patty Murray raised $2.1M in reported campaign funds (through 2024). About 59% came from large donors, PACs and committee transfers ($941K itemized, $284K PAC), while 36% ($754K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $23K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 20,
-      "lobbyScore": 20,
+      "total": 10,
+      "lobbyScore": 10,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 4327823,
+      "totalMoney": 2095534,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T02:01:44.868Z"
+      "lastUpdated": "2026-06-02T23:38:09.295Z"
     }
   },
   {
@@ -3997,34 +4017,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 12504648,
-      "largeDonorMoney": 3749109,
-      "smallDonorMoney": 8129756,
-      "pacMoney": 0,
+      "periodYear": "2024",
+      "totalRaised": 12786118,
+      "largeDonorMoney": 8565200,
+      "smallDonorMoney": 3491074,
+      "pacMoney": 54025,
       "partyMoney": 0,
-      "transferMoney": 407598,
-      "bigMoneyShare": 0.332,
-      "smallDonorShare": 0.65,
+      "transferMoney": 262672,
+      "otherMoney": 413148,
+      "bigMoneyShare": 0.695,
+      "smallDonorShare": 0.273,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Christopher Murphy raised $12.5M in reported campaign funds (through 2026). About 33% came from large donors, PACs and committee transfers ($3.7M itemized, $0 PAC), while 65% ($8.1M) came from small grassroots donors. This funding mix is grassroots-leaning, a lower influence-risk signal. Tracked industry/PAC contributions identified so far total $3K.",
+    "viewSummary": "Christopher Murphy raised $12.8M in reported campaign funds (through 2024). About 70% came from large donors, PACs and committee transfers ($8.6M itemized, $54K PAC), while 27% ($3.5M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $3K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 16,
-      "lobbyScore": 16,
+      "total": 21,
+      "lobbyScore": 21,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 12504648,
+      "totalMoney": 12786118,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T02:03:17.904Z"
+      "lastUpdated": "2026-06-02T23:39:40.523Z"
     }
   },
   {
@@ -4085,34 +4106,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 1762561,
-      "largeDonorMoney": 1040282,
-      "smallDonorMoney": 66430,
-      "pacMoney": 556100,
+      "periodYear": "2024",
+      "totalRaised": 689241,
+      "largeDonorMoney": 327791,
+      "smallDonorMoney": 28535,
+      "pacMoney": 276800,
       "partyMoney": 0,
       "transferMoney": 7139,
-      "bigMoneyShare": 0.91,
-      "smallDonorShare": 0.038,
+      "otherMoney": 48976,
+      "bigMoneyShare": 0.888,
+      "smallDonorShare": 0.041,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Lisa Murkowski raised $1.8M in reported campaign funds (through 2026). About 91% came from large donors, PACs and committee transfers ($1.0M itemized, $556K PAC), while 4% ($66K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $12K.",
+    "viewSummary": "Lisa Murkowski raised $689K in reported campaign funds (through 2024). About 89% came from large donors, PACs and committee transfers ($328K itemized, $277K PAC), while 4% ($29K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $12K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 15,
-      "lobbyScore": 15,
+      "total": 6,
+      "lobbyScore": 6,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 1762561,
+      "totalMoney": 689241,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T02:03:25.553Z"
+      "lastUpdated": "2026-06-02T23:39:45.089Z"
     }
   },
   {
@@ -4132,34 +4154,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 2277696,
-      "largeDonorMoney": 258455,
-      "smallDonorMoney": 208302,
-      "pacMoney": 247871,
-      "partyMoney": 0,
-      "transferMoney": 1554825,
-      "bigMoneyShare": 0.905,
-      "smallDonorShare": 0.091,
+      "periodYear": "2024",
+      "totalRaised": 26920694,
+      "largeDonorMoney": 11267320,
+      "smallDonorMoney": 3543874,
+      "pacMoney": 909531,
+      "partyMoney": 53325,
+      "transferMoney": 6508602,
+      "otherMoney": 4638041,
+      "bigMoneyShare": 0.696,
+      "smallDonorShare": 0.132,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Bernie Moreno raised $2.3M in reported campaign funds (through 2026). About 91% came from large donors, PACs and committee transfers ($258K itemized, $248K PAC), while 9% ($208K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal.",
+    "viewSummary": "Bernie Moreno raised $26.9M in reported campaign funds (through 2024). About 70% came from large donors, PACs and committee transfers ($11.3M itemized, $910K PAC), while 13% ($3.5M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal.",
     "profileComplete": false,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 5,
-      "lobbyScore": 5,
+      "total": 21,
+      "lobbyScore": 21,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 2277696,
+      "totalMoney": 26920694,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T02:03:29.185Z"
+      "lastUpdated": "2026-06-02T23:39:47.594Z"
     }
   },
   {
@@ -4244,34 +4267,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 2796530,
-      "largeDonorMoney": 348750,
-      "smallDonorMoney": 24787,
-      "pacMoney": 785300,
+      "periodYear": "2024",
+      "totalRaised": 1805896,
+      "largeDonorMoney": 175626,
+      "smallDonorMoney": 24050,
+      "pacMoney": 499850,
       "partyMoney": 0,
-      "transferMoney": 954052,
-      "bigMoneyShare": 0.747,
-      "smallDonorShare": 0.009,
+      "transferMoney": 582188,
+      "otherMoney": 524181,
+      "bigMoneyShare": 0.696,
+      "smallDonorShare": 0.013,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Jerry Moran raised $2.8M in reported campaign funds (through 2026). About 75% came from large donors, PACs and committee transfers ($349K itemized, $785K PAC), while 1% ($25K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $46K.",
+    "viewSummary": "Jerry Moran raised $1.8M in reported campaign funds (through 2024). About 70% came from large donors, PACs and committee transfers ($176K itemized, $500K PAC), while 1% ($24K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $46K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 10,
-      "lobbyScore": 10,
+      "total": 6,
+      "lobbyScore": 6,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 2796530,
+      "totalMoney": 1805896,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T02:03:35.228Z"
+      "lastUpdated": "2026-06-02T23:39:53.433Z"
     }
   },
   {
@@ -4290,35 +4314,33 @@
     "lawsuits": [],
     "votes": [],
     "funding": {
-      "available": true,
-      "periodYear": "2026",
-      "totalRaised": 8407064,
-      "largeDonorMoney": 2007103,
-      "smallDonorMoney": 741558,
-      "pacMoney": 1504500,
-      "partyMoney": 62000,
-      "transferMoney": 4089142,
-      "bigMoneyShare": 0.911,
-      "smallDonorShare": 0.088,
-      "confidence": "high",
-      "sources": [
-        "FEC /candidate/{id}/totals"
-      ]
+      "available": false,
+      "totalRaised": 0,
+      "largeDonorMoney": 0,
+      "smallDonorMoney": 0,
+      "pacMoney": 0,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 0,
+      "bigMoneyShare": null,
+      "smallDonorShare": null,
+      "confidence": "low",
+      "sources": []
     },
-    "viewSummary": "Ashley Moody raised $8.4M in reported campaign funds (through 2026). About 91% came from large donors, PACs and committee transfers ($2.0M itemized, $1.5M PAC), while 9% ($742K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal.",
+    "viewSummary": "Ashley Moody: campaign-finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-06-02T01:37:19.387Z",
+    "dataVersion": "2026-06-02T23:11:27.375Z",
     "score": {
-      "total": 24,
-      "lobbyScore": 24,
+      "total": 0,
+      "lobbyScore": 0,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 8407064,
+      "totalMoney": 0,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T02:03:38.228Z"
+      "lastUpdated": "2026-06-02T23:39:56.255Z"
     }
   },
   {
