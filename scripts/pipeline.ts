@@ -1,7 +1,7 @@
 #!/usr/bin/env tsx
 /**
  * scripts/pipeline.ts
- * Master ETL pipeline Ã¢ÂÂ run this to generate data/politicians.json
+ * Master ETL pipeline - run this to generate data/politicians.json
  *
  * Usage:
  *   npx tsx scripts/pipeline.ts
@@ -10,14 +10,14 @@
  *   npx tsx scripts/pipeline.ts --id=B001230        (single bioguide ID)
  *
  * Required env vars (.env.local):
- *   CONGRESS_API_KEY   Ã¢ÂÂ from api.congress.gov/sign-up/
- *   FEC_API_KEY        Ã¢ÂÂ from api.data.gov/signup/
+ *   CONGRESS_API_KEY   - from api.congress.gov/sign-up/
+ *   FEC_API_KEY        - from api.data.gov/signup/
  *
  * Optional env vars:
- *   COURTLISTENER_TOKEN Ã¢ÂÂ from courtlistener.com (higher rate limits)
+ *   COURTLISTENER_TOKEN - from courtlistener.com (higher rate limits)
  *
- * Runtime: ~45Ã¢ÂÂ90 minutes for all ~535 federal members
- * Output:  data/politicians.json  (~8Ã¢ÂÂ15 MB)
+ * Runtime: ~45-90 minutes for all ~535 federal members
+ * Output:  data/politicians.json  (~8-15 MB)
  *          data/pipeline-log.json (run metadata)
  */
 
@@ -32,7 +32,7 @@ import type { Politician, PipelineRun, Chamber } from '../lib/types';
 import { readFile, writeFile } from 'fs/promises';
 import { execSync } from 'child_process';
 
-// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ Config Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// --- Config ---
 
 const CONGRESS_API_KEY = process.env.CONGRESS_API_KEY || '';
 const FEC_API_KEY      = process.env.FEC_API_KEY || '';
@@ -47,11 +47,11 @@ const args = Object.fromEntries(
     .map(a => a.slice(2).split('=') as [string, string])
 );
 
-// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ Main Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// --- Main ---
 
 async function main() {
   if (!CONGRESS_API_KEY || !FEC_API_KEY) {
-    console.error('Ã¢ÂÂ Missing API keys. Set CONGRESS_API_KEY and FEC_API_KEY in .env.local');
+    console.error(' Missing API keys. Set CONGRESS_API_KEY and FEC_API_KEY in .env.local');
     console.error('   Congress.gov: https://api.congress.gov/sign-up/');
     console.error('   FEC API:       https://api.data.gov/signup/');
     process.exit(1);
@@ -66,18 +66,18 @@ async function main() {
     errors: [],
   };
 
-  console.log('\nÃ°ÂÂÂ³  VoteWatch Data Pipeline');
-  console.log('Ã¢ÂÂ'.repeat(50));
+  console.log('\n  VoteWatch Data Pipeline');
+  console.log('-'.repeat(50));
   console.log(`Started: ${run.startedAt}`);
   console.log('');
 
   // Pre-fetch bulk trade data (one request fetches all trades at once)
-  console.log('Ã°ÂÂÂ Pre-fetching stock trade disclosures...');
+  console.log(' Pre-fetching stock trade disclosures...');
   await fetchSenateTrades();
   await fetchHouseTrades();
 
   // Fetch all current Congress members
-  console.log('\nÃ°ÂÂÂ  Fetching Congress members from Congress.gov...');
+  console.log('\n  Fetching Congress members from Congress.gov...');
   let members = await fetchAllMembers(CONGRESS_API_KEY);
   console.log(`   Found ${members.length} current members`);
 
@@ -99,7 +99,7 @@ async function main() {
     console.log(`  Slice: officials ${__start + 1}..${__start + members.length} (start=${__start}, count=${__count || 'all'})`);
   }
 
-  console.log('\nÃ°ÂÂÂ Processing politicians...\n');
+  console.log('\n Processing politicians...\n');
 
   const politicians: Politician[] = [];
 
@@ -168,7 +168,7 @@ async function main() {
       );
       if (__hasData && process.env.FORCE_REPROCESS !== "1") {
         politicians.push(__ex);
-        console.log(`  [${i + 1}/${members.length}] ${member.name} â already complete, skipped`);
+        console.log(`  [${i + 1}/${members.length}] ${member.name} - already complete, skipped`);
         continue;
       }
     }
@@ -259,17 +259,17 @@ async function main() {
       run.politiciansProcessed++;
 
       const { total, label } = scoreLabel(politician.score.total);
-      process.stdout.write(` Ã¢ÂÂ score=${total} (${label})\n`);
+      process.stdout.write(`  score=${total} (${label})\n`);
 
     } catch (err) {
       const msg = `${member.name}: ${(err as Error).message}`;
       run.errors.push(msg);
-      process.stdout.write(` Ã¢ÂÂ ERROR: ${(err as Error).message}\n`);
+      process.stdout.write(`  ERROR: ${(err as Error).message}\n`);
     }
   }
 
   // Write output
-  console.log('\nÃ°ÂÂÂ¾ Writing output files...');
+  console.log('\n Writing output files...');
 
   // (politicians.json is written by flushAndCommit below, with merged data.)
 
@@ -287,19 +287,19 @@ async function main() {
     (new Date(run.completedAt).getTime() - new Date(run.startedAt).getTime()) / 1000
   );
 
-  console.log('\n' + 'Ã¢ÂÂ'.repeat(50));
-  console.log(`Ã¢ÂÂ Pipeline complete`);
+  console.log('\n' + '-'.repeat(50));
+  console.log(` Pipeline complete`);
   console.log(`   Politicians processed: ${run.politiciansProcessed}`);
   console.log(`   Errors: ${run.errors.length}`);
   console.log(`   Duration: ${Math.floor(duration / 60)}m ${duration % 60}s`);
   console.log(`   Output: data/politicians.json`);
   if (run.errors.length > 0) {
-    console.log('\nÃ¢ÂÂ Ã¯Â¸Â  Errors:');
+    console.log('\n  Errors:');
     run.errors.forEach(e => console.log(`   - ${e}`));
   }
 }
 
-// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ Helpers Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// --- Helpers ---
 
 function fmtMoney(n: number): string {
   if (n >= 1_000_000) return `$${(n / 1_000_000).toFixed(1)}M`;
@@ -379,7 +379,7 @@ function generateId(name: string, state: string, chamber: string): string {
 }
 
 function formatName(name: string): string {
-  // Congress.gov returns "LAST, FIRST M." Ã¢ÂÂ convert to "First Last"
+  // Congress.gov returns "LAST, FIRST M." - convert to "First Last"
   const parts = name.split(',').map(s => s.trim());
   if (parts.length === 2) {
     const first = parts[1].split(' ')[0];
@@ -398,6 +398,6 @@ function sleep(ms: number) {
 }
 
 main().catch(err => {
-  console.error('\nÃ¢ÂÂ Fatal pipeline error:', err);
+  console.error('\n Fatal pipeline error:', err);
   process.exit(1);
 });
