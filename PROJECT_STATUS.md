@@ -351,3 +351,56 @@ Politician[] cast, so this did not break the build, but it is now correct.)
 property access exists on the type. A single TS error silently breaks the Cloudflare deploy
 while GitHub stays green. Check commit check-runs ("Cloudflare Pages") for failure after
 committing - do NOT assume a commit deployed just because it landed on main.
+
+---
+
+## 2026-06 - Pelosi finance reconciliation + verified vote expansion
+
+**Problem reported:** Pelosi's page showed too few votes (3) and too little lobby/PAC money;
+campaign-finance total did not reconcile with lobbies + big donors.
+
+**Root cause:** funding used the barely-started 2025-2026 cycle ($2.43M, $33K PAC) which
+understated her footprint, and the lobbyMoney list ($61K of estimated round numbers) was
+both larger than the real reported PAC total and disconnected from the headline total.
+
+**Fix (authoritative, cross-verified via FEC + OpenSecrets):** switched funding to her most
+recent COMPLETE cycle (2023-2024).
+- Total raised: $10,003,159 = large individual $9,269,859 + small $480,000 + PAC $253,300
+  (reconciles exactly; bigMoneyShare ~0.95).
+- lobbyMoney rebuilt from OpenSecrets sector-level PAC totals so the list (~$248,300) ties to
+  the real $253,300 PAC figure: Labor $99.3K, Ideology $25.5K, Finance/Insur/RealEst $33.5K,
+  Agribusiness $19K, Pro-Israel/AIPAC $16K, Health $15K, Comms/Electronics $11.5K, Misc Biz
+  $11K, Lawyers/Lobbyists $7.5K, Construction $5K, Transport $5K. (AIPAC pulled out of the
+  Ideology bucket to avoid double counting and to keep the donor-alignment mapping working.)
+
+**Votes expanded 3 -> 7**, each verified against the official House Clerk roll-call XML
+(clerk.house.gov/evs/2024/rollNNN.xml; Pelosi name-id P000197):
+- HR 7521 TikTok divestment - YEA (roll 86, 2024-03-13)
+- HR 8034 Israel Security Supplemental - YEA (roll 152, 2024-04-20) [DONOR-ALIGNED: aipac]
+- HR 8035 Ukraine Security Supplemental - YEA (roll 151, 2024-04-20)
+- HR 8036 Indo-Pacific Security Supplemental - YEA (roll 146, 2024-04-20)
+- HR 2882 Further Consolidated Appropriations - YEA (roll 102, 2024-03-22)
+- HR 7888 FISA Sec 702 reauth (RISAA) - YEA (roll 119, 2024-04-12)
+- HR 6090 Antisemitism Awareness Act - YEA (roll 172, 2024-05-01)
+
+**Score: 48 -> 59.** Lobby/Money 6 -> 24 (reflects real $10M, big-money dominated), Vote Align
+12 -> 5 (1 of 7 donor-aligned; more votes lowers the aligned ratio), Stock 25, Legal 5.
+
+**Reusable scoring math (from scripts/score.ts):**
+- moneyScore: base=min(20,(largeDonor+pac)/100000*0.8); mult=0.6+bigMoneyShare*0.65;
+  return min(25, base*mult). (fallback when no funding: min(25, sum(lobby)/100000*1.2))
+- alignScore = (donorAlignedVotes / totalVotes) * 35. Alignment via LOBBY_POSITIONS keyword
+  map (e.g. 'israel' -> aipac:YEA) intersected with the lobbyIds present in lobbyMoney.
+- stockScore = min(25, conflictTrades*5 + (anyTrade>=500k?10:0)). legalScore = sum severity
+  (high7/med4/low1) cap 15.
+
+**SCALABLE METHOD for other politicians:** (1) pull FEC totals for the most recent COMPLETE
+cycle (not the in-progress one); (2) build lobbyMoney from OpenSecrets SECTOR-level PAC totals
+(top-level rows only - sub-industry rows double-count) so the list sums to the reported PAC
+total; (3) reconcile large+small+pac == totalRaised; (4) verify votes against House Clerk
+roll-call XML by name-id; (5) recompute scores with the formulas above; (6) mark genuinely
+missing components 'not applicable', never $0.
+
+**Gotchas:** OpenSecrets summary page shows the current (often empty) cycle by default - add
+&cycle=2024. FEC DEMO_KEY rate-limits at 40/hr (the pipeline's real key in GH Secrets is
+higher). api.open.fec.gov and clerk.house.gov are reachable for live JS fetches once approved.
