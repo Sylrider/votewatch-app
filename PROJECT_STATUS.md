@@ -404,3 +404,45 @@ missing components 'not applicable', never $0.
 **Gotchas:** OpenSecrets summary page shows the current (often empty) cycle by default - add
 &cycle=2024. FEC DEMO_KEY rate-limits at 40/hr (the pipeline's real key in GH Secrets is
 higher). api.open.fec.gov and clerk.house.gov are reachable for live JS fetches once approved.
+
+---
+
+## 2026-06 - Batch 1 of finance/vote rollout (5 House members)
+
+**Members:** Jasmine Crockett (TX), Lauren Boebert (CO), Dan Crenshaw (TX), Maxine Waters (CA), Jason Crow (CO).
+
+**Votes (DONE, fully authoritative):** added the same 7 verified 118th-Congress House roll calls to
+each member, pulled from the official Clerk XML by name-id in ONE batched fetch across all 5
+members x 7 rolls (efficient). Positions are real and member-specific (e.g. Boebert NAY on all
+four supplementals; Crockett PRESENT on TikTok; Crow/Crenshaw YEA on Israel). Donor-alignment:
+only HR 8034 (Israel) maps to aipac:YEA, so only Crenshaw and Crow (both hold aipac + voted YEA)
+get 1 aligned vote each; the rest 0.
+
+**Finance:** Crockett reconciled to the 2023-2024 complete cycle from FEC totals
+($3,114,950 raised = large $972,046 + small $1,369,700 + PAC $719,354; gap ~$54K = other receipts).
+Waters and Crow were left on their existing FEC-sourced funding (still tagged periodYear 2026 =
+the in-progress cycle, so understated like Pelosi was); Boebert and Crenshaw have no funding object
+and were NOT fabricated.
+
+**Scores after:** Crockett 1->13, Crenshaw 4->9, Crow 12->17, Waters 5 (votes added, money
+unchanged), Boebert 0 (sparse data, no fabrication).
+
+**Type gotcha caught:** VoteValue union allows YEA | NAY | ABSTAIN | NOT VOTING - NOT 'PRESENT'
+or 'AYE'. House XML uses Present/Aye/No, so normalize: Present->ABSTAIN, Aye->YEA, No->NAY before
+writing, or the next build breaks on a TS error. (Caught in validation before commit this time.)
+
+**Commit d57e08e - Cloudflare build: success. Live verified** (Crockett 13/100, $3.11M, 7 votes).
+
+### Self-reflection / process improvements
+- FEC DEMO_KEY (40/hr) is the real bottleneck and was nearly exhausted; it now yields ~1 call before
+  re-blocking. DO NOT retry into it call-by-call - that wastes the session. For a real batch, use the
+  project pipeline (scripts/pipeline.ts) which carries the FEC key from GH Secrets at full rate, or
+  collect all needed FEC IDs and fire them in a single throttled burst right after a reset.
+- raw.githubusercontent.com (and github.com/.../raw) cache aggressively and IGNORE query-string
+  cache-busters - they showed stale 0-vote data for minutes after a good commit. To verify a commit's
+  CONTENT, read the commit .patch (authoritative) rather than the raw CDN; to verify DEPLOY, check the
+  commit's 'Status checks' label and the live site (Cloudflare rebuilds from the real file, not the CDN).
+- Batching all members x all roll calls into a single Clerk-XML fetch loop was far faster than per-vote
+  lookups - keep doing this. Reuse the located roll-call numbers across members (same Congress).
+- TODO next batch: reconcile Waters/Crow to the 2023-2024 cycle and add FEC finance for Boebert/Crenshaw
+  once FEC quota allows; then continue to the next 5 incomplete high-profile profiles.
