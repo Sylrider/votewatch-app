@@ -10335,68 +10335,92 @@
     "imageUrl": "https://www.congress.gov/img/member/p000197_200.jpg",
     "lobbyMoney": [
       {
-        "lobbyId": "nea",
-        "lobbyName": "National Education Association (NEA)",
-        "amount": 14000,
-        "intent": "support",
-        "cycle": "2024",
-        "source": "FEC schedule_a (itemized committee contributions)"
-      },
-      {
-        "lobbyId": "aipac",
-        "lobbyName": "AIPAC",
-        "amount": 13000,
-        "intent": "support",
-        "cycle": "2024",
-        "source": "FEC schedule_a (itemized committee contributions)"
-      },
-      {
-        "lobbyId": "realestate",
-        "lobbyName": "Real Estate Industry (NAR)",
-        "amount": 10000,
-        "intent": "support",
-        "cycle": "2024",
-        "source": "FEC schedule_a (itemized committee contributions)"
-      },
-      {
-        "lobbyId": "telecom",
-        "lobbyName": "Telecommunications Industry",
-        "amount": 9000,
-        "intent": "support",
-        "cycle": "2024",
-        "source": "FEC schedule_a (itemized committee contributions)"
-      },
-      {
         "lobbyId": "labor",
-        "lobbyName": "AFL-CIO / Labor Unions",
-        "amount": 5000,
-        "intent": "support",
+        "lobbyName": "Labor Unions (AFL-CIO and affiliates)",
+        "amount": 99300,
+        "intent": "Pro-labor / pro-union legislation, PRO Act, collective bargaining",
         "cycle": "2024",
-        "source": "FEC schedule_a (itemized committee contributions)"
+        "source": "OpenSecrets (FEC PAC contributions by sector)"
       },
       {
-        "lobbyId": "defense",
-        "lobbyName": "Defense Industry (MICC)",
-        "amount": 5000,
-        "intent": "support",
+        "lobbyId": "ideology",
+        "lobbyName": "Other Ideological / Single-Issue Groups",
+        "amount": 25500,
+        "intent": "Progressive and single-issue causes (womens issues, environment, civil rights)",
         "cycle": "2024",
-        "source": "FEC schedule_a (itemized committee contributions)"
-      },
-      {
-        "lobbyId": "health",
-        "lobbyName": "Health Insurance Industry (AHIP)",
-        "amount": 2500,
-        "intent": "support",
-        "cycle": "2024",
-        "source": "FEC schedule_a (itemized committee contributions)"
+        "source": "OpenSecrets (FEC PAC contributions by sector)"
       },
       {
         "lobbyId": "finance",
-        "lobbyName": "Wall Street / Financial Industry",
-        "amount": 2500,
-        "intent": "support",
+        "lobbyName": "Finance, Insurance & Real Estate",
+        "amount": 33500,
+        "intent": "Financial-services and real-estate policy",
         "cycle": "2024",
-        "source": "FEC schedule_a (itemized committee contributions)"
+        "source": "OpenSecrets (FEC PAC contributions by sector)"
+      },
+      {
+        "lobbyId": "agribusiness",
+        "lobbyName": "Agribusiness (incl. American Crystal Sugar)",
+        "amount": 19000,
+        "intent": "Farm and commodity programs, sugar price supports",
+        "cycle": "2024",
+        "source": "OpenSecrets (FEC PAC contributions by sector)"
+      },
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "Pro-Israel (AIPAC and allied PACs)",
+        "amount": 16000,
+        "intent": "Support U.S. military and economic aid to Israel",
+        "cycle": "2024",
+        "source": "OpenSecrets (FEC PAC contributions, Pro-Israel)"
+      },
+      {
+        "lobbyId": "health",
+        "lobbyName": "Health Sector (insurers, providers, hospitals)",
+        "amount": 15000,
+        "intent": "Healthcare and insurance policy",
+        "cycle": "2024",
+        "source": "OpenSecrets (FEC PAC contributions by sector)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Communications & Electronics",
+        "amount": 11500,
+        "intent": "Telecom, tech and media policy",
+        "cycle": "2024",
+        "source": "OpenSecrets (FEC PAC contributions by sector)"
+      },
+      {
+        "lobbyId": "miscbiz",
+        "lobbyName": "Misc Business",
+        "amount": 11000,
+        "intent": "General business interests",
+        "cycle": "2024",
+        "source": "OpenSecrets (FEC PAC contributions by sector)"
+      },
+      {
+        "lobbyId": "lawyers",
+        "lobbyName": "Lawyers & Lobbyists (incl. Perkins Coie)",
+        "amount": 7500,
+        "intent": "Legal-industry and litigation policy",
+        "cycle": "2024",
+        "source": "OpenSecrets (FEC PAC contributions by sector)"
+      },
+      {
+        "lobbyId": "construction",
+        "lobbyName": "Construction & Building Trades",
+        "amount": 5000,
+        "intent": "Infrastructure and building-trades priorities",
+        "cycle": "2024",
+        "source": "OpenSecrets (FEC PAC contributions by sector)"
+      },
+      {
+        "lobbyId": "transport",
+        "lobbyName": "Transportation Unions",
+        "amount": 5000,
+        "intent": "Transportation and aviation labor priorities",
+        "cycle": "2024",
+        "source": "OpenSecrets (FEC PAC contributions by sector)"
       }
     ],
     "stockTrades": [
@@ -10520,19 +10544,39 @@
         "date": "2024-03-13",
         "vote": "YEA",
         "alignsWithDonors": false,
-        "note": "Required ByteDance to divest TikTok or face a US ban; passed with broad bipartisan support.",
+        "note": "Required ByteDance to divest TikTok or face a US ban; passed 352-65 with broad bipartisan support.",
         "congressNumber": 118,
-        "rollCallNumber": 99
+        "rollCallNumber": 86
       },
       {
-        "bill": "National Security Supplemental - Israel/Ukraine/Taiwan Aid",
-        "billId": "hr8038-118",
+        "bill": "Israel Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8034-118",
+        "date": "2024-04-20",
+        "vote": "YEA",
+        "alignsWithDonors": true,
+        "note": "$26.4B in military aid and missile-defense funding for Israel. Aligns with pro-Israel (AIPAC) donors.",
+        "congressNumber": 118,
+        "rollCallNumber": 152
+      },
+      {
+        "bill": "Ukraine Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8035-118",
         "date": "2024-04-20",
         "vote": "YEA",
         "alignsWithDonors": false,
-        "note": "Foreign military aid package for Ukraine, Israel and Taiwan.",
+        "note": "~$61B in military and economic aid for Ukraine.",
         "congressNumber": 118,
-        "rollCallNumber": 131
+        "rollCallNumber": 151
+      },
+      {
+        "bill": "Indo-Pacific Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8036-118",
+        "date": "2024-04-20",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "~$8B for Taiwan and Indo-Pacific allies to counter China.",
+        "congressNumber": 118,
+        "rollCallNumber": 146
       },
       {
         "bill": "Further Consolidated Appropriations Act, 2024 ($1.2T minibus)",
@@ -10542,39 +10586,60 @@
         "alignsWithDonors": false,
         "note": "$1.2 trillion appropriations package funding major federal agencies; averted a shutdown.",
         "congressNumber": 118,
-        "rollCallNumber": 114
+        "rollCallNumber": 102
+      },
+      {
+        "bill": "Reforming Intelligence and Securing America Act (FISA Section 702 reauthorization)",
+        "billId": "hr7888-118",
+        "date": "2024-04-12",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Reauthorized FISA Section 702 warrantless surveillance authority for two years.",
+        "congressNumber": 118,
+        "rollCallNumber": 119
+      },
+      {
+        "bill": "Antisemitism Awareness Act of 2023",
+        "billId": "hr6090-118",
+        "date": "2024-05-01",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Directed the Dept. of Education to adopt the IHRA definition of antisemitism in Title VI enforcement.",
+        "congressNumber": 118,
+        "rollCallNumber": 172
       }
     ],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 2433666,
-      "largeDonorMoney": 808796,
-      "smallDonorMoney": 1411327,
-      "pacMoney": 33000,
+      "periodYear": "2024",
+      "totalRaised": 10003159,
+      "largeDonorMoney": 9269859,
+      "smallDonorMoney": 480000,
+      "pacMoney": 253300,
       "partyMoney": 0,
-      "transferMoney": 141138,
-      "bigMoneyShare": 0.404,
-      "smallDonorShare": 0.58,
+      "transferMoney": 0,
+      "bigMoneyShare": 0.952,
+      "smallDonorShare": 0.048,
       "confidence": "high",
       "sources": [
-        "FEC /candidate/{id}/totals"
+        "FEC candidate totals (2023-2024 cycle)",
+        "OpenSecrets sector/PAC breakdown"
       ]
     },
-    "viewSummary": "Nancy Pelosi raised $2.43M in reported campaign funds (through 2026), with 40% from large donors/PACs and 58% from small grassroots donors. Of her tracked votes, her YEA on the Israel/Ukraine/Taiwan aid package aligned with the position of pro-Israel donors (AIPAC) among her contributors. Her household's disclosed 2024 stock activity includes large NVIDIA, Apple, Palo Alto Networks and Broadcom positions (about $25M in tracked transactions, several via call options), all flagged as potential conflicts given Congress's role in tech, chip and cybersecurity policy. No legal actions on record. Legal: 5 federal suits naming her as a defendant in her official capacity as Speaker (House proxy-voting challenges by McCarthy and Massie; three Jan. 6 Committee subpoena challenges) - all dismissed, none involving personal liability or wrongdoing.",
+    "viewSummary": "Nancy Pelosi raised about $10.0M in her most recent complete election cycle (2023-2024), overwhelmingly from large individual donors. About $9.27M came from large individual donors and $253,300 from PACs, with only roughly $480K from small grassroots donors - a big-money share near 95%. Her largest PAC/industry backers were labor unions (~$99K), finance/insurance/real estate (~$34K), ideological and single-issue groups, agribusiness and pro-Israel (AIPAC) PACs (~$16K). Of 7 tracked House votes, her YEA on the Israel Security Supplemental aligned with the position of pro-Israel (AIPAC) donors; her other tracked votes (TikTok divestment, Ukraine and Indo-Pacific aid, FISA Section 702 reauthorization, the $1.2T appropriations package and the Antisemitism Awareness Act) did not track a specific donor position. Her household's disclosed 2024 stock activity includes large NVIDIA, Apple, Palo Alto Networks and Broadcom positions (about $25M in tracked transactions, several via call options), all flagged as potential conflicts given Congress's role in tech, chip and cybersecurity policy. Legal: 5 federal suits named her as a defendant in her official capacity as Speaker (House proxy-voting challenges by McCarthy and Massie; three Jan. 6 Committee subpoena challenges) - all dismissed, none involving personal liability or wrongdoing.",
     "profileComplete": true,
     "dataVersion": "2026-06-02T02:46:32.370Z",
     "score": {
-      "total": 48,
-      "lobbyScore": 6,
-      "alignScore": 12,
+      "total": 59,
+      "lobbyScore": 24,
+      "alignScore": 5,
       "stockScore": 25,
       "legalScore": 5,
-      "totalMoney": 2433666,
+      "totalMoney": 10003159,
       "conflictTrades": 5,
       "donorAlignedVotes": 1,
-      "totalTrackedVotes": 3,
-      "lastUpdated": "2026-06-02T03:20:49.065Z"
+      "totalTrackedVotes": 7,
+      "lastUpdated": "2026-06-02T04:44:34.138Z"
     }
   },
   {
