@@ -140,6 +140,14 @@ export interface Politician {
   // Metadata
   profileComplete: boolean;   // false = compact/basic profile only
   dataVersion: string;        // pipeline run version
+
+  // Flags for categories that do not apply (e.g., executives have no stock/vote disclosures)
+  notApplicable?: {
+    lobbyMoney?: boolean;
+    stockTrades?: boolean;
+    votes?: boolean;
+    lawsuits?: boolean;
+  };
 }
 
 // -- Pipeline ---
