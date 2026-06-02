@@ -12301,8 +12301,8 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
-    "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -12313,7 +12313,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:11:44.159Z"
+      "lastUpdated": "2026-06-02T00:19:30.557Z"
     }
   },
   {
@@ -13248,8 +13248,8 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
-    "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -13260,7 +13260,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:13:40.624Z"
+      "lastUpdated": "2026-06-02T00:19:32.574Z"
     }
   },
   {
@@ -13641,6 +13641,202 @@
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
       "lastUpdated": "2026-06-01T13:14:12.040Z"
+    }
+  },
+  {
+    "id": "rep-crank-jeff-co",
+    "name": "Jeff Crank",
+    "state": "Colorado",
+    "party": "Republican",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2025,
+    "bioguideId": "C001137",
+    "fecCandidateId": "H6CO05142",
+    "imageUrl": "https://www.congress.gov/img/member/677424810b34857ecc909071_200.jpg",
+    "lobbyMoney": [],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 0,
+      "lobbyScore": 0,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 0,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:19:34.668Z"
+    }
+  },
+  {
+    "id": "rep-bell-wesley-mi",
+    "name": "Wesley Bell",
+    "state": "Missouri",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2025,
+    "bioguideId": "B001324",
+    "fecCandidateId": "H4MO01134",
+    "imageUrl": "https://www.congress.gov/img/member/677422240b34857ecc90904a_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 1525376,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 10000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 5000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "tech",
+        "lobbyName": "Big Tech Industry",
+        "amount": 2500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "health",
+        "lobbyName": "Health Insurance Industry (AHIP)",
+        "amount": 2500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
+        "amount": 2000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 19,
+      "lobbyScore": 19,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 1547376,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:19:45.296Z"
+    }
+  },
+  {
+    "id": "rep-wied-tony-wi",
+    "name": "Tony Wied",
+    "state": "Wisconsin",
+    "party": "Republican",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2024,
+    "bioguideId": "W000829",
+    "fecCandidateId": "H4WI08119",
+    "imageUrl": "https://www.congress.gov/img/member/6734b6724c72e343a6aff9e6_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 11500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 10000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 2500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 2500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "uscc",
+        "lobbyName": "U.S. Chamber of Commerce",
+        "amount": 1500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nra",
+        "lobbyName": "National Rifle Association (NRA)",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 0,
+      "lobbyScore": 0,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 30000,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:19:49.902Z"
     }
   }
 ]
