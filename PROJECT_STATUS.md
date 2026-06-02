@@ -322,3 +322,32 @@ uses CL_TOKEN for higher limits - prefer running the real pipeline per-batch whe
 
 **Resume checkpoint:** next batch = incomplete profiles starting AFTER the first 15 already
 checked (Schiff done). 226 profiles still have no lawsuits; continue in small batches of ~15.
+
+
+### 2026-06-02 (later) - chrome ext (CLOUDFLARE BUILD FIXED - root cause found)
+
+**THE STALE-SITE MYSTERY: SOLVED.** watchgov.org was frozen at an old build (Pelosi 31/100)
+because EVERY Cloudflare Pages build since commit 7b6ed67 had been FAILING. Diagnosis path:
+GitHub commit check-runs showed "Cloudflare Pages: failure" on all commits from 7b6ed67
+onward; the last SUCCESS was df1c1e0.
+
+**Root cause:** commit 7b6ed67 ("Not applicable" stock-trades feature) added a reference to
+`p.notApplicable?.stockTrades` in app/politicians/[slug]/page.tsx, but the Politician type in
+lib/types.ts had NO notApplicable field. Since next.config has typescript.ignoreBuildErrors:
+false, `next build` failed with TS2339 (Property does not exist) on every build -> Cloudflare
+kept serving the last good deploy. (Note: scripts/ is excluded in tsconfig, so the lawsuits.ts
+status typing did NOT affect the build; only app/lib/components are type-checked.)
+
+**Fix:** added optional `notApplicable?: { lobbyMoney?, stockTrades?, votes?, lawsuits? }` to
+the Politician interface (matches the Trump data record). Build now SUCCEEDS and the live site
+updated: Pelosi 48/100, Schiff 19/100, Trump 32/100 all render lawsuits correctly.
+
+**Also fixed:** invalid LawsuitStatus value. lawsuits.ts and the data used status "ON RECORD"
+which is NOT in the LawsuitStatus union (ONGOING|DISMISSED|SETTLED|CONVICTED|ACQUITTED|UNDER
+REVIEW|RESOLVED|CLOSED|NO SUIT FILED). Changed to "ONGOING". (Data is read via fs as
+Politician[] cast, so this did not break the build, but it is now correct.)
+
+**LESSON FOR FUTURE EDITS:** before committing app/lib/components .tsx/.ts, make sure any new
+property access exists on the type. A single TS error silently breaks the Cloudflare deploy
+while GitHub stays green. Check commit check-runs ("Cloudflare Pages") for failure after
+committing - do NOT assume a commit deployed just because it landed on main.
