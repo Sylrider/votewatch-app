@@ -9763,8 +9763,8 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
-    "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -9775,7 +9775,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:01:39.349Z"
+      "lastUpdated": "2026-06-02T00:19:19.409Z"
     }
   },
   {
@@ -10584,8 +10584,8 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
-    "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -10596,7 +10596,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:03:47.102Z"
+      "lastUpdated": "2026-06-02T00:19:21.423Z"
     }
   },
   {
@@ -11033,8 +11033,8 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
-    "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -11045,7 +11045,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:04:29.852Z"
+      "lastUpdated": "2026-06-02T00:19:23.548Z"
     }
   },
   {
@@ -11458,8 +11458,8 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
-    "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -11470,7 +11470,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:09:47.418Z"
+      "lastUpdated": "2026-06-02T00:19:25.425Z"
     }
   },
   {
@@ -11836,8 +11836,8 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
-    "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -11848,7 +11848,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:10:24.826Z"
+      "lastUpdated": "2026-06-02T00:19:27.409Z"
     }
   },
   {
