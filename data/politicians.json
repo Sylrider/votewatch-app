@@ -10479,20 +10479,20 @@
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Nancy Pelosi raised $2.43M in reported campaign funds (through 2026), with 40% from large donors/PACs and 58% from small grassroots donors. Her household's disclosed 2024 stock activity includes large NVIDIA, Apple, Palo Alto Networks and Broadcom positions (about $25M in tracked transactions, several via call options), all flagged as potential conflicts given Congress's role in tech, chip and cybersecurity policy. No legal actions on record. Recent notable votes (TikTok divestment, Ukraine/Israel aid, FY24 appropriations) tracked from House roll calls.",
+    "viewSummary": "Nancy Pelosi raised $2.43M in reported campaign funds (through 2026), with 40% from large donors/PACs and 58% from small grassroots donors. Of her tracked votes, her YEA on the Israel/Ukraine/Taiwan aid package aligned with the position of pro-Israel donors (AIPAC) among her contributors. Her household's disclosed 2024 stock activity includes large NVIDIA, Apple, Palo Alto Networks and Broadcom positions (about $25M in tracked transactions, several via call options), all flagged as potential conflicts given Congress's role in tech, chip and cybersecurity policy. No legal actions on record.",
     "profileComplete": true,
     "dataVersion": "2026-06-02T02:46:32.370Z",
     "score": {
-      "total": 31,
+      "total": 43,
       "lobbyScore": 6,
-      "alignScore": 0,
+      "alignScore": 12,
       "stockScore": 25,
       "legalScore": 0,
       "totalMoney": 2433666,
       "conflictTrades": 5,
-      "donorAlignedVotes": 0,
+      "donorAlignedVotes": 1,
       "totalTrackedVotes": 3,
-      "lastUpdated": "2026-06-02T02:46:14.302Z"
+      "lastUpdated": "2026-06-02T02:57:08.846Z"
     }
   },
   {
@@ -19583,18 +19583,19 @@
       "available": true,
       "periodYear": "2024",
       "totalRaised": 495853270,
-      "largeDonorMoney": 198000000,
-      "smallDonorMoney": 247000000,
+      "largeDonorMoney": 200000000,
+      "smallDonorMoney": 245000000,
       "pacMoney": 1000000,
       "partyMoney": 0,
       "transferMoney": 49853270,
       "bigMoneyShare": 0.4,
-      "smallDonorShare": 0.5,
+      "smallDonorShare": 0.49,
       "confidence": "medium",
       "sources": [
-        "FEC committee totals (Donald J. Trump for President 2024, Inc., C00580100)",
+        "FEC committee totals (Donald J. Trump for President 2024, Inc.)",
         "FEC PAC summary 2023-2024"
-      ]
+      ],
+      "note": "Breakdown is an estimate; itemized vs. small-dollar split for the principal committee is approximate. JFC/super-PAC money (combined ~$1.45B) sits outside the candidate committee."
     },
     "notApplicable": {
       "votes": true,
@@ -19612,9 +19613,9 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T02:46:14.303Z"
+      "lastUpdated": "2026-06-02T02:57:08.846Z"
     },
     "dataVersion": "2026-06-02T02:46:32.370Z",
-    "viewSummary": "Donald J. Trump's 2024 principal campaign committee reported about $496M in receipts; counting joint fundraising committees and aligned super PACs, the broader operation raised roughly $1.45 billion. As an executive-branch official he casts no congressional roll-call votes and files no congressional stock disclosures, so those categories are not applicable. His legal record is extensive: a 2024 New York criminal conviction on 34 felony counts, two E. Jean Carroll civil judgments ($5M and $83.3M), a New York civil fraud case (penalty later vacated on appeal, liability upheld), and federal/state cases that were dismissed or wound down."
+    "viewSummary": "Donald J. Trump's 2024 principal campaign committee reported about $496M in receipts; counting joint fundraising committees and aligned super PACs, the broader operation raised roughly $1.45 billion (the itemized vs. small-dollar split shown is an estimate). As an executive-branch official he casts no congressional roll-call votes and files no congressional stock disclosures, so those categories are not applicable. His legal record is extensive: a 2024 New York criminal conviction on 34 felony counts, two E. Jean Carroll civil judgments ($5M and $83.3M), a New York civil fraud case (penalty later vacated on appeal, liability upheld), and federal/state cases that were dismissed or wound down."
   }
 ]
