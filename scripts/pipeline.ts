@@ -91,9 +91,12 @@ async function main() {
   if (args.id) {
     members = members.filter(m => m.bioguideId === args.id);
   }
-  if (args.limit) {
-    members = members.slice(0, parseInt(args.limit, 10));
-    console.log(`   Limited to first ${members.length} members (testing mode)`);
+  // Bounded slice: --start=<offset> --count=<n> (or --limit=<n>) so each run stays short & under the job timeout.
+  const __start = args.start ? parseInt(String(args.start), 10) : 0;
+  const __count = args.count ? parseInt(String(args.count), 10) : (args.limit ? parseInt(String(args.limit), 10) : 0);
+  if (__start > 0 || __count > 0) {
+    members = members.slice(__start, __count > 0 ? __start + __count : undefined);
+    console.log(`  Slice: officials ${__start + 1}..${__start + members.length} (start=${__start}, count=${__count || 'all'})`);
   }
 
   console.log('\nð Processing politicians...\n');
