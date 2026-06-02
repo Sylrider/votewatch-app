@@ -10430,7 +10430,58 @@
         "filingId": "PTR-2024-Pelosi-AVGO"
       }
     ],
-    "lawsuits": [],
+    "lawsuits": [
+      {
+        "title": "McCarthy v. Pelosi (House proxy-voting challenge)",
+        "year": 2020,
+        "type": "Civil - constitutional challenge (official capacity)",
+        "status": "DISMISSED",
+        "outcome": "Dismissed; court held the Speech or Debate Clause barred the suit. Sued as Speaker, not personal liability.",
+        "description": "GOP Leader Kevin McCarthy and members challenged the House rule allowing proxy voting during COVID-19. Pelosi named as defendant in her official capacity as Speaker.",
+        "severity": "low",
+        "caseId": "D.D.C. No. 20-1395"
+      },
+      {
+        "title": "Massie v. Pelosi (proxy voting / floor fines challenge)",
+        "year": 2022,
+        "type": "Civil - constitutional challenge (official capacity)",
+        "status": "DISMISSED",
+        "outcome": "Dismissed; affirmed by the D.C. Circuit on June 30, 2023 (No. 22-5058). Pelosi sued in her official capacity only.",
+        "description": "Rep. Thomas Massie and others challenged House proxy voting and floor mask/metal-detector fines. Pelosi named as defendant in her official capacity as Speaker.",
+        "severity": "low",
+        "caseId": "D.D.C. No. 21-2023 / D.C. Cir. 22-5058"
+      },
+      {
+        "title": "Budowich v. Pelosi (Jan. 6 Committee subpoena challenge)",
+        "year": 2021,
+        "type": "Civil - subpoena challenge (official capacity)",
+        "status": "DISMISSED",
+        "outcome": "Dismissed. Challenge to a House Jan. 6 Select Committee subpoena; Pelosi named as Speaker.",
+        "description": "Taylor Budowich sued to block a Select Committee subpoena for bank records. Pelosi named as defendant in her official capacity.",
+        "severity": "low",
+        "caseId": "D.D.C. No. 21-3366"
+      },
+      {
+        "title": "Meadows v. Pelosi (Jan. 6 Committee subpoena challenge)",
+        "year": 2021,
+        "type": "Civil - subpoena challenge (official capacity)",
+        "status": "DISMISSED",
+        "outcome": "Dismissed. Challenge to a House Jan. 6 Select Committee subpoena; Pelosi named as Speaker.",
+        "description": "Former WH Chief of Staff Mark Meadows sued to block Select Committee subpoenas. Pelosi named as defendant in her official capacity.",
+        "severity": "low",
+        "caseId": "D.D.C. No. 21-3217"
+      },
+      {
+        "title": "Republican National Committee v. Pelosi (Jan. 6 subpoena challenge)",
+        "year": 2022,
+        "type": "Civil - subpoena challenge (official capacity)",
+        "status": "DISMISSED",
+        "outcome": "Dismissed. Challenge to a Select Committee subpoena of vendor records; Pelosi named as Speaker.",
+        "description": "The RNC sued to block a Jan. 6 Select Committee subpoena to a third-party vendor. Pelosi named as defendant in her official capacity.",
+        "severity": "low",
+        "caseId": "D.D.C. No. 22-0659"
+      }
+    ],
     "votes": [
       {
         "bill": "TikTok Divestment Act (Protecting Americans from Foreign Adversary Controlled Applications Act)",
@@ -10479,20 +10530,20 @@
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Nancy Pelosi raised $2.43M in reported campaign funds (through 2026), with 40% from large donors/PACs and 58% from small grassroots donors. Of her tracked votes, her YEA on the Israel/Ukraine/Taiwan aid package aligned with the position of pro-Israel donors (AIPAC) among her contributors. Her household's disclosed 2024 stock activity includes large NVIDIA, Apple, Palo Alto Networks and Broadcom positions (about $25M in tracked transactions, several via call options), all flagged as potential conflicts given Congress's role in tech, chip and cybersecurity policy. No legal actions on record.",
+    "viewSummary": "Nancy Pelosi raised $2.43M in reported campaign funds (through 2026), with 40% from large donors/PACs and 58% from small grassroots donors. Of her tracked votes, her YEA on the Israel/Ukraine/Taiwan aid package aligned with the position of pro-Israel donors (AIPAC) among her contributors. Her household's disclosed 2024 stock activity includes large NVIDIA, Apple, Palo Alto Networks and Broadcom positions (about $25M in tracked transactions, several via call options), all flagged as potential conflicts given Congress's role in tech, chip and cybersecurity policy. No legal actions on record. Legal: 5 federal suits naming her as a defendant in her official capacity as Speaker (House proxy-voting challenges by McCarthy and Massie; three Jan. 6 Committee subpoena challenges) - all dismissed, none involving personal liability or wrongdoing.",
     "profileComplete": true,
     "dataVersion": "2026-06-02T02:46:32.370Z",
     "score": {
-      "total": 43,
+      "total": 48,
       "lobbyScore": 6,
       "alignScore": 12,
       "stockScore": 25,
-      "legalScore": 0,
+      "legalScore": 5,
       "totalMoney": 2433666,
       "conflictTrades": 5,
       "donorAlignedVotes": 1,
       "totalTrackedVotes": 3,
-      "lastUpdated": "2026-06-02T02:57:08.846Z"
+      "lastUpdated": "2026-06-02T03:20:49.065Z"
     }
   },
   {
