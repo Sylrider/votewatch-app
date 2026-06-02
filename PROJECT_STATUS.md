@@ -477,3 +477,19 @@ writing, or the next build breaks on a TS error. (Caught in validation before co
   with DEMO_KEY. Secret VALUES are write-only/masked in GitHub and must never be extracted or pasted.
 - Same pattern for the other sources: CONGRESS_API_KEY and COURTLISTENER_TOKEN are also in Secrets and
   wired through the workflow + pipeline. Use the pipeline, not hand-rolled keyed URLs.
+
+
+## Pipeline funding fixes + Batch-1 reconciliation (2026-06-02)
+- BUG FIX (commit 5eef22e6): scripts/sources/fec.ts fetchFundingProfile was picking the most-recent
+  reporting period (in-progress 2026 cycle) instead of the most-recent COMPLETE cycle. Added
+  FUNDING_CYCLE=2024 with a cycle param + row filter so finance reflects the 2023-2024 cycle.
+- RECONCILIATION FIX (commit 5f2e360b): added an otherMoney bucket to FundingProfile. FEC gross
+  receipts (totalRaised) often exceed the sum of the five named buckets (loans/self-funding/offsets/
+  other receipts). otherMoney = max(0, receipts - (large+small+pac+party+transfers)). It is kept
+  OUT of the big-money concentration multiplier (bigMoney = itemized+pac+party+transfers only).
+- BATCH-1 (officials 0-24, run #26852254252, bot commit 9650f53): 25/25 on the 2024 cycle, all
+  funding reconciles exactly (19 exact, 6 within +/-3 cents of integer rounding, 0 broken).
+  Cloudflare Pages deploy = success. Example: Crow totalRaised 2208412 = 1207202+614488+280830+0+
+  89478+16414. Thune prior 41pct gap now captured as otherMoney 1711236 (reconciles).
+- PROCESS: run the Refresh Data Pipeline workflow in 25-member windows (start=N, count=25, force=1),
+  verify reconciliation + Cloudflare success after each, then advance start += 25 through all 229.
