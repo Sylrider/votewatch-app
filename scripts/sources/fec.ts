@@ -160,6 +160,7 @@ export interface FundingProfile {
   pacMoney: number;
   partyMoney: number;
   transferMoney: number;
+  otherMoney: number;
   bigMoneyShare: number | null;
   smallDonorShare: number | null;
   confidence: "high" | "medium" | "low";
@@ -185,6 +186,7 @@ export async function fetchFundingProfile(
     pacMoney: 0,
     partyMoney: 0,
     transferMoney: 0,
+    otherMoney: 0,
     bigMoneyShare: null,
     smallDonorShare: null,
     confidence: "low",
@@ -217,6 +219,9 @@ export async function fetchFundingProfile(
       Number(r.transfers_from_other_authorized_committee) || 0;
     const receipts = Number(r.receipts) || 0;
     const bigMoney = itemized + pac + party + transfers;
+    // Remaining gross receipts not in the five named buckets (loans/self-funding,
+    // offsets to operating expenditures, other receipts). Ensures the parts sum to total.
+    const other = Math.max(0, receipts - (itemized + unitemized + pac + party + transfers));
     const periodYear =
       typeof r.coverage_end_date === "string"
         ? r.coverage_end_date.slice(0, 4)
@@ -230,6 +235,7 @@ export async function fetchFundingProfile(
       pacMoney: Math.round(pac),
       partyMoney: Math.round(party),
       transferMoney: Math.round(transfers),
+      otherMoney: Math.round(other),
       bigMoneyShare: receipts ? Number((bigMoney / receipts).toFixed(3)) : null,
       smallDonorShare: receipts
         ? Number((unitemized / receipts).toFixed(3))
