@@ -192,12 +192,16 @@ export async function fetchFundingProfile(
   };
   if (!candidateId) return empty;
   try {
+    // Use the most-recent COMPLETE election cycle (2024), matching buildLobbyContributions.
+    // The in-progress cycle (2026) understates totals and will not reconcile.
+    const FUNDING_CYCLE = 2024;
     const data = await get(`/candidate/${candidateId}/totals/`, apiKey, {
+      cycle: FUNDING_CYCLE,
       per_page: 20,
     });
     const rows = (data && data.results) || [];
     const valid = rows
-      .filter((r: any) => Number(r.receipts) > 0)
+      .filter((r: any) => Number(r.receipts) > 0 && (r.cycle === FUNDING_CYCLE || r.cycle === undefined))
       .sort(
         (a: any, b: any) =>
           new Date(b.coverage_end_date).getTime() -
