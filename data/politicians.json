@@ -16122,5 +16122,2281 @@
       "totalTrackedVotes": 0,
       "lastUpdated": "2026-06-02T00:31:49.159Z"
     }
+  },
+  {
+    "id": "rep-boebert-lauren-co",
+    "name": "Lauren Boebert",
+    "state": "Colorado",
+    "party": "Republican",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2021,
+    "bioguideId": "B000825",
+    "fecCandidateId": "H0CO03165",
+    "imageUrl": "https://www.congress.gov/img/member/b000825_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "nra",
+        "lobbyName": "National Rifle Association (NRA)",
+        "amount": 2000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 0,
+      "lobbyScore": 0,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 2000,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:32:10.130Z"
+    }
+  },
+  {
+    "id": "rep-miller-carol-we",
+    "name": "Carol Miller",
+    "state": "West Virginia",
+    "party": "Republican",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2019,
+    "bioguideId": "M001205",
+    "fecCandidateId": "H8WV03097",
+    "imageUrl": "https://www.congress.gov/img/member/m001205_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 30000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 29850,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "pharma",
+        "lobbyName": "PhRMA – Pharmaceutical Manufacturers",
+        "amount": 27500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 22000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 11000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "health",
+        "lobbyName": "Health Insurance Industry (AHIP)",
+        "amount": 10500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 10500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "tech",
+        "lobbyName": "Big Tech Industry",
+        "amount": 9500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "uscc",
+        "lobbyName": "U.S. Chamber of Commerce",
+        "amount": 5000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nra",
+        "lobbyName": "National Rifle Association (NRA)",
+        "amount": 3500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
+        "amount": 3000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 2,
+      "lobbyScore": 2,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 162350,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:32:15.486Z"
+    }
+  },
+  {
+    "id": "rep-mcbath-lucy-ge",
+    "name": "Lucy McBath",
+    "state": "Georgia",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2019,
+    "bioguideId": "M001208",
+    "fecCandidateId": "H8GA06393",
+    "imageUrl": "https://www.congress.gov/img/member/m001208_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 20000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 19000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 11000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 10000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 10000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 4500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 4500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "tech",
+        "lobbyName": "Big Tech Industry",
+        "amount": 4000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "health",
+        "lobbyName": "Health Insurance Industry (AHIP)",
+        "amount": 2500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "crypto",
+        "lobbyName": "Cryptocurrency Industry",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "agribusiness",
+        "lobbyName": "Agribusiness (Farm Bureau)",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 1,
+      "lobbyScore": 1,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 88500,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:32:21.740Z"
+    }
+  },
+  {
+    "id": "rep-cisneros-gilbert-ca",
+    "name": "Gilbert Cisneros",
+    "state": "California",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2019,
+    "bioguideId": "C001123",
+    "fecCandidateId": "H8CA39174",
+    "imageUrl": "https://www.congress.gov/img/member/6807d8d63e52ea7df920ef05_200.jpg",
+    "lobbyMoney": [],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 0,
+      "lobbyScore": 0,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 0,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:32:24.104Z"
+    }
+  },
+  {
+    "id": "rep-scanlon-mary-pe",
+    "name": "Mary Scanlon",
+    "state": "Pennsylvania",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2018,
+    "bioguideId": "S001205",
+    "fecCandidateId": "H8PA07200",
+    "imageUrl": "https://www.congress.gov/img/member/116_rp_pa_5_scanlon_mary_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 61000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 23000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 11000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "health",
+        "lobbyName": "Health Insurance Industry (AHIP)",
+        "amount": 11000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "pharma",
+        "lobbyName": "PhRMA – Pharmaceutical Manufacturers",
+        "amount": 9500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 9000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 7750,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 5500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
+        "amount": 5000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 3500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 2,
+      "lobbyScore": 2,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 146250,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:32:32.188Z"
+    }
+  },
+  {
+    "id": "rep-gonzalez-vicente-te",
+    "name": "Vicente Gonzalez",
+    "state": "Texas",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2017,
+    "bioguideId": "G000581",
+    "fecCandidateId": "H6TX15162",
+    "imageUrl": "https://www.congress.gov/img/member/115_rp_tx_15_gonzalez_vicente_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 101301,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 100500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 39000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 31500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 24500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 16000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "pharma",
+        "lobbyName": "PhRMA – Pharmaceutical Manufacturers",
+        "amount": 5500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "uscc",
+        "lobbyName": "U.S. Chamber of Commerce",
+        "amount": 5000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 4000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 4,
+      "lobbyScore": 4,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 327301,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:33:19.184Z"
+    }
+  },
+  {
+    "id": "rep-suozzi-thomas-ne",
+    "name": "Thomas Suozzi",
+    "state": "New York",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2017,
+    "bioguideId": "S001201",
+    "fecCandidateId": "H6NY03247",
+    "imageUrl": "https://www.congress.gov/img/member/116_rp_ny_3_suozzi_thomas_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 68125,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 51300,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 20000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 13300,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 10000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 8500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 2,
+      "lobbyScore": 2,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 171225,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:33:26.930Z"
+    }
+  },
+  {
+    "id": "rep-green-al-te",
+    "name": "Al Green",
+    "state": "Texas",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2005,
+    "bioguideId": "G000553",
+    "fecCandidateId": "H4TX09095",
+    "imageUrl": "https://www.congress.gov/img/member/116_rp_tx_9_green_al_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 35000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 20000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 4000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 3500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 2000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 1,
+      "lobbyScore": 1,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 64500,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:33:30.804Z"
+    }
+  },
+  {
+    "id": "rep-doggett-lloyd-te",
+    "name": "Lloyd Doggett",
+    "state": "Texas",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 1995,
+    "bioguideId": "D000399",
+    "fecCandidateId": "H4TX10028",
+    "imageUrl": "https://www.congress.gov/img/member/d000399_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 37500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 21000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 14000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 8000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 4000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "tech",
+        "lobbyName": "Big Tech Industry",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 1,
+      "lobbyScore": 1,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 86500,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:33:34.260Z"
+    }
+  },
+  {
+    "id": "rep-vasquez-gabe-ne",
+    "name": "Gabe Vasquez",
+    "state": "New Mexico",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "V000136",
+    "fecCandidateId": "H2NM02191",
+    "imageUrl": "https://www.congress.gov/img/member/v000136_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 76000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 41000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 16800,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 12500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "pharma",
+        "lobbyName": "PhRMA – Pharmaceutical Manufacturers",
+        "amount": 9500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 7500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 7000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "health",
+        "lobbyName": "Health Insurance Industry (AHIP)",
+        "amount": 4000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 2,
+      "lobbyScore": 2,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 174300,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:33:57.144Z"
+    }
+  },
+  {
+    "id": "rep-tokuda-jill-ha",
+    "name": "Jill Tokuda",
+    "state": "Hawaii",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "T000487",
+    "fecCandidateId": "H2HI02581",
+    "imageUrl": "https://www.congress.gov/img/member/t000487_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 22500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 10000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 7500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 5000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 4300,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 4000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "uscc",
+        "lobbyName": "U.S. Chamber of Commerce",
+        "amount": 100,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 1,
+      "lobbyScore": 1,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 53400,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:34:03.223Z"
+    }
+  },
+  {
+    "id": "rep-thanedar-shri-mi",
+    "name": "Shri Thanedar",
+    "state": "Michigan",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "T000488",
+    "fecCandidateId": "H2MI13204",
+    "imageUrl": "https://www.congress.gov/img/member/68122bf2246d1b6bd8d9f6a2_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 155247,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 7500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 5000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 5000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 4000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "pharma",
+        "lobbyName": "PhRMA – Pharmaceutical Manufacturers",
+        "amount": 3000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 2500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
+        "amount": 2000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 2000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "tech",
+        "lobbyName": "Big Tech Industry",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 2,
+      "lobbyScore": 2,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 187247,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:34:12.086Z"
+    }
+  },
+  {
+    "id": "rep-sykes-emilia-oh",
+    "name": "Emilia Sykes",
+    "state": "Ohio",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "S001223",
+    "fecCandidateId": "H2OH13264",
+    "imageUrl": "https://www.congress.gov/img/member/s001223_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 122200,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 35500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 25500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 11000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 10000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "pharma",
+        "lobbyName": "PhRMA – Pharmaceutical Manufacturers",
+        "amount": 8000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 5000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 3000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "tech",
+        "lobbyName": "Big Tech Industry",
+        "amount": 1500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 3,
+      "lobbyScore": 3,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 221700,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:34:19.173Z"
+    }
+  },
+  {
+    "id": "rep-sorensen-eric-il",
+    "name": "Eric Sorensen",
+    "state": "Illinois",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "S001225",
+    "fecCandidateId": "H2IL17147",
+    "imageUrl": "https://www.congress.gov/img/member/s001225_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 73100,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 65000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 13000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 10000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 7000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "agribusiness",
+        "lobbyName": "Agribusiness (Farm Bureau)",
+        "amount": 5000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 3000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 3000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 2,
+      "lobbyScore": 2,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 179100,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:35:15.925Z"
+    }
+  },
+  {
+    "id": "rep-scholten-hillary-mi",
+    "name": "Hillary Scholten",
+    "state": "Michigan",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "S001221",
+    "fecCandidateId": "H0MI03316",
+    "imageUrl": "https://www.congress.gov/img/member/s001221_200.jpg",
+    "lobbyMoney": [],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 0,
+      "lobbyScore": 0,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 0,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:35:18.452Z"
+    }
+  },
+  {
+    "id": "rep-salinas-andrea-or",
+    "name": "Andrea Salinas",
+    "state": "Oregon",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "S001226",
+    "fecCandidateId": "H2OR06066",
+    "imageUrl": "https://www.congress.gov/img/member/s001226_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 117229,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 38600,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 31000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 13000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 10000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "health",
+        "lobbyName": "Health Insurance Industry (AHIP)",
+        "amount": 10000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 8000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "pharma",
+        "lobbyName": "PhRMA – Pharmaceutical Manufacturers",
+        "amount": 8000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 7000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "tech",
+        "lobbyName": "Big Tech Industry",
+        "amount": 1500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 3,
+      "lobbyScore": 3,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 244329,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:35:31.816Z"
+    }
+  },
+  {
+    "id": "rep-ramirez-delia-il",
+    "name": "Delia Ramirez",
+    "state": "Illinois",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "R000617",
+    "fecCandidateId": "H2IL03162",
+    "imageUrl": "https://www.congress.gov/img/member/684c2356333714e4aee2e1fd_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 37500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 4250,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 4000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 1500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 1,
+      "lobbyScore": 1,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 48250,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:37:20.848Z"
+    }
+  },
+  {
+    "id": "rep-nunn-zachary-io",
+    "name": "Zachary Nunn",
+    "state": "Iowa",
+    "party": "Republican",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "N000193",
+    "fecCandidateId": "H2IA03119",
+    "imageUrl": "https://www.congress.gov/img/member/n000193_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 69619,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 62500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 27000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 26500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "agribusiness",
+        "lobbyName": "Agribusiness (Farm Bureau)",
+        "amount": 23000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 18500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "tech",
+        "lobbyName": "Big Tech Industry",
+        "amount": 5000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "uscc",
+        "lobbyName": "U.S. Chamber of Commerce",
+        "amount": 4500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nra",
+        "lobbyName": "National Rifle Association (NRA)",
+        "amount": 3950,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "health",
+        "lobbyName": "Health Insurance Industry (AHIP)",
+        "amount": 2500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
+        "amount": 1500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 3,
+      "lobbyScore": 3,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 244569,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:37:34.639Z"
+    }
+  },
+  {
+    "id": "rep-moylan-james-gu",
+    "name": "James Moylan",
+    "state": "Guam",
+    "party": "Republican",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "M001219",
+    "fecCandidateId": "H2GU01031",
+    "imageUrl": "https://www.congress.gov/img/member/m001219_200.jpg",
+    "lobbyMoney": [],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": false,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 0,
+      "lobbyScore": 0,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 0,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:37:37.162Z"
+    }
+  },
+  {
+    "id": "rep-moskowitz-jared-fl",
+    "name": "Jared Moskowitz",
+    "state": "Florida",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "M001217",
+    "fecCandidateId": "H2FL22171",
+    "imageUrl": "https://www.congress.gov/img/member/m001217_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 285448,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 21500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 17500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 16300,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 10000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "health",
+        "lobbyName": "Health Insurance Industry (AHIP)",
+        "amount": 10000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 9500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 4000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
+        "amount": 3000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "tech",
+        "lobbyName": "Big Tech Industry",
+        "amount": 2000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "pharma",
+        "lobbyName": "PhRMA – Pharmaceutical Manufacturers",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 5,
+      "lobbyScore": 5,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 380248,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:37:44.721Z"
+    }
+  },
+  {
+    "id": "rep-mills-cory-fl",
+    "name": "Cory Mills",
+    "state": "Florida",
+    "party": "Republican",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "M001216",
+    "fecCandidateId": "H2FL07156",
+    "imageUrl": "https://www.congress.gov/img/member/m001216_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 22850,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 12500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 10000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
+        "amount": 9000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 4500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 3000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nra",
+        "lobbyName": "National Rifle Association (NRA)",
+        "amount": 2000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "uscc",
+        "lobbyName": "U.S. Chamber of Commerce",
+        "amount": 2000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 1,
+      "lobbyScore": 1,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 65850,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:37:50.197Z"
+    }
+  },
+  {
+    "id": "rep-miller-max-oh",
+    "name": "Max Miller",
+    "state": "Ohio",
+    "party": "Republican",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "M001222",
+    "fecCandidateId": "H2OH16051",
+    "imageUrl": "https://www.congress.gov/img/member/680908fb6c2e6631263de71f_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 114868,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 75142,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 12000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "agribusiness",
+        "lobbyName": "Agribusiness (Farm Bureau)",
+        "amount": 12000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 5000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
+        "amount": 4000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "uscc",
+        "lobbyName": "U.S. Chamber of Commerce",
+        "amount": 4000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nra",
+        "lobbyName": "National Rifle Association (NRA)",
+        "amount": 2000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "pharma",
+        "lobbyName": "PhRMA – Pharmaceutical Manufacturers",
+        "amount": 1500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "tech",
+        "lobbyName": "Big Tech Industry",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "crypto",
+        "lobbyName": "Cryptocurrency Industry",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "health",
+        "lobbyName": "Health Insurance Industry (AHIP)",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 3,
+      "lobbyScore": 3,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 233510,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:37:57.307Z"
+    }
+  },
+  {
+    "id": "rep-menendez-robert-ne",
+    "name": "Robert Menendez",
+    "state": "New Jersey",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "M001226",
+    "fecCandidateId": "H2NJ08232",
+    "imageUrl": "https://www.congress.gov/img/member/681231f6246d1b6bd8d9f6b4_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 209900,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "pharma",
+        "lobbyName": "PhRMA – Pharmaceutical Manufacturers",
+        "amount": 30000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 23000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 22000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 15000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 14500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "health",
+        "lobbyName": "Health Insurance Industry (AHIP)",
+        "amount": 7500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
+        "amount": 3000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 3000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "agribusiness",
+        "lobbyName": "Agribusiness (Farm Bureau)",
+        "amount": 2000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "tech",
+        "lobbyName": "Big Tech Industry",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 4,
+      "lobbyScore": 4,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 330900,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:38:04.096Z"
+    }
+  },
+  {
+    "id": "rep-mcgarvey-morgan-ke",
+    "name": "Morgan McGarvey",
+    "state": "Kentucky",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "M001220",
+    "fecCandidateId": "H2KY03206",
+    "imageUrl": "https://www.congress.gov/img/member/m001220_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 67263,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
+        "amount": 59000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 22500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 16000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "pharma",
+        "lobbyName": "PhRMA – Pharmaceutical Manufacturers",
+        "amount": 11000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 10500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 10000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 4000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
+        "amount": 3000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "agribusiness",
+        "lobbyName": "Agribusiness (Farm Bureau)",
+        "amount": 3000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "health",
+        "lobbyName": "Health Insurance Industry (AHIP)",
+        "amount": 2500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 3,
+      "lobbyScore": 3,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 208763,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:38:12.179Z"
+    }
+  },
+  {
+    "id": "rep-luna-anna-fl",
+    "name": "Anna Luna",
+    "state": "Florida",
+    "party": "Republican",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "L000596",
+    "fecCandidateId": "H0FL13158",
+    "imageUrl": "https://www.congress.gov/img/member/l000596_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 21000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 17000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 3674,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nra",
+        "lobbyName": "National Rifle Association (NRA)",
+        "amount": 2000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "uscc",
+        "lobbyName": "U.S. Chamber of Commerce",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "profileComplete": true,
+    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "score": {
+      "total": 1,
+      "lobbyScore": 1,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 45674,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-02T00:38:22.913Z"
+    }
   }
 ]
