@@ -10826,13 +10826,13 @@
       "available": true,
       "periodYear": "2024",
       "totalRaised": 10003159,
-      "largeDonorMoney": 9269859,
-      "smallDonorMoney": 480000,
+      "largeDonorMoney": 4409172,
+      "smallDonorMoney": 5340687,
       "pacMoney": 253300,
       "partyMoney": 0,
       "transferMoney": 0,
-      "bigMoneyShare": 0.952,
-      "smallDonorShare": 0.048,
+      "bigMoneyShare": 0.4661,
+      "smallDonorShare": 0.5339,
       "confidence": "high",
       "sources": [
         "FEC candidate totals (2023-2024 cycle)",
@@ -10843,8 +10843,8 @@
     "profileComplete": true,
     "dataVersion": "2026-06-02T02:46:32.370Z",
     "score": {
-      "total": 59,
-      "lobbyScore": 24,
+      "total": 53,
+      "lobbyScore": 18,
       "alignScore": 5,
       "stockScore": 25,
       "legalScore": 5,
@@ -10852,7 +10852,7 @@
       "conflictTrades": 5,
       "donorAlignedVotes": 1,
       "totalTrackedVotes": 7,
-      "lastUpdated": "2026-06-02T04:44:34.138Z"
+      "lastUpdated": "2026-06-02T14:57:54.213Z"
     }
   },
   {
