@@ -295,3 +295,30 @@ ASCII-fold -> commit -> verify via GitHub API. Repeat. Resume from checkpoint; n
 **Known caveat: Cloudflare live site lag.** After commits, watchgov.org kept serving a stale
 cached build (Pelosi still showed 31/100). Data is correct at source (GitHub). Verify the
 Cloudflare Pages build is triggering on commits to main; may need a manual rebuild.
+
+
+### 2026-06-02 (later) - chrome ext (small-batch rollout - Batch 1)
+
+**Lawsuits filter hardened.** lawsuits.ts now requires BOTH first AND last name to appear
+in caption+snippet (was: surname + official-capacity, which false-matched e.g. "Medicine
+Crow" for Jason Crow). Even so, edge cases remain (a common first name can appear as a
+JUDGE or unrelated party - e.g. "In re Kiley", a Utah bankruptcy case, matched "Kevin" via
+the judge's name). RULE: a human still verifies every auto-suggested match before commit.
+
+**Batch 1 done (15 incomplete profiles, lawsuits).** Queried CourtListener v4 live, verified
+each hit. Result: only Adam Schiff had real cases -> 3 official-capacity federal suits
+(Michalopoulos v. Schiff D.D.C.; AAPS v. Schiff D.C.Cir 21-5080; Judicial Watch v. Schiff
+D.C.Cir 20-5270), all low severity. legalScore 3, total 16->19. The other 14 (Friedman,
+Van Epps, Booker, Armstrong, Mejia, Fuller, Castro, McDonald Rivet, Crow, Kiley, Boyle,
+Young, Wyden, Wicker) had NO high-confidence federal cases - correctly left empty (NOT $0/fake).
+
+**Reality check for rollout.** Most individual members have no federal suit naming them
+personally; named-party lawsuits cluster among leadership/high-profile members. Expect most
+batch entries to be "none". That is accurate, not a failure.
+
+**Rate limit.** Unauthenticated CourtListener throttles fast (HTTP 429); browser batches must
+space requests ~2.5s apart and run <=4 names per JS call (CDP 45s cap). The prod pipeline
+uses CL_TOKEN for higher limits - prefer running the real pipeline per-batch where possible.
+
+**Resume checkpoint:** next batch = incomplete profiles starting AFTER the first 15 already
+checked (Schiff done). 226 profiles still have no lawsuits; continue in small batches of ~15.
