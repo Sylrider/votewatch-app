@@ -276,7 +276,38 @@
       }
     ],
     "stockTrades": [],
-    "lawsuits": [],
+    "lawsuits": [
+      {
+        "title": "Michalopoulos v. Schiff (Sen. Adam Schiff named defendant)",
+        "year": 2026,
+        "type": "Civil",
+        "status": "ON RECORD",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal suit naming Adam Schiff as defendant (D.D.C.).",
+        "severity": "low",
+        "caseId": "D.D.C. No. 26-1139"
+      },
+      {
+        "title": "Association of American Physicians & Surgeons, Inc. v. Adam Schiff",
+        "year": 2022,
+        "type": "Civil",
+        "status": "ON RECORD",
+        "outcome": "D.C. Circuit decided Jan 25, 2022; see CourtListener for disposition.",
+        "description": "Federal suit naming Adam Schiff in connection with his congressional role.",
+        "severity": "low",
+        "caseId": "D.C. Cir. 21-5080"
+      },
+      {
+        "title": "Judicial Watch, Inc. v. Adam B. Schiff",
+        "year": 2021,
+        "type": "Civil",
+        "status": "ON RECORD",
+        "outcome": "D.C. Circuit decided June 4, 2021; see CourtListener for disposition.",
+        "description": "Federal suit naming Adam Schiff in connection with his congressional role.",
+        "severity": "low",
+        "caseId": "D.C. Cir. 20-5270"
+      }
+    ],
     "votes": [],
     "funding": {
       "available": true,
@@ -298,16 +329,16 @@
     "profileComplete": true,
     "dataVersion": "2026-06-02T01:37:19.387Z",
     "score": {
-      "total": 16,
+      "total": 19,
       "lobbyScore": 16,
       "alignScore": 0,
       "stockScore": 0,
-      "legalScore": 0,
+      "legalScore": 3,
       "totalMoney": 7793491,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:39:50.514Z"
+      "lastUpdated": "2026-06-02T03:47:08.816Z"
     }
   },
   {
