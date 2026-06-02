@@ -56,6 +56,7 @@
       "pacMoney": 309393,
       "partyMoney": 0,
       "transferMoney": 0,
+      "otherMoney": 6754,
       "bigMoneyShare": 0.903,
       "smallDonorShare": 0.093,
       "confidence": "high",
@@ -65,7 +66,7 @@
     },
     "viewSummary": "Laura Friedman raised $1.8M in reported campaign funds (through 2024). About 90% came from large donors, PACs and committee transfers ($1.3M itemized, $309K PAC), while 9% ($171K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $35K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 16,
       "lobbyScore": 16,
@@ -76,7 +77,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:12:15.992Z"
+      "lastUpdated": "2026-06-02T22:46:09.780Z"
     }
   },
   {
@@ -102,6 +103,7 @@
       "pacMoney": 0,
       "partyMoney": 0,
       "transferMoney": 0,
+      "otherMoney": 0,
       "bigMoneyShare": null,
       "smallDonorShare": null,
       "confidence": "low",
@@ -109,7 +111,7 @@
     },
     "viewSummary": "Matt Van Epps: campaign-finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -120,7 +122,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:12:18.301Z"
+      "lastUpdated": "2026-06-02T22:46:14.522Z"
     }
   },
   {
@@ -180,6 +182,7 @@
       "pacMoney": 16510,
       "partyMoney": 0,
       "transferMoney": 3171526,
+      "otherMoney": 497813,
       "bigMoneyShare": 0.645,
       "smallDonorShare": 0.292,
       "confidence": "high",
@@ -189,7 +192,7 @@
     },
     "viewSummary": "Cory Booker raised $7.9M in reported campaign funds (through 2024). About 65% came from large donors, PACs and committee transfers ($1.9M itemized, $17K PAC), while 29% ($2.3M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $18K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 16,
       "lobbyScore": 16,
@@ -200,7 +203,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:13:08.728Z"
+      "lastUpdated": "2026-06-02T22:46:52.426Z"
     }
   },
   {
@@ -284,6 +287,7 @@
       "pacMoney": 1015453,
       "partyMoney": 250,
       "transferMoney": 536368,
+      "otherMoney": 1486497,
       "bigMoneyShare": 0.578,
       "smallDonorShare": 0.391,
       "confidence": "high",
@@ -293,7 +297,7 @@
     },
     "viewSummary": "Adam Schiff raised $48.1M in reported campaign funds (through 2024). About 58% came from large donors, PACs and committee transfers ($26.3M itemized, $1.0M PAC), while 39% ($18.8M) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $231K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 20,
       "lobbyScore": 20,
@@ -304,7 +308,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:14:18.431Z"
+      "lastUpdated": "2026-06-02T22:47:49.594Z"
     }
   },
   {
@@ -328,6 +332,7 @@
       "pacMoney": 0,
       "partyMoney": 0,
       "transferMoney": 0,
+      "otherMoney": 0,
       "bigMoneyShare": null,
       "smallDonorShare": null,
       "confidence": "low",
@@ -335,7 +340,7 @@
     },
     "viewSummary": "Alan Armstrong: campaign-finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -346,7 +351,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:14:20.822Z"
+      "lastUpdated": "2026-06-02T22:47:53.377Z"
     }
   },
   {
@@ -372,6 +377,7 @@
       "pacMoney": 0,
       "partyMoney": 0,
       "transferMoney": 0,
+      "otherMoney": 0,
       "bigMoneyShare": null,
       "smallDonorShare": null,
       "confidence": "low",
@@ -379,7 +385,7 @@
     },
     "viewSummary": "Analilia Mejia: campaign-finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -390,7 +396,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:14:43.642Z"
+      "lastUpdated": "2026-06-02T22:47:55.874Z"
     }
   },
   {
@@ -416,6 +422,7 @@
       "pacMoney": 0,
       "partyMoney": 0,
       "transferMoney": 0,
+      "otherMoney": 0,
       "bigMoneyShare": null,
       "smallDonorShare": null,
       "confidence": "low",
@@ -423,7 +430,7 @@
     },
     "viewSummary": "Clay Fuller: campaign-finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -434,7 +441,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:14:52.209Z"
+      "lastUpdated": "2026-06-02T22:47:58.895Z"
     }
   },
   {
@@ -518,6 +525,7 @@
       "pacMoney": 228417,
       "partyMoney": 0,
       "transferMoney": 0,
+      "otherMoney": 381,
       "bigMoneyShare": 0.882,
       "smallDonorShare": 0.117,
       "confidence": "high",
@@ -527,7 +535,7 @@
     },
     "viewSummary": "Joaquin Castro raised $690K in reported campaign funds (through 2024). About 88% came from large donors, PACs and committee transfers ($380K itemized, $228K PAC), while 12% ($81K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $44K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 6,
       "lobbyScore": 6,
@@ -538,7 +546,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:14:59.165Z"
+      "lastUpdated": "2026-06-02T22:48:06.192Z"
     }
   },
   {
@@ -614,6 +622,7 @@
       "pacMoney": 926636,
       "partyMoney": 13000,
       "transferMoney": 177288,
+      "otherMoney": 7657,
       "bigMoneyShare": 0.838,
       "smallDonorShare": 0.161,
       "confidence": "high",
@@ -623,7 +632,7 @@
     },
     "viewSummary": "Kristen McDonald Rivet raised $6.1M in reported campaign funds (through 2024). About 84% came from large donors, PACs and committee transfers ($4.0M itemized, $927K PAC), while 16% ($975K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $191K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 23,
       "lobbyScore": 23,
@@ -634,7 +643,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:15:07.954Z"
+      "lastUpdated": "2026-06-02T22:48:17.510Z"
     }
   },
   {
@@ -702,6 +711,7 @@
       "pacMoney": 280830,
       "partyMoney": 0,
       "transferMoney": 89478,
+      "otherMoney": 16414,
       "bigMoneyShare": 0.714,
       "smallDonorShare": 0.278,
       "confidence": "high",
@@ -711,7 +721,7 @@
     },
     "viewSummary": "Jason Crow raised $2.2M in reported campaign funds (through 2024). About 71% came from large donors, PACs and committee transfers ($1.2M itemized, $281K PAC), while 28% ($614K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $64K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 13,
       "lobbyScore": 13,
@@ -722,7 +732,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:15:28.681Z"
+      "lastUpdated": "2026-06-02T22:48:30.141Z"
     }
   },
   {
@@ -830,6 +840,7 @@
       "pacMoney": 650722,
       "partyMoney": 0,
       "transferMoney": 576095,
+      "otherMoney": 24382,
       "bigMoneyShare": 0.822,
       "smallDonorShare": 0.173,
       "confidence": "high",
@@ -839,7 +850,7 @@
     },
     "viewSummary": "Kevin Kiley raised $4.3M in reported campaign funds (through 2024). About 82% came from large donors, PACs and committee transfers ($2.3M itemized, $651K PAC), while 17% ($736K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $84K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 23,
       "lobbyScore": 23,
@@ -850,7 +861,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:15:35.153Z"
+      "lastUpdated": "2026-06-02T22:49:06.338Z"
     }
   },
   {
@@ -974,6 +985,7 @@
       "pacMoney": 1112299,
       "partyMoney": 0,
       "transferMoney": 0,
+      "otherMoney": 589416,
       "bigMoneyShare": 0.742,
       "smallDonorShare": 0.005,
       "confidence": "high",
@@ -983,7 +995,7 @@
     },
     "viewSummary": "Brendan Boyle raised $2.3M in reported campaign funds (through 2024). About 74% came from large donors, PACs and committee transfers ($623K itemized, $1.1M PAC), while 1% ($13K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $346K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 15,
       "lobbyScore": 15,
@@ -994,7 +1006,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:15:40.606Z"
+      "lastUpdated": "2026-06-02T22:49:14.653Z"
     }
   },
   {
@@ -1062,6 +1074,7 @@
       "pacMoney": 330350,
       "partyMoney": 0,
       "transferMoney": 515839,
+      "otherMoney": 247159,
       "bigMoneyShare": 0.811,
       "smallDonorShare": 0.049,
       "confidence": "high",
@@ -1071,7 +1084,7 @@
     },
     "viewSummary": "Todd Young raised $1.8M in reported campaign funds (through 2024). About 81% came from large donors, PACs and committee transfers ($576K itemized, $330K PAC), while 5% ($85K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $21K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 8,
       "lobbyScore": 8,
@@ -1082,7 +1095,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:15:44.721Z"
+      "lastUpdated": "2026-06-02T22:49:20.696Z"
     }
   },
   {
@@ -1166,6 +1179,7 @@
       "pacMoney": 309350,
       "partyMoney": 0,
       "transferMoney": 367986,
+      "otherMoney": 190774,
       "bigMoneyShare": 0.698,
       "smallDonorShare": 0.178,
       "confidence": "high",
@@ -1175,7 +1189,7 @@
     },
     "viewSummary": "Ron Wyden raised $1.5M in reported campaign funds (through 2024). About 70% came from large donors, PACs and committee transfers ($393K itemized, $309K PAC), while 18% ($273K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $47K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 6,
       "lobbyScore": 6,
@@ -1186,7 +1200,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:15:57.784Z"
+      "lastUpdated": "2026-06-02T22:49:28.756Z"
     }
   },
   {
@@ -1310,6 +1324,7 @@
       "pacMoney": 2282995,
       "partyMoney": 0,
       "transferMoney": 1235076,
+      "otherMoney": 1385,
       "bigMoneyShare": 0.958,
       "smallDonorShare": 0.042,
       "confidence": "high",
@@ -1319,7 +1334,7 @@
     },
     "viewSummary": "Roger Wicker raised $7.4M in reported campaign funds (through 2024). About 96% came from large donors, PACs and committee transfers ($3.6M itemized, $2.3M PAC), while 4% ($314K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $717K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 24,
       "lobbyScore": 24,
@@ -1330,7 +1345,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:16:13.196Z"
+      "lastUpdated": "2026-06-02T22:49:36.386Z"
     }
   },
   {
@@ -1390,6 +1405,7 @@
       "pacMoney": 738285,
       "partyMoney": 0,
       "transferMoney": 1418262,
+      "otherMoney": 2610,
       "bigMoneyShare": 0.999,
       "smallDonorShare": 0,
       "confidence": "high",
@@ -1399,7 +1415,7 @@
     },
     "viewSummary": "Sheldon Whitehouse raised $4.9M in reported campaign funds (through 2024). About 100% came from large donors, PACs and committee transfers ($2.7M itemized, $738K PAC), while 0% ($0) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $222K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 25,
       "lobbyScore": 25,
@@ -1410,7 +1426,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:16:57.786Z"
+      "lastUpdated": "2026-06-02T22:50:32.389Z"
     }
   },
   {
@@ -1462,6 +1478,7 @@
       "pacMoney": 43110,
       "partyMoney": 0,
       "transferMoney": 44728,
+      "otherMoney": 175646,
       "bigMoneyShare": 0.445,
       "smallDonorShare": 0.024,
       "confidence": "high",
@@ -1471,7 +1488,7 @@
     },
     "viewSummary": "Peter Welch raised $331K in reported campaign funds (through 2024). About 45% came from large donors, PACs and committee transfers ($59K itemized, $43K PAC), while 2% ($8K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $12K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 1,
       "lobbyScore": 1,
@@ -1482,7 +1499,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:17:02.737Z"
+      "lastUpdated": "2026-06-02T22:50:37.403Z"
     }
   },
   {
@@ -1518,6 +1535,7 @@
       "pacMoney": 59800,
       "partyMoney": 0,
       "transferMoney": 198967,
+      "otherMoney": 84924,
       "bigMoneyShare": 0.482,
       "smallDonorShare": 0.508,
       "confidence": "high",
@@ -1527,7 +1545,7 @@
     },
     "viewSummary": "Elizabeth Warren raised $9.0M in reported campaign funds (through 2024). About 48% came from large donors, PACs and committee transfers ($4.1M itemized, $60K PAC), while 51% ($4.6M) came from small grassroots donors. This funding mix is grassroots-leaning, a lower influence-risk signal. Tracked industry/PAC contributions identified so far total $5K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 18,
       "lobbyScore": 18,
@@ -1538,7 +1556,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:18:20.099Z"
+      "lastUpdated": "2026-06-02T22:52:58.841Z"
     }
   },
   {
@@ -1590,6 +1608,7 @@
       "pacMoney": 87317,
       "partyMoney": 0,
       "transferMoney": 516272,
+      "otherMoney": 427402,
       "bigMoneyShare": 0.548,
       "smallDonorShare": 0.363,
       "confidence": "high",
@@ -1599,7 +1618,7 @@
     },
     "viewSummary": "Raphael Warnock raised $4.8M in reported campaign funds (through 2024). About 55% came from large donors, PACs and committee transfers ($2.0M itemized, $87K PAC), while 36% ($1.7M) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $2K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 16,
       "lobbyScore": 16,
@@ -1610,7 +1629,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:19:28.857Z"
+      "lastUpdated": "2026-06-02T22:54:05.643Z"
     }
   },
   {
@@ -1637,6 +1656,7 @@
       "pacMoney": 710700,
       "partyMoney": 0,
       "transferMoney": 1190855,
+      "otherMoney": 122363,
       "bigMoneyShare": 0.91,
       "smallDonorShare": 0.062,
       "confidence": "high",
@@ -1646,7 +1666,7 @@
     },
     "viewSummary": "Mark Warner raised $4.3M in reported campaign funds (through 2024). About 91% came from large donors, PACs and committee transfers ($2.0M itemized, $711K PAC), while 6% ($264K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal.",
     "profileComplete": false,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 24,
       "lobbyScore": 24,
@@ -1657,7 +1677,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:19:30.896Z"
+      "lastUpdated": "2026-06-02T22:54:08.288Z"
     }
   },
   {
@@ -1717,6 +1737,7 @@
       "pacMoney": 44000,
       "partyMoney": 0,
       "transferMoney": 0,
+      "otherMoney": 54313,
       "bigMoneyShare": 0.718,
       "smallDonorShare": 0.117,
       "confidence": "high",
@@ -1726,7 +1747,7 @@
     },
     "viewSummary": "Chris Van Hollen raised $331K in reported campaign funds (through 2024). About 72% came from large donors, PACs and committee transfers ($193K itemized, $44K PAC), while 12% ($39K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $19K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 2,
       "lobbyScore": 2,
@@ -1737,7 +1758,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:20:19.166Z"
+      "lastUpdated": "2026-06-02T22:54:17.063Z"
     }
   },
   {
@@ -1805,6 +1826,7 @@
       "pacMoney": 324300,
       "partyMoney": 0,
       "transferMoney": 5792,
+      "otherMoney": 13329,
       "bigMoneyShare": 0.682,
       "smallDonorShare": 0.312,
       "confidence": "high",
@@ -1814,7 +1836,7 @@
     },
     "viewSummary": "Tommy Tuberville raised $2.2M in reported campaign funds (through 2024). About 68% came from large donors, PACs and committee transfers ($1.2M itemized, $324K PAC), while 31% ($684K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $13K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 12,
       "lobbyScore": 12,
@@ -1825,7 +1847,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:20:28.289Z"
+      "lastUpdated": "2026-06-02T22:54:24.836Z"
     }
   },
   {
@@ -1925,6 +1947,7 @@
       "pacMoney": 1053190,
       "partyMoney": 0,
       "transferMoney": 36822,
+      "otherMoney": 12112,
       "bigMoneyShare": 0.972,
       "smallDonorShare": 0.023,
       "confidence": "high",
@@ -1934,7 +1957,7 @@
     },
     "viewSummary": "Thomas Tillis raised $2.5M in reported campaign funds (through 2024). About 97% came from large donors, PACs and committee transfers ($1.3M itemized, $1.1M PAC), while 2% ($56K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $98K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 23,
       "lobbyScore": 23,
@@ -1945,7 +1968,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:20:39.066Z"
+      "lastUpdated": "2026-06-02T22:54:32.226Z"
     }
   },
   {
@@ -2021,6 +2044,7 @@
       "pacMoney": 555700,
       "partyMoney": 0,
       "transferMoney": 557055,
+      "otherMoney": 1711236,
       "bigMoneyShare": 0.532,
       "smallDonorShare": 0.057,
       "confidence": "high",
@@ -2030,7 +2054,7 @@
     },
     "viewSummary": "John Thune raised $4.2M in reported campaign funds (through 2024). About 53% came from large donors, PACs and committee transfers ($1.1M itemized, $556K PAC), while 6% ($239K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $49K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 13,
       "lobbyScore": 13,
@@ -2041,7 +2065,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:25:02.421Z"
+      "lastUpdated": "2026-06-02T22:54:40.005Z"
     }
   },
   {
@@ -2125,6 +2149,7 @@
       "pacMoney": 523850,
       "partyMoney": 0,
       "transferMoney": 381064,
+      "otherMoney": 73617,
       "bigMoneyShare": 0.921,
       "smallDonorShare": 0.04,
       "confidence": "high",
@@ -2134,7 +2159,7 @@
     },
     "viewSummary": "Dan Sullivan raised $1.9M in reported campaign funds (through 2024). About 92% came from large donors, PACs and committee transfers ($840K itemized, $524K PAC), while 4% ($75K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $46K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:12:03.912Z",
+    "dataVersion": "2026-06-02T22:40:59.602Z",
     "score": {
       "total": 13,
       "lobbyScore": 13,
@@ -2145,7 +2170,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:25:09.678Z"
+      "lastUpdated": "2026-06-02T22:54:47.937Z"
     }
   },
   {
