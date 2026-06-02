@@ -44,7 +44,7 @@ async function get(path: string, apiKey: string, params: Record<string, string |
   }
 }
 
-// ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Find FEC candidate ID ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ
+// ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Find FEC candidate ID ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ
 
 const STATE_CODES: Record<string, string> = {
   'alabama': 'AL', 'alaska': 'AK', 'arizona': 'AZ', 'arkansas': 'AR', 'california': 'CA',
@@ -101,12 +101,12 @@ export async function findCandidateId(
     });
     results = data.results || [];
   } catch (err) {
-    console.warn(`  ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ  FEC candidate search failed for "${name}" (${state}/${office}): ${(err as Error).message} ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ no donor data for this official.`);
+    console.warn(`  ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ  FEC candidate search failed for "${name}" (${state}/${office}): ${(err as Error).message} ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ no donor data for this official.`);
     return null;
   }
 
   if (results.length === 0) {
-    console.warn(`  ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ  FEC: no candidates returned for "${name}" (${state}/${office}) ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ no donor data.`);
+    console.warn(`  ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ  FEC: no candidates returned for "${name}" (${state}/${office}) ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ no donor data.`);
     return null;
   }
 
@@ -123,7 +123,7 @@ export async function findCandidateId(
   if (!match && results.length === 1) match = results[0];
 
   if (!match) {
-    console.warn(`  ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ  FEC: no name match for "${name}" (${state}/${office}) among ${results.length} candidates ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ no donor data.`);
+    console.warn(`  ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ  FEC: no name match for "${name}" (${state}/${office}) among ${results.length} candidates ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ no donor data.`);
     return null;
   }
 
@@ -146,8 +146,98 @@ export async function fetchCandidateFinance(
     const totalReceipts = row && typeof row.receipts === 'number' ? row.receipts : 0;
     return { totalReceipts, topDonors: [] };
   } catch (err) {
-    console.warn(`  Ã¢ÂÂ  FEC finance fetch failed for ${candidateId}: ${(err as Error).message} Ã¢ÂÂ receipts unavailable.`);
+    console.warn(`  ÃÂ¢ÃÂÃÂ  FEC finance fetch failed for ${candidateId}: ${(err as Error).message} ÃÂ¢ÃÂÃÂ receipts unavailable.`);
     return { totalReceipts: 0, topDonors: [] };
+  }
+}
+
+export interface FundingProfile {
+  available: boolean;
+  periodYear?: string;
+  totalRaised: number;
+  largeDonorMoney: number;
+  smallDonorMoney: number;
+  pacMoney: number;
+  partyMoney: number;
+  transferMoney: number;
+  bigMoneyShare: number | null;
+  smallDonorShare: number | null;
+  confidence: "high" | "medium" | "low";
+  sources: string[];
+}
+
+/**
+ * Build a full campaign-finance profile from the FEC /totals endpoint.
+ * Picks the most-recent reporting period (by coverage_end_date) that has receipts.
+ * Big-money share = (itemized individual + PAC + party + transfers) / receipts;
+ * small-donor share = unitemized individual / receipts. Returns available:false
+ * (NOT zeros) when the candidate has no FEC committee, so the UI can show "unavailable".
+ */
+export async function fetchFundingProfile(
+  candidateId: string | null,
+  apiKey: string,
+): Promise<FundingProfile> {
+  const empty: FundingProfile = {
+    available: false,
+    totalRaised: 0,
+    largeDonorMoney: 0,
+    smallDonorMoney: 0,
+    pacMoney: 0,
+    partyMoney: 0,
+    transferMoney: 0,
+    bigMoneyShare: null,
+    smallDonorShare: null,
+    confidence: "low",
+    sources: [],
+  };
+  if (!candidateId) return empty;
+  try {
+    const data = await get(`/candidate/${candidateId}/totals/`, apiKey, {
+      per_page: 20,
+    });
+    const rows = (data && data.results) || [];
+    const valid = rows
+      .filter((r: any) => Number(r.receipts) > 0)
+      .sort(
+        (a: any, b: any) =>
+          new Date(b.coverage_end_date).getTime() -
+          new Date(a.coverage_end_date).getTime(),
+      );
+    if (valid.length === 0) return empty;
+    const r = valid[0];
+    const itemized = Number(r.individual_itemized_contributions) || 0;
+    const unitemized = Number(r.individual_unitemized_contributions) || 0;
+    const pac = Number(r.other_political_committee_contributions) || 0;
+    const party = Number(r.political_party_committee_contributions) || 0;
+    const transfers =
+      Number(r.transfers_from_other_authorized_committee) || 0;
+    const receipts = Number(r.receipts) || 0;
+    const bigMoney = itemized + pac + party + transfers;
+    const periodYear =
+      typeof r.coverage_end_date === "string"
+        ? r.coverage_end_date.slice(0, 4)
+        : undefined;
+    return {
+      available: true,
+      periodYear,
+      totalRaised: Math.round(receipts),
+      largeDonorMoney: Math.round(itemized),
+      smallDonorMoney: Math.round(unitemized),
+      pacMoney: Math.round(pac),
+      partyMoney: Math.round(party),
+      transferMoney: Math.round(transfers),
+      bigMoneyShare: receipts ? Number((bigMoney / receipts).toFixed(3)) : null,
+      smallDonorShare: receipts
+        ? Number((unitemized / receipts).toFixed(3))
+        : null,
+      confidence: "high",
+      sources: ["FEC /candidate/{id}/totals"],
+    };
+  } catch (err) {
+    console.warn(
+      `[fec] funding profile failed for ${candidateId}: ${(err as Error).message} - unavailable.`,
+    );
+    return empty;
   }
 }
 
@@ -240,10 +330,10 @@ export async function buildLobbyContributions(
 function getLobbyById(id: string): { name: string; defaultIntent: string } | null {
   const LOBBY_INFO: Record<string, { name: string; defaultIntent: string }> = {
     nra: { name: 'National Rifle Association (NRA)', defaultIntent: 'Block gun safety legislation, promote firearms deregulation' },
-    pharma: { name: 'PhRMA ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Pharmaceutical Manufacturers', defaultIntent: 'Block drug price negotiation, protect pharmaceutical patents' },
+    pharma: { name: 'PhRMA ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Pharmaceutical Manufacturers', defaultIntent: 'Block drug price negotiation, protect pharmaceutical patents' },
     api: { name: 'American Petroleum Institute (API)', defaultIntent: 'Block climate legislation, support fossil fuel subsidies and deregulation' },
     uscc: { name: 'U.S. Chamber of Commerce', defaultIntent: 'Reduce corporate taxes, oppose labor regulations, support deregulation' },
-    aipac: { name: 'AIPAC ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ American Israel Public Affairs Committee', defaultIntent: 'Support unconditional military aid to Israel, oppose arms embargo conditions' },
+    aipac: { name: 'AIPAC ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ American Israel Public Affairs Committee', defaultIntent: 'Support unconditional military aid to Israel, oppose arms embargo conditions' },
     finance: { name: 'Wall Street / Financial Industry', defaultIntent: 'Oppose financial regulation, support bank deregulation' },
     defense: { name: 'Defense Industry (MICC)', defaultIntent: 'Support defense budget increases, weapons procurement contracts' },
     tech: { name: 'Big Tech Industry', defaultIntent: 'Oppose antitrust enforcement, limit platform liability regulations' },
