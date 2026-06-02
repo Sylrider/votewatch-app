@@ -2,12 +2,12 @@
  * scripts/score.ts
  * Calculates the Transparency Risk Score for each politician.
  *
- * Score = Lobby Score (0–25) + Alignment Score (0–35) + Stock Score (0–25) + Legal Score (0–15)
+ * Score = Lobby Score (0â25) + Alignment Score (0â35) + Stock Score (0â25) + Legal Score (0â15)
  */
 
 import type { Politician, TransparencyScore, Vote, LobbyContribution, StockTrade, Lawsuit } from '../lib/types';
 
-// Known lobby positions on major bills — used to calculate donor-vote alignment
+// Known lobby positions on major bills â used to calculate donor-vote alignment
 // Format: { billKeyword: { lobbyId: expectedVote } }
 const LOBBY_POSITIONS: Record<string, Record<string, 'YEA' | 'NAY'>> = {
   'inflation reduction': { api: 'NAY', pharma: 'NAY', nra: 'NAY', uscc: 'NAY' },
@@ -33,10 +33,10 @@ const LOBBY_POSITIONS: Record<string, Record<string, 'YEA' | 'NAY'>> = {
   'net neutrality':      { telecom: 'NAY' },
 };
 
-// ─── Main scoring function ────────────────────────────────────────────────────
+// âââ Main scoring function ââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 export function calculateScore(politician: Politician): TransparencyScore {
-  const lobbyScore  = calcLobbyScore(politician.lobbyMoney);
+  const lobbyScore  = calcMoneyScore(politician.funding, politician.lobbyMoney);
   const alignScore  = calcAlignScore(politician.votes, politician.lobbyMoney);
   const stockScore  = calcStockScore(politician.stockTrades);
   const legalScore  = calcLegalScore(politician.lawsuits);
@@ -44,7 +44,10 @@ export function calculateScore(politician: Politician): TransparencyScore {
   const total = Math.min(100, Math.round(lobbyScore + alignScore + stockScore + legalScore));
 
   const conflictTrades = politician.stockTrades.filter(t => t.conflict).length;
-  const totalMoney = politician.lobbyMoney.reduce((s, l) => s + l.amount, 0);
+  const totalMoney =
+    politician.funding && politician.funding.available
+      ? politician.funding.totalRaised
+      : politician.lobbyMoney.reduce((s, l) => s + l.amount, 0);
   const donorAlignedVotes = politician.votes.filter(v => v.alignsWithDonors).length;
 
   return {
@@ -61,15 +64,31 @@ export function calculateScore(politician: Politician): TransparencyScore {
   };
 }
 
-// ─── Component calculators ────────────────────────────────────────────────────
+// âââ Component calculators ââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
-/** Lobby Money Score: 0–25, scaled per $100K received */
-function calcLobbyScore(contributions: LobbyContribution[]): number {
+/**
+ * Money-Influence Score: 0-25. Driven by REAL FEC funding when available:
+ * big-money dollars (large itemized individual + PAC) scaled per $100K, then
+ * weighted by the big-money share so a high reliance on large/PAC money raises
+ * risk and a grassroots (small-donor) base lowers it. Falls back to tracked
+ * lobby contributions when no FEC funding profile is available.
+ */
+function calcMoneyScore(
+  funding: Politician['funding'],
+  contributions: LobbyContribution[],
+): number {
+  if (funding && funding.available && funding.totalRaised > 0) {
+    const bigMoneyDollars = funding.largeDonorMoney + funding.pacMoney;
+    const base = Math.min(20, (bigMoneyDollars / 100_000) * 0.8);
+    const share = funding.bigMoneyShare == null ? 0.5 : funding.bigMoneyShare;
+    const shareMult = 0.6 + share * 0.65;
+    return Math.min(25, base * shareMult);
+  }
   const total = contributions.reduce((s, l) => s + l.amount, 0);
   return Math.min(25, (total / 100_000) * 1.2);
 }
 
-/** Donor-Vote Alignment Score: 0–35 */
+/** Donor-Vote Alignment Score: 0â35 */
 function calcAlignScore(votes: Vote[], contributions: LobbyContribution[]): number {
   if (votes.length === 0) return 0;
 
@@ -85,21 +104,21 @@ function calcAlignScore(votes: Vote[], contributions: LobbyContribution[]): numb
   return (alignedCount / votes.length) * 35;
 }
 
-/** Stock Trade Conflict Score: 0–25 */
+/** Stock Trade Conflict Score: 0â25 */
 function calcStockScore(trades: StockTrade[]): number {
   const conflictTrades = trades.filter(t => t.conflict);
   const hasLargeTrade = conflictTrades.some(t => t.amount >= 500_000);
   return Math.min(25, conflictTrades.length * 5 + (hasLargeTrade ? 10 : 0));
 }
 
-/** Legal Record Score: 0–15 */
+/** Legal Record Score: 0â15 */
 function calcLegalScore(lawsuits: Lawsuit[]): number {
   const weights = { high: 7, medium: 4, low: 1 };
   const total = lawsuits.reduce((s, l) => s + weights[l.severity], 0);
   return Math.min(15, total);
 }
 
-// ─── Vote alignment checker ───────────────────────────────────────────────────
+// âââ Vote alignment checker âââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 export function isAlignedWithDonors(vote: Vote, donorLobbyIds: Set<string>): boolean {
   const billLower = (vote.bill || '').toLowerCase();
@@ -128,7 +147,7 @@ export function annotateVoteAlignment(politician: Politician): Politician {
   return { ...politician, votes: annotatedVotes };
 }
 
-// ─── Risk label helper ────────────────────────────────────────────────────────
+// âââ Risk label helper ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 export function riskLabel(score: number): { label: string; color: string } {
   if (score >= 75) return { label: 'CRITICAL',  color: '#ef4444' };
