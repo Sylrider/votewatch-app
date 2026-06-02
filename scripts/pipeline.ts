@@ -1,7 +1,7 @@
 #!/usr/bin/env tsx
 /**
  * scripts/pipeline.ts
- * Master ETL pipeline â run this to generate data/politicians.json
+ * Master ETL pipeline Ã¢ÂÂ run this to generate data/politicians.json
  *
  * Usage:
  *   npx tsx scripts/pipeline.ts
@@ -10,21 +10,21 @@
  *   npx tsx scripts/pipeline.ts --id=B001230        (single bioguide ID)
  *
  * Required env vars (.env.local):
- *   CONGRESS_API_KEY   â from api.congress.gov/sign-up/
- *   FEC_API_KEY        â from api.data.gov/signup/
+ *   CONGRESS_API_KEY   Ã¢ÂÂ from api.congress.gov/sign-up/
+ *   FEC_API_KEY        Ã¢ÂÂ from api.data.gov/signup/
  *
  * Optional env vars:
- *   COURTLISTENER_TOKEN â from courtlistener.com (higher rate limits)
+ *   COURTLISTENER_TOKEN Ã¢ÂÂ from courtlistener.com (higher rate limits)
  *
- * Runtime: ~45â90 minutes for all ~535 federal members
- * Output:  data/politicians.json  (~8â15 MB)
+ * Runtime: ~45Ã¢ÂÂ90 minutes for all ~535 federal members
+ * Output:  data/politicians.json  (~8Ã¢ÂÂ15 MB)
  *          data/pipeline-log.json (run metadata)
  */
 
 import * as fs from 'fs/promises';
 import * as path from 'path';
 import { fetchAllMembers, fetchMemberVotes } from './sources/congress';
-import { findCandidateId, buildLobbyContributions } from './sources/fec';
+import { findCandidateId, buildLobbyContributions, fetchFundingProfile } from './sources/fec';
 import { fetchSenateTrades, fetchHouseTrades, getTradesForPolitician } from './sources/trades';
 import { searchLawsuits } from './sources/lawsuits';
 import { calculateScore, annotateVoteAlignment } from './score';
@@ -32,7 +32,7 @@ import type { Politician, PipelineRun, Chamber } from '../lib/types';
 import { readFile, writeFile } from 'fs/promises';
 import { execSync } from 'child_process';
 
-// âââ Config âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ Config Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 
 const CONGRESS_API_KEY = process.env.CONGRESS_API_KEY || '';
 const FEC_API_KEY      = process.env.FEC_API_KEY || '';
@@ -47,11 +47,11 @@ const args = Object.fromEntries(
     .map(a => a.slice(2).split('=') as [string, string])
 );
 
-// âââ Main âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ Main Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 
 async function main() {
   if (!CONGRESS_API_KEY || !FEC_API_KEY) {
-    console.error('â Missing API keys. Set CONGRESS_API_KEY and FEC_API_KEY in .env.local');
+    console.error('Ã¢ÂÂ Missing API keys. Set CONGRESS_API_KEY and FEC_API_KEY in .env.local');
     console.error('   Congress.gov: https://api.congress.gov/sign-up/');
     console.error('   FEC API:       https://api.data.gov/signup/');
     process.exit(1);
@@ -66,18 +66,18 @@ async function main() {
     errors: [],
   };
 
-  console.log('\nð³  VoteWatch Data Pipeline');
-  console.log('â'.repeat(50));
+  console.log('\nÃ°ÂÂÂ³  VoteWatch Data Pipeline');
+  console.log('Ã¢ÂÂ'.repeat(50));
   console.log(`Started: ${run.startedAt}`);
   console.log('');
 
   // Pre-fetch bulk trade data (one request fetches all trades at once)
-  console.log('ð Pre-fetching stock trade disclosures...');
+  console.log('Ã°ÂÂÂ Pre-fetching stock trade disclosures...');
   await fetchSenateTrades();
   await fetchHouseTrades();
 
   // Fetch all current Congress members
-  console.log('\nð  Fetching Congress members from Congress.gov...');
+  console.log('\nÃ°ÂÂÂ  Fetching Congress members from Congress.gov...');
   let members = await fetchAllMembers(CONGRESS_API_KEY);
   console.log(`   Found ${members.length} current members`);
 
@@ -99,7 +99,7 @@ async function main() {
     console.log(`  Slice: officials ${__start + 1}..${__start + members.length} (start=${__start}, count=${__count || 'all'})`);
   }
 
-  console.log('\nð Processing politicians...\n');
+  console.log('\nÃ°ÂÂÂ Processing politicians...\n');
 
   const politicians: Politician[] = [];
 
@@ -168,7 +168,7 @@ async function main() {
       );
       if (__hasData && process.env.FORCE_REPROCESS !== "1") {
         politicians.push(__ex);
-        console.log(`  [${i + 1}/${members.length}] ${member.name} — already complete, skipped`);
+        console.log(`  [${i + 1}/${members.length}] ${member.name} â already complete, skipped`);
         continue;
       }
     }
@@ -202,6 +202,10 @@ async function main() {
         : [];
       await sleep(RATE_LIMIT_MS);
 
+      // 3b. Fetch full campaign-finance profile (real totals, big-money share)
+      const funding = await fetchFundingProfile(fecId, FEC_API_KEY);
+      await sleep(RATE_LIMIT_MS);
+
       // 4. Fetch stock trades
       const stockTrades = await getTradesForPolitician(member.name, chamber);
       await sleep(RATE_LIMIT_MS);
@@ -228,6 +232,14 @@ async function main() {
         stockTrades,
         lawsuits,
         votes,
+        funding,
+        viewSummary: buildViewSummary({
+          name: formatName(member.name),
+          funding,
+          lobbyMoney,
+          stockTrades,
+          lawsuits,
+        }),
         profileComplete: Boolean((Array.isArray(lobbyMoney)&&lobbyMoney.length>0)||(Array.isArray(stockTrades)&&stockTrades.length>0)||(Array.isArray(lawsuits)&&lawsuits.length>0)),
         dataVersion: run.startedAt,
         score: {
@@ -247,17 +259,17 @@ async function main() {
       run.politiciansProcessed++;
 
       const { total, label } = scoreLabel(politician.score.total);
-      process.stdout.write(` â score=${total} (${label})\n`);
+      process.stdout.write(` Ã¢ÂÂ score=${total} (${label})\n`);
 
     } catch (err) {
       const msg = `${member.name}: ${(err as Error).message}`;
       run.errors.push(msg);
-      process.stdout.write(` â ERROR: ${(err as Error).message}\n`);
+      process.stdout.write(` Ã¢ÂÂ ERROR: ${(err as Error).message}\n`);
     }
   }
 
   // Write output
-  console.log('\nð¾ Writing output files...');
+  console.log('\nÃ°ÂÂÂ¾ Writing output files...');
 
   // (politicians.json is written by flushAndCommit below, with merged data.)
 
@@ -275,19 +287,83 @@ async function main() {
     (new Date(run.completedAt).getTime() - new Date(run.startedAt).getTime()) / 1000
   );
 
-  console.log('\n' + 'â'.repeat(50));
-  console.log(`â Pipeline complete`);
+  console.log('\n' + 'Ã¢ÂÂ'.repeat(50));
+  console.log(`Ã¢ÂÂ Pipeline complete`);
   console.log(`   Politicians processed: ${run.politiciansProcessed}`);
   console.log(`   Errors: ${run.errors.length}`);
   console.log(`   Duration: ${Math.floor(duration / 60)}m ${duration % 60}s`);
   console.log(`   Output: data/politicians.json`);
   if (run.errors.length > 0) {
-    console.log('\nâ ï¸  Errors:');
+    console.log('\nÃ¢ÂÂ Ã¯Â¸Â  Errors:');
     run.errors.forEach(e => console.log(`   - ${e}`));
   }
 }
 
-// âââ Helpers âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ Helpers Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+
+function fmtMoney(n: number): string {
+  if (n >= 1_000_000) return `$${(n / 1_000_000).toFixed(1)}M`;
+  if (n >= 1_000) return `$${Math.round(n / 1_000)}K`;
+  return `$${Math.round(n)}`;
+}
+
+/**
+ * Builds a plain-language summary of a politician's money & influence profile
+ * from already-fetched, sourced data (no fabrication). Shows "unavailable" when
+ * FEC finance is missing rather than implying $0.
+ */
+function buildViewSummary(input: {
+  name: string;
+  funding: import("./sources/fec").FundingProfile;
+  lobbyMoney: Array<{ amount: number }>;
+  stockTrades: Array<{ conflict?: boolean }>;
+  lawsuits: Array<unknown>;
+}): string {
+  const { name, funding, lobbyMoney, stockTrades, lawsuits } = input;
+  const parts: string[] = [];
+
+  if (funding && funding.available && funding.totalRaised > 0) {
+    const yr = funding.periodYear ? ` (through ${funding.periodYear})` : "";
+    parts.push(
+      `${name} raised ${fmtMoney(funding.totalRaised)} in reported campaign funds${yr}.`,
+    );
+    if (funding.bigMoneyShare != null && funding.smallDonorShare != null) {
+      const bigPct = Math.round(funding.bigMoneyShare * 100);
+      const smallPct = Math.round(funding.smallDonorShare * 100);
+      parts.push(
+        `About ${bigPct}% came from large donors, PACs and committee transfers ` +
+          `(${fmtMoney(funding.largeDonorMoney)} itemized, ${fmtMoney(funding.pacMoney)} PAC), ` +
+          `while ${smallPct}% (${fmtMoney(funding.smallDonorMoney)}) came from small grassroots donors.`,
+      );
+      if (bigPct >= 60) {
+        parts.push("This funding mix leans heavily on big-money sources, a higher influence-risk signal.");
+      } else if (smallPct >= 50) {
+        parts.push("This funding mix is grassroots-leaning, a lower influence-risk signal.");
+      }
+    }
+  } else {
+    parts.push(`${name}: campaign-finance totals are unavailable (no matched FEC committee).`);
+  }
+
+  const trackedLobby = lobbyMoney.reduce((s, l) => s + (l.amount || 0), 0);
+  if (trackedLobby > 0) {
+    parts.push(`Tracked industry/PAC contributions identified so far total ${fmtMoney(trackedLobby)}.`);
+  }
+
+  const conflicts = stockTrades.filter((t) => t.conflict).length;
+  if (stockTrades.length > 0) {
+    parts.push(
+      `${stockTrades.length} disclosed stock trade(s)` +
+        (conflicts > 0 ? `, ${conflicts} flagged as a potential conflict of interest.` : "."),
+    );
+  }
+
+  if (lawsuits.length > 0) {
+    parts.push(`${lawsuits.length} legal action(s)/lawsuit(s) on record.`);
+  }
+
+  return parts.join(" ");
+}
 
 function generateId(name: string, state: string, chamber: string): string {
   const prefix = chamber === 'Senate' ? 'sen' : 'rep';
@@ -303,7 +379,7 @@ function generateId(name: string, state: string, chamber: string): string {
 }
 
 function formatName(name: string): string {
-  // Congress.gov returns "LAST, FIRST M." â convert to "First Last"
+  // Congress.gov returns "LAST, FIRST M." Ã¢ÂÂ convert to "First Last"
   const parts = name.split(',').map(s => s.trim());
   if (parts.length === 2) {
     const first = parts[1].split(' ')[0];
@@ -322,6 +398,6 @@ function sleep(ms: number) {
 }
 
 main().catch(err => {
-  console.error('\nâ Fatal pipeline error:', err);
+  console.error('\nÃ¢ÂÂ Fatal pipeline error:', err);
   process.exit(1);
 });
