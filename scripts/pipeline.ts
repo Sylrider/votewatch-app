@@ -32,6 +32,22 @@ import type { Politician, PipelineRun, Chamber } from '../lib/types';
 import { readFile, writeFile } from 'fs/promises';
 import { execSync } from 'child_process';
 
+// Ensure all text written to data files is plain ASCII so it can never be
+// double-encoded into mojibake by any tool/editor round-trip.
+function asciiSafe(s: string): string {
+  return s
+    .replace(/[\u2013\u2014\u2012\u2015]/g, '-')      // dashes -> hyphen
+    .replace(/[\u2018\u2019\u201b]/g, "'")           // single quotes
+    .replace(/[\u201c\u201d\u201e]/g, '\"')           // double quotes
+    .replace(/\u2026/g, '...')                          // ellipsis
+    .replace(/[\u00a0\u202f\u2009]/g, ' ')           // nbsp/thin space
+    .replace(/[\u2022\u00b7]/g, '-')                  // bullet/middot
+    .replace(/\u00a7/g, 'Sec.')                        // section sign
+    .replace(/\u2265/g, '>=').replace(/\u2264/g, '<=')
+    .replace(/\u00d7/g, 'x')                            // multiply sign
+    .replace(/[^\x00-\x7F]/g, '');                    // strip any remaining non-ASCII
+}
+
 // --- Config ---
 
 const CONGRESS_API_KEY = process.env.CONGRESS_API_KEY || '';
@@ -133,7 +149,7 @@ async function main() {
     const merged = Array.from(existingById.values());
     await writeFile(
       path.join(OUT_DIR, 'politicians.json'),
-      JSON.stringify(merged, null, 2),
+      asciiSafe(JSON.stringify(merged, null, 2)),
     );
     lastCommitted = politicians.length;
     if (!SHOULD_PUSH) return;
