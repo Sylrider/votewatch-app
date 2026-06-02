@@ -1,6 +1,6 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// VoteWatch — Core Data Types
-// ─────────────────────────────────────────────────────────────────────────────
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// VoteWatch â Core Data Types
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 export type Chamber = 'Senate' | 'House' | 'Executive' | 'Governor' | 'Mayor';
 export type Party = 'Democrat' | 'Republican' | 'Independent' | string;
@@ -10,7 +10,7 @@ export type LawsuitStatus =
   | 'ONGOING' | 'DISMISSED' | 'SETTLED' | 'CONVICTED'
   | 'ACQUITTED' | 'UNDER REVIEW' | 'RESOLVED' | 'CLOSED' | 'NO SUIT FILED';
 
-// ── Lobby / PAC ───────────────────────────────────────────────────────────────
+// ââ Lobby / PAC âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 export interface Lobby {
   id: string;
@@ -34,7 +34,7 @@ export interface LobbyContribution {
   source?: string;            // "FEC" | "OpenSecrets" | "manual"
 }
 
-// ── Stock Trades ─────────────────────────────────────────────────────────────
+// ââ Stock Trades âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 export interface StockTrade {
   ticker: string;
@@ -49,12 +49,12 @@ export interface StockTrade {
   filingId?: string;          // original disclosure filing reference
 }
 
-// ── Legal Record ─────────────────────────────────────────────────────────────
+// ââ Legal Record âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 export interface Lawsuit {
   title: string;
   year: number;
-  type: string;               // "Criminal — Federal" | "Civil" | "Ethics" | etc.
+  type: string;               // "Criminal â Federal" | "Civil" | "Ethics" | etc.
   status: LawsuitStatus;
   outcome: string;
   description: string;
@@ -63,7 +63,7 @@ export interface Lawsuit {
   courtListenerUrl?: string;
 }
 
-// ── Voting Record ─────────────────────────────────────────────────────────────
+// ââ Voting Record âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 export interface Vote {
   bill: string;               // bill name / title
@@ -76,14 +76,14 @@ export interface Vote {
   rollCallNumber?: number;
 }
 
-// ── Transparency Score ────────────────────────────────────────────────────────
+// ââ Transparency Score ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 export interface TransparencyScore {
-  total: number;              // 0–100 composite
-  lobbyScore: number;         // 0–25  (total lobby money received)
-  alignScore: number;         // 0–35  (donor-vote alignment %)
-  stockScore: number;         // 0–25  (conflict stock trades)
-  legalScore: number;         // 0–15  (lawsuit severity)
+  total: number;              // 0â100 composite
+  lobbyScore: number;         // 0â25  (total lobby money received)
+  alignScore: number;         // 0â35  (donor-vote alignment %)
+  stockScore: number;         // 0â25  (conflict stock trades)
+  legalScore: number;         // 0â15  (lawsuit severity)
   // Derived stats
   totalMoney: number;
   conflictTrades: number;
@@ -92,7 +92,7 @@ export interface TransparencyScore {
   lastUpdated: string;        // ISO datetime of last pipeline run
 }
 
-// ── Politician ────────────────────────────────────────────────────────────────
+// ââ Politician ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 export interface Politician {
   id: string;                 // e.g. "sen-ted-cruz-tx"
@@ -113,6 +113,24 @@ export interface Politician {
   lobbyMoney: LobbyContribution[];
   stockTrades: StockTrade[];
   lawsuits: Lawsuit[];
+  // Campaign finance profile (FEC totals endpoint, most-recent reporting period).
+  // totalRaised = receipts; large = itemized individual; small = unitemized (grassroots);
+  // pac = other-committee money; bigMoneyShare = (itemized+pac+party+transfers)/receipts.
+  // `available:false` means no FEC committee matched (show "unavailable", never $0).
+  funding?: {
+    available: boolean;
+    periodYear?: string;
+    totalRaised: number;
+    largeDonorMoney: number;
+    smallDonorMoney: number;
+    pacMoney: number;
+    partyMoney: number;
+    transferMoney: number;
+    bigMoneyShare: number | null;
+    smallDonorShare: number | null;
+    confidence: "high" | "medium" | "low";
+    sources: string[];
+  };
   votes: Vote[];
   viewSummary?: string;       // AI-generated or manually written summary
 
@@ -124,7 +142,7 @@ export interface Politician {
   dataVersion: string;        // pipeline run version
 }
 
-// ── Pipeline ─────────────────────────────────────────────────────────────────
+// ââ Pipeline âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 export interface PipelineConfig {
   congressApiKey: string;
@@ -143,7 +161,7 @@ export interface PipelineRun {
   errors: string[];
 }
 
-// ── API Response Shapes ───────────────────────────────────────────────────────
+// ââ API Response Shapes âââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 // Congress.gov member
 export interface CongressMember {
