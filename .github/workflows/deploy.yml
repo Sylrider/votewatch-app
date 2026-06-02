@@ -3,6 +3,15 @@ name: Refresh Data Pipeline
 on:
   # Manual trigger from the Actions tab
   workflow_dispatch:
+    inputs:
+      start:
+        description: 'Roster offset to start from (0-based). Leave blank for 0.'
+        required: false
+        default: '0'
+      count:
+        description: 'How many officials to process this run (keeps runs short). Blank/0 = all.'
+        required: false
+        default: '50'
   # Weekly refresh
   schedule:
     - cron: '0 6 * * 1'   # Every Monday at 6am UTC
@@ -31,7 +40,7 @@ jobs:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
           FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
           COURTLISTENER_TOKEN: ${{ secrets.COURTLISTENER_TOKEN }}
-        run: npm run pipeline
+        run: npm run pipeline -- --start=${{ github.event.inputs.start || '0' }} --count=${{ github.event.inputs.count || '50' }}
         timeout-minutes: 90
 
       - name: Commit refreshed data
