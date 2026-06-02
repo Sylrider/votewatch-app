@@ -15,7 +15,7 @@
 > memory. This file is the bridge. The repo is the shared state; this file is the memory.
 > Read first, write last, every time.
 >
-> Last updated: 2026-06-02 - by: chrome ext (finance redesign)
+> Last updated: 2026-06-02 - by: chrome ext (lawsuits via CourtListener v4 + small-batch rollout)
 
 ---
 
@@ -42,7 +42,8 @@ Risk Score. Each lobby gets a page (mission, key positions, funded politicians).
 - [x] deploy.yml FIXED & pipeline now RUNS end-to-end on the Actions runner
 - [x] FEC integration FIXED: name matching, state->2-letter code, /totals endpoint
 - [x] Dead Stock Watcher sources made NON-FATAL (no longer crash pipeline)
-- [ ] data/politicians.json still NOT committed (runs cancelled before commit step)
+- [x] data/politicians.json committed (229 records); lawsuits source rewritten (CourtListener v4)
+- [~] Lawsuits/votes/stocks populated ONLY for showcase profiles (Pelosi, Trump) - rolling out in small batches
 - [ ] Composite Transparency Risk Scores still 0 -> need Option B (donor->lobby) data
 - [ ] CLOUDFLARE secrets NOT set (not required; Cloudflare auto-deploys on commit)
 
@@ -245,3 +246,52 @@ and power statistically overlap; it does NOT assert illegal activity.
   had NO 429 handling -> later members would silently get empty lobby data. CORRECTED
   (commit da7506c): added 429/5xx retry-with-backoff + Retry-After to get(). Cancelled
   test run; starting fresh full run on da7506c to produce COMPLETE data.
+
+
+### 2026-06-02 - chrome ext (lawsuits + encoding + verified profiles)
+
+**Encoding (mojibake) - fixed permanently.** Root cause was a clipboard-paste editing
+workflow that double-encoded non-ASCII chars (em-dashes, smart quotes, emoji, box-drawing)
+into Latin1->UTF-8 mojibake. Fix: de-mojibake + ASCII-fold every source/data file, and add
+a permanent asciiSafe() guard in pipeline.ts that strips/normalizes all non-ASCII before any
+JSON.stringify write. RULE: all data output and source files must stay pure ASCII. When
+editing via the GitHub web editor, always ASCII-fold the content first and verify 0 non-ASCII.
+
+**Why profiles were incomplete (diagnosis).**
+- VOTES: the Congress.gov call hit a nonexistent endpoint (/member/{bioguideId}/votes does
+  not exist); the catch silently returned [], so ALL members had 0 votes. Still needs a
+  real roll-call source (House Clerk XML / Senate roll-call) before votes can populate at scale.
+- STOCKS: trades.ts points at the DEAD Senate/House Stock Watcher feeds (NXDOMAIN). Needs a
+  live replacement feed; until then stocks stay empty (and are N/A for executives).
+- LAWSUITS: lawsuits.ts used the deprecated CourtListener v3 API and silently returned [] on
+  any error -> every profile had 0 lawsuits.
+
+**Lawsuits source - REWRITTEN (scalable).** scripts/sources/lawsuits.ts now uses CourtListener
+v4 search (GET /api/rest/v4/search/?q=caseName:"<surname>"&type=o&order_by=dateFiled desc,
+URL-encoded, optional Authorization: Token <CL_TOKEN>). It keeps ONLY high-confidence matches
+(caption/opinion contains the full name OR an explicit "official capacity" marker) and THROWS
+on HTTP errors instead of returning [] silently. Design choice: PRECISION over recall -
+common surnames (Warren, McConnell, Schumer) would otherwise attach unrelated parties; we
+would rather return empty than misattribute a lawsuit. Full coverage at scale would need a
+curated docket allowlist or CourtListener party-ID matching.
+
+**Scoring math (confirmed, for reference).** Total = Lobby/money(25) + VoteAlign(35) +
+Stock(25) + Legal(15). Legal = sum of severity weights (high=7, medium=4, low=1), capped 15.
+Stock = conflictTrades*5 + (largeTrade>=500k?10:0), cap 25. Align = (aligned/votes)*35.
+
+**Two verified showcase profiles (live in data).**
+- Nancy Pelosi (rep-pelosi-nancy-ca, idx 121): funding + lobby + 5 stock trades + 3 votes +
+  5 lawsuits (all official-capacity, dismissed: McCarthy & Massie proxy-voting; Budowich,
+  Meadows, RNC Jan-6 subpoena challenges). legalScore 5, alignScore 12, TOTAL 48/100.
+- Donald Trump (exec-trump-donald, chamber Executive): FEC P80001571 principal committee
+  $495.85M (~$1.45B combined, labeled estimate, confidence medium); 6 lawsuits; votes/stocks
+  marked Not Applicable for executive. legalScore 15, TOTAL 32/100.
+
+**Rollout method (per user): SMALL BATCHES, no endless pipeline.** Process incomplete profiles
+in small batches (~10-15) directly: live CourtListener v4 lookup per person -> build
+high-confidence lawsuits -> recompute legalScore -> merge-by-ID into politicians.json ->
+ASCII-fold -> commit -> verify via GitHub API. Repeat. Resume from checkpoint; never overwrite.
+
+**Known caveat: Cloudflare live site lag.** After commits, watchgov.org kept serving a stale
+cached build (Pelosi still showed 31/100). Data is correct at source (GitHub). Verify the
+Cloudflare Pages build is triggering on commits to main; may need a manual rebuild.
