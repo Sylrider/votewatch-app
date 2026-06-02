@@ -51,7 +51,7 @@ function deriveStatusOutcome(blob: string): { status: string; outcome: string } 
   if (/dismiss/.test(blob)) return { status: 'DISMISSED', outcome: 'Case dismissed (per court opinion).' };
   if (/affirmed/.test(blob)) return { status: 'RESOLVED', outcome: 'Lower ruling affirmed on appeal.' };
   if (/granted/.test(blob)) return { status: 'RESOLVED', outcome: 'Motion granted (per court opinion).' };
-  return { status: 'ON RECORD', outcome: 'On the public docket; see CourtListener for disposition.' };
+  return { status: 'ONGOING', outcome: 'On the public docket; see CourtListener for disposition.' };
 }
 
 export async function searchLawsuits(name: string, token?: string): Promise<Lawsuit[]> {
