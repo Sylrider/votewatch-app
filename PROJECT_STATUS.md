@@ -446,3 +446,20 @@ writing, or the next build breaks on a TS error. (Caught in validation before co
   lookups - keep doing this. Reuse the located roll-call numbers across members (same Congress).
 - TODO next batch: reconcile Waters/Crow to the 2023-2024 cycle and add FEC finance for Boebert/Crenshaw
   once FEC quota allows; then continue to the next 5 incomplete high-profile profiles.
+
+
+## Pelosi finance correction (2026-06-02, commit f883638)
+- Prior split was inverted (large $9,269,859 / small $480,000, bigMoneyShare 0.952). Corrected to
+  Pelosi's actual grassroots-heavy profile per OpenSecrets + reported donor breakdown:
+  - Total raised (2023-2024): $10,003,159 (OpenSecrets summary, two-source w/ FEC summary reports).
+  - Small grassroots (<=$200): $5,340,687 (53.39%).
+  - Large itemized individuals: $4,409,172.
+  - PAC/committee: $253,300 (OpenSecrets Total PAC Money, 59 unique PACs).
+  - Reconciles exactly: small + large + PAC == totalRaised == $10,003,159.
+  - bigMoneyShare 0.4661, smallDonorShare 0.5339.
+- Score moved 59 -> 53: moneyScore dropped 24 -> 18 because the corrected (lower) big-money share
+  reduces the concentration multiplier (0.6 + share*0.65: 1.219 -> 0.903), even though big-money
+  dollars still max the base at 20. align 5 / stock 25 / legal 5 unchanged. Live-verified on watchgov.org.
+- NOTE on data source: FEC DEMO_KEY (40/hr) keeps throttling. Recommend the user register a free
+  OpenSecrets API key AND a personal api.data.gov FEC key (1000/hr) and add to GitHub Secrets so the
+  pipeline can pull finance reliably. I cannot create accounts or handle keys - user must do this.
