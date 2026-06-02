@@ -1,12 +1,12 @@
 import type { Lawsuit } from '../../lib/types';
 
 // CourtListener v4 opinion search. Strategy: query by the official's surname in the
-// case caption, then keep ONLY high-confidence matches -- captions/opinions that
-// contain the official's full name OR an explicit 'official capacity' marker.
-// This favors PRECISION over recall: common surnames (Warren, McConnell, ...) would
-// otherwise pull in thousands of unrelated parties. We would rather return an empty
-// list than attribute someone else's lawsuit to this official. Errors are thrown so
-// the pipeline logs/retries instead of silently writing [].
+// case caption, then keep ONLY high-confidence matches where BOTH the official's first
+// AND last name appear in the caption or opinion snippet. This favors PRECISION over
+// recall: common surnames (Warren, McConnell, Crow, ...) otherwise pull in unrelated
+// parties. Requiring the full name rejects e.g. 'Medicine Crow' for 'Jason Crow'. We
+// would rather return [] than misattribute a lawsuit. Errors are thrown so the pipeline
+// logs/retries instead of silently writing an empty list.
 
 const CL_BASE = 'https://www.courtlistener.com/api/rest/v4/search/';
 
@@ -19,10 +19,14 @@ interface CLResult {
   opinions?: Array<{ snippet?: string }>;
 }
 
-function lastNameOf(fullName: string): string {
+function escapeRe(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function nameParts(fullName: string): { first: string; last: string } {
   const cleaned = fullName.replace(/\b(Jr|Sr|II|III|IV)\.?$/i, '').trim();
   const parts = cleaned.split(/\s+/);
-  return parts[parts.length - 1] || cleaned;
+  return { first: parts[0] || cleaned, last: parts[parts.length - 1] || cleaned };
 }
 
 function classifyType(suitNature: string, blob: string): string {
@@ -51,7 +55,7 @@ function deriveStatusOutcome(blob: string): { status: string; outcome: string } 
 }
 
 export async function searchLawsuits(name: string, token?: string): Promise<Lawsuit[]> {
-  const last = lastNameOf(name);
+  const { first, last } = nameParts(name);
   if (!last || last.length < 3) return [];
 
   const q = 'caseName:"' + last + '"';
@@ -67,8 +71,8 @@ export async function searchLawsuits(name: string, token?: string): Promise<Laws
   const data = await resp.json();
   const results: CLResult[] = Array.isArray(data.results) ? data.results : [];
 
-  const fullLower = name.toLowerCase();
-  const surnameRe = new RegExp('\\b' + last + '\\b', 'i');
+  const firstRe = new RegExp('\\b' + escapeRe(first) + '\\b', 'i');
+  const lastRe = new RegExp('\\b' + escapeRe(last) + '\\b', 'i');
   const offCapRe = /official capacity|as speaker of the house|in (his|her) official capacity/i;
 
   const seen = new Set<string>();
@@ -76,27 +80,26 @@ export async function searchLawsuits(name: string, token?: string): Promise<Laws
 
   for (const r of results) {
     const caption = r.caseName || '';
-    if (!surnameRe.test(caption)) continue;
     const snippet = (r.opinions && r.opinions[0] && r.opinions[0].snippet) || '';
-    const blob = (caption + ' ' + snippet).toLowerCase();
+    const blob = caption + ' ' + snippet;
 
-    // High-confidence only: full name present OR explicit official-capacity marker.
-    const confident = blob.includes(fullLower) || offCapRe.test(blob);
-    if (!confident) continue;
+    // High-confidence ONLY: both first AND last name must appear.
+    if (!firstRe.test(blob) || !lastRe.test(blob)) continue;
 
     const key = caption + '|' + (r.dateFiled || '');
     if (seen.has(key)) continue;
     seen.add(key);
 
-    const { status, outcome } = deriveStatusOutcome(blob);
+    const lower = blob.toLowerCase();
+    const { status, outcome } = deriveStatusOutcome(lower);
     lawsuits.push({
       title: caption,
       year: r.dateFiled ? new Date(r.dateFiled).getFullYear() : 0,
-      type: classifyType(r.suitNature || '', blob),
+      type: classifyType(r.suitNature || '', lower),
       status,
       outcome,
-      description: 'Federal court matter naming ' + name + (offCapRe.test(blob) ? ' (official capacity).' : '.'),
-      severity: classifySeverity(blob),
+      description: 'Federal court matter naming ' + name + (offCapRe.test(lower) ? ' (official capacity).' : '.'),
+      severity: classifySeverity(lower),
       caseId: r.docketNumber || r.court || '',
     });
     if (lawsuits.length >= 10) break;
