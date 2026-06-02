@@ -463,3 +463,17 @@ writing, or the next build breaks on a TS error. (Caught in validation before co
 - NOTE on data source: FEC DEMO_KEY (40/hr) keeps throttling. Recommend the user register a free
   OpenSecrets API key AND a personal api.data.gov FEC key (1000/hr) and add to GitHub Secrets so the
   pipeline can pull finance reliably. I cannot create accounts or handle keys - user must do this.
+
+
+## FEC API key usage (2026-06-02) - IMPORTANT, DO NOT REPEAT THE DEMO MISTAKE
+- DO NOT use the FEC DEMO_KEY for any data pulls. It is capped at 40 calls/hr and was the cause of
+  repeated rate-limit stalls. The ad-hoc browser calls to api.open.fec.gov with DEMO_KEY were wrong.
+- A real FEC key already exists in GitHub Secrets under the name FEC_API_KEY (free api.data.gov key,
+  1000 calls/hr). It is referenced by .github/workflows/deploy.yml as
+  FEC_API_KEY: ${{ secrets.FEC_API_KEY }} and consumed by scripts/pipeline.ts via
+  process.env.FEC_API_KEY (no DEMO fallback - pipeline hard-fails if the key is missing).
+- CORRECT way to pull finance going forward: run the data pipeline (scripts/pipeline.ts), which the
+  build/deploy workflow already runs with the real FEC_API_KEY. Do NOT make manual browser fetches
+  with DEMO_KEY. Secret VALUES are write-only/masked in GitHub and must never be extracted or pasted.
+- Same pattern for the other sources: CONGRESS_API_KEY and COURTLISTENER_TOKEN are also in Secrets and
+  wired through the workflow + pipeline. Use the pipeline, not hand-rolled keyed URLs.
