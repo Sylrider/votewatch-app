@@ -732,7 +732,78 @@
     ],
     "stockTrades": [],
     "lawsuits": [],
-    "votes": [],
+    "votes": [
+      {
+        "bill": "TikTok Divestment Act (Protecting Americans from Foreign Adversary Controlled Applications Act)",
+        "billId": "hr7521-118",
+        "date": "2024-03-13",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Required ByteDance to divest TikTok or face a US ban; passed 352-65.",
+        "congressNumber": 118,
+        "rollCallNumber": 86
+      },
+      {
+        "bill": "Israel Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8034-118",
+        "date": "2024-04-20",
+        "vote": "YEA",
+        "alignsWithDonors": true,
+        "note": "$26.4B in military aid and missile-defense funding for Israel. Aligns with pro-Israel (AIPAC) donors.",
+        "congressNumber": 118,
+        "rollCallNumber": 152
+      },
+      {
+        "bill": "Ukraine Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8035-118",
+        "date": "2024-04-20",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "~$61B in military and economic aid for Ukraine.",
+        "congressNumber": 118,
+        "rollCallNumber": 151
+      },
+      {
+        "bill": "Indo-Pacific Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8036-118",
+        "date": "2024-04-20",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "~$8B for Taiwan and Indo-Pacific allies to counter China.",
+        "congressNumber": 118,
+        "rollCallNumber": 146
+      },
+      {
+        "bill": "Further Consolidated Appropriations Act, 2024 ($1.2T minibus)",
+        "billId": "hr2882-118",
+        "date": "2024-03-22",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "$1.2 trillion appropriations package; averted a shutdown.",
+        "congressNumber": 118,
+        "rollCallNumber": 102
+      },
+      {
+        "bill": "Reforming Intelligence and Securing America Act (FISA Section 702 reauthorization)",
+        "billId": "hr7888-118",
+        "date": "2024-04-12",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Reauthorized FISA Section 702 surveillance authority for two years.",
+        "congressNumber": 118,
+        "rollCallNumber": 119
+      },
+      {
+        "bill": "Antisemitism Awareness Act of 2023",
+        "billId": "hr6090-118",
+        "date": "2024-05-01",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Directed the Dept. of Education to adopt the IHRA definition of antisemitism in Title VI enforcement.",
+        "congressNumber": 118,
+        "rollCallNumber": 172
+      }
+    ],
     "funding": {
       "available": true,
       "periodYear": "2026",
@@ -753,16 +824,16 @@
     "profileComplete": true,
     "dataVersion": "2026-06-02T01:37:19.387Z",
     "score": {
-      "total": 12,
+      "total": 17,
       "lobbyScore": 12,
-      "alignScore": 0,
+      "alignScore": 5,
       "stockScore": 0,
       "legalScore": 0,
       "totalMoney": 2565978,
       "conflictTrades": 0,
-      "donorAlignedVotes": 0,
-      "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T01:40:55.445Z"
+      "donorAlignedVotes": 1,
+      "totalTrackedVotes": 7,
+      "lastUpdated": "2026-06-02T14:35:01.911Z"
     }
   },
   {
@@ -9347,20 +9418,91 @@
     ],
     "stockTrades": [],
     "lawsuits": [],
-    "votes": [],
+    "votes": [
+      {
+        "bill": "TikTok Divestment Act (Protecting Americans from Foreign Adversary Controlled Applications Act)",
+        "billId": "hr7521-118",
+        "date": "2024-03-13",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Required ByteDance to divest TikTok or face a US ban; passed 352-65.",
+        "congressNumber": 118,
+        "rollCallNumber": 86
+      },
+      {
+        "bill": "Israel Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8034-118",
+        "date": "2024-04-20",
+        "vote": "YEA",
+        "alignsWithDonors": true,
+        "note": "$26.4B in military aid and missile-defense funding for Israel. Aligns with pro-Israel (AIPAC) donors.",
+        "congressNumber": 118,
+        "rollCallNumber": 152
+      },
+      {
+        "bill": "Ukraine Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8035-118",
+        "date": "2024-04-20",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "~$61B in military and economic aid for Ukraine.",
+        "congressNumber": 118,
+        "rollCallNumber": 151
+      },
+      {
+        "bill": "Indo-Pacific Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8036-118",
+        "date": "2024-04-20",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "~$8B for Taiwan and Indo-Pacific allies to counter China.",
+        "congressNumber": 118,
+        "rollCallNumber": 146
+      },
+      {
+        "bill": "Further Consolidated Appropriations Act, 2024 ($1.2T minibus)",
+        "billId": "hr2882-118",
+        "date": "2024-03-22",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "$1.2 trillion appropriations package; averted a shutdown.",
+        "congressNumber": 118,
+        "rollCallNumber": 102
+      },
+      {
+        "bill": "Reforming Intelligence and Securing America Act (FISA Section 702 reauthorization)",
+        "billId": "hr7888-118",
+        "date": "2024-04-12",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Reauthorized FISA Section 702 surveillance authority for two years.",
+        "congressNumber": 118,
+        "rollCallNumber": 119
+      },
+      {
+        "bill": "Antisemitism Awareness Act of 2023",
+        "billId": "hr6090-118",
+        "date": "2024-05-01",
+        "vote": "NOT VOTING",
+        "alignsWithDonors": false,
+        "note": "Directed the Dept. of Education to adopt the IHRA definition of antisemitism in Title VI enforcement.",
+        "congressNumber": 118,
+        "rollCallNumber": 172
+      }
+    ],
     "profileComplete": true,
     "dataVersion": "2026-06-01T11:49:44.552Z",
     "score": {
-      "total": 4,
+      "total": 9,
       "lobbyScore": 4,
-      "alignScore": 0,
+      "alignScore": 5,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 306437,
+      "totalMoney": 0,
       "conflictTrades": 0,
-      "donorAlignedVotes": 0,
-      "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T12:55:16.313Z"
+      "donorAlignedVotes": 1,
+      "totalTrackedVotes": 7,
+      "lastUpdated": "2026-06-02T14:35:01.911Z"
     }
   },
   {
@@ -10289,7 +10431,78 @@
     ],
     "stockTrades": [],
     "lawsuits": [],
-    "votes": [],
+    "votes": [
+      {
+        "bill": "TikTok Divestment Act (Protecting Americans from Foreign Adversary Controlled Applications Act)",
+        "billId": "hr7521-118",
+        "date": "2024-03-13",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Required ByteDance to divest TikTok or face a US ban; passed 352-65.",
+        "congressNumber": 118,
+        "rollCallNumber": 86
+      },
+      {
+        "bill": "Israel Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8034-118",
+        "date": "2024-04-20",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "$26.4B in military aid and missile-defense funding for Israel.",
+        "congressNumber": 118,
+        "rollCallNumber": 152
+      },
+      {
+        "bill": "Ukraine Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8035-118",
+        "date": "2024-04-20",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "~$61B in military and economic aid for Ukraine.",
+        "congressNumber": 118,
+        "rollCallNumber": 151
+      },
+      {
+        "bill": "Indo-Pacific Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8036-118",
+        "date": "2024-04-20",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "~$8B for Taiwan and Indo-Pacific allies to counter China.",
+        "congressNumber": 118,
+        "rollCallNumber": 146
+      },
+      {
+        "bill": "Further Consolidated Appropriations Act, 2024 ($1.2T minibus)",
+        "billId": "hr2882-118",
+        "date": "2024-03-22",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "$1.2 trillion appropriations package; averted a shutdown.",
+        "congressNumber": 118,
+        "rollCallNumber": 102
+      },
+      {
+        "bill": "Reforming Intelligence and Securing America Act (FISA Section 702 reauthorization)",
+        "billId": "hr7888-118",
+        "date": "2024-04-12",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Reauthorized FISA Section 702 surveillance authority for two years.",
+        "congressNumber": 118,
+        "rollCallNumber": 119
+      },
+      {
+        "bill": "Antisemitism Awareness Act of 2023",
+        "billId": "hr6090-118",
+        "date": "2024-05-01",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Directed the Dept. of Education to adopt the IHRA definition of antisemitism in Title VI enforcement.",
+        "congressNumber": 118,
+        "rollCallNumber": 172
+      }
+    ],
     "funding": {
       "available": true,
       "periodYear": "2026",
@@ -10318,8 +10531,8 @@
       "totalMoney": 733764,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
-      "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T02:08:34.586Z"
+      "totalTrackedVotes": 7,
+      "lastUpdated": "2026-06-02T14:35:01.911Z"
     }
   },
   {
@@ -16999,20 +17212,107 @@
     ],
     "stockTrades": [],
     "lawsuits": [],
-    "votes": [],
+    "votes": [
+      {
+        "bill": "TikTok Divestment Act (Protecting Americans from Foreign Adversary Controlled Applications Act)",
+        "billId": "hr7521-118",
+        "date": "2024-03-13",
+        "vote": "ABSTAIN",
+        "alignsWithDonors": false,
+        "note": "Required ByteDance to divest TikTok or face a US ban; passed 352-65.",
+        "congressNumber": 118,
+        "rollCallNumber": 86
+      },
+      {
+        "bill": "Israel Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8034-118",
+        "date": "2024-04-20",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "$26.4B in military aid and missile-defense funding for Israel.",
+        "congressNumber": 118,
+        "rollCallNumber": 152
+      },
+      {
+        "bill": "Ukraine Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8035-118",
+        "date": "2024-04-20",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "~$61B in military and economic aid for Ukraine.",
+        "congressNumber": 118,
+        "rollCallNumber": 151
+      },
+      {
+        "bill": "Indo-Pacific Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8036-118",
+        "date": "2024-04-20",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "~$8B for Taiwan and Indo-Pacific allies to counter China.",
+        "congressNumber": 118,
+        "rollCallNumber": 146
+      },
+      {
+        "bill": "Further Consolidated Appropriations Act, 2024 ($1.2T minibus)",
+        "billId": "hr2882-118",
+        "date": "2024-03-22",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "$1.2 trillion appropriations package; averted a shutdown.",
+        "congressNumber": 118,
+        "rollCallNumber": 102
+      },
+      {
+        "bill": "Reforming Intelligence and Securing America Act (FISA Section 702 reauthorization)",
+        "billId": "hr7888-118",
+        "date": "2024-04-12",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Reauthorized FISA Section 702 surveillance authority for two years.",
+        "congressNumber": 118,
+        "rollCallNumber": 119
+      },
+      {
+        "bill": "Antisemitism Awareness Act of 2023",
+        "billId": "hr6090-118",
+        "date": "2024-05-01",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Directed the Dept. of Education to adopt the IHRA definition of antisemitism in Title VI enforcement.",
+        "congressNumber": 118,
+        "rollCallNumber": 172
+      }
+    ],
     "profileComplete": true,
     "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
-      "total": 1,
-      "lobbyScore": 1,
+      "total": 13,
+      "lobbyScore": 13,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 90500,
+      "totalMoney": 3114950,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
-      "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:31:11.859Z"
+      "totalTrackedVotes": 7,
+      "lastUpdated": "2026-06-02T14:35:01.911Z"
+    },
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 3114950,
+      "largeDonorMoney": 972046,
+      "smallDonorMoney": 1369700,
+      "pacMoney": 719354,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "bigMoneyShare": 0.543,
+      "smallDonorShare": 0.44,
+      "confidence": "high",
+      "sources": [
+        "FEC candidate totals (2023-2024 cycle)"
+      ]
     }
   },
   {
@@ -17402,7 +17702,78 @@
     ],
     "stockTrades": [],
     "lawsuits": [],
-    "votes": [],
+    "votes": [
+      {
+        "bill": "TikTok Divestment Act (Protecting Americans from Foreign Adversary Controlled Applications Act)",
+        "billId": "hr7521-118",
+        "date": "2024-03-13",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Required ByteDance to divest TikTok or face a US ban; passed 352-65.",
+        "congressNumber": 118,
+        "rollCallNumber": 86
+      },
+      {
+        "bill": "Israel Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8034-118",
+        "date": "2024-04-20",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "$26.4B in military aid and missile-defense funding for Israel.",
+        "congressNumber": 118,
+        "rollCallNumber": 152
+      },
+      {
+        "bill": "Ukraine Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8035-118",
+        "date": "2024-04-20",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "~$61B in military and economic aid for Ukraine.",
+        "congressNumber": 118,
+        "rollCallNumber": 151
+      },
+      {
+        "bill": "Indo-Pacific Security Supplemental Appropriations Act, 2024",
+        "billId": "hr8036-118",
+        "date": "2024-04-20",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "~$8B for Taiwan and Indo-Pacific allies to counter China.",
+        "congressNumber": 118,
+        "rollCallNumber": 146
+      },
+      {
+        "bill": "Further Consolidated Appropriations Act, 2024 ($1.2T minibus)",
+        "billId": "hr2882-118",
+        "date": "2024-03-22",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "$1.2 trillion appropriations package; averted a shutdown.",
+        "congressNumber": 118,
+        "rollCallNumber": 102
+      },
+      {
+        "bill": "Reforming Intelligence and Securing America Act (FISA Section 702 reauthorization)",
+        "billId": "hr7888-118",
+        "date": "2024-04-12",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Reauthorized FISA Section 702 surveillance authority for two years.",
+        "congressNumber": 118,
+        "rollCallNumber": 119
+      },
+      {
+        "bill": "Antisemitism Awareness Act of 2023",
+        "billId": "hr6090-118",
+        "date": "2024-05-01",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Directed the Dept. of Education to adopt the IHRA definition of antisemitism in Title VI enforcement.",
+        "congressNumber": 118,
+        "rollCallNumber": 172
+      }
+    ],
     "profileComplete": true,
     "dataVersion": "2026-06-01T23:31:23.125Z",
     "score": {
@@ -17411,11 +17782,11 @@
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 2000,
+      "totalMoney": 0,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
-      "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:32:10.130Z"
+      "totalTrackedVotes": 7,
+      "lastUpdated": "2026-06-02T14:35:01.911Z"
     }
   },
   {
