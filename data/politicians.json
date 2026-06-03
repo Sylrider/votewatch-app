@@ -22210,19 +22210,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 2384983,
+      "largeDonorMoney": 1545882,
+      "smallDonorMoney": 12811,
+      "pacMoney": 822383,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 3906,
+      "bigMoneyShare": 0.993,
+      "smallDonorShare": 0.005,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Robert Menendez raised $2.4M in reported campaign funds (through 2024). About 99% came from large donors, PACs and committee transfers ($1.5M itemized, $822K PAC), while 1% ($13K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $331K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T01:42:36.756Z",
     "score": {
-      "total": 4,
-      "lobbyScore": 4,
+      "total": 24,
+      "lobbyScore": 24,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 330900,
+      "totalMoney": 2384983,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:38:04.096Z"
+      "lastUpdated": "2026-06-03T02:03:19.414Z"
     }
   },
   {
@@ -22329,19 +22347,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 2184236,
+      "largeDonorMoney": 1100062,
+      "smallDonorMoney": 141599,
+      "pacMoney": 649084,
+      "partyMoney": 0,
+      "transferMoney": 262391,
+      "otherMoney": 31099,
+      "bigMoneyShare": 0.921,
+      "smallDonorShare": 0.065,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Morgan McGarvey raised $2.2M in reported campaign funds (through 2024). About 92% came from large donors, PACs and committee transfers ($1.1M itemized, $649K PAC), while 7% ($142K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $209K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T01:42:36.756Z",
     "score": {
-      "total": 3,
-      "lobbyScore": 3,
+      "total": 17,
+      "lobbyScore": 17,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 208763,
+      "totalMoney": 2184236,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:38:12.179Z"
+      "lastUpdated": "2026-06-03T02:03:27.059Z"
     }
   },
   {
@@ -22408,19 +22444,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 3697835,
+      "largeDonorMoney": 1242915,
+      "smallDonorMoney": 1521833,
+      "pacMoney": 324324,
+      "partyMoney": 0,
+      "transferMoney": 594990,
+      "otherMoney": 13773,
+      "bigMoneyShare": 0.585,
+      "smallDonorShare": 0.412,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Anna Luna raised $3.7M in reported campaign funds (through 2024). About 59% came from large donors, PACs and committee transfers ($1.2M itemized, $324K PAC), while 41% ($1.5M) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $46K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T01:42:36.756Z",
     "score": {
-      "total": 1,
-      "lobbyScore": 1,
+      "total": 12,
+      "lobbyScore": 12,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 45674,
+      "totalMoney": 3697835,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:38:22.913Z"
+      "lastUpdated": "2026-06-03T02:04:09.615Z"
     }
   },
   {
@@ -22532,5 +22586,150 @@
     },
     "dataVersion": "2026-06-02T02:46:32.370Z",
     "viewSummary": "Donald J. Trump's 2024 principal campaign committee reported about $496M in receipts; counting joint fundraising committees and aligned super PACs, the broader operation raised roughly $1.45 billion (the itemized vs. small-dollar split shown is an estimate). As an executive-branch official he casts no congressional roll-call votes and files no congressional stock disclosures, so those categories are not applicable. His legal record is extensive: a 2024 New York criminal conviction on 34 felony counts, two E. Jean Carroll civil judgments ($5M and $83.3M), a New York civil fraud case (penalty later vacated on appeal, liability upheld), and federal/state cases that were dismissed or wound down."
+  },
+  {
+    "id": "rep-lee-laurel-fl",
+    "name": "Laurel Lee",
+    "state": "Florida",
+    "party": "Republican",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2023,
+    "bioguideId": "L000597",
+    "fecCandidateId": "H2FL15241",
+    "imageUrl": "https://www.congress.gov/img/member/l000597_200.jpg",
+    "lobbyMoney": [
+      {
+        "lobbyId": "aipac",
+        "lobbyName": "AIPAC",
+        "amount": 29878,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "telecom",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 29500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 17000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "api",
+        "lobbyName": "American Petroleum Institute (API)",
+        "amount": 13300,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "tech",
+        "lobbyName": "Big Tech Industry",
+        "amount": 9000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 7500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "pharma",
+        "lobbyName": "PhRMA - Pharmaceutical Manufacturers",
+        "amount": 7000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
+        "amount": 6000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "health",
+        "lobbyName": "Health Insurance Industry (AHIP)",
+        "amount": 4500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "uscc",
+        "lobbyName": "U.S. Chamber of Commerce",
+        "amount": 3000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "nra",
+        "lobbyName": "National Rifle Association (NRA)",
+        "amount": 2000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "agribusiness",
+        "lobbyName": "Agribusiness (Farm Bureau)",
+        "amount": 1000,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      }
+    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 2162710,
+      "largeDonorMoney": 541443,
+      "smallDonorMoney": 29777,
+      "pacMoney": 811300,
+      "partyMoney": 0,
+      "transferMoney": 768200,
+      "otherMoney": 11990,
+      "bigMoneyShare": 0.981,
+      "smallDonorShare": 0.014,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Laurel Lee raised $2.2M in reported campaign funds (through 2024). About 98% came from large donors, PACs and committee transfers ($541K itemized, $811K PAC), while 1% ($30K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $130K.",
+    "profileComplete": true,
+    "dataVersion": "2026-06-03T01:42:36.756Z",
+    "score": {
+      "total": 13,
+      "lobbyScore": 13,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 2162710,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-03T02:04:35.401Z"
+    }
   }
 ]
