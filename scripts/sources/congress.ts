@@ -189,6 +189,25 @@ async function buildSenateCache(): Promise<Map<string, Vote[]>> {
 }
 
 // Unified accessor. House -> match by bioguideId; Senate -> match by last name + state.
+const STATE_ABBR: Record<string, string> = {
+  'alabama':'AL','alaska':'AK','arizona':'AZ','arkansas':'AR','california':'CA','colorado':'CO',
+  'connecticut':'CT','delaware':'DE','florida':'FL','georgia':'GA','hawaii':'HI','idaho':'ID',
+  'illinois':'IL','indiana':'IN','iowa':'IA','kansas':'KS','kentucky':'KY','louisiana':'LA',
+  'maine':'ME','maryland':'MD','massachusetts':'MA','michigan':'MI','minnesota':'MN',
+  'mississippi':'MS','missouri':'MO','montana':'MT','nebraska':'NE','nevada':'NV',
+  'new hampshire':'NH','new jersey':'NJ','new mexico':'NM','new york':'NY','north carolina':'NC',
+  'north dakota':'ND','ohio':'OH','oklahoma':'OK','oregon':'OR','pennsylvania':'PA',
+  'rhode island':'RI','south carolina':'SC','south dakota':'SD','tennessee':'TN','texas':'TX',
+  'utah':'UT','vermont':'VT','virginia':'VA','washington':'WA','west virginia':'WV',
+  'wisconsin':'WI','wyoming':'WY','district of columbia':'DC','puerto rico':'PR',
+};
+
+function toStateAbbr(state: string): string {
+  const s = (state || '').trim();
+  if (s.length === 2) return s.toUpperCase();
+  return STATE_ABBR[s.toLowerCase()] || s.toUpperCase();
+}
+
 export async function fetchMemberVotes(
   bioguideId: string,
   chamber: 'House' | 'Senate',
@@ -198,7 +217,7 @@ export async function fetchMemberVotes(
   try {
     if (chamber === 'Senate') {
       const cache = await buildSenateCache();
-      return cache.get(`${(lastName || '').toLowerCase()}|${(state || '').toUpperCase()}`) || [];
+      return cache.get(`${(lastName || '').toLowerCase()}|${toStateAbbr(state)}`) || [];
     }
     const cache = await buildHouseCache();
     return cache.get(bioguideId) || [];
