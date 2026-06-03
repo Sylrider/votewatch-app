@@ -76,9 +76,20 @@ const SENATE_SESSION = 2;
 let __houseCache: Map<string, Vote[]> | null = null;
 let __senateCache: Map<string, Vote[]> | null = null;
 
+function decodeEntities(s: string): string {
+  return s
+    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, "'").replace(/&#34;/g, "'").replace(/&apos;/g, "'").replace(/&#39;/g, "'")
+    .replace(/[\u201c\u201d\u201e\u201f]/g, "'")   // curly double quotes -> apostrophe (JSON-safe)
+    .replace(/[\u2018\u2019\u201b]/g, "'")          // curly single quotes
+    .replace(/"/g, "'")                                // any stray double quote -> apostrophe
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function getTag(xml: string, tag: string): string {
   const m = xml.match(new RegExp('<' + tag + '[^>]*>([\\s\\S]*?)</' + tag + '>'));
-  return m ? m[1].trim() : '';
+  return m ? decodeEntities(m[1]) : '';
 }
 
 async function buildHouseCache(): Promise<Map<string, Vote[]>> {
