@@ -214,6 +214,31 @@ and power statistically overlap; it does NOT assert illegal activity.
 
 ## 13. CHANGELOG (each session: add a dated line here after doing work)
 
+- 2026-06-03 (chrome ext): VOTES + LAWSUITS + MERGE-GUARD shipped and VERIFIED (batch 0-25, force=1).
+  * MERGE GUARD (scripts/pipeline.ts): per category (votes/stockTrades/lawsuits/lobbyMoney/funding) fresh data
+    only overwrites when NON-EMPTY; empty/failed fetch falls back to existing prod record. No destructive wipes.
+  * VOTES (scripts/sources/congress.ts): replaced dead Congress.gov /member/{id}/votes with REAL roll-call
+    fetchers - House Clerk XML (clerk.house.gov/evs/2024/roll{NNN}.xml, name-id==bioguideId, rolls 1..517) and
+    Senate LIS XML (vote_menu_118_2 + per-vote XML). 40 most-recent roll calls/member. Pipeline passes
+    chamber+lastName+state. FIXED Senate matching: convert full state name -> 2-letter abbr (toStateAbbr) so
+    keys match XML. VERIFIED: Booker/Warren/Wyden/Whitehouse now v=40 (were 0); Crow (House) v=40.
+    Cross-checked Booker roll 339 (H.R. 10545) = YEA against official Senate XML. Match.
+  * LAWSUITS (scripts/sources/lawsuits.ts): fixed nameParts() for Congress.gov "Last, First" format so the
+    first+AND+last precision filter actually works (was garbled). Lawsuits preserved (Schiff 3, Pelosi 5).
+  * JSON-SAFETY BUG (root-caused + fixed): asciiSafe() mapped curly double-quotes to a RAW unescaped quote,
+    corrupting politicians.json once vote titles contained curly quotes -> build-breaking invalid JSON. Fixed
+    asciiSafe to use apostrophe; added decodeEntities() in congress.ts (decode XML entities, normalize quotes,
+    collapse whitespace) so vote strings are JSON-safe at source. Repaired the already-committed malformed
+    data/politicians.json (escaped 16 stray quotes) so the pipeline could reload all 230 records.
+  * STOCKS: no reliable free machine-readable source (Stock Watcher .com dead; S3 now 403; House FD is PDF).
+    NOT fabricated. trades.ts skips gracefully; score recomputes stockScore=0 from empty arrays. Honest
+    empty-state copy on politician detail page. (Pelosi still shows stale stockScore=25 until her batch reruns.)
+  * CI: scoped ASCII mojibake guard to app/components/lib only (server-side script glyphs were failing every run).
+  * Funding still reconciles to the penny for 2024 cycle (Booker/Crow/Warren/Wyden/Whitehouse). Note: Schiff off
+    by USD1 (pre-existing rounding in funding builder, >3c tolerance) - flagged, not blocking.
+  * Bot commits: 70429f4 (batch 25/25, 230 officials) + 36b641a (refresh). Cloudflare deploy in progress.
+  * NEXT: continue batches 25-50, 50-75, ... force=1 to refresh remaining 205 stale records (votes + clean scores).
+
 - 2026-06-02 (chrome ext): FINANCE-MODEL REDESIGN. Root-caused lobby-money undercount (LOBBY_MAP 15-cat
   slice, single cycle) and the "scores don't reflect reality" problem. Added FundingProfile to types.ts (6cd12c6);
   new fetchFundingProfile() in fec.ts (4005602) using FEC /candidate/{id}/totals  real totalRaised, large
