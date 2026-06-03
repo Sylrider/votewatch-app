@@ -5,7 +5,7 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://watchgov.org'),
   title: {
-    default: 'WatchGov — U.S. Political Transparency',
+    default: 'WatchGov - U.S. Political Transparency',
     template: '%s | WatchGov',
   },
   description: 'Independent transparency tracker for all U.S. elected officials. Scores based on lobby money, votes, stock trades, and legal records.',
@@ -50,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Disclaimer */}
         <div className="disc-bar" role="alert">
-          ⚠ Data sourced from FEC.gov, Congress.gov, Senate/House Stock Watchers, and CourtListener.
+          ! Data sourced from FEC.gov, Congress.gov, Senate/House Stock Watchers, and CourtListener.
           All information is based on public disclosures. Not legal advice.
         </div>
 
@@ -93,7 +93,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       rel="noopener noreferrer"
                       className="hover:text-amber-400 transition-colors"
                     >
-                      {label} ↗
+                      {label} ->
                     </a>
                   </li>
                 ))}
@@ -106,7 +106,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </h3>
               <ul className="space-y-1 text-sm" style={{ color: '#64748b' }}>
                 <li><Link href="/methodology" className="hover:text-amber-400 transition-colors">Methodology & Scoring</Link></li>
-                <li><a href="https://github.com/votewatch/votewatch" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Open Source on GitHub ↗</a></li>
+                <li><a href="https://github.com/votewatch/votewatch" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Open Source on GitHub -></a></li>
                 <li><span>Data updated: {new Date().getFullYear()}</span></li>
               </ul>
             </div>
