@@ -4,7 +4,7 @@ import { fmtMoney } from '@/lib/utils';
 import PoliticianGrid from '@/components/PoliticianGrid';
 
 export const metadata: Metadata = {
-  title: 'WatchGov — U.S. Political Transparency Tracker',
+  title: 'WatchGov - U.S. Political Transparency Tracker',
   description:
     'Track lobbying money, stock trading conflicts, lawsuits, and donor-vote alignment for every U.S. Senator, Representative, Governor, and President. Transparency scores based on disclosed records, not declarations.',
   keywords: [
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'US representatives', 'governors', 'campaign finance', 'special interests',
   ].join(', '),
   openGraph: {
-    title: 'WatchGov — Who Does Your Politician Really Work For?',
+    title: 'WatchGov - Who Does Your Politician Really Work For?',
     description: 'Independent transparency tracking for all U.S. elected officials. Scores based on lobby money, votes, stock trades, and legal records.',
     type: 'website',
     url: 'https://watchgov.org',
@@ -37,7 +37,7 @@ const jsonLd = {
 };
 
 export default async function HomePage() {
-  // Data is pre-generated at build time — zero per-user cost
+  // Data is pre-generated at build time - zero per-user cost
   const politicians = await getPoliticians();
 
   const totalMoney = politicians.reduce(
@@ -69,7 +69,7 @@ export default async function HomePage() {
         <p className="hero-desc">
           Track lobbying money, stock trading conflicts, lawsuits, and
           donor-vote alignment for every elected official. Views derived from
-          actions and financial disclosures — not declarations.
+          actions and financial disclosures - not declarations.
         </p>
         <div className="stats-row">
           <div className="stat-item">
