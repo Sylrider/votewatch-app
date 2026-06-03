@@ -1,4 +1,4 @@
-// Pure utility functions — no Node.js imports, safe for client components
+// Pure utility functions - no Node.js imports, safe for client components
 
 export function fmtMoney(n: number): string {
   if (n >= 1e9) return `$${(n / 1e9).toFixed(1)}B`;
