@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const lobby = await getLobby(params.slug);
   if (!lobby) return { title: 'Not Found' };
   return {
-    title: `${lobby.name} — Lobby Profile`,
+    title: `${lobby.name} - Lobby Profile`,
     description: `${lobby.name} lobbying profile. Annual spend: ${fmtMoney(lobby.annualSpend)}. ${lobby.mission.slice(0, 140)}`,
     keywords: `${lobby.name}, ${lobby.category}, lobbying, political donations, campaign finance`,
   };
@@ -43,7 +43,7 @@ export default async function LobbyPage({ params }: { params: { slug: string } }
       <div className="max-w-4xl mx-auto px-6 py-6" itemScope itemType="https://schema.org/Organization">
         <nav className="mb-6">
           <Link href="/lobbies" style={{ color: '#64748b', fontSize: 13, border: '1px solid #252a3a', padding: '6px 14px', borderRadius: 6, textDecoration: 'none' }}>
-            ← Back to Lobbies
+            <- Back to Lobbies
           </Link>
         </nav>
 
@@ -79,7 +79,7 @@ export default async function LobbyPage({ params }: { params: { slug: string } }
             <ul style={{ listStyle: 'none' }}>
               {lobby.keyPositions.map((pos, i) => (
                 <li key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', padding: '12px 18px', borderBottom: i < lobby.keyPositions.length - 1 ? '1px solid #252a3a' : 'none', fontSize: 14, color: '#e2e8f0' }}>
-                  <span style={{ color: '#ef4444', fontSize: 15, flexShrink: 0, marginTop: 1 }}>✕</span>
+                  <span style={{ color: '#ef4444', fontSize: 15, flexShrink: 0, marginTop: 1 }}>x</span>
                   <span>{pos}</span>
                 </li>
               ))}
@@ -107,7 +107,7 @@ export default async function LobbyPage({ params }: { params: { slug: string } }
                             {partyShort(p.party)}
                           </span>
                         </div>
-                        <div style={{ fontSize: 12, color: '#64748b', marginBottom: entry?.intent ? 4 : 0 }}>{p.title} · {p.state}</div>
+                        <div style={{ fontSize: 12, color: '#64748b', marginBottom: entry?.intent ? 4 : 0 }}>{p.title} - {p.state}</div>
                         {entry?.intent && (
                           <div style={{ fontSize: 11, color: '#8da4c0', lineHeight: 1.4, borderLeft: '2px solid #252a3a', paddingLeft: 8 }}>{entry.intent}</div>
                         )}
