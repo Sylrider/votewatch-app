@@ -66,7 +66,7 @@
     },
     "viewSummary": "Laura Friedman raised $1.8M in reported campaign funds (through 2024). About 90% came from large donors, PACs and committee transfers ($1.3M itemized, $309K PAC), while 9% ($171K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $35K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 16,
       "lobbyScore": 16,
@@ -77,7 +77,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:46:09.780Z"
+      "lastUpdated": "2026-06-03T04:14:46.336Z"
     }
   },
   {
@@ -111,7 +111,7 @@
     },
     "viewSummary": "Matt Van Epps: campaign-finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -122,7 +122,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:46:14.522Z"
+      "lastUpdated": "2026-06-03T04:14:50.982Z"
     }
   },
   {
@@ -192,7 +192,7 @@
     },
     "viewSummary": "Cory Booker raised $7.9M in reported campaign funds (through 2024). About 65% came from large donors, PACs and committee transfers ($1.9M itemized, $17K PAC), while 29% ($2.3M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $18K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 16,
       "lobbyScore": 16,
@@ -203,7 +203,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:46:52.426Z"
+      "lastUpdated": "2026-06-03T04:16:04.933Z"
     }
   },
   {
@@ -278,34 +278,34 @@
     "stockTrades": [],
     "lawsuits": [
       {
-        "title": "Michalopoulos v. Schiff (Sen. Adam Schiff named defendant)",
+        "title": "Michalapoulos v. Schiff",
         "year": 2026,
         "type": "Civil",
         "status": "ONGOING",
         "outcome": "On the public docket; see CourtListener for disposition.",
-        "description": "Federal suit naming Adam Schiff as defendant (D.D.C.).",
+        "description": "Federal court matter naming Schiff, Adam B..",
         "severity": "low",
-        "caseId": "D.D.C. No. 26-1139"
+        "caseId": "Civil Action No. 2026-1139"
       },
       {
         "title": "Association of American Physicians & Surgeons, Inc. v. Adam Schiff",
         "year": 2022,
         "type": "Civil",
         "status": "ONGOING",
-        "outcome": "D.C. Circuit decided Jan 25, 2022; see CourtListener for disposition.",
-        "description": "Federal suit naming Adam Schiff in connection with his congressional role.",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming Schiff, Adam B..",
         "severity": "low",
-        "caseId": "D.C. Cir. 21-5080"
+        "caseId": "21-5080"
       },
       {
         "title": "Judicial Watch, Inc. v. Adam B. Schiff",
         "year": 2021,
         "type": "Civil",
         "status": "ONGOING",
-        "outcome": "D.C. Circuit decided June 4, 2021; see CourtListener for disposition.",
-        "description": "Federal suit naming Adam Schiff in connection with his congressional role.",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming Schiff, Adam B..",
         "severity": "low",
-        "caseId": "D.C. Cir. 20-5270"
+        "caseId": "20-5270"
       }
     ],
     "votes": [],
@@ -326,9 +326,9 @@
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Adam Schiff raised $48.1M in reported campaign funds (through 2024). About 58% came from large donors, PACs and committee transfers ($26.3M itemized, $1.0M PAC), while 39% ($18.8M) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $231K.",
+    "viewSummary": "Adam Schiff raised $48.1M in reported campaign funds (through 2024). About 58% came from large donors, PACs and committee transfers ($26.3M itemized, $1.0M PAC), while 39% ($18.8M) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $231K. 3 legal action(s)/lawsuit(s) on record.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 23,
       "lobbyScore": 20,
@@ -339,7 +339,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:47:49.594Z"
+      "lastUpdated": "2026-06-03T04:17:02.956Z"
     }
   },
   {
@@ -371,7 +371,7 @@
     },
     "viewSummary": "Alan Armstrong: campaign-finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -382,7 +382,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:47:53.377Z"
+      "lastUpdated": "2026-06-03T04:17:05.297Z"
     }
   },
   {
@@ -416,7 +416,7 @@
     },
     "viewSummary": "Analilia Mejia: campaign-finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -427,7 +427,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:47:55.874Z"
+      "lastUpdated": "2026-06-03T04:17:10.324Z"
     }
   },
   {
@@ -461,7 +461,7 @@
     },
     "viewSummary": "Clay Fuller: campaign-finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -472,7 +472,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:47:58.895Z"
+      "lastUpdated": "2026-06-03T04:17:13.623Z"
     }
   },
   {
@@ -546,7 +546,408 @@
     ],
     "stockTrades": [],
     "lawsuits": [],
-    "votes": [],
+    "votes": [
+      {
+        "bill": "H R 10545",
+        "billId": "HR10545",
+        "date": "20-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "American Relief Act, 2025",
+        "congressNumber": 118,
+        "rollCallNumber": 517
+      },
+      {
+        "bill": "H R 10515",
+        "billId": "HR10515",
+        "date": "19-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "American Relief Act",
+        "congressNumber": 118,
+        "rollCallNumber": 516
+      },
+      {
+        "bill": "S 759",
+        "billId": "S759",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Beagle Brigade Act",
+        "congressNumber": 118,
+        "rollCallNumber": 515
+      },
+      {
+        "bill": "H R 8663",
+        "billId": "HR8663",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "DETECT Fentanyl and Xylazine Act",
+        "congressNumber": 118,
+        "rollCallNumber": 514
+      },
+      {
+        "bill": "S 3857",
+        "billId": "S3857",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Jamul Indian Village Land Transfer Act",
+        "congressNumber": 118,
+        "rollCallNumber": 513
+      },
+      {
+        "bill": "S 1351",
+        "billId": "S1351",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Stop Institutional Child Abuse Act",
+        "congressNumber": 118,
+        "rollCallNumber": 512
+      },
+      {
+        "bill": "H R 1101",
+        "billId": "HR1101",
+        "date": "17-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Lumbee Fairness Act",
+        "congressNumber": 118,
+        "rollCallNumber": 511
+      },
+      {
+        "bill": "S 3448",
+        "billId": "S3448",
+        "date": "17-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Never Again Education Reauthorization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 510
+      },
+      {
+        "bill": "H R 115",
+        "billId": "HR115",
+        "date": "17-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Midnight Rules Relief Act",
+        "congressNumber": 118,
+        "rollCallNumber": 509
+      },
+      {
+        "bill": "H R 115",
+        "billId": "HR115",
+        "date": "17-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Midnight Rules Relief Act",
+        "congressNumber": 118,
+        "rollCallNumber": 508
+      },
+      {
+        "bill": "H RES 1616",
+        "billId": "HRES1616",
+        "date": "17-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 115) to amend chapter 8 of title 5, United States Code, to provide for en bloc consideration in resolutions of disapproval for "midnight rules", and for other purposes",
+        "congressNumber": 118,
+        "rollCallNumber": 507
+      },
+      {
+        "bill": "H RES 1616",
+        "billId": "HRES1616",
+        "date": "17-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 115) to amend chapter 8 of title 5, United States Code, to provide for en bloc consideration in resolutions of disapproval for "midnight rules", and for other purposes",
+        "congressNumber": 118,
+        "rollCallNumber": 506
+      },
+      {
+        "bill": "S 4077",
+        "billId": "S4077",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "To designate the facility of the United States Postal Service located at 180 Steuart Street in San Francisco, California, as the "Dianne Feinstein Post Office"",
+        "congressNumber": 118,
+        "rollCallNumber": 505
+      },
+      {
+        "bill": "S 141",
+        "billId": "S141",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Senator Elizabeth Dole 21st Century Veterans Healthcare and Benefits Improvement Act",
+        "congressNumber": 118,
+        "rollCallNumber": 504
+      },
+      {
+        "bill": "S 3998",
+        "billId": "S3998",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Federal Judiciary Stabilization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 503
+      },
+      {
+        "bill": "H R 7213",
+        "billId": "HR7213",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Autism CARES Act",
+        "congressNumber": 118,
+        "rollCallNumber": 502
+      },
+      {
+        "bill": "S 4199",
+        "billId": "S4199",
+        "date": "12-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "JUDGES Act",
+        "congressNumber": 118,
+        "rollCallNumber": 501
+      },
+      {
+        "bill": "H R 5009",
+        "billId": "HR5009",
+        "date": "11-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "WILD Act",
+        "congressNumber": 118,
+        "rollCallNumber": 500
+      },
+      {
+        "bill": "H R 9716",
+        "billId": "HR9716",
+        "date": "11-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Increasing Baseline Updates Act",
+        "congressNumber": 118,
+        "rollCallNumber": 499
+      },
+      {
+        "bill": "H R 9668",
+        "billId": "HR9668",
+        "date": "10-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "SHIELD Against CCP Act",
+        "congressNumber": 118,
+        "rollCallNumber": 498
+      },
+      {
+        "bill": "H R 7673",
+        "billId": "HR7673",
+        "date": "10-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Liberty in Laundry Act",
+        "congressNumber": 118,
+        "rollCallNumber": 497
+      },
+      {
+        "bill": "S 3613",
+        "billId": "S3613",
+        "date": "10-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Improving Federal Building Security Act",
+        "congressNumber": 118,
+        "rollCallNumber": 496
+      },
+      {
+        "bill": "H RES 1612",
+        "billId": "HRES1612",
+        "date": "10-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 7673) the Liberty in Laundry Act; providing for consideration of the bill (S. 4199) the Judicial Understaffing Delays Getting Emergencies Solved Act; and providing for consideration of the Senate amendment to the bill (H.R. 5009) the WILD Act",
+        "congressNumber": 118,
+        "rollCallNumber": 495
+      },
+      {
+        "bill": "H RES 1612",
+        "billId": "HRES1612",
+        "date": "10-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 7673) the Liberty in Laundry Act; providing for consideration of the bill (S. 4199) the Judicial Understaffing Delays Getting Emergencies Solved Act; and providing for consideration of the Senate amendment to the bill (H.R. 5009) the WILD Act",
+        "congressNumber": 118,
+        "rollCallNumber": 494
+      },
+      {
+        "bill": "S 4367",
+        "billId": "S4367",
+        "date": "10-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Thomas R. Carper Water Resources Development Act",
+        "congressNumber": 118,
+        "rollCallNumber": 493
+      },
+      {
+        "bill": "H R 5349",
+        "billId": "HR5349",
+        "date": "6-Dec-2024",
+        "vote": "NOT VOTING",
+        "alignsWithDonors": false,
+        "note": "Crucial Communism Teaching Act",
+        "congressNumber": 118,
+        "rollCallNumber": 492
+      },
+      {
+        "bill": "H RES 1609",
+        "billId": "HRES1609",
+        "date": "5-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Raising a Question of the Privileges of the House",
+        "congressNumber": 118,
+        "rollCallNumber": 491
+      },
+      {
+        "bill": "H RES 1608",
+        "billId": "HRES1608",
+        "date": "5-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Raising a Question of the Privileges of the House",
+        "congressNumber": 118,
+        "rollCallNumber": 490
+      },
+      {
+        "bill": "H R 7198",
+        "billId": "HR7198",
+        "date": "5-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 489
+      },
+      {
+        "bill": "H R 7198",
+        "billId": "HR7198",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 488
+      },
+      {
+        "bill": "H R 7198",
+        "billId": "HR7198",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "On Agreeing to the Amendment",
+        "congressNumber": 118,
+        "rollCallNumber": 487
+      },
+      {
+        "bill": "H R 9600",
+        "billId": "HR9600",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "To designate the facility of the United States Postal Service located at 119 Main Street in Plains, Georgia, as the "Jimmy and Rosalynn Carter Post Office"",
+        "congressNumber": 118,
+        "rollCallNumber": 486
+      },
+      {
+        "bill": "H R 9598",
+        "billId": "HR9598",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Office of National Drug Control Policy Reauthorization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 485
+      },
+      {
+        "bill": "S 709",
+        "billId": "S709",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Federal Agency Performance Act",
+        "congressNumber": 118,
+        "rollCallNumber": 484
+      },
+      {
+        "bill": "H RES 1602",
+        "billId": "HRES1602",
+        "date": "4-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 5349) the Crucial Communism Teaching Act; and providing for consideration of the bill (H.R. 7198) the Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 483
+      },
+      {
+        "bill": "H RES 1602",
+        "billId": "HRES1602",
+        "date": "4-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 5349) the Crucial Communism Teaching Act; and providing for consideration of the bill (H.R. 7198) the Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 482
+      },
+      {
+        "bill": "H R 8219",
+        "billId": "HR8219",
+        "date": "4-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Lahaina National Heritage Area Study Act",
+        "congressNumber": 118,
+        "rollCallNumber": 481
+      },
+      {
+        "bill": "H R 390",
+        "billId": "HR390",
+        "date": "4-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Maurice D. Hinchey Hudson River Valley National Heritage Area Enhancement Act",
+        "congressNumber": 118,
+        "rollCallNumber": 480
+      },
+      {
+        "bill": "S 3791",
+        "billId": "S3791",
+        "date": "3-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "America's Conservation Enhancement Reauthorization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 479
+      },
+      {
+        "bill": "H RES 915",
+        "billId": "HRES915",
+        "date": "21-Nov-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Urging the Government of Ukraine to review and modify its decision to suspend adoption by foreign nationals with a view to resuming such adoptions, particularly in cases where the mutual concerns of the Governments of Ukraine and of the United States can be substantially addressed",
+        "congressNumber": 118,
+        "rollCallNumber": 478
+      }
+    ],
     "funding": {
       "available": true,
       "periodYear": "2024",
@@ -566,7 +967,7 @@
     },
     "viewSummary": "Joaquin Castro raised $690K in reported campaign funds (through 2024). About 88% came from large donors, PACs and committee transfers ($380K itemized, $228K PAC), while 12% ($81K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $44K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 6,
       "lobbyScore": 6,
@@ -576,8 +977,8 @@
       "totalMoney": 689807,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
-      "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:48:06.192Z"
+      "totalTrackedVotes": 40,
+      "lastUpdated": "2026-06-03T04:17:23.314Z"
     }
   },
   {
@@ -663,7 +1064,7 @@
     },
     "viewSummary": "Kristen McDonald Rivet raised $6.1M in reported campaign funds (through 2024). About 84% came from large donors, PACs and committee transfers ($4.0M itemized, $927K PAC), while 16% ($975K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $191K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 23,
       "lobbyScore": 23,
@@ -674,7 +1075,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:48:17.510Z"
+      "lastUpdated": "2026-06-03T04:17:36.297Z"
     }
   },
   {
@@ -732,7 +1133,408 @@
     ],
     "stockTrades": [],
     "lawsuits": [],
-    "votes": [],
+    "votes": [
+      {
+        "bill": "H R 10545",
+        "billId": "HR10545",
+        "date": "20-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "American Relief Act, 2025",
+        "congressNumber": 118,
+        "rollCallNumber": 517
+      },
+      {
+        "bill": "H R 10515",
+        "billId": "HR10515",
+        "date": "19-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "American Relief Act",
+        "congressNumber": 118,
+        "rollCallNumber": 516
+      },
+      {
+        "bill": "S 759",
+        "billId": "S759",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Beagle Brigade Act",
+        "congressNumber": 118,
+        "rollCallNumber": 515
+      },
+      {
+        "bill": "H R 8663",
+        "billId": "HR8663",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "DETECT Fentanyl and Xylazine Act",
+        "congressNumber": 118,
+        "rollCallNumber": 514
+      },
+      {
+        "bill": "S 3857",
+        "billId": "S3857",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Jamul Indian Village Land Transfer Act",
+        "congressNumber": 118,
+        "rollCallNumber": 513
+      },
+      {
+        "bill": "S 1351",
+        "billId": "S1351",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Stop Institutional Child Abuse Act",
+        "congressNumber": 118,
+        "rollCallNumber": 512
+      },
+      {
+        "bill": "H R 1101",
+        "billId": "HR1101",
+        "date": "17-Dec-2024",
+        "vote": "NOT VOTING",
+        "alignsWithDonors": false,
+        "note": "Lumbee Fairness Act",
+        "congressNumber": 118,
+        "rollCallNumber": 511
+      },
+      {
+        "bill": "S 3448",
+        "billId": "S3448",
+        "date": "17-Dec-2024",
+        "vote": "NOT VOTING",
+        "alignsWithDonors": false,
+        "note": "Never Again Education Reauthorization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 510
+      },
+      {
+        "bill": "H R 115",
+        "billId": "HR115",
+        "date": "17-Dec-2024",
+        "vote": "NOT VOTING",
+        "alignsWithDonors": false,
+        "note": "Midnight Rules Relief Act",
+        "congressNumber": 118,
+        "rollCallNumber": 509
+      },
+      {
+        "bill": "H R 115",
+        "billId": "HR115",
+        "date": "17-Dec-2024",
+        "vote": "NOT VOTING",
+        "alignsWithDonors": false,
+        "note": "Midnight Rules Relief Act",
+        "congressNumber": 118,
+        "rollCallNumber": 508
+      },
+      {
+        "bill": "H RES 1616",
+        "billId": "HRES1616",
+        "date": "17-Dec-2024",
+        "vote": "NOT VOTING",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 115) to amend chapter 8 of title 5, United States Code, to provide for en bloc consideration in resolutions of disapproval for "midnight rules", and for other purposes",
+        "congressNumber": 118,
+        "rollCallNumber": 507
+      },
+      {
+        "bill": "H RES 1616",
+        "billId": "HRES1616",
+        "date": "17-Dec-2024",
+        "vote": "NOT VOTING",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 115) to amend chapter 8 of title 5, United States Code, to provide for en bloc consideration in resolutions of disapproval for "midnight rules", and for other purposes",
+        "congressNumber": 118,
+        "rollCallNumber": 506
+      },
+      {
+        "bill": "S 4077",
+        "billId": "S4077",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "To designate the facility of the United States Postal Service located at 180 Steuart Street in San Francisco, California, as the "Dianne Feinstein Post Office"",
+        "congressNumber": 118,
+        "rollCallNumber": 505
+      },
+      {
+        "bill": "S 141",
+        "billId": "S141",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Senator Elizabeth Dole 21st Century Veterans Healthcare and Benefits Improvement Act",
+        "congressNumber": 118,
+        "rollCallNumber": 504
+      },
+      {
+        "bill": "S 3998",
+        "billId": "S3998",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Federal Judiciary Stabilization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 503
+      },
+      {
+        "bill": "H R 7213",
+        "billId": "HR7213",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Autism CARES Act",
+        "congressNumber": 118,
+        "rollCallNumber": 502
+      },
+      {
+        "bill": "S 4199",
+        "billId": "S4199",
+        "date": "12-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "JUDGES Act",
+        "congressNumber": 118,
+        "rollCallNumber": 501
+      },
+      {
+        "bill": "H R 5009",
+        "billId": "HR5009",
+        "date": "11-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "WILD Act",
+        "congressNumber": 118,
+        "rollCallNumber": 500
+      },
+      {
+        "bill": "H R 9716",
+        "billId": "HR9716",
+        "date": "11-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Increasing Baseline Updates Act",
+        "congressNumber": 118,
+        "rollCallNumber": 499
+      },
+      {
+        "bill": "H R 9668",
+        "billId": "HR9668",
+        "date": "10-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "SHIELD Against CCP Act",
+        "congressNumber": 118,
+        "rollCallNumber": 498
+      },
+      {
+        "bill": "H R 7673",
+        "billId": "HR7673",
+        "date": "10-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Liberty in Laundry Act",
+        "congressNumber": 118,
+        "rollCallNumber": 497
+      },
+      {
+        "bill": "S 3613",
+        "billId": "S3613",
+        "date": "10-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Improving Federal Building Security Act",
+        "congressNumber": 118,
+        "rollCallNumber": 496
+      },
+      {
+        "bill": "H RES 1612",
+        "billId": "HRES1612",
+        "date": "10-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 7673) the Liberty in Laundry Act; providing for consideration of the bill (S. 4199) the Judicial Understaffing Delays Getting Emergencies Solved Act; and providing for consideration of the Senate amendment to the bill (H.R. 5009) the WILD Act",
+        "congressNumber": 118,
+        "rollCallNumber": 495
+      },
+      {
+        "bill": "H RES 1612",
+        "billId": "HRES1612",
+        "date": "10-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 7673) the Liberty in Laundry Act; providing for consideration of the bill (S. 4199) the Judicial Understaffing Delays Getting Emergencies Solved Act; and providing for consideration of the Senate amendment to the bill (H.R. 5009) the WILD Act",
+        "congressNumber": 118,
+        "rollCallNumber": 494
+      },
+      {
+        "bill": "S 4367",
+        "billId": "S4367",
+        "date": "10-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Thomas R. Carper Water Resources Development Act",
+        "congressNumber": 118,
+        "rollCallNumber": 493
+      },
+      {
+        "bill": "H R 5349",
+        "billId": "HR5349",
+        "date": "6-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Crucial Communism Teaching Act",
+        "congressNumber": 118,
+        "rollCallNumber": 492
+      },
+      {
+        "bill": "H RES 1609",
+        "billId": "HRES1609",
+        "date": "5-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Raising a Question of the Privileges of the House",
+        "congressNumber": 118,
+        "rollCallNumber": 491
+      },
+      {
+        "bill": "H RES 1608",
+        "billId": "HRES1608",
+        "date": "5-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Raising a Question of the Privileges of the House",
+        "congressNumber": 118,
+        "rollCallNumber": 490
+      },
+      {
+        "bill": "H R 7198",
+        "billId": "HR7198",
+        "date": "5-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 489
+      },
+      {
+        "bill": "H R 7198",
+        "billId": "HR7198",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 488
+      },
+      {
+        "bill": "H R 7198",
+        "billId": "HR7198",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "On Agreeing to the Amendment",
+        "congressNumber": 118,
+        "rollCallNumber": 487
+      },
+      {
+        "bill": "H R 9600",
+        "billId": "HR9600",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "To designate the facility of the United States Postal Service located at 119 Main Street in Plains, Georgia, as the "Jimmy and Rosalynn Carter Post Office"",
+        "congressNumber": 118,
+        "rollCallNumber": 486
+      },
+      {
+        "bill": "H R 9598",
+        "billId": "HR9598",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Office of National Drug Control Policy Reauthorization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 485
+      },
+      {
+        "bill": "S 709",
+        "billId": "S709",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Federal Agency Performance Act",
+        "congressNumber": 118,
+        "rollCallNumber": 484
+      },
+      {
+        "bill": "H RES 1602",
+        "billId": "HRES1602",
+        "date": "4-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 5349) the Crucial Communism Teaching Act; and providing for consideration of the bill (H.R. 7198) the Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 483
+      },
+      {
+        "bill": "H RES 1602",
+        "billId": "HRES1602",
+        "date": "4-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 5349) the Crucial Communism Teaching Act; and providing for consideration of the bill (H.R. 7198) the Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 482
+      },
+      {
+        "bill": "H R 8219",
+        "billId": "HR8219",
+        "date": "4-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Lahaina National Heritage Area Study Act",
+        "congressNumber": 118,
+        "rollCallNumber": 481
+      },
+      {
+        "bill": "H R 390",
+        "billId": "HR390",
+        "date": "4-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Maurice D. Hinchey Hudson River Valley National Heritage Area Enhancement Act",
+        "congressNumber": 118,
+        "rollCallNumber": 480
+      },
+      {
+        "bill": "S 3791",
+        "billId": "S3791",
+        "date": "3-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "America's Conservation Enhancement Reauthorization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 479
+      },
+      {
+        "bill": "H RES 915",
+        "billId": "HRES915",
+        "date": "21-Nov-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Urging the Government of Ukraine to review and modify its decision to suspend adoption by foreign nationals with a view to resuming such adoptions, particularly in cases where the mutual concerns of the Governments of Ukraine and of the United States can be substantially addressed",
+        "congressNumber": 118,
+        "rollCallNumber": 478
+      }
+    ],
     "funding": {
       "available": true,
       "periodYear": "2024",
@@ -752,18 +1554,18 @@
     },
     "viewSummary": "Jason Crow raised $2.2M in reported campaign funds (through 2024). About 71% came from large donors, PACs and committee transfers ($1.2M itemized, $281K PAC), while 28% ($614K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $64K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
-      "total": 18,
+      "total": 13,
       "lobbyScore": 13,
-      "alignScore": 5,
+      "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
       "totalMoney": 2208412,
       "conflictTrades": 0,
-      "donorAlignedVotes": 1,
-      "totalTrackedVotes": 7,
-      "lastUpdated": "2026-06-02T22:48:30.141Z"
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 40,
+      "lastUpdated": "2026-06-03T04:18:16.258Z"
     }
   },
   {
@@ -860,8 +1662,420 @@
       }
     ],
     "stockTrades": [],
-    "lawsuits": [],
-    "votes": [],
+    "lawsuits": [
+      {
+        "title": "In re Kiley",
+        "year": 2018,
+        "type": "Civil",
+        "status": "ONGOING",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming Kiley, Kevin.",
+        "severity": "low",
+        "caseId": "Bankruptcy Number: 15-27838"
+      }
+    ],
+    "votes": [
+      {
+        "bill": "H R 10545",
+        "billId": "HR10545",
+        "date": "20-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "American Relief Act, 2025",
+        "congressNumber": 118,
+        "rollCallNumber": 517
+      },
+      {
+        "bill": "H R 10515",
+        "billId": "HR10515",
+        "date": "19-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "American Relief Act",
+        "congressNumber": 118,
+        "rollCallNumber": 516
+      },
+      {
+        "bill": "S 759",
+        "billId": "S759",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Beagle Brigade Act",
+        "congressNumber": 118,
+        "rollCallNumber": 515
+      },
+      {
+        "bill": "H R 8663",
+        "billId": "HR8663",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "DETECT Fentanyl and Xylazine Act",
+        "congressNumber": 118,
+        "rollCallNumber": 514
+      },
+      {
+        "bill": "S 3857",
+        "billId": "S3857",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Jamul Indian Village Land Transfer Act",
+        "congressNumber": 118,
+        "rollCallNumber": 513
+      },
+      {
+        "bill": "S 1351",
+        "billId": "S1351",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Stop Institutional Child Abuse Act",
+        "congressNumber": 118,
+        "rollCallNumber": 512
+      },
+      {
+        "bill": "H R 1101",
+        "billId": "HR1101",
+        "date": "17-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Lumbee Fairness Act",
+        "congressNumber": 118,
+        "rollCallNumber": 511
+      },
+      {
+        "bill": "S 3448",
+        "billId": "S3448",
+        "date": "17-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Never Again Education Reauthorization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 510
+      },
+      {
+        "bill": "H R 115",
+        "billId": "HR115",
+        "date": "17-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Midnight Rules Relief Act",
+        "congressNumber": 118,
+        "rollCallNumber": 509
+      },
+      {
+        "bill": "H R 115",
+        "billId": "HR115",
+        "date": "17-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Midnight Rules Relief Act",
+        "congressNumber": 118,
+        "rollCallNumber": 508
+      },
+      {
+        "bill": "H RES 1616",
+        "billId": "HRES1616",
+        "date": "17-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 115) to amend chapter 8 of title 5, United States Code, to provide for en bloc consideration in resolutions of disapproval for "midnight rules", and for other purposes",
+        "congressNumber": 118,
+        "rollCallNumber": 507
+      },
+      {
+        "bill": "H RES 1616",
+        "billId": "HRES1616",
+        "date": "17-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 115) to amend chapter 8 of title 5, United States Code, to provide for en bloc consideration in resolutions of disapproval for "midnight rules", and for other purposes",
+        "congressNumber": 118,
+        "rollCallNumber": 506
+      },
+      {
+        "bill": "S 4077",
+        "billId": "S4077",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "To designate the facility of the United States Postal Service located at 180 Steuart Street in San Francisco, California, as the "Dianne Feinstein Post Office"",
+        "congressNumber": 118,
+        "rollCallNumber": 505
+      },
+      {
+        "bill": "S 141",
+        "billId": "S141",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Senator Elizabeth Dole 21st Century Veterans Healthcare and Benefits Improvement Act",
+        "congressNumber": 118,
+        "rollCallNumber": 504
+      },
+      {
+        "bill": "S 3998",
+        "billId": "S3998",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Federal Judiciary Stabilization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 503
+      },
+      {
+        "bill": "H R 7213",
+        "billId": "HR7213",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Autism CARES Act",
+        "congressNumber": 118,
+        "rollCallNumber": 502
+      },
+      {
+        "bill": "S 4199",
+        "billId": "S4199",
+        "date": "12-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "JUDGES Act",
+        "congressNumber": 118,
+        "rollCallNumber": 501
+      },
+      {
+        "bill": "H R 5009",
+        "billId": "HR5009",
+        "date": "11-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "WILD Act",
+        "congressNumber": 118,
+        "rollCallNumber": 500
+      },
+      {
+        "bill": "H R 9716",
+        "billId": "HR9716",
+        "date": "11-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Increasing Baseline Updates Act",
+        "congressNumber": 118,
+        "rollCallNumber": 499
+      },
+      {
+        "bill": "H R 9668",
+        "billId": "HR9668",
+        "date": "10-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "SHIELD Against CCP Act",
+        "congressNumber": 118,
+        "rollCallNumber": 498
+      },
+      {
+        "bill": "H R 7673",
+        "billId": "HR7673",
+        "date": "10-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Liberty in Laundry Act",
+        "congressNumber": 118,
+        "rollCallNumber": 497
+      },
+      {
+        "bill": "S 3613",
+        "billId": "S3613",
+        "date": "10-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Improving Federal Building Security Act",
+        "congressNumber": 118,
+        "rollCallNumber": 496
+      },
+      {
+        "bill": "H RES 1612",
+        "billId": "HRES1612",
+        "date": "10-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 7673) the Liberty in Laundry Act; providing for consideration of the bill (S. 4199) the Judicial Understaffing Delays Getting Emergencies Solved Act; and providing for consideration of the Senate amendment to the bill (H.R. 5009) the WILD Act",
+        "congressNumber": 118,
+        "rollCallNumber": 495
+      },
+      {
+        "bill": "H RES 1612",
+        "billId": "HRES1612",
+        "date": "10-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 7673) the Liberty in Laundry Act; providing for consideration of the bill (S. 4199) the Judicial Understaffing Delays Getting Emergencies Solved Act; and providing for consideration of the Senate amendment to the bill (H.R. 5009) the WILD Act",
+        "congressNumber": 118,
+        "rollCallNumber": 494
+      },
+      {
+        "bill": "S 4367",
+        "billId": "S4367",
+        "date": "10-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Thomas R. Carper Water Resources Development Act",
+        "congressNumber": 118,
+        "rollCallNumber": 493
+      },
+      {
+        "bill": "H R 5349",
+        "billId": "HR5349",
+        "date": "6-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Crucial Communism Teaching Act",
+        "congressNumber": 118,
+        "rollCallNumber": 492
+      },
+      {
+        "bill": "H RES 1609",
+        "billId": "HRES1609",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Raising a Question of the Privileges of the House",
+        "congressNumber": 118,
+        "rollCallNumber": 491
+      },
+      {
+        "bill": "H RES 1608",
+        "billId": "HRES1608",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Raising a Question of the Privileges of the House",
+        "congressNumber": 118,
+        "rollCallNumber": 490
+      },
+      {
+        "bill": "H R 7198",
+        "billId": "HR7198",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 489
+      },
+      {
+        "bill": "H R 7198",
+        "billId": "HR7198",
+        "date": "5-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 488
+      },
+      {
+        "bill": "H R 7198",
+        "billId": "HR7198",
+        "date": "5-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "On Agreeing to the Amendment",
+        "congressNumber": 118,
+        "rollCallNumber": 487
+      },
+      {
+        "bill": "H R 9600",
+        "billId": "HR9600",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "To designate the facility of the United States Postal Service located at 119 Main Street in Plains, Georgia, as the "Jimmy and Rosalynn Carter Post Office"",
+        "congressNumber": 118,
+        "rollCallNumber": 486
+      },
+      {
+        "bill": "H R 9598",
+        "billId": "HR9598",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Office of National Drug Control Policy Reauthorization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 485
+      },
+      {
+        "bill": "S 709",
+        "billId": "S709",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Federal Agency Performance Act",
+        "congressNumber": 118,
+        "rollCallNumber": 484
+      },
+      {
+        "bill": "H RES 1602",
+        "billId": "HRES1602",
+        "date": "4-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 5349) the Crucial Communism Teaching Act; and providing for consideration of the bill (H.R. 7198) the Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 483
+      },
+      {
+        "bill": "H RES 1602",
+        "billId": "HRES1602",
+        "date": "4-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 5349) the Crucial Communism Teaching Act; and providing for consideration of the bill (H.R. 7198) the Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 482
+      },
+      {
+        "bill": "H R 8219",
+        "billId": "HR8219",
+        "date": "4-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Lahaina National Heritage Area Study Act",
+        "congressNumber": 118,
+        "rollCallNumber": 481
+      },
+      {
+        "bill": "H R 390",
+        "billId": "HR390",
+        "date": "4-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Maurice D. Hinchey Hudson River Valley National Heritage Area Enhancement Act",
+        "congressNumber": 118,
+        "rollCallNumber": 480
+      },
+      {
+        "bill": "S 3791",
+        "billId": "S3791",
+        "date": "3-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "America's Conservation Enhancement Reauthorization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 479
+      },
+      {
+        "bill": "H RES 915",
+        "billId": "HRES915",
+        "date": "21-Nov-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Urging the Government of Ukraine to review and modify its decision to suspend adoption by foreign nationals with a view to resuming such adoptions, particularly in cases where the mutual concerns of the Governments of Ukraine and of the United States can be substantially addressed",
+        "congressNumber": 118,
+        "rollCallNumber": 478
+      }
+    ],
     "funding": {
       "available": true,
       "periodYear": "2024",
@@ -879,20 +2093,20 @@
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Kevin Kiley raised $4.3M in reported campaign funds (through 2024). About 82% came from large donors, PACs and committee transfers ($2.3M itemized, $651K PAC), while 17% ($736K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $84K.",
+    "viewSummary": "Kevin Kiley raised $4.3M in reported campaign funds (through 2024). About 82% came from large donors, PACs and committee transfers ($2.3M itemized, $651K PAC), while 17% ($736K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $84K. 1 legal action(s)/lawsuit(s) on record.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
-      "total": 23,
+      "total": 24,
       "lobbyScore": 23,
       "alignScore": 0,
       "stockScore": 0,
-      "legalScore": 0,
+      "legalScore": 1,
       "totalMoney": 4266158,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
-      "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:49:06.338Z"
+      "totalTrackedVotes": 40,
+      "lastUpdated": "2026-06-03T04:23:24.526Z"
     }
   },
   {
@@ -1006,7 +2220,408 @@
     ],
     "stockTrades": [],
     "lawsuits": [],
-    "votes": [],
+    "votes": [
+      {
+        "bill": "H R 10545",
+        "billId": "HR10545",
+        "date": "20-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "American Relief Act, 2025",
+        "congressNumber": 118,
+        "rollCallNumber": 517
+      },
+      {
+        "bill": "H R 10515",
+        "billId": "HR10515",
+        "date": "19-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "American Relief Act",
+        "congressNumber": 118,
+        "rollCallNumber": 516
+      },
+      {
+        "bill": "S 759",
+        "billId": "S759",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Beagle Brigade Act",
+        "congressNumber": 118,
+        "rollCallNumber": 515
+      },
+      {
+        "bill": "H R 8663",
+        "billId": "HR8663",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "DETECT Fentanyl and Xylazine Act",
+        "congressNumber": 118,
+        "rollCallNumber": 514
+      },
+      {
+        "bill": "S 3857",
+        "billId": "S3857",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Jamul Indian Village Land Transfer Act",
+        "congressNumber": 118,
+        "rollCallNumber": 513
+      },
+      {
+        "bill": "S 1351",
+        "billId": "S1351",
+        "date": "18-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Stop Institutional Child Abuse Act",
+        "congressNumber": 118,
+        "rollCallNumber": 512
+      },
+      {
+        "bill": "H R 1101",
+        "billId": "HR1101",
+        "date": "17-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Lumbee Fairness Act",
+        "congressNumber": 118,
+        "rollCallNumber": 511
+      },
+      {
+        "bill": "S 3448",
+        "billId": "S3448",
+        "date": "17-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Never Again Education Reauthorization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 510
+      },
+      {
+        "bill": "H R 115",
+        "billId": "HR115",
+        "date": "17-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Midnight Rules Relief Act",
+        "congressNumber": 118,
+        "rollCallNumber": 509
+      },
+      {
+        "bill": "H R 115",
+        "billId": "HR115",
+        "date": "17-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Midnight Rules Relief Act",
+        "congressNumber": 118,
+        "rollCallNumber": 508
+      },
+      {
+        "bill": "H RES 1616",
+        "billId": "HRES1616",
+        "date": "17-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 115) to amend chapter 8 of title 5, United States Code, to provide for en bloc consideration in resolutions of disapproval for "midnight rules", and for other purposes",
+        "congressNumber": 118,
+        "rollCallNumber": 507
+      },
+      {
+        "bill": "H RES 1616",
+        "billId": "HRES1616",
+        "date": "17-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 115) to amend chapter 8 of title 5, United States Code, to provide for en bloc consideration in resolutions of disapproval for "midnight rules", and for other purposes",
+        "congressNumber": 118,
+        "rollCallNumber": 506
+      },
+      {
+        "bill": "S 4077",
+        "billId": "S4077",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "To designate the facility of the United States Postal Service located at 180 Steuart Street in San Francisco, California, as the "Dianne Feinstein Post Office"",
+        "congressNumber": 118,
+        "rollCallNumber": 505
+      },
+      {
+        "bill": "S 141",
+        "billId": "S141",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Senator Elizabeth Dole 21st Century Veterans Healthcare and Benefits Improvement Act",
+        "congressNumber": 118,
+        "rollCallNumber": 504
+      },
+      {
+        "bill": "S 3998",
+        "billId": "S3998",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Federal Judiciary Stabilization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 503
+      },
+      {
+        "bill": "H R 7213",
+        "billId": "HR7213",
+        "date": "16-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Autism CARES Act",
+        "congressNumber": 118,
+        "rollCallNumber": 502
+      },
+      {
+        "bill": "S 4199",
+        "billId": "S4199",
+        "date": "12-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "JUDGES Act",
+        "congressNumber": 118,
+        "rollCallNumber": 501
+      },
+      {
+        "bill": "H R 5009",
+        "billId": "HR5009",
+        "date": "11-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "WILD Act",
+        "congressNumber": 118,
+        "rollCallNumber": 500
+      },
+      {
+        "bill": "H R 9716",
+        "billId": "HR9716",
+        "date": "11-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Increasing Baseline Updates Act",
+        "congressNumber": 118,
+        "rollCallNumber": 499
+      },
+      {
+        "bill": "H R 9668",
+        "billId": "HR9668",
+        "date": "10-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "SHIELD Against CCP Act",
+        "congressNumber": 118,
+        "rollCallNumber": 498
+      },
+      {
+        "bill": "H R 7673",
+        "billId": "HR7673",
+        "date": "10-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Liberty in Laundry Act",
+        "congressNumber": 118,
+        "rollCallNumber": 497
+      },
+      {
+        "bill": "S 3613",
+        "billId": "S3613",
+        "date": "10-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Improving Federal Building Security Act",
+        "congressNumber": 118,
+        "rollCallNumber": 496
+      },
+      {
+        "bill": "H RES 1612",
+        "billId": "HRES1612",
+        "date": "10-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 7673) the Liberty in Laundry Act; providing for consideration of the bill (S. 4199) the Judicial Understaffing Delays Getting Emergencies Solved Act; and providing for consideration of the Senate amendment to the bill (H.R. 5009) the WILD Act",
+        "congressNumber": 118,
+        "rollCallNumber": 495
+      },
+      {
+        "bill": "H RES 1612",
+        "billId": "HRES1612",
+        "date": "10-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 7673) the Liberty in Laundry Act; providing for consideration of the bill (S. 4199) the Judicial Understaffing Delays Getting Emergencies Solved Act; and providing for consideration of the Senate amendment to the bill (H.R. 5009) the WILD Act",
+        "congressNumber": 118,
+        "rollCallNumber": 494
+      },
+      {
+        "bill": "S 4367",
+        "billId": "S4367",
+        "date": "10-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Thomas R. Carper Water Resources Development Act",
+        "congressNumber": 118,
+        "rollCallNumber": 493
+      },
+      {
+        "bill": "H R 5349",
+        "billId": "HR5349",
+        "date": "6-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Crucial Communism Teaching Act",
+        "congressNumber": 118,
+        "rollCallNumber": 492
+      },
+      {
+        "bill": "H RES 1609",
+        "billId": "HRES1609",
+        "date": "5-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Raising a Question of the Privileges of the House",
+        "congressNumber": 118,
+        "rollCallNumber": 491
+      },
+      {
+        "bill": "H RES 1608",
+        "billId": "HRES1608",
+        "date": "5-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Raising a Question of the Privileges of the House",
+        "congressNumber": 118,
+        "rollCallNumber": 490
+      },
+      {
+        "bill": "H R 7198",
+        "billId": "HR7198",
+        "date": "5-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 489
+      },
+      {
+        "bill": "H R 7198",
+        "billId": "HR7198",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 488
+      },
+      {
+        "bill": "H R 7198",
+        "billId": "HR7198",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "On Agreeing to the Amendment",
+        "congressNumber": 118,
+        "rollCallNumber": 487
+      },
+      {
+        "bill": "H R 9600",
+        "billId": "HR9600",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "To designate the facility of the United States Postal Service located at 119 Main Street in Plains, Georgia, as the "Jimmy and Rosalynn Carter Post Office"",
+        "congressNumber": 118,
+        "rollCallNumber": 486
+      },
+      {
+        "bill": "H R 9598",
+        "billId": "HR9598",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Office of National Drug Control Policy Reauthorization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 485
+      },
+      {
+        "bill": "S 709",
+        "billId": "S709",
+        "date": "5-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Federal Agency Performance Act",
+        "congressNumber": 118,
+        "rollCallNumber": 484
+      },
+      {
+        "bill": "H RES 1602",
+        "billId": "HRES1602",
+        "date": "4-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 5349) the Crucial Communism Teaching Act; and providing for consideration of the bill (H.R. 7198) the Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 483
+      },
+      {
+        "bill": "H RES 1602",
+        "billId": "HRES1602",
+        "date": "4-Dec-2024",
+        "vote": "NAY",
+        "alignsWithDonors": false,
+        "note": "Providing for consideration of the bill (H.R. 5349) the Crucial Communism Teaching Act; and providing for consideration of the bill (H.R. 7198) the Prove It Act",
+        "congressNumber": 118,
+        "rollCallNumber": 482
+      },
+      {
+        "bill": "H R 8219",
+        "billId": "HR8219",
+        "date": "4-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Lahaina National Heritage Area Study Act",
+        "congressNumber": 118,
+        "rollCallNumber": 481
+      },
+      {
+        "bill": "H R 390",
+        "billId": "HR390",
+        "date": "4-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "Maurice D. Hinchey Hudson River Valley National Heritage Area Enhancement Act",
+        "congressNumber": 118,
+        "rollCallNumber": 480
+      },
+      {
+        "bill": "S 3791",
+        "billId": "S3791",
+        "date": "3-Dec-2024",
+        "vote": "YEA",
+        "alignsWithDonors": false,
+        "note": "America's Conservation Enhancement Reauthorization Act",
+        "congressNumber": 118,
+        "rollCallNumber": 479
+      },
+      {
+        "bill": "H RES 915",
+        "billId": "HRES915",
+        "date": "21-Nov-2024",
+        "vote": "NOT VOTING",
+        "alignsWithDonors": false,
+        "note": "Urging the Government of Ukraine to review and modify its decision to suspend adoption by foreign nationals with a view to resuming such adoptions, particularly in cases where the mutual concerns of the Governments of Ukraine and of the United States can be substantially addressed",
+        "congressNumber": 118,
+        "rollCallNumber": 478
+      }
+    ],
     "funding": {
       "available": true,
       "periodYear": "2024",
@@ -1026,7 +2641,7 @@
     },
     "viewSummary": "Brendan Boyle raised $2.3M in reported campaign funds (through 2024). About 74% came from large donors, PACs and committee transfers ($623K itemized, $1.1M PAC), while 1% ($13K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $346K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 15,
       "lobbyScore": 15,
@@ -1036,8 +2651,8 @@
       "totalMoney": 2337216,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
-      "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:49:14.653Z"
+      "totalTrackedVotes": 40,
+      "lastUpdated": "2026-06-03T04:26:24.472Z"
     }
   },
   {
@@ -1115,7 +2730,7 @@
     },
     "viewSummary": "Todd Young raised $1.8M in reported campaign funds (through 2024). About 81% came from large donors, PACs and committee transfers ($576K itemized, $330K PAC), while 5% ($85K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $21K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 8,
       "lobbyScore": 8,
@@ -1126,7 +2741,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:49:20.696Z"
+      "lastUpdated": "2026-06-03T04:26:31.558Z"
     }
   },
   {
@@ -1220,7 +2835,7 @@
     },
     "viewSummary": "Ron Wyden raised $1.5M in reported campaign funds (through 2024). About 70% came from large donors, PACs and committee transfers ($393K itemized, $309K PAC), while 18% ($273K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $47K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 6,
       "lobbyScore": 6,
@@ -1231,7 +2846,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:49:28.756Z"
+      "lastUpdated": "2026-06-03T04:26:40.236Z"
     }
   },
   {
@@ -1365,7 +2980,7 @@
     },
     "viewSummary": "Roger Wicker raised $7.4M in reported campaign funds (through 2024). About 96% came from large donors, PACs and committee transfers ($3.6M itemized, $2.3M PAC), while 4% ($314K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $717K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 24,
       "lobbyScore": 24,
@@ -1376,7 +2991,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:49:36.386Z"
+      "lastUpdated": "2026-06-03T04:26:50.183Z"
     }
   },
   {
@@ -1446,7 +3061,7 @@
     },
     "viewSummary": "Sheldon Whitehouse raised $4.9M in reported campaign funds (through 2024). About 100% came from large donors, PACs and committee transfers ($2.7M itemized, $738K PAC), while 0% ($0) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $222K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 25,
       "lobbyScore": 25,
@@ -1457,7 +3072,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:50:32.389Z"
+      "lastUpdated": "2026-06-03T04:27:29.742Z"
     }
   },
   {
@@ -1519,7 +3134,7 @@
     },
     "viewSummary": "Peter Welch raised $331K in reported campaign funds (through 2024). About 45% came from large donors, PACs and committee transfers ($59K itemized, $43K PAC), while 2% ($8K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $12K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 1,
       "lobbyScore": 1,
@@ -1530,7 +3145,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:50:37.403Z"
+      "lastUpdated": "2026-06-03T04:27:35.743Z"
     }
   },
   {
@@ -1576,7 +3191,7 @@
     },
     "viewSummary": "Elizabeth Warren raised $9.0M in reported campaign funds (through 2024). About 48% came from large donors, PACs and committee transfers ($4.1M itemized, $60K PAC), while 51% ($4.6M) came from small grassroots donors. This funding mix is grassroots-leaning, a lower influence-risk signal. Tracked industry/PAC contributions identified so far total $5K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 18,
       "lobbyScore": 18,
@@ -1587,7 +3202,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:52:58.841Z"
+      "lastUpdated": "2026-06-03T04:29:14.103Z"
     }
   },
   {
@@ -1649,7 +3264,7 @@
     },
     "viewSummary": "Raphael Warnock raised $4.8M in reported campaign funds (through 2024). About 55% came from large donors, PACs and committee transfers ($2.0M itemized, $87K PAC), while 36% ($1.7M) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $2K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 16,
       "lobbyScore": 16,
@@ -1660,7 +3275,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:54:05.643Z"
+      "lastUpdated": "2026-06-03T04:30:07.947Z"
     }
   },
   {
@@ -1676,7 +3291,18 @@
     "imageUrl": "https://www.congress.gov/img/member/w000805_200.jpg",
     "lobbyMoney": [],
     "stockTrades": [],
-    "lawsuits": [],
+    "lawsuits": [
+      {
+        "title": "Leadmine Community Church a/k/a Leadmine United Methodist Church, by and through its Trustees, James G. Alford, Larry Stemple, Mark Warner, Jeremy Hile, Lonnie Dotson, Wesley Lantz, Karen Hockman, Mark D. Phillips, and Sylvia Owens v. West Virginia Annual Conference of the United Methodist Church, an unincorporated association, by and through its Trustees, Nancy Cheshire, Yvonne W. Harris, Richard Shaffer, Richard E. Ford, Jr., Sheri Kernik, Thomas Matthews, Holly Biondi, Annette Carper, Ken Krimmel, Randall F. Flanagan, Cynthia Eakle, and Frank Shomo",
+        "year": 2025,
+        "type": "Civil - contract",
+        "status": "ONGOING",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming Warner, Mark R..",
+        "severity": "low",
+        "caseId": "24-ica-475"
+      }
+    ],
     "votes": [],
     "funding": {
       "available": true,
@@ -1695,20 +3321,20 @@
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Mark Warner raised $4.3M in reported campaign funds (through 2024). About 91% came from large donors, PACs and committee transfers ($2.0M itemized, $711K PAC), while 6% ($264K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal.",
-    "profileComplete": false,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "viewSummary": "Mark Warner raised $4.3M in reported campaign funds (through 2024). About 91% came from large donors, PACs and committee transfers ($2.0M itemized, $711K PAC), while 6% ($264K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. 1 legal action(s)/lawsuit(s) on record.",
+    "profileComplete": true,
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
-      "total": 24,
+      "total": 25,
       "lobbyScore": 24,
       "alignScore": 0,
       "stockScore": 0,
-      "legalScore": 0,
+      "legalScore": 1,
       "totalMoney": 4266869,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:54:08.288Z"
+      "lastUpdated": "2026-06-03T04:30:29.564Z"
     }
   },
   {
@@ -1757,7 +3383,28 @@
       }
     ],
     "stockTrades": [],
-    "lawsuits": [],
+    "lawsuits": [
+      {
+        "title": "Van Hollen v. Federal Election Commission",
+        "year": 2014,
+        "type": "Civil",
+        "status": "ONGOING",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming Van Hollen, Chris.",
+        "severity": "low",
+        "caseId": "Civil Action No. 2011-0766"
+      },
+      {
+        "title": "Van Hollen v. Federal Election Commission",
+        "year": 2012,
+        "type": "Civil",
+        "status": "ONGOING",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming Van Hollen, Chris.",
+        "severity": "low",
+        "caseId": "Civil Action No. 2011-0766"
+      }
+    ],
     "votes": [],
     "funding": {
       "available": true,
@@ -1776,20 +3423,20 @@
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Chris Van Hollen raised $331K in reported campaign funds (through 2024). About 72% came from large donors, PACs and committee transfers ($193K itemized, $44K PAC), while 12% ($39K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $19K.",
+    "viewSummary": "Chris Van Hollen raised $331K in reported campaign funds (through 2024). About 72% came from large donors, PACs and committee transfers ($193K itemized, $44K PAC), while 12% ($39K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $19K. 2 legal action(s)/lawsuit(s) on record.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
-      "total": 2,
+      "total": 4,
       "lobbyScore": 2,
       "alignScore": 0,
       "stockScore": 0,
-      "legalScore": 0,
+      "legalScore": 2,
       "totalMoney": 330579,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:54:17.063Z"
+      "lastUpdated": "2026-06-03T04:30:48.426Z"
     }
   },
   {
@@ -1867,7 +3514,7 @@
     },
     "viewSummary": "Tommy Tuberville raised $2.2M in reported campaign funds (through 2024). About 68% came from large donors, PACs and committee transfers ($1.2M itemized, $324K PAC), while 31% ($684K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $13K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 12,
       "lobbyScore": 12,
@@ -1878,7 +3525,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:54:24.836Z"
+      "lastUpdated": "2026-06-03T04:30:54.792Z"
     }
   },
   {
@@ -1988,7 +3635,7 @@
     },
     "viewSummary": "Thomas Tillis raised $2.5M in reported campaign funds (through 2024). About 97% came from large donors, PACs and committee transfers ($1.3M itemized, $1.1M PAC), while 2% ($56K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $98K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 23,
       "lobbyScore": 23,
@@ -1999,7 +3646,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:54:32.226Z"
+      "lastUpdated": "2026-06-03T04:31:04.449Z"
     }
   },
   {
@@ -2085,7 +3732,7 @@
     },
     "viewSummary": "John Thune raised $4.2M in reported campaign funds (through 2024). About 53% came from large donors, PACs and committee transfers ($1.1M itemized, $556K PAC), while 6% ($239K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $49K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 13,
       "lobbyScore": 13,
@@ -2096,7 +3743,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:54:40.005Z"
+      "lastUpdated": "2026-06-03T04:31:13.288Z"
     }
   },
   {
@@ -2190,7 +3837,7 @@
     },
     "viewSummary": "Dan Sullivan raised $1.9M in reported campaign funds (through 2024). About 92% came from large donors, PACs and committee transfers ($840K itemized, $524K PAC), while 4% ($75K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $46K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T22:40:59.602Z",
+    "dataVersion": "2026-06-03T04:13:21.375Z",
     "score": {
       "total": 13,
       "lobbyScore": 13,
@@ -2201,7 +3848,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T22:54:47.937Z"
+      "lastUpdated": "2026-06-03T04:31:21.268Z"
     }
   },
   {
