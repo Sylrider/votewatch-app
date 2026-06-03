@@ -24,9 +24,16 @@ function escapeRe(s: string): string {
 }
 
 function nameParts(fullName: string): { first: string; last: string } {
-  const cleaned = fullName.replace(/\b(Jr|Sr|II|III|IV)\.?$/i, '').trim();
-  const parts = cleaned.split(/\s+/);
-  return { first: parts[0] || cleaned, last: parts[parts.length - 1] || cleaned };
+  // Congress.gov supplies names as 'Last, First Middle'. Also handle plain 'First Last'.
+  let raw = (fullName || '').replace(/\b(Jr|Sr|II|III|IV)\.?$/i, '').trim();
+  if (raw.includes(',')) {
+    const [lastPart, firstPart = ''] = raw.split(',');
+    const last = lastPart.trim().split(/\s+/).pop() || lastPart.trim();
+    const first = (firstPart.trim().split(/\s+/)[0]) || '';
+    return { first: first || last, last };
+  }
+  const parts = raw.split(/\s+/);
+  return { first: parts[0] || raw, last: parts[parts.length - 1] || raw };
 }
 
 function classifyType(suitNature: string, blob: string): string {
