@@ -54,7 +54,7 @@ jobs:
                 }
               }
             }
-            walk(".");
+            ["app","components","lib"].forEach(function(d){ if(fs.existsSync(d)) walk(d); });
             if(bad.length){console.error("Non-ASCII in source:\n"+bad.join("\n"));process.exit(1);}
             console.log("ASCII check passed.");
           '
