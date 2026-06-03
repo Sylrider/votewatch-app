@@ -43,7 +43,7 @@ export default async function LobbyPage({ params }: { params: { slug: string } }
       <div className="max-w-4xl mx-auto px-6 py-6" itemScope itemType="https://schema.org/Organization">
         <nav className="mb-6">
           <Link href="/lobbies" style={{ color: '#64748b', fontSize: 13, border: '1px solid #252a3a', padding: '6px 14px', borderRadius: 6, textDecoration: 'none' }}>
-            <- Back to Lobbies
+            &larr; Back to Lobbies
           </Link>
         </nav>
 
