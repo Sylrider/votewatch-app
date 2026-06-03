@@ -50423,7 +50423,7 @@
     },
     "viewSummary": "Randy Fine: campaign-finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -50434,7 +50434,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T00:54:51.296Z"
+      "lastUpdated": "2026-06-03T18:46:18.313Z"
     }
   },
   {
@@ -50450,7 +50450,18 @@
     "imageUrl": "https://www.congress.gov/img/member/67efdb991b05a5a598f7fde9_200.jpg",
     "lobbyMoney": [],
     "stockTrades": [],
-    "lawsuits": [],
+    "lawsuits": [
+      {
+        "title": "Symonette v. Patronis",
+        "year": 2025,
+        "type": "Civil",
+        "status": "ONGOING",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming Patronis, Jimmy.",
+        "severity": "low",
+        "caseId": "1D2024-1009"
+      }
+    ],
     "votes": [],
     "funding": {
       "available": false,
@@ -50466,20 +50477,20 @@
       "confidence": "low",
       "sources": []
     },
-    "viewSummary": "Jimmy Patronis: campaign-finance totals are unavailable (no matched FEC committee).",
-    "profileComplete": false,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "viewSummary": "Jimmy Patronis: campaign-finance totals are unavailable (no matched FEC committee). 1 legal action(s)/lawsuit(s) on record.",
+    "profileComplete": true,
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
-      "total": 0,
+      "total": 1,
       "lobbyScore": 0,
       "alignScore": 0,
       "stockScore": 0,
-      "legalScore": 0,
+      "legalScore": 1,
       "totalMoney": 0,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T00:54:55.827Z"
+      "lastUpdated": "2026-06-03T18:46:23.954Z"
     }
   },
   {
@@ -50541,7 +50552,7 @@
     },
     "viewSummary": "Eugene Vindman raised $18.1M in reported campaign funds (through 2024). About 38% came from large donors, PACs and committee transfers ($6.3M itemized, $394K PAC), while 62% ($11.2M) came from small grassroots donors. This funding mix is grassroots-leaning, a lower influence-risk signal. Tracked industry/PAC contributions identified so far total $35K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 17,
       "lobbyScore": 17,
@@ -50552,7 +50563,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T00:55:33.637Z"
+      "lastUpdated": "2026-06-03T18:48:05.450Z"
     }
   },
   {
@@ -50662,7 +50673,7 @@
     },
     "viewSummary": "David Taylor raised $2.3M in reported campaign funds (through 2024). About 24% came from large donors, PACs and committee transfers ($322K itemized, $215K PAC), while 1% ($25K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $36K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 3,
       "lobbyScore": 3,
@@ -50673,7 +50684,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T00:55:37.614Z"
+      "lastUpdated": "2026-06-03T18:48:41.959Z"
     }
   },
   {
@@ -50775,7 +50786,7 @@
     },
     "viewSummary": "Suhas Subramanyam raised $2.9M in reported campaign funds (through 2024). About 90% came from large donors, PACs and committee transfers ($2.2M itemized, $365K PAC), while 6% ($187K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $75K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 24,
       "lobbyScore": 24,
@@ -50786,7 +50797,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T00:55:46.860Z"
+      "lastUpdated": "2026-06-03T18:48:56.399Z"
     }
   },
   {
@@ -50864,7 +50875,7 @@
     },
     "viewSummary": "Jefferson Shreve raised $6.2M in reported campaign funds (through 2024). About 5% came from large donors, PACs and committee transfers ($126K itemized, $171K PAC), while 0% ($2K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $36K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 1,
       "lobbyScore": 1,
@@ -50875,7 +50886,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T00:55:51.200Z"
+      "lastUpdated": "2026-06-03T18:49:08.631Z"
     }
   },
   {
@@ -51001,7 +51012,7 @@
     },
     "viewSummary": "Derek Schmidt raised $1.3M in reported campaign funds (through 2024). About 96% came from large donors, PACs and committee transfers ($781K itemized, $416K PAC), while 3% ($36K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $67K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 12,
       "lobbyScore": 12,
@@ -51012,7 +51023,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T00:59:38.445Z"
+      "lastUpdated": "2026-06-03T18:49:13.045Z"
     }
   },
   {
@@ -51082,7 +51093,7 @@
     },
     "viewSummary": "Josh Riley raised $9.8M in reported campaign funds (through 2024). About 77% came from large donors, PACs and committee transfers ($6.0M itemized, $632K PAC), while 22% ($2.2M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $51K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 22,
       "lobbyScore": 22,
@@ -51093,7 +51104,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:00:11.879Z"
+      "lastUpdated": "2026-06-03T18:52:02.322Z"
     }
   },
   {
@@ -51187,7 +51198,7 @@
     },
     "viewSummary": "Nellie Pou raised $643K in reported campaign funds (through 2024). About 98% came from large donors, PACs and committee transfers ($306K itemized, $326K PAC), while 2% ($10K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $99K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 6,
       "lobbyScore": 6,
@@ -51198,7 +51209,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:00:19.506Z"
+      "lastUpdated": "2026-06-03T18:52:27.601Z"
     }
   },
   {
@@ -51308,7 +51319,7 @@
     },
     "viewSummary": "Johnny Olszewski raised $1.6M in reported campaign funds (through 2024). About 94% came from large donors, PACs and committee transfers ($1.2M itemized, $311K PAC), while 5% ($72K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $53K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 14,
       "lobbyScore": 14,
@@ -51319,7 +51330,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:00:28.794Z"
+      "lastUpdated": "2026-06-03T18:52:47.182Z"
     }
   },
   {
@@ -51421,7 +51432,7 @@
     },
     "viewSummary": "Addison McDowell raised $933K in reported campaign funds (through 2024). About 98% came from large donors, PACs and committee transfers ($609K itemized, $297K PAC), while 2% ($20K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $62K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 9,
       "lobbyScore": 9,
@@ -51432,7 +51443,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:00:33.391Z"
+      "lastUpdated": "2026-06-03T18:52:53.660Z"
     }
   },
   {
@@ -51448,7 +51459,18 @@
     "imageUrl": "https://www.congress.gov/img/member/67744ba20b34857ecc909149_200.jpg",
     "lobbyMoney": [],
     "stockTrades": [],
-    "lawsuits": [],
+    "lawsuits": [
+      {
+        "title": "In Lux Research v. Hull McGuire Pc",
+        "year": 2025,
+        "type": "Civil",
+        "status": "ONGOING",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming McGuire, John J..",
+        "severity": "low",
+        "caseId": "Civil Action No. 2023-0523"
+      }
+    ],
     "votes": [],
     "funding": {
       "available": false,
@@ -51464,20 +51486,20 @@
       "confidence": "low",
       "sources": []
     },
-    "viewSummary": "John McGuire: campaign-finance totals are unavailable (no matched FEC committee).",
-    "profileComplete": false,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "viewSummary": "John McGuire: campaign-finance totals are unavailable (no matched FEC committee). 1 legal action(s)/lawsuit(s) on record.",
+    "profileComplete": true,
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
-      "total": 0,
+      "total": 1,
       "lobbyScore": 0,
       "alignScore": 0,
       "stockScore": 0,
-      "legalScore": 0,
+      "legalScore": 1,
       "totalMoney": 0,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:00:36.066Z"
+      "lastUpdated": "2026-06-03T18:56:34.929Z"
     }
   },
   {
@@ -51571,7 +51593,7 @@
     },
     "viewSummary": "Tim Moore raised $2.4M in reported campaign funds (through 2024). About 99% came from large donors, PACs and committee transfers ($1.8M itemized, $371K PAC), while 1% ($17K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $51K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 21,
       "lobbyScore": 21,
@@ -51582,7 +51604,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:00:40.117Z"
+      "lastUpdated": "2026-06-03T18:56:38.151Z"
     }
   },
   {
@@ -51684,7 +51706,7 @@
     },
     "viewSummary": "Riley Moore raised $1.4M in reported campaign funds (through 2024). About 89% came from large donors, PACs and committee transfers ($663K itemized, $484K PAC), while 11% ($157K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $107K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 11,
       "lobbyScore": 11,
@@ -51695,7 +51717,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:00:54.143Z"
+      "lastUpdated": "2026-06-03T18:57:42.630Z"
     }
   },
   {
@@ -51776,7 +51798,18 @@
       }
     ],
     "stockTrades": [],
-    "lawsuits": [],
+    "lawsuits": [
+      {
+        "title": "Dahl v. Messmer",
+        "year": 2006,
+        "type": "Civil",
+        "status": "ONGOING",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming Messmer, Mark B..",
+        "severity": "low",
+        "caseId": "20050426"
+      }
+    ],
     "votes": [],
     "funding": {
       "available": true,
@@ -51795,20 +51828,20 @@
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Mark Messmer raised $1.5M in reported campaign funds (through 2024). About 97% came from large donors, PACs and committee transfers ($991K itemized, $361K PAC), while 1% ($18K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $300K.",
+    "viewSummary": "Mark Messmer raised $1.5M in reported campaign funds (through 2024). About 97% came from large donors, PACs and committee transfers ($991K itemized, $361K PAC), while 1% ($18K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $300K. 1 legal action(s)/lawsuit(s) on record.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
-      "total": 13,
+      "total": 14,
       "lobbyScore": 13,
       "alignScore": 0,
       "stockScore": 0,
-      "legalScore": 0,
+      "legalScore": 1,
       "totalMoney": 1545284,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:06:05.358Z"
+      "lastUpdated": "2026-06-03T19:08:04.979Z"
     }
   },
   {
@@ -51826,7 +51859,7 @@
       {
         "lobbyId": "aipac",
         "lobbyName": "AIPAC",
-        "amount": 53900,
+        "amount": 38900,
         "intent": "support",
         "cycle": "2024",
         "source": "FEC schedule_a (itemized committee contributions)"
@@ -51842,7 +51875,7 @@
       {
         "lobbyId": "api",
         "lobbyName": "American Petroleum Institute (API)",
-        "amount": 14300,
+        "amount": 10300,
         "intent": "support",
         "cycle": "2024",
         "source": "FEC schedule_a (itemized committee contributions)"
@@ -51873,7 +51906,38 @@
       }
     ],
     "stockTrades": [],
-    "lawsuits": [],
+    "lawsuits": [
+      {
+        "title": "In Re Delaney",
+        "year": 2024,
+        "type": "Civil",
+        "status": "ONGOING",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming McClain Delaney, April.",
+        "severity": "low",
+        "caseId": "23-434"
+      },
+      {
+        "title": "Dee A. Delaney v. Second Injury Fund of Iowa",
+        "year": 2024,
+        "type": "Civil",
+        "status": "ONGOING",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming McClain Delaney, April.",
+        "severity": "low",
+        "caseId": "23-0182"
+      },
+      {
+        "title": "People v. Delaney",
+        "year": 2024,
+        "type": "Civil",
+        "status": "ONGOING",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming McClain Delaney, April.",
+        "severity": "low",
+        "caseId": "Ind. No. 186/18 Appeal No. 2122 Case No. 2019-3999"
+      }
+    ],
     "votes": [],
     "funding": {
       "available": true,
@@ -51892,20 +51956,20 @@
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "April McClain Delaney raised $5.9M in reported campaign funds (through 2024). About 33% came from large donors, PACs and committee transfers ($1.6M itemized, $386K PAC), while 1% ($82K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $94K.",
+    "viewSummary": "April McClain Delaney raised $5.9M in reported campaign funds (through 2024). About 33% came from large donors, PACs and committee transfers ($1.6M itemized, $386K PAC), while 1% ($82K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $75K. 3 legal action(s)/lawsuit(s) on record.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
-      "total": 13,
+      "total": 16,
       "lobbyScore": 13,
       "alignScore": 0,
       "stockScore": 0,
-      "legalScore": 0,
+      "legalScore": 3,
       "totalMoney": 5943528,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:06:15.371Z"
+      "lastUpdated": "2026-06-03T19:17:18.402Z"
     }
   },
   {
@@ -51954,7 +52018,38 @@
       }
     ],
     "stockTrades": [],
-    "lawsuits": [],
+    "lawsuits": [
+      {
+        "title": "People of Michigan v. John Christopher Mannion",
+        "year": 2019,
+        "type": "Civil",
+        "status": "ONGOING",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming Mannion, John W..",
+        "severity": "low",
+        "caseId": "158093"
+      },
+      {
+        "title": "People of Michigan v. John Christopher Mannion",
+        "year": 2013,
+        "type": "Civil",
+        "status": "ONGOING",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming Mannion, John W..",
+        "severity": "low",
+        "caseId": "147293"
+      },
+      {
+        "title": "People v. Mannion",
+        "year": 2007,
+        "type": "Civil",
+        "status": "ONGOING",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming Mannion, John W..",
+        "severity": "low",
+        "caseId": "134195"
+      }
+    ],
     "votes": [],
     "funding": {
       "available": true,
@@ -51973,20 +52068,20 @@
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "John Mannion raised $4.2M in reported campaign funds (through 2024). About 82% came from large donors, PACs and committee transfers ($2.6M itemized, $648K PAC), while 18% ($732K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $113K.",
+    "viewSummary": "John Mannion raised $4.2M in reported campaign funds (through 2024). About 82% came from large donors, PACs and committee transfers ($2.6M itemized, $648K PAC), while 18% ($732K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $113K. 3 legal action(s)/lawsuit(s) on record.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
-      "total": 23,
+      "total": 26,
       "lobbyScore": 23,
       "alignScore": 0,
       "stockScore": 0,
-      "legalScore": 0,
+      "legalScore": 3,
       "totalMoney": 4161857,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:06:28.353Z"
+      "lastUpdated": "2026-06-03T19:18:36.632Z"
     }
   },
   {
@@ -52002,7 +52097,18 @@
     "imageUrl": "https://www.congress.gov/img/member/677430a40b34857ecc909113_200.jpg",
     "lobbyMoney": [],
     "stockTrades": [],
-    "lawsuits": [],
+    "lawsuits": [
+      {
+        "title": "Ryan Scott Simpson v. MacKenzie Kelly",
+        "year": 2025,
+        "type": "Civil",
+        "status": "ONGOING",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming Mackenzie, Ryan.",
+        "severity": "low",
+        "caseId": "03-25-00300-CV"
+      }
+    ],
     "votes": [],
     "funding": {
       "available": true,
@@ -52021,20 +52127,20 @@
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Ryan Mackenzie raised $1.8M in reported campaign funds (through 2024). About 87% came from large donors, PACs and committee transfers ($655K itemized, $419K PAC), while 13% ($232K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal.",
-    "profileComplete": false,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "viewSummary": "Ryan Mackenzie raised $1.8M in reported campaign funds (through 2024). About 87% came from large donors, PACs and committee transfers ($655K itemized, $419K PAC), while 13% ($232K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. 1 legal action(s)/lawsuit(s) on record.",
+    "profileComplete": true,
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
-      "total": 10,
+      "total": 11,
       "lobbyScore": 10,
       "alignScore": 0,
       "stockScore": 0,
-      "legalScore": 0,
+      "legalScore": 1,
       "totalMoney": 1818407,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:06:32.368Z"
+      "lastUpdated": "2026-06-03T19:18:56.107Z"
     }
   },
   {
@@ -52096,7 +52202,7 @@
     },
     "viewSummary": "George Latimer raised $6.7M in reported campaign funds (through 2024). About 93% came from large donors, PACs and committee transfers ($6.0M itemized, $210K PAC), while 7% ($443K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $1.2M.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 24,
       "lobbyScore": 24,
@@ -52107,7 +52213,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:06:47.068Z"
+      "lastUpdated": "2026-06-03T19:19:15.251Z"
     }
   },
   {
@@ -52233,7 +52339,7 @@
     },
     "viewSummary": "Brad Knott raised $2.5M in reported campaign funds (through 2024). About 67% came from large donors, PACs and committee transfers ($1.3M itemized, $369K PAC), while 2% ($39K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $47K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 14,
       "lobbyScore": 14,
@@ -52244,7 +52350,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:06:52.273Z"
+      "lastUpdated": "2026-06-03T19:19:44.718Z"
     }
   },
   {
@@ -52354,7 +52460,7 @@
     },
     "viewSummary": "Mike Kennedy raised $1.0M in reported campaign funds (through 2024). About 82% came from large donors, PACs and committee transfers ($531K itemized, $306K PAC), while 1% ($12K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $46K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 8,
       "lobbyScore": 8,
@@ -52365,7 +52471,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:06:56.936Z"
+      "lastUpdated": "2026-06-03T19:28:41.734Z"
     }
   },
   {
@@ -52491,7 +52597,7 @@
     },
     "viewSummary": "Julie Johnson raised $2.1M in reported campaign funds (through 2024). About 94% came from large donors, PACs and committee transfers ($1.4M itemized, $535K PAC), while 6% ($115K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $129K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 19,
       "lobbyScore": 19,
@@ -52502,7 +52608,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:07:10.369Z"
+      "lastUpdated": "2026-06-03T19:28:53.784Z"
     }
   },
   {
@@ -52535,7 +52641,7 @@
     },
     "viewSummary": "Pablo Hernndez: campaign-finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -52546,7 +52652,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:07:13.035Z"
+      "lastUpdated": "2026-06-03T19:28:55.911Z"
     }
   },
   {
@@ -52632,7 +52738,7 @@
     },
     "viewSummary": "Mark Harris raised $838K in reported campaign funds (through 2024). About 86% came from large donors, PACs and committee transfers ($545K itemized, $176K PAC), while 5% ($38K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $31K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 7,
       "lobbyScore": 7,
@@ -52643,7 +52749,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:07:17.489Z"
+      "lastUpdated": "2026-06-03T19:33:59.670Z"
     }
   },
   {
@@ -52753,7 +52859,7 @@
     },
     "viewSummary": "Pat Harrigan raised $1.9M in reported campaign funds (through 2024). About 63% came from large donors, PACs and committee transfers ($768K itemized, $392K PAC), while 10% ($193K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $40K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T00:54:44.932Z",
+    "dataVersion": "2026-06-03T18:44:39.786Z",
     "score": {
       "total": 9,
       "lobbyScore": 9,
@@ -52764,7 +52870,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T01:07:25.378Z"
+      "lastUpdated": "2026-06-03T19:34:06.935Z"
     }
   },
   {
