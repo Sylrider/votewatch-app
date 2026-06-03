@@ -512,3 +512,22 @@ writing, or the next build breaks on a TS error. (Caught in validation before co
   funding, votes, lawsuits, stocks and scores for the full federal roster.
 - NOTE: 16 members without funding are mostly recent newcomers with no completed 2024-cycle FEC
   filings yet; revisit on a future refresh once their committees report.
+
+
+## REGRESSION FOUND + FIXED: force-reprocess wiped curated stock/vote/lawsuit data (2026-06-02)
+- ISSUE: running the pipeline with force=1 re-fetched stocks (Stock Watchers), votes (Clerk) and
+  lawsuits (CourtListener) for every member and OVERWROTE previously hand-curated records with
+  empty fetch results. Site-wide totals dropped: stock conflicts 5->0, members-with-votes 6->0
+  (42 tracked votes lost), lawsuits 14->8. Funding refresh itself was correct and unaffected.
+- AFFECTED (curated) MEMBERS: pelosi (5 stock conflicts, 5 lawsuits, 7 votes), crow, crenshaw,
+  waters, crockett, boebert (7 votes each), schiff (3 lawsuits).
+- FIX (commit d6e8922): surgically restored stocks/lawsuits and the vote/stock/legal score
+  components for those 7 members from pre-refresh commit f883638, while KEEPING the new 2024-cycle
+  funding + recomputed moneyScore. Recomputed total = round(newMoney)+round(align)+round(stock)+
+  round(legal). Verified: stockConflicts back to 5, members-with-votes 6, lawsuits 16, funding still
+  reconciles (131 exact/83 cent-rounding/0 broken). Pelosi live = 53/100 with stock+vote+lawsuit
+  sections rendering. Cloudflare deploy success.
+- LESSON / TODO: the force-reprocess pipeline must NOT clobber curated stock/vote/lawsuit data when
+  its source fetch returns empty. Recommended pipeline guard: only overwrite stocks/votes/lawsuits
+  when the new fetch returns a non-empty result; otherwise preserve existing. Until that guard is
+  added, future force=1 refreshes should be funding-only OR followed by this restore step.
