@@ -531,3 +531,20 @@ writing, or the next build breaks on a TS error. (Caught in validation before co
   its source fetch returns empty. Recommended pipeline guard: only overwrite stocks/votes/lawsuits
   when the new fetch returns a non-empty result; otherwise preserve existing. Until that guard is
   added, future force=1 refreshes should be funding-only OR followed by this restore step.
+
+## Encoding corruption (mojibake) root cause + permanent fix [2026-06-03]
+
+- SYMPTOM (3rd recurrence): live site showed garbled chars in UI labels (Sort, Stock, Legal,
+  Profile arrow, title separators, search placeholder).
+- ROOT CAUSE: components/PoliticianGrid.tsx contained multi-byte UTF-8 glyphs (en/em dash,
+  middot, ellipsis, right-arrow, lightning + scales emoji). A full-file editor replace re-saved
+  them as double-encoded byte runs (each UTF-8 byte became a separate Latin-1 codepoint), i.e.
+  classic UTF-8 to Latin-1 to UTF-8 mojibake. The page+data were correctly UTF-8; only this
+  source file was corrupted.
+- FIX (commit 9b524e7): replaced every non-ASCII glyph in PoliticianGrid.tsx with pure-ASCII
+  equivalents (dash, ..., -> ) and removed the emoji. File is now 100pct ASCII and cannot
+  re-corrupt regardless of editor encoding.
+- PREVENTION RULE: keep all source files (components/*.tsx, app/*.tsx) pure ASCII. Never inject
+  multi-byte glyphs via the web editor. Verify 0 non-ASCII bytes before committing any source file.
+- NOTE: Cloudflare check-run for 9b524e7 reported a 0-second failure (started==completed),
+  an infra anomaly; re-triggered build via this commit to confirm a clean deploy.
