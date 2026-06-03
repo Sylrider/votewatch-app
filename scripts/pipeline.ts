@@ -38,7 +38,7 @@ function asciiSafe(s: string): string {
   return s
     .replace(/[\u2013\u2014\u2012\u2015]/g, '-')      // dashes -> hyphen
     .replace(/[\u2018\u2019\u201b]/g, "'")           // single quotes
-    .replace(/[\u201c\u201d\u201e]/g, '\"')           // double quotes
+    .replace(/[\u201c\u201d\u201e]/g, "'")           // double quotes
     .replace(/\u2026/g, '...')                          // ellipsis
     .replace(/[\u00a0\u202f\u2009]/g, ' ')           // nbsp/thin space
     .replace(/[\u2022\u00b7]/g, '-')                  // bullet/middot
