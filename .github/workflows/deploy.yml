@@ -62,10 +62,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: DIAG build site (temporary)
-        run: npm run build
-        timeout-minutes: 20
-
       - name: Run data pipeline
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
