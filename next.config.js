@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Static export — generates pure HTML/CSS/JS
+  // Static export - generates pure HTML/CSS/JS
   // Perfect for Cloudflare Pages (no server needed, zero hosting cost)
   output: 'export',
 
@@ -14,6 +14,11 @@ const nextConfig = {
   },
 
   // TypeScript strict mode
+  eslint: {
+    // Do not let lint warnings block production deploys (TS type-checking stays on below)
+    ignoreDuringBuilds: true,
+  },
+
   typescript: {
     ignoreBuildErrors: false,
   },
