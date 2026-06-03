@@ -14383,19 +14383,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 4358978,
+      "largeDonorMoney": 3925625,
+      "smallDonorMoney": 3213,
+      "pacMoney": 392933,
+      "partyMoney": 106,
+      "transferMoney": 33324,
+      "otherMoney": 3777,
+      "bigMoneyShare": 0.998,
+      "smallDonorShare": 0.001,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Maggie Goodlander raised $4.4M in reported campaign funds (through 2024). About 100% came from large donors, PACs and committee transfers ($3.9M itemized, $393K PAC), while 0% ($3K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $102K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 1,
-      "lobbyScore": 1,
+      "total": 25,
+      "lobbyScore": 25,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 102300,
+      "totalMoney": 4358978,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:10:18.322Z"
+      "lastUpdated": "2026-06-03T01:11:31.271Z"
     }
   },
   {
@@ -14470,19 +14488,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1779343,
+      "largeDonorMoney": 631404,
+      "smallDonorMoney": 268376,
+      "pacMoney": 268752,
+      "partyMoney": 0,
+      "transferMoney": 87933,
+      "otherMoney": 522877,
+      "bigMoneyShare": 0.555,
+      "smallDonorShare": 0.151,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Brandon Gill raised $1.8M in reported campaign funds (through 2024). About 56% came from large donors, PACs and committee transfers ($631K itemized, $269K PAC), while 15% ($268K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $45K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 1,
-      "lobbyScore": 1,
+      "total": 7,
+      "lobbyScore": 7,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 45250,
+      "totalMoney": 1779343,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:10:22.831Z"
+      "lastUpdated": "2026-06-03T01:11:37.183Z"
     }
   },
   {
@@ -14500,19 +14536,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2023",
+      "totalRaised": 5,
+      "largeDonorMoney": 0,
+      "smallDonorMoney": 0,
+      "pacMoney": 0,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 5,
+      "bigMoneyShare": 0,
+      "smallDonorShare": 0,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Laura Gillen raised $5 in reported campaign funds (through 2023). About 0% came from large donors, PACs and committee transfers ($0 itemized, $0 PAC), while 0% ($0) came from small grassroots donors.",
     "profileComplete": false,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 0,
+      "totalMoney": 5,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:19:27.409Z"
+      "lastUpdated": "2026-06-03T01:11:41.337Z"
     }
   },
   {
@@ -14603,19 +14657,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 3196798,
+      "largeDonorMoney": 2242074,
+      "smallDonorMoney": 66217,
+      "pacMoney": 615420,
+      "partyMoney": 0,
+      "transferMoney": 266486,
+      "otherMoney": 6600,
+      "bigMoneyShare": 0.977,
+      "smallDonorShare": 0.021,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Craig Goldman raised $3.2M in reported campaign funds (through 2024). About 98% came from large donors, PACs and committee transfers ($2.2M itemized, $615K PAC), while 2% ($66K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $148K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 2,
-      "lobbyScore": 2,
+      "total": 25,
+      "lobbyScore": 25,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 147752,
+      "totalMoney": 3196798,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:10:28.429Z"
+      "lastUpdated": "2026-06-03T01:11:45.745Z"
     }
   },
   {
@@ -14690,19 +14762,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1979067,
+      "largeDonorMoney": 1283583,
+      "smallDonorMoney": 47476,
+      "pacMoney": 556166,
+      "partyMoney": 0,
+      "transferMoney": 89841,
+      "otherMoney": 2000,
+      "bigMoneyShare": 0.975,
+      "smallDonorShare": 0.024,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Julie Fedorchak raised $2.0M in reported campaign funds (through 2024). About 98% came from large donors, PACs and committee transfers ($1.3M itemized, $556K PAC), while 2% ($47K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $74K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 1,
-      "lobbyScore": 1,
+      "total": 18,
+      "lobbyScore": 18,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 74350,
+      "totalMoney": 1979067,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:10:31.709Z"
+      "lastUpdated": "2026-06-03T01:11:51.085Z"
     }
   },
   {
@@ -14793,19 +14883,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 2276074,
+      "largeDonorMoney": 1821388,
+      "smallDonorMoney": 146509,
+      "pacMoney": 305518,
+      "partyMoney": 250,
+      "transferMoney": 0,
+      "otherMoney": 2409,
+      "bigMoneyShare": 0.935,
+      "smallDonorShare": 0.064,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Sarah Elfreth raised $2.3M in reported campaign funds (through 2024). About 94% came from large donors, PACs and committee transfers ($1.8M itemized, $306K PAC), while 6% ($147K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $38K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 21,
+      "lobbyScore": 21,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 37500,
+      "totalMoney": 2276074,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:10:38.011Z"
+      "lastUpdated": "2026-06-03T01:12:45.921Z"
     }
   },
   {
@@ -14848,19 +14956,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1818245,
+      "largeDonorMoney": 1437569,
+      "smallDonorMoney": 93410,
+      "pacMoney": 267631,
+      "partyMoney": 2500,
+      "transferMoney": 9155,
+      "otherMoney": 7981,
+      "bigMoneyShare": 0.944,
+      "smallDonorShare": 0.051,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Maxine Dexter raised $1.8M in reported campaign funds (through 2024). About 94% came from large donors, PACs and committee transfers ($1.4M itemized, $268K PAC), while 5% ($93K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $30K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 17,
+      "lobbyScore": 17,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 29500,
+      "totalMoney": 1818245,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:10:44.863Z"
+      "lastUpdated": "2026-06-03T01:12:54.182Z"
     }
   },
   {
@@ -14935,19 +15061,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 2943575,
+      "largeDonorMoney": 952233,
+      "smallDonorMoney": 467486,
+      "pacMoney": 350535,
+      "partyMoney": 0,
+      "transferMoney": 33092,
+      "otherMoney": 1140228,
+      "bigMoneyShare": 0.454,
+      "smallDonorShare": 0.159,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Troy Downing raised $2.9M in reported campaign funds (through 2024). About 45% came from large donors, PACs and committee transfers ($952K itemized, $351K PAC), while 16% ($467K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $30K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 9,
+      "lobbyScore": 9,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 30000,
+      "totalMoney": 2943575,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:11:41.956Z"
+      "lastUpdated": "2026-06-03T01:13:19.147Z"
     }
   },
   {
@@ -14965,19 +15109,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1353248,
+      "largeDonorMoney": 773674,
+      "smallDonorMoney": 105147,
+      "pacMoney": 445850,
+      "partyMoney": 0,
+      "transferMoney": 23286,
+      "otherMoney": 5292,
+      "bigMoneyShare": 0.918,
+      "smallDonorShare": 0.078,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Herbert Conaway raised $1.4M in reported campaign funds (through 2024). About 92% came from large donors, PACs and committee transfers ($774K itemized, $446K PAC), while 8% ($105K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal.",
     "profileComplete": false,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 12,
+      "lobbyScore": 12,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 0,
+      "totalMoney": 1353248,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:19:30.557Z"
+      "lastUpdated": "2026-06-03T01:13:21.737Z"
     }
   },
   {
@@ -15052,19 +15214,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 4540166,
+      "largeDonorMoney": 1084563,
+      "smallDonorMoney": 698414,
+      "pacMoney": 687275,
+      "partyMoney": 5000,
+      "transferMoney": 742421,
+      "otherMoney": 1322493,
+      "bigMoneyShare": 0.555,
+      "smallDonorShare": 0.154,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Robert Bresnahan raised $4.5M in reported campaign funds (through 2024). About 56% came from large donors, PACs and committee transfers ($1.1M itemized, $687K PAC), while 15% ($698K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $57K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 1,
-      "lobbyScore": 1,
+      "total": 14,
+      "lobbyScore": 14,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 57303,
+      "totalMoney": 4540166,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:11:49.444Z"
+      "lastUpdated": "2026-06-03T01:13:27.930Z"
     }
   },
   {
@@ -15115,19 +15295,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 7524632,
+      "largeDonorMoney": 4730137,
+      "smallDonorMoney": 1855932,
+      "pacMoney": 769351,
+      "partyMoney": 1000,
+      "transferMoney": 148685,
+      "otherMoney": 19527,
+      "bigMoneyShare": 0.751,
+      "smallDonorShare": 0.247,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Janelle Bynum raised $7.5M in reported campaign funds (through 2024). About 75% came from large donors, PACs and committee transfers ($4.7M itemized, $769K PAC), while 25% ($1.9M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $54K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 1,
-      "lobbyScore": 1,
+      "total": 22,
+      "lobbyScore": 22,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 53600,
+      "totalMoney": 7524632,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:12:05.568Z"
+      "lastUpdated": "2026-06-03T01:13:48.417Z"
     }
   },
   {
@@ -15202,19 +15400,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1076796,
+      "largeDonorMoney": 395318,
+      "smallDonorMoney": 8178,
+      "pacMoney": 278300,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 395000,
+      "bigMoneyShare": 0.626,
+      "smallDonorShare": 0.008,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Sheri Biggs raised $1.1M in reported campaign funds (through 2024). About 63% came from large donors, PACs and committee transfers ($395K itemized, $278K PAC), while 1% ($8K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $34K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 5,
+      "lobbyScore": 5,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 34300,
+      "totalMoney": 1076796,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:12:08.932Z"
+      "lastUpdated": "2026-06-03T01:13:53.458Z"
     }
   },
   {
@@ -15305,19 +15521,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1505190,
+      "largeDonorMoney": 951664,
+      "smallDonorMoney": 91445,
+      "pacMoney": 301300,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 160781,
+      "bigMoneyShare": 0.832,
+      "smallDonorShare": 0.061,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Michael Baumgartner raised $1.5M in reported campaign funds (through 2024). About 83% came from large donors, PACs and committee transfers ($952K itemized, $301K PAC), while 6% ($91K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $51K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 1,
-      "lobbyScore": 1,
+      "total": 11,
+      "lobbyScore": 11,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 50750,
+      "totalMoney": 1505190,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:12:13.835Z"
+      "lastUpdated": "2026-06-03T01:14:00.360Z"
     }
   },
   {
@@ -15368,19 +15602,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 5103613,
+      "largeDonorMoney": 2204284,
+      "smallDonorMoney": 1275540,
+      "pacMoney": 859024,
+      "partyMoney": 10000,
+      "transferMoney": 748718,
+      "otherMoney": 6048,
+      "bigMoneyShare": 0.749,
+      "smallDonorShare": 0.25,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Tom Barrett raised $5.1M in reported campaign funds (through 2024). About 75% came from large donors, PACs and committee transfers ($2.2M itemized, $859K PAC), while 25% ($1.3M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $21K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 22,
+      "lobbyScore": 22,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 20513,
+      "totalMoney": 5103613,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:12:24.358Z"
+      "lastUpdated": "2026-06-03T01:19:08.538Z"
     }
   },
   {
@@ -15495,19 +15747,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 2277572,
+      "largeDonorMoney": 921882,
+      "smallDonorMoney": 98906,
+      "pacMoney": 446100,
+      "partyMoney": 0,
+      "transferMoney": 795520,
+      "otherMoney": 15164,
+      "bigMoneyShare": 0.95,
+      "smallDonorShare": 0.043,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Richard McCormick raised $2.3M in reported campaign funds (through 2024). About 95% came from large donors, PACs and committee transfers ($922K itemized, $446K PAC), while 4% ($99K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $46K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 1,
-      "lobbyScore": 1,
+      "total": 13,
+      "lobbyScore": 13,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 46000,
+      "totalMoney": 2277572,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:12:31.220Z"
+      "lastUpdated": "2026-06-03T01:19:18.386Z"
     }
   },
   {
@@ -15598,8 +15868,23 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": false,
+      "totalRaised": 0,
+      "largeDonorMoney": 0,
+      "smallDonorMoney": 0,
+      "pacMoney": 0,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 0,
+      "bigMoneyShare": null,
+      "smallDonorShare": null,
+      "confidence": "low",
+      "sources": []
+    },
+    "viewSummary": "Marlin Stutzman: campaign-finance totals are unavailable (no matched FEC committee). Tracked industry/PAC contributions identified so far total $50K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
       "total": 1,
       "lobbyScore": 1,
@@ -15610,7 +15895,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:12:34.911Z"
+      "lastUpdated": "2026-06-03T01:19:22.520Z"
     }
   },
   {
@@ -15661,19 +15946,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1245925,
+      "largeDonorMoney": 1093194,
+      "smallDonorMoney": 14347,
+      "pacMoney": 126183,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 12200,
+      "bigMoneyShare": 0.979,
+      "smallDonorShare": 0.012,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Cleo Fields raised $1.2M in reported campaign funds (through 2024). About 98% came from large donors, PACs and committee transfers ($1.1M itemized, $126K PAC), while 1% ($14K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $19K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 12,
+      "lobbyScore": 12,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 18500,
+      "totalMoney": 1245925,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:12:37.298Z"
+      "lastUpdated": "2026-06-03T01:19:26.009Z"
     }
   },
   {
@@ -15740,19 +16043,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1778242,
+      "largeDonorMoney": 637430,
+      "smallDonorMoney": 17219,
+      "pacMoney": 222347,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 901246,
+      "bigMoneyShare": 0.483,
+      "smallDonorShare": 0.01,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Robert Onder raised $1.8M in reported campaign funds (through 2024). About 48% came from large donors, PACs and committee transfers ($637K itemized, $222K PAC), while 1% ($17K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $22K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 6,
+      "lobbyScore": 6,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 22000,
+      "totalMoney": 1778242,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:13:21.875Z"
+      "lastUpdated": "2026-06-03T01:19:29.533Z"
     }
   },
   {
@@ -15827,19 +16148,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 4091643,
+      "largeDonorMoney": 3103904,
+      "smallDonorMoney": 477712,
+      "pacMoney": 416050,
+      "partyMoney": 0,
+      "transferMoney": 85959,
+      "otherMoney": 8018,
+      "bigMoneyShare": 0.881,
+      "smallDonorShare": 0.117,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Sarah McBride raised $4.1M in reported campaign funds (through 2024). About 88% came from large donors, PACs and committee transfers ($3.1M itemized, $416K PAC), while 12% ($478K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $78K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 1,
-      "lobbyScore": 1,
+      "total": 23,
+      "lobbyScore": 23,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 77900,
+      "totalMoney": 4091643,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:13:30.332Z"
+      "lastUpdated": "2026-06-03T01:19:44.058Z"
     }
   },
   {
@@ -15882,19 +16221,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 2263654,
+      "largeDonorMoney": 1636863,
+      "smallDonorMoney": 290080,
+      "pacMoney": 284600,
+      "partyMoney": 0,
+      "transferMoney": 23934,
+      "otherMoney": 28176,
+      "bigMoneyShare": 0.859,
+      "smallDonorShare": 0.128,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Kelly Morrison raised $2.3M in reported campaign funds (through 2024). About 86% came from large donors, PACs and committee transfers ($1.6M itemized, $285K PAC), while 13% ($290K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $26K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 18,
+      "lobbyScore": 18,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 26000,
+      "totalMoney": 2263654,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:13:38.704Z"
+      "lastUpdated": "2026-06-03T01:19:54.638Z"
     }
   },
   {
@@ -15912,19 +16269,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 86430,
+      "largeDonorMoney": 65842,
+      "smallDonorMoney": 20588,
+      "pacMoney": 0,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 0,
+      "bigMoneyShare": 0.762,
+      "smallDonorShare": 0.238,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Kimberlyn King-Hinds raised $86K in reported campaign funds (through 2024). About 76% came from large donors, PACs and committee transfers ($66K itemized, $0 PAC), while 24% ($21K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal.",
     "profileComplete": false,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 1,
+      "lobbyScore": 1,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 0,
+      "totalMoney": 86430,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:19:32.574Z"
+      "lastUpdated": "2026-06-03T01:19:58.304Z"
     }
   },
   {
@@ -16023,19 +16398,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 2296183,
+      "largeDonorMoney": 1115596,
+      "smallDonorMoney": 112740,
+      "pacMoney": 629290,
+      "partyMoney": 0,
+      "transferMoney": 415397,
+      "otherMoney": 23160,
+      "bigMoneyShare": 0.941,
+      "smallDonorShare": 0.049,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Brian Jack raised $2.3M in reported campaign funds (through 2024). About 94% came from large donors, PACs and committee transfers ($1.1M itemized, $629K PAC), while 5% ($113K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $141K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 2,
-      "lobbyScore": 2,
+      "total": 17,
+      "lobbyScore": 17,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 140500,
+      "totalMoney": 2296183,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:13:55.245Z"
+      "lastUpdated": "2026-06-03T01:20:32.430Z"
     }
   },
   {
@@ -16126,19 +16519,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1759341,
+      "largeDonorMoney": 1285492,
+      "smallDonorMoney": 29082,
+      "pacMoney": 370000,
+      "partyMoney": 0,
+      "transferMoney": 18440,
+      "otherMoney": 56326,
+      "bigMoneyShare": 0.951,
+      "smallDonorShare": 0.017,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Mike Haridopolos raised $1.8M in reported campaign funds (through 2024). About 95% came from large donors, PACs and committee transfers ($1.3M itemized, $370K PAC), while 2% ($29K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $60K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 1,
-      "lobbyScore": 1,
+      "total": 16,
+      "lobbyScore": 16,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 59668,
+      "totalMoney": 1759341,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:13:59.750Z"
+      "lastUpdated": "2026-06-03T01:20:39.373Z"
     }
   },
   {
@@ -16221,19 +16632,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 2628629,
+      "largeDonorMoney": 1525379,
+      "smallDonorMoney": 349985,
+      "pacMoney": 613861,
+      "partyMoney": 5426,
+      "transferMoney": 104915,
+      "otherMoney": 29062,
+      "bigMoneyShare": 0.856,
+      "smallDonorShare": 0.133,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Shomari Figures raised $2.6M in reported campaign funds (through 2024). About 86% came from large donors, PACs and committee transfers ($1.5M itemized, $614K PAC), while 13% ($350K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $99K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 1,
-      "lobbyScore": 1,
+      "total": 20,
+      "lobbyScore": 20,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 99300,
+      "totalMoney": 2628629,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:14:06.336Z"
+      "lastUpdated": "2026-06-03T01:22:19.469Z"
     }
   },
   {
@@ -16292,19 +16721,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 2734309,
+      "largeDonorMoney": 1132218,
+      "smallDonorMoney": 343935,
+      "pacMoney": 611950,
+      "partyMoney": 6000,
+      "transferMoney": 617750,
+      "otherMoney": 22456,
+      "bigMoneyShare": 0.866,
+      "smallDonorShare": 0.126,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Gabe Evans raised $2.7M in reported campaign funds (through 2024). About 87% came from large donors, PACs and committee transfers ($1.1M itemized, $612K PAC), while 13% ($344K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $36K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T01:11:05.575Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 16,
+      "lobbyScore": 16,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 36373,
+      "totalMoney": 2734309,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:14:12.040Z"
+      "lastUpdated": "2026-06-03T01:22:29.322Z"
     }
   },
   {
