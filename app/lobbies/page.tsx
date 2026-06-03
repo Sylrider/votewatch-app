@@ -5,7 +5,7 @@ import { fmtMoney } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'U.S. Lobbying Groups & Special Interests',
-  description: 'Profiles of the most powerful U.S. lobbying groups — NRA, PhRMA, API, Chamber of Commerce, AIPAC, and more. See what they spend, what they want, and which politicians they fund.',
+  description: 'Profiles of the most powerful U.S. lobbying groups - NRA, PhRMA, API, Chamber of Commerce, AIPAC, and more. See what they spend, what they want, and which politicians they fund.',
   keywords: 'lobbying groups, special interests, NRA, PhRMA, AIPAC, Chamber of Commerce, campaign finance, political donors',
 };
 
