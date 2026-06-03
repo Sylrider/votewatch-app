@@ -241,10 +241,18 @@ async function main() {
       const __nonEmpty = (a: unknown): a is unknown[] => Array.isArray(a) && a.length > 0;
       const __pick = <T,>(fresh: T[] | undefined, old: T[] | undefined): T[] =>
         __nonEmpty(fresh) ? (fresh as T[]) : (Array.isArray(old) ? old : (Array.isArray(fresh) ? fresh : []));
-      const mVotes = __pick(votes, __prev && __prev.votes);
-      const mStockTrades = __pick(stockTrades, __prev && __prev.stockTrades);
-      const mLawsuits = __pick(lawsuits, __prev && __prev.lawsuits);
-      const mLobbyMoney = __pick(lobbyMoney, __prev && __prev.lobbyMoney);
+      // RICHER-WINS guard: for datasets that should never shrink (stock trades, lobby/PAC money),
+      // keep whichever side has MORE records. A non-empty-but-thinner fresh fetch must NOT
+      // overwrite a richer previously-stored dataset. Only adopt fresh when it is at least as rich.
+      const __pickRicher = <T,>(fresh: T[] | undefined, old: T[] | undefined): T[] => {
+        const f = Array.isArray(fresh) ? fresh : [];
+        const o = Array.isArray(old) ? old : [];
+        return f.length >= o.length ? f : o;
+      };
+      const mVotes = __pickRicher(votes, __prev && __prev.votes);
+      const mStockTrades = __pickRicher(stockTrades, __prev && __prev.stockTrades);
+      const mLawsuits = __pickRicher(lawsuits, __prev && __prev.lawsuits);
+      const mLobbyMoney = __pickRicher(lobbyMoney, __prev && __prev.lobbyMoney);
       // Funding: keep fresh only if it reports real money raised; else fall back to prior.
       const __freshRaised = funding && typeof (funding as { totalRaised?: number }).totalRaised === 'number'
         ? (funding as { totalRaised: number }).totalRaised : 0;
