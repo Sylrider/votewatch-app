@@ -2,7 +2,7 @@
  * scripts/score.ts
  * Calculates the Transparency Risk Score for each politician.
  *
- * Score = Lobby Score (0-25) + Alignment Score (0-35) + Stock Score (0-25) + Legal Score (0-15)
+ * Score = Lobby Score (0-25) + Alignment Score (0-25) + Stock Score (0-25) + Legal Score (0-25). Four equally-weighted 25% pillars.
  */
 
 import type { Politician, TransparencyScore, Vote, LobbyContribution, StockTrade, Lawsuit } from '../lib/types';
@@ -88,7 +88,7 @@ function calcMoneyScore(
   return Math.min(25, (total / 100_000) * 1.2);
 }
 
-/** Donor-Vote Alignment Score: 0-35 */
+/** Donor-Vote Alignment Score: 0-25 */
 function calcAlignScore(votes: Vote[], contributions: LobbyContribution[]): number {
   if (votes.length === 0) return 0;
 
@@ -101,7 +101,7 @@ function calcAlignScore(votes: Vote[], contributions: LobbyContribution[]): numb
     }
   }
 
-  return (alignedCount / votes.length) * 35;
+  return (alignedCount / votes.length) * 25;
 }
 
 /** Stock Trade Conflict Score: 0-25 */
@@ -111,11 +111,11 @@ function calcStockScore(trades: StockTrade[]): number {
   return Math.min(25, conflictTrades.length * 5 + (hasLargeTrade ? 10 : 0));
 }
 
-/** Legal Record Score: 0-15 */
+/** Legal Record Score: 0-25 */
 function calcLegalScore(lawsuits: Lawsuit[]): number {
   const weights = { high: 7, medium: 4, low: 1 };
   const total = lawsuits.reduce((s, l) => s + weights[l.severity], 0);
-  return Math.min(15, total);
+  return Math.min(25, total * (25 / 15));
 }
 
 // --- Vote alignment checker ---
