@@ -9410,19 +9410,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 726859,
+      "largeDonorMoney": 167177,
+      "smallDonorMoney": 23757,
+      "pacMoney": 440900,
+      "partyMoney": 0,
+      "transferMoney": 58483,
+      "otherMoney": 36543,
+      "bigMoneyShare": 0.917,
+      "smallDonorShare": 0.033,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "John Boozman raised $727K in reported campaign funds (through 2024). About 92% came from large donors, PACs and committee transfers ($167K itemized, $441K PAC), while 3% ($24K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $29K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 6,
+      "lobbyScore": 6,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 29098,
+      "totalMoney": 726859,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:11:34.956Z"
+      "lastUpdated": "2026-06-03T00:34:07.516Z"
     }
   },
   {
@@ -9529,19 +9547,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 9934497,
+      "largeDonorMoney": 3879608,
+      "smallDonorMoney": 2160238,
+      "pacMoney": 2365766,
+      "partyMoney": 0,
+      "transferMoney": 1526922,
+      "otherMoney": 1963,
+      "bigMoneyShare": 0.782,
+      "smallDonorShare": 0.217,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Lisa Blunt Rochester raised $9.9M in reported campaign funds (through 2024). About 78% came from large donors, PACs and committee transfers ($3.9M itemized, $2.4M PAC), while 22% ($2.2M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $1.6M.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 19,
-      "lobbyScore": 19,
+      "total": 22,
+      "lobbyScore": 22,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 1585774,
+      "totalMoney": 9934497,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:11:52.719Z"
+      "lastUpdated": "2026-06-03T00:34:30.711Z"
     }
   },
   {
@@ -9559,19 +9595,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 398539,
+      "largeDonorMoney": 88766,
+      "smallDonorMoney": 54320,
+      "pacMoney": 73054,
+      "partyMoney": 0,
+      "transferMoney": 67863,
+      "otherMoney": 114537,
+      "bigMoneyShare": 0.576,
+      "smallDonorShare": 0.136,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Richard Blumenthal raised $399K in reported campaign funds (through 2024). About 58% came from large donors, PACs and committee transfers ($89K itemized, $73K PAC), while 14% ($54K) came from small grassroots donors.",
     "profileComplete": false,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 1,
+      "lobbyScore": 1,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 0,
+      "totalMoney": 398539,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:12:46.079Z"
+      "lastUpdated": "2026-06-03T00:34:38.207Z"
     }
   },
   {
@@ -9678,19 +9732,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 13571274,
+      "largeDonorMoney": 3275693,
+      "smallDonorMoney": 598407,
+      "pacMoney": 2143309,
+      "partyMoney": 0,
+      "transferMoney": 7275127,
+      "otherMoney": 278739,
+      "bigMoneyShare": 0.935,
+      "smallDonorShare": 0.044,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Marsha Blackburn raised $13.6M in reported campaign funds (through 2024). About 94% came from large donors, PACs and committee transfers ($3.3M itemized, $2.1M PAC), while 4% ($598K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $612K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 7,
-      "lobbyScore": 7,
+      "total": 24,
+      "lobbyScore": 24,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 611681,
+      "totalMoney": 13571274,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:14:25.093Z"
+      "lastUpdated": "2026-06-03T00:35:25.459Z"
     }
   },
   {
@@ -9725,19 +9797,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1181528,
+      "largeDonorMoney": 557940,
+      "smallDonorMoney": 398103,
+      "pacMoney": 58597,
+      "partyMoney": 0,
+      "transferMoney": 36387,
+      "otherMoney": 130501,
+      "bigMoneyShare": 0.553,
+      "smallDonorShare": 0.337,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Michael Bennet raised $1.2M in reported campaign funds (through 2024). About 55% came from large donors, PACs and committee transfers ($558K itemized, $59K PAC), while 34% ($398K) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $10K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 5,
+      "lobbyScore": 5,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 9650,
+      "totalMoney": 1181528,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:14:41.429Z"
+      "lastUpdated": "2026-06-03T00:35:45.312Z"
     }
   },
   {
@@ -9755,19 +9845,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 7761388,
+      "largeDonorMoney": 3311646,
+      "smallDonorMoney": 338692,
+      "pacMoney": 2725370,
+      "partyMoney": 0,
+      "transferMoney": 1376468,
+      "otherMoney": 9213,
+      "bigMoneyShare": 0.955,
+      "smallDonorShare": 0.044,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "John Barrasso raised $7.8M in reported campaign funds (through 2024). About 96% came from large donors, PACs and committee transfers ($3.3M itemized, $2.7M PAC), while 4% ($339K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal.",
     "profileComplete": false,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 24,
+      "lobbyScore": 24,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 0,
+      "totalMoney": 7761388,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:14:43.737Z"
+      "lastUpdated": "2026-06-03T00:35:48.200Z"
     }
   },
   {
@@ -9866,19 +9974,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 7337227,
+      "largeDonorMoney": 3229250,
+      "smallDonorMoney": 1305346,
+      "pacMoney": 1432093,
+      "partyMoney": 850,
+      "transferMoney": 1283521,
+      "otherMoney": 86167,
+      "bigMoneyShare": 0.81,
+      "smallDonorShare": 0.178,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Jim Banks raised $7.3M in reported campaign funds (through 2024). About 81% came from large donors, PACs and committee transfers ($3.2M itemized, $1.4M PAC), while 18% ($1.3M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $314K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 4,
-      "lobbyScore": 4,
+      "total": 23,
+      "lobbyScore": 23,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 313650,
+      "totalMoney": 7337227,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:15:02.858Z"
+      "lastUpdated": "2026-06-03T00:36:15.609Z"
     }
   },
   {
@@ -9969,19 +10095,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 50228545,
+      "largeDonorMoney": 27826023,
+      "smallDonorMoney": 14254826,
+      "pacMoney": 2607544,
+      "partyMoney": 62426,
+      "transferMoney": 4703224,
+      "otherMoney": 774503,
+      "bigMoneyShare": 0.701,
+      "smallDonorShare": 0.284,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Tammy Baldwin raised $50.2M in reported campaign funds (through 2024). About 70% came from large donors, PACs and committee transfers ($27.8M itemized, $2.6M PAC), while 28% ($14.3M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $180K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 2,
-      "lobbyScore": 2,
+      "total": 21,
+      "lobbyScore": 21,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 180200,
+      "totalMoney": 50228545,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:16:36.498Z"
+      "lastUpdated": "2026-06-03T00:36:54.496Z"
     }
   },
   {
@@ -10048,19 +10192,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 31077806,
+      "largeDonorMoney": 15550208,
+      "smallDonorMoney": 8214278,
+      "pacMoney": 1194819,
+      "partyMoney": 58400,
+      "transferMoney": 5852229,
+      "otherMoney": 207870,
+      "bigMoneyShare": 0.729,
+      "smallDonorShare": 0.264,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Angela Alsobrooks raised $31.1M in reported campaign funds (through 2024). About 73% came from large donors, PACs and committee transfers ($15.6M itemized, $1.2M PAC), while 26% ($8.2M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $100K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 1,
-      "lobbyScore": 1,
+      "total": 21,
+      "lobbyScore": 21,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 99800,
+      "totalMoney": 31077806,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:17:06.575Z"
+      "lastUpdated": "2026-06-03T00:37:12.023Z"
     }
   },
   {
@@ -10111,19 +10273,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 4065839,
+      "largeDonorMoney": 1755292,
+      "smallDonorMoney": 1924972,
+      "pacMoney": 378351,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 7224,
+      "bigMoneyShare": 0.525,
+      "smallDonorShare": 0.473,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Maxwell Frost raised $4.1M in reported campaign funds (through 2024). About 53% came from large donors, PACs and committee transfers ($1.8M itemized, $378K PAC), while 47% ($1.9M) came from small grassroots donors. Tracked industry/PAC contributions identified so far total $59K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 1,
-      "lobbyScore": 1,
+      "total": 16,
+      "lobbyScore": 16,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 58500,
+      "totalMoney": 4065839,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T12:53:57.834Z"
+      "lastUpdated": "2026-06-03T00:37:41.588Z"
     }
   },
   {
@@ -10141,8 +10321,23 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": false,
+      "totalRaised": 0,
+      "largeDonorMoney": 0,
+      "smallDonorMoney": 0,
+      "pacMoney": 0,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 0,
+      "bigMoneyShare": null,
+      "smallDonorShare": null,
+      "confidence": "low",
+      "sources": []
+    },
+    "viewSummary": "Christian Menefee: campaign-finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -10153,7 +10348,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:17:08.863Z"
+      "lastUpdated": "2026-06-03T00:37:44.169Z"
     }
   },
   {
@@ -10251,91 +10446,38 @@
     ],
     "stockTrades": [],
     "lawsuits": [],
-    "votes": [
-      {
-        "bill": "TikTok Divestment Act (Protecting Americans from Foreign Adversary Controlled Applications Act)",
-        "billId": "hr7521-118",
-        "date": "2024-03-13",
-        "vote": "YEA",
-        "alignsWithDonors": false,
-        "note": "Required ByteDance to divest TikTok or face a US ban; passed 352-65.",
-        "congressNumber": 118,
-        "rollCallNumber": 86
-      },
-      {
-        "bill": "Israel Security Supplemental Appropriations Act, 2024",
-        "billId": "hr8034-118",
-        "date": "2024-04-20",
-        "vote": "YEA",
-        "alignsWithDonors": true,
-        "note": "$26.4B in military aid and missile-defense funding for Israel. Aligns with pro-Israel (AIPAC) donors.",
-        "congressNumber": 118,
-        "rollCallNumber": 152
-      },
-      {
-        "bill": "Ukraine Security Supplemental Appropriations Act, 2024",
-        "billId": "hr8035-118",
-        "date": "2024-04-20",
-        "vote": "YEA",
-        "alignsWithDonors": false,
-        "note": "~$61B in military and economic aid for Ukraine.",
-        "congressNumber": 118,
-        "rollCallNumber": 151
-      },
-      {
-        "bill": "Indo-Pacific Security Supplemental Appropriations Act, 2024",
-        "billId": "hr8036-118",
-        "date": "2024-04-20",
-        "vote": "YEA",
-        "alignsWithDonors": false,
-        "note": "~$8B for Taiwan and Indo-Pacific allies to counter China.",
-        "congressNumber": 118,
-        "rollCallNumber": 146
-      },
-      {
-        "bill": "Further Consolidated Appropriations Act, 2024 ($1.2T minibus)",
-        "billId": "hr2882-118",
-        "date": "2024-03-22",
-        "vote": "YEA",
-        "alignsWithDonors": false,
-        "note": "$1.2 trillion appropriations package; averted a shutdown.",
-        "congressNumber": 118,
-        "rollCallNumber": 102
-      },
-      {
-        "bill": "Reforming Intelligence and Securing America Act (FISA Section 702 reauthorization)",
-        "billId": "hr7888-118",
-        "date": "2024-04-12",
-        "vote": "YEA",
-        "alignsWithDonors": false,
-        "note": "Reauthorized FISA Section 702 surveillance authority for two years.",
-        "congressNumber": 118,
-        "rollCallNumber": 119
-      },
-      {
-        "bill": "Antisemitism Awareness Act of 2023",
-        "billId": "hr6090-118",
-        "date": "2024-05-01",
-        "vote": "NOT VOTING",
-        "alignsWithDonors": false,
-        "note": "Directed the Dept. of Education to adopt the IHRA definition of antisemitism in Title VI enforcement.",
-        "congressNumber": 118,
-        "rollCallNumber": 172
-      }
-    ],
+    "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 4138445,
+      "largeDonorMoney": 1540266,
+      "smallDonorMoney": 1209494,
+      "pacMoney": 840947,
+      "partyMoney": 0,
+      "transferMoney": 474412,
+      "otherMoney": 73327,
+      "bigMoneyShare": 0.69,
+      "smallDonorShare": 0.292,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Dan Crenshaw raised $4.1M in reported campaign funds (through 2024). About 69% came from large donors, PACs and committee transfers ($1.5M itemized, $841K PAC), while 29% ($1.2M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $306K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 9,
-      "lobbyScore": 4,
-      "alignScore": 5,
+      "total": 20,
+      "lobbyScore": 20,
+      "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 0,
+      "totalMoney": 4138445,
       "conflictTrades": 0,
-      "donorAlignedVotes": 1,
-      "totalTrackedVotes": 7,
-      "lastUpdated": "2026-06-02T14:35:01.911Z"
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-03T00:38:03.867Z"
     }
   },
   {
@@ -10353,19 +10495,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1998122,
+      "largeDonorMoney": 638585,
+      "smallDonorMoney": 50117,
+      "pacMoney": 1267150,
+      "partyMoney": 0,
+      "transferMoney": 7056,
+      "otherMoney": 35213,
+      "bigMoneyShare": 0.957,
+      "smallDonorShare": 0.025,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Robert Latta raised $2.0M in reported campaign funds (through 2024). About 96% came from large donors, PACs and committee transfers ($639K itemized, $1.3M PAC), while 3% ($50K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal.",
     "profileComplete": false,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 19,
+      "lobbyScore": 19,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 0,
+      "totalMoney": 1998122,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:17:10.878Z"
+      "lastUpdated": "2026-06-03T00:38:06.498Z"
     }
   },
   {
@@ -10472,19 +10632,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1030467,
+      "largeDonorMoney": 463572,
+      "smallDonorMoney": 58930,
+      "pacMoney": 489735,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 18230,
+      "bigMoneyShare": 0.925,
+      "smallDonorShare": 0.057,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Ben Cline raised $1.0M in reported campaign funds (through 2024). About 93% came from large donors, PACs and committee transfers ($464K itemized, $490K PAC), while 6% ($59K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $127K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 2,
-      "lobbyScore": 2,
+      "total": 9,
+      "lobbyScore": 9,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 127141,
+      "totalMoney": 1030467,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:00:15.472Z"
+      "lastUpdated": "2026-06-03T00:38:13.465Z"
     }
   },
   {
@@ -10607,19 +10785,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1705408,
+      "largeDonorMoney": 686723,
+      "smallDonorMoney": 4980,
+      "pacMoney": 1010513,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 3192,
+      "bigMoneyShare": 0.995,
+      "smallDonorShare": 0.003,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Jim Costa raised $1.7M in reported campaign funds (through 2024). About 100% came from large donors, PACs and committee transfers ($687K itemized, $1.0M PAC), while 0% ($5K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $291K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 3,
-      "lobbyScore": 3,
+      "total": 17,
+      "lobbyScore": 17,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 291073,
+      "totalMoney": 1705408,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:00:21.657Z"
+      "lastUpdated": "2026-06-03T00:38:27.593Z"
     }
   },
   {
@@ -10734,19 +10930,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 4328377,
+      "largeDonorMoney": 1818951,
+      "smallDonorMoney": 770676,
+      "pacMoney": 1657760,
+      "partyMoney": 0,
+      "transferMoney": 72598,
+      "otherMoney": 8392,
+      "bigMoneyShare": 0.82,
+      "smallDonorShare": 0.178,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Ann Wagner raised $4.3M in reported campaign funds (through 2024). About 82% came from large donors, PACs and committee transfers ($1.8M itemized, $1.7M PAC), while 18% ($771K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $264K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 3,
-      "lobbyScore": 3,
+      "total": 23,
+      "lobbyScore": 23,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 263711,
+      "totalMoney": 4328377,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:00:43.985Z"
+      "lastUpdated": "2026-06-03T00:38:55.745Z"
     }
   },
   {
@@ -10845,19 +11059,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1154952,
+      "largeDonorMoney": 558404,
+      "smallDonorMoney": 37054,
+      "pacMoney": 445336,
+      "partyMoney": 0,
+      "transferMoney": 83399,
+      "otherMoney": 30759,
+      "bigMoneyShare": 0.941,
+      "smallDonorShare": 0.032,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Michael Rulli raised $1.2M in reported campaign funds (through 2024). About 94% came from large donors, PACs and committee transfers ($558K itemized, $445K PAC), while 3% ($37K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $58K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 1,
-      "lobbyScore": 1,
+      "total": 10,
+      "lobbyScore": 10,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 58000,
+      "totalMoney": 1154952,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:00:48.221Z"
+      "lastUpdated": "2026-06-03T00:38:59.834Z"
     }
   },
   {
@@ -10972,19 +11204,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1648135,
+      "largeDonorMoney": 494111,
+      "smallDonorMoney": 91746,
+      "pacMoney": 836807,
+      "partyMoney": 0,
+      "transferMoney": 198203,
+      "otherMoney": 27268,
+      "bigMoneyShare": 0.928,
+      "smallDonorShare": 0.056,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Neal Dunn raised $1.6M in reported campaign funds (through 2024). About 93% came from large donors, PACs and committee transfers ($494K itemized, $837K PAC), while 6% ($92K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $170K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 2,
-      "lobbyScore": 2,
+      "total": 13,
+      "lobbyScore": 13,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 169638,
+      "totalMoney": 1648135,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:17:18.443Z"
+      "lastUpdated": "2026-06-03T00:39:06.540Z"
     }
   },
   {
@@ -11051,19 +11301,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 307917,
+      "largeDonorMoney": 73500,
+      "smallDonorMoney": 7167,
+      "pacMoney": 157250,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 70000,
+      "bigMoneyShare": 0.749,
+      "smallDonorShare": 0.023,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Eleanor Norton raised $308K in reported campaign funds (through 2024). About 75% came from large donors, PACs and committee transfers ($74K itemized, $157K PAC), while 2% ($7K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $24K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T23:31:23.125Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 0,
-      "lobbyScore": 0,
+      "total": 2,
+      "lobbyScore": 2,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 23500,
+      "totalMoney": 307917,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T00:17:21.379Z"
+      "lastUpdated": "2026-06-03T00:39:10.913Z"
     }
   },
   {
@@ -11162,19 +11430,37 @@
     "stockTrades": [],
     "lawsuits": [],
     "votes": [],
+    "funding": {
+      "available": true,
+      "periodYear": "2024",
+      "totalRaised": 1751635,
+      "largeDonorMoney": 719555,
+      "smallDonorMoney": 79563,
+      "pacMoney": 867476,
+      "partyMoney": 0,
+      "transferMoney": 85000,
+      "otherMoney": 40,
+      "bigMoneyShare": 0.955,
+      "smallDonorShare": 0.045,
+      "confidence": "high",
+      "sources": [
+        "FEC /candidate/{id}/totals"
+      ]
+    },
+    "viewSummary": "Rosa DeLauro raised $1.8M in reported campaign funds (through 2024). About 96% came from large donors, PACs and committee transfers ($720K itemized, $867K PAC), while 5% ($80K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $153K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-01T11:49:44.552Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 2,
-      "lobbyScore": 2,
+      "total": 15,
+      "lobbyScore": 15,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 152785,
+      "totalMoney": 1751635,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-01T13:01:01.524Z"
+      "lastUpdated": "2026-06-03T00:44:10.034Z"
     }
   },
   {
@@ -11264,108 +11550,38 @@
     ],
     "stockTrades": [],
     "lawsuits": [],
-    "votes": [
-      {
-        "bill": "TikTok Divestment Act (Protecting Americans from Foreign Adversary Controlled Applications Act)",
-        "billId": "hr7521-118",
-        "date": "2024-03-13",
-        "vote": "YEA",
-        "alignsWithDonors": false,
-        "note": "Required ByteDance to divest TikTok or face a US ban; passed 352-65.",
-        "congressNumber": 118,
-        "rollCallNumber": 86
-      },
-      {
-        "bill": "Israel Security Supplemental Appropriations Act, 2024",
-        "billId": "hr8034-118",
-        "date": "2024-04-20",
-        "vote": "NAY",
-        "alignsWithDonors": false,
-        "note": "$26.4B in military aid and missile-defense funding for Israel.",
-        "congressNumber": 118,
-        "rollCallNumber": 152
-      },
-      {
-        "bill": "Ukraine Security Supplemental Appropriations Act, 2024",
-        "billId": "hr8035-118",
-        "date": "2024-04-20",
-        "vote": "YEA",
-        "alignsWithDonors": false,
-        "note": "~$61B in military and economic aid for Ukraine.",
-        "congressNumber": 118,
-        "rollCallNumber": 151
-      },
-      {
-        "bill": "Indo-Pacific Security Supplemental Appropriations Act, 2024",
-        "billId": "hr8036-118",
-        "date": "2024-04-20",
-        "vote": "YEA",
-        "alignsWithDonors": false,
-        "note": "~$8B for Taiwan and Indo-Pacific allies to counter China.",
-        "congressNumber": 118,
-        "rollCallNumber": 146
-      },
-      {
-        "bill": "Further Consolidated Appropriations Act, 2024 ($1.2T minibus)",
-        "billId": "hr2882-118",
-        "date": "2024-03-22",
-        "vote": "YEA",
-        "alignsWithDonors": false,
-        "note": "$1.2 trillion appropriations package; averted a shutdown.",
-        "congressNumber": 118,
-        "rollCallNumber": 102
-      },
-      {
-        "bill": "Reforming Intelligence and Securing America Act (FISA Section 702 reauthorization)",
-        "billId": "hr7888-118",
-        "date": "2024-04-12",
-        "vote": "NAY",
-        "alignsWithDonors": false,
-        "note": "Reauthorized FISA Section 702 surveillance authority for two years.",
-        "congressNumber": 118,
-        "rollCallNumber": 119
-      },
-      {
-        "bill": "Antisemitism Awareness Act of 2023",
-        "billId": "hr6090-118",
-        "date": "2024-05-01",
-        "vote": "NAY",
-        "alignsWithDonors": false,
-        "note": "Directed the Dept. of Education to adopt the IHRA definition of antisemitism in Title VI enforcement.",
-        "congressNumber": 118,
-        "rollCallNumber": 172
-      }
-    ],
+    "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 733764,
-      "largeDonorMoney": 277218,
-      "smallDonorMoney": 20033,
-      "pacMoney": 312000,
-      "partyMoney": 0,
+      "periodYear": "2024",
+      "totalRaised": 1119386,
+      "largeDonorMoney": 547196,
+      "smallDonorMoney": 12512,
+      "pacMoney": 493977,
+      "partyMoney": 3300,
       "transferMoney": 0,
-      "bigMoneyShare": 0.803,
-      "smallDonorShare": 0.027,
+      "otherMoney": 62400,
+      "bigMoneyShare": 0.933,
+      "smallDonorShare": 0.011,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Maxine Waters raised $734K in reported campaign funds (through 2026). About 80% came from large donors, PACs and committee transfers ($277K itemized, $312K PAC), while 3% ($20K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $89K.",
+    "viewSummary": "Maxine Waters raised $1.1M in reported campaign funds (through 2024). About 93% came from large donors, PACs and committee transfers ($547K itemized, $494K PAC), while 1% ($13K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $89K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T02:08:27.244Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 5,
-      "lobbyScore": 5,
+      "total": 10,
+      "lobbyScore": 10,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 733764,
+      "totalMoney": 1119386,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
-      "totalTrackedVotes": 7,
-      "lastUpdated": "2026-06-02T14:35:01.911Z"
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-03T00:44:17.313Z"
     }
   },
   {
@@ -11381,311 +11597,104 @@
     "imageUrl": "https://www.congress.gov/img/member/p000197_200.jpg",
     "lobbyMoney": [
       {
-        "lobbyId": "labor",
-        "lobbyName": "Labor Unions (AFL-CIO and affiliates)",
-        "amount": 99300,
-        "intent": "Pro-labor / pro-union legislation, PRO Act, collective bargaining",
+        "lobbyId": "nea",
+        "lobbyName": "National Education Association (NEA)",
+        "amount": 14000,
+        "intent": "support",
         "cycle": "2024",
-        "source": "OpenSecrets (FEC PAC contributions by sector)"
-      },
-      {
-        "lobbyId": "ideology",
-        "lobbyName": "Other Ideological / Single-Issue Groups",
-        "amount": 25500,
-        "intent": "Progressive and single-issue causes (womens issues, environment, civil rights)",
-        "cycle": "2024",
-        "source": "OpenSecrets (FEC PAC contributions by sector)"
-      },
-      {
-        "lobbyId": "finance",
-        "lobbyName": "Finance, Insurance & Real Estate",
-        "amount": 33500,
-        "intent": "Financial-services and real-estate policy",
-        "cycle": "2024",
-        "source": "OpenSecrets (FEC PAC contributions by sector)"
-      },
-      {
-        "lobbyId": "agribusiness",
-        "lobbyName": "Agribusiness (incl. American Crystal Sugar)",
-        "amount": 19000,
-        "intent": "Farm and commodity programs, sugar price supports",
-        "cycle": "2024",
-        "source": "OpenSecrets (FEC PAC contributions by sector)"
+        "source": "FEC schedule_a (itemized committee contributions)"
       },
       {
         "lobbyId": "aipac",
-        "lobbyName": "Pro-Israel (AIPAC and allied PACs)",
-        "amount": 16000,
-        "intent": "Support U.S. military and economic aid to Israel",
+        "lobbyName": "AIPAC",
+        "amount": 13000,
+        "intent": "support",
         "cycle": "2024",
-        "source": "OpenSecrets (FEC PAC contributions, Pro-Israel)"
+        "source": "FEC schedule_a (itemized committee contributions)"
       },
       {
-        "lobbyId": "health",
-        "lobbyName": "Health Sector (insurers, providers, hospitals)",
-        "amount": 15000,
-        "intent": "Healthcare and insurance policy",
+        "lobbyId": "realestate",
+        "lobbyName": "Real Estate Industry (NAR)",
+        "amount": 10000,
+        "intent": "support",
         "cycle": "2024",
-        "source": "OpenSecrets (FEC PAC contributions by sector)"
+        "source": "FEC schedule_a (itemized committee contributions)"
       },
       {
         "lobbyId": "telecom",
-        "lobbyName": "Communications & Electronics",
-        "amount": 11500,
-        "intent": "Telecom, tech and media policy",
+        "lobbyName": "Telecommunications Industry",
+        "amount": 9000,
+        "intent": "support",
         "cycle": "2024",
-        "source": "OpenSecrets (FEC PAC contributions by sector)"
+        "source": "FEC schedule_a (itemized committee contributions)"
       },
       {
-        "lobbyId": "miscbiz",
-        "lobbyName": "Misc Business",
-        "amount": 11000,
-        "intent": "General business interests",
-        "cycle": "2024",
-        "source": "OpenSecrets (FEC PAC contributions by sector)"
-      },
-      {
-        "lobbyId": "lawyers",
-        "lobbyName": "Lawyers & Lobbyists (incl. Perkins Coie)",
-        "amount": 7500,
-        "intent": "Legal-industry and litigation policy",
-        "cycle": "2024",
-        "source": "OpenSecrets (FEC PAC contributions by sector)"
-      },
-      {
-        "lobbyId": "construction",
-        "lobbyName": "Construction & Building Trades",
+        "lobbyId": "labor",
+        "lobbyName": "AFL-CIO / Labor Unions",
         "amount": 5000,
-        "intent": "Infrastructure and building-trades priorities",
+        "intent": "support",
         "cycle": "2024",
-        "source": "OpenSecrets (FEC PAC contributions by sector)"
+        "source": "FEC schedule_a (itemized committee contributions)"
       },
       {
-        "lobbyId": "transport",
-        "lobbyName": "Transportation Unions",
+        "lobbyId": "defense",
+        "lobbyName": "Defense Industry (MICC)",
         "amount": 5000,
-        "intent": "Transportation and aviation labor priorities",
+        "intent": "support",
         "cycle": "2024",
-        "source": "OpenSecrets (FEC PAC contributions by sector)"
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "health",
+        "lobbyName": "Health Insurance Industry (AHIP)",
+        "amount": 2500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
+      },
+      {
+        "lobbyId": "finance",
+        "lobbyName": "Wall Street / Financial Industry",
+        "amount": 2500,
+        "intent": "support",
+        "cycle": "2024",
+        "source": "FEC schedule_a (itemized committee contributions)"
       }
     ],
-    "stockTrades": [
-      {
-        "ticker": "NVDA",
-        "company": "NVIDIA Corp",
-        "action": "BUY",
-        "amount": 3500000,
-        "amountRange": "$1,000,001 - $5,000,000",
-        "date": "2024-12-20",
-        "conflict": true,
-        "conflictNote": "Exercised 500 call options (acquired Nov 2023) to acquire 50,000 shares while Congress considered chip/AI and semiconductor policy.",
-        "source": "House Stock Watcher / House Clerk PTR",
-        "filingId": "PTR-2025-Pelosi-NVDA"
-      },
-      {
-        "ticker": "NVDA",
-        "company": "NVIDIA Corp",
-        "action": "SELL",
-        "amount": 1300000,
-        "amountRange": "$1,000,001 - $5,000,000",
-        "date": "2024-12-31",
-        "conflict": true,
-        "conflictNote": "Sold 10,000 NVIDIA shares shortly after exercising options.",
-        "source": "House Stock Watcher / House Clerk PTR",
-        "filingId": "PTR-2025-Pelosi-NVDA2"
-      },
-      {
-        "ticker": "AAPL",
-        "company": "Apple Inc",
-        "action": "SELL",
-        "amount": 15000000,
-        "amountRange": "$5,000,001 - $25,000,000",
-        "date": "2024-12-31",
-        "conflict": true,
-        "conflictNote": "Sold ~31,600 Apple shares (valued $5M-$25M).",
-        "source": "House Stock Watcher / House Clerk PTR",
-        "filingId": "PTR-2025-Pelosi-AAPL"
-      },
-      {
-        "ticker": "PANW",
-        "company": "Palo Alto Networks",
-        "action": "BUY",
-        "amount": 3000000,
-        "amountRange": "$1,000,001 - $5,000,000",
-        "date": "2024-12-20",
-        "conflict": true,
-        "conflictNote": "Exercised 140 call options to acquire shares; firm benefits from federal cybersecurity spending.",
-        "source": "House Stock Watcher / House Clerk PTR",
-        "filingId": "PTR-2025-Pelosi-PANW"
-      },
-      {
-        "ticker": "AVGO",
-        "company": "Broadcom Inc",
-        "action": "BUY",
-        "amount": 2500000,
-        "amountRange": "$1,000,001 - $5,000,000",
-        "date": "2024-06-24",
-        "conflict": true,
-        "conflictNote": "Bullish Broadcom call options; semiconductor firm sensitive to trade/chip policy.",
-        "source": "House Stock Watcher / House Clerk PTR",
-        "filingId": "PTR-2024-Pelosi-AVGO"
-      }
-    ],
-    "lawsuits": [
-      {
-        "title": "McCarthy v. Pelosi (House proxy-voting challenge)",
-        "year": 2020,
-        "type": "Civil - constitutional challenge (official capacity)",
-        "status": "DISMISSED",
-        "outcome": "Dismissed; court held the Speech or Debate Clause barred the suit. Sued as Speaker, not personal liability.",
-        "description": "GOP Leader Kevin McCarthy and members challenged the House rule allowing proxy voting during COVID-19. Pelosi named as defendant in her official capacity as Speaker.",
-        "severity": "low",
-        "caseId": "D.D.C. No. 20-1395"
-      },
-      {
-        "title": "Massie v. Pelosi (proxy voting / floor fines challenge)",
-        "year": 2022,
-        "type": "Civil - constitutional challenge (official capacity)",
-        "status": "DISMISSED",
-        "outcome": "Dismissed; affirmed by the D.C. Circuit on June 30, 2023 (No. 22-5058). Pelosi sued in her official capacity only.",
-        "description": "Rep. Thomas Massie and others challenged House proxy voting and floor mask/metal-detector fines. Pelosi named as defendant in her official capacity as Speaker.",
-        "severity": "low",
-        "caseId": "D.D.C. No. 21-2023 / D.C. Cir. 22-5058"
-      },
-      {
-        "title": "Budowich v. Pelosi (Jan. 6 Committee subpoena challenge)",
-        "year": 2021,
-        "type": "Civil - subpoena challenge (official capacity)",
-        "status": "DISMISSED",
-        "outcome": "Dismissed. Challenge to a House Jan. 6 Select Committee subpoena; Pelosi named as Speaker.",
-        "description": "Taylor Budowich sued to block a Select Committee subpoena for bank records. Pelosi named as defendant in her official capacity.",
-        "severity": "low",
-        "caseId": "D.D.C. No. 21-3366"
-      },
-      {
-        "title": "Meadows v. Pelosi (Jan. 6 Committee subpoena challenge)",
-        "year": 2021,
-        "type": "Civil - subpoena challenge (official capacity)",
-        "status": "DISMISSED",
-        "outcome": "Dismissed. Challenge to a House Jan. 6 Select Committee subpoena; Pelosi named as Speaker.",
-        "description": "Former WH Chief of Staff Mark Meadows sued to block Select Committee subpoenas. Pelosi named as defendant in her official capacity.",
-        "severity": "low",
-        "caseId": "D.D.C. No. 21-3217"
-      },
-      {
-        "title": "Republican National Committee v. Pelosi (Jan. 6 subpoena challenge)",
-        "year": 2022,
-        "type": "Civil - subpoena challenge (official capacity)",
-        "status": "DISMISSED",
-        "outcome": "Dismissed. Challenge to a Select Committee subpoena of vendor records; Pelosi named as Speaker.",
-        "description": "The RNC sued to block a Jan. 6 Select Committee subpoena to a third-party vendor. Pelosi named as defendant in her official capacity.",
-        "severity": "low",
-        "caseId": "D.D.C. No. 22-0659"
-      }
-    ],
-    "votes": [
-      {
-        "bill": "TikTok Divestment Act (Protecting Americans from Foreign Adversary Controlled Applications Act)",
-        "billId": "hr7521-118",
-        "date": "2024-03-13",
-        "vote": "YEA",
-        "alignsWithDonors": false,
-        "note": "Required ByteDance to divest TikTok or face a US ban; passed 352-65 with broad bipartisan support.",
-        "congressNumber": 118,
-        "rollCallNumber": 86
-      },
-      {
-        "bill": "Israel Security Supplemental Appropriations Act, 2024",
-        "billId": "hr8034-118",
-        "date": "2024-04-20",
-        "vote": "YEA",
-        "alignsWithDonors": true,
-        "note": "$26.4B in military aid and missile-defense funding for Israel. Aligns with pro-Israel (AIPAC) donors.",
-        "congressNumber": 118,
-        "rollCallNumber": 152
-      },
-      {
-        "bill": "Ukraine Security Supplemental Appropriations Act, 2024",
-        "billId": "hr8035-118",
-        "date": "2024-04-20",
-        "vote": "YEA",
-        "alignsWithDonors": false,
-        "note": "~$61B in military and economic aid for Ukraine.",
-        "congressNumber": 118,
-        "rollCallNumber": 151
-      },
-      {
-        "bill": "Indo-Pacific Security Supplemental Appropriations Act, 2024",
-        "billId": "hr8036-118",
-        "date": "2024-04-20",
-        "vote": "YEA",
-        "alignsWithDonors": false,
-        "note": "~$8B for Taiwan and Indo-Pacific allies to counter China.",
-        "congressNumber": 118,
-        "rollCallNumber": 146
-      },
-      {
-        "bill": "Further Consolidated Appropriations Act, 2024 ($1.2T minibus)",
-        "billId": "hr2882-118",
-        "date": "2024-03-22",
-        "vote": "YEA",
-        "alignsWithDonors": false,
-        "note": "$1.2 trillion appropriations package funding major federal agencies; averted a shutdown.",
-        "congressNumber": 118,
-        "rollCallNumber": 102
-      },
-      {
-        "bill": "Reforming Intelligence and Securing America Act (FISA Section 702 reauthorization)",
-        "billId": "hr7888-118",
-        "date": "2024-04-12",
-        "vote": "YEA",
-        "alignsWithDonors": false,
-        "note": "Reauthorized FISA Section 702 warrantless surveillance authority for two years.",
-        "congressNumber": 118,
-        "rollCallNumber": 119
-      },
-      {
-        "bill": "Antisemitism Awareness Act of 2023",
-        "billId": "hr6090-118",
-        "date": "2024-05-01",
-        "vote": "YEA",
-        "alignsWithDonors": false,
-        "note": "Directed the Dept. of Education to adopt the IHRA definition of antisemitism in Title VI enforcement.",
-        "congressNumber": 118,
-        "rollCallNumber": 172
-      }
-    ],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
     "funding": {
       "available": true,
       "periodYear": "2024",
-      "totalRaised": 10003159,
-      "largeDonorMoney": 4409172,
-      "smallDonorMoney": 5340687,
-      "pacMoney": 253300,
-      "partyMoney": 0,
-      "transferMoney": 0,
-      "bigMoneyShare": 0.4661,
-      "smallDonorShare": 0.5339,
+      "totalRaised": 10223364,
+      "largeDonorMoney": 4213520,
+      "smallDonorMoney": 5340919,
+      "pacMoney": 251519,
+      "partyMoney": 131,
+      "transferMoney": 403888,
+      "otherMoney": 13387,
+      "bigMoneyShare": 0.476,
+      "smallDonorShare": 0.522,
       "confidence": "high",
       "sources": [
-        "FEC candidate totals (2023-2024 cycle)",
-        "OpenSecrets sector/PAC breakdown"
+        "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Nancy Pelosi raised about $10.0M in her most recent complete election cycle (2023-2024), overwhelmingly from large individual donors. About $9.27M came from large individual donors and $253,300 from PACs, with only roughly $480K from small grassroots donors - a big-money share near 95%. Her largest PAC/industry backers were labor unions (~$99K), finance/insurance/real estate (~$34K), ideological and single-issue groups, agribusiness and pro-Israel (AIPAC) PACs (~$16K). Of 7 tracked House votes, her YEA on the Israel Security Supplemental aligned with the position of pro-Israel (AIPAC) donors; her other tracked votes (TikTok divestment, Ukraine and Indo-Pacific aid, FISA Section 702 reauthorization, the $1.2T appropriations package and the Antisemitism Awareness Act) did not track a specific donor position. Her household's disclosed 2024 stock activity includes large NVIDIA, Apple, Palo Alto Networks and Broadcom positions (about $25M in tracked transactions, several via call options), all flagged as potential conflicts given Congress's role in tech, chip and cybersecurity policy. Legal: 5 federal suits named her as a defendant in her official capacity as Speaker (House proxy-voting challenges by McCarthy and Massie; three Jan. 6 Committee subpoena challenges) - all dismissed, none involving personal liability or wrongdoing.",
+    "viewSummary": "Nancy Pelosi raised $10.2M in reported campaign funds (through 2024). About 48% came from large donors, PACs and committee transfers ($4.2M itemized, $252K PAC), while 52% ($5.3M) came from small grassroots donors. This funding mix is grassroots-leaning, a lower influence-risk signal. Tracked industry/PAC contributions identified so far total $61K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T02:46:32.370Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 53,
+      "total": 18,
       "lobbyScore": 18,
-      "alignScore": 5,
-      "stockScore": 25,
-      "legalScore": 5,
-      "totalMoney": 10003159,
-      "conflictTrades": 5,
-      "donorAlignedVotes": 1,
-      "totalTrackedVotes": 7,
-      "lastUpdated": "2026-06-02T14:57:54.213Z"
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 10223364,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-06-03T00:51:47.877Z"
     }
   },
   {
@@ -11704,35 +11713,33 @@
     "lawsuits": [],
     "votes": [],
     "funding": {
-      "available": true,
-      "periodYear": "2026",
-      "totalRaised": 2094207,
-      "largeDonorMoney": 720283,
-      "smallDonorMoney": 966638,
-      "pacMoney": 399584,
+      "available": false,
+      "totalRaised": 0,
+      "largeDonorMoney": 0,
+      "smallDonorMoney": 0,
+      "pacMoney": 0,
       "partyMoney": 0,
       "transferMoney": 0,
-      "bigMoneyShare": 0.535,
-      "smallDonorShare": 0.462,
-      "confidence": "high",
-      "sources": [
-        "FEC /candidate/{id}/totals"
-      ]
+      "otherMoney": 0,
+      "bigMoneyShare": null,
+      "smallDonorShare": null,
+      "confidence": "low",
+      "sources": []
     },
-    "viewSummary": "Adelita Grijalva raised $2.1M in reported campaign funds (through 2026). About 54% came from large donors, PACs and committee transfers ($720K itemized, $400K PAC), while 46% ($967K) came from small grassroots donors.",
+    "viewSummary": "Adelita Grijalva: campaign-finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-06-02T02:08:27.244Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 8,
-      "lobbyScore": 8,
+      "total": 0,
+      "lobbyScore": 0,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 2094207,
+      "totalMoney": 0,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T02:10:36.631Z"
+      "lastUpdated": "2026-06-03T00:51:50.554Z"
     }
   },
   {
@@ -11833,34 +11840,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 762876,
-      "largeDonorMoney": 255899,
-      "smallDonorMoney": 5507,
-      "pacMoney": 462500,
-      "partyMoney": 0,
-      "transferMoney": 0,
-      "bigMoneyShare": 0.942,
-      "smallDonorShare": 0.007,
+      "periodYear": "2024",
+      "totalRaised": 1098029,
+      "largeDonorMoney": 315335,
+      "smallDonorMoney": 10023,
+      "pacMoney": 740194,
+      "partyMoney": 1750,
+      "transferMoney": 7750,
+      "otherMoney": 22978,
+      "bigMoneyShare": 0.97,
+      "smallDonorShare": 0.009,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Eric Crawford raised $763K in reported campaign funds (through 2026). About 94% came from large donors, PACs and committee transfers ($256K itemized, $463K PAC), while 1% ($6K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $87K.",
+    "viewSummary": "Eric Crawford raised $1.1M in reported campaign funds (through 2024). About 97% came from large donors, PACs and committee transfers ($315K itemized, $740K PAC), while 1% ($10K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $87K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T02:08:27.244Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 7,
-      "lobbyScore": 7,
+      "total": 10,
+      "lobbyScore": 10,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 762876,
+      "totalMoney": 1098029,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T02:10:42.411Z"
+      "lastUpdated": "2026-06-03T00:51:55.615Z"
     }
   },
   {
@@ -11905,34 +11913,35 @@
     "votes": [],
     "funding": {
       "available": true,
-      "periodYear": "2026",
-      "totalRaised": 3536154,
-      "largeDonorMoney": 2180675,
-      "smallDonorMoney": 338589,
-      "pacMoney": 552338,
-      "partyMoney": 6892,
-      "transferMoney": 376324,
-      "bigMoneyShare": 0.881,
-      "smallDonorShare": 0.096,
+      "periodYear": "2024",
+      "totalRaised": 10614138,
+      "largeDonorMoney": 5977825,
+      "smallDonorMoney": 1568863,
+      "pacMoney": 692133,
+      "partyMoney": 10190,
+      "transferMoney": 575882,
+      "otherMoney": 1789244,
+      "bigMoneyShare": 0.684,
+      "smallDonorShare": 0.148,
       "confidence": "high",
       "sources": [
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "George Whitesides raised $3.5M in reported campaign funds (through 2026). About 88% came from large donors, PACs and committee transfers ($2.2M itemized, $552K PAC), while 10% ($339K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $53K.",
+    "viewSummary": "George Whitesides raised $10.6M in reported campaign funds (through 2024). About 68% came from large donors, PACs and committee transfers ($6.0M itemized, $692K PAC), while 15% ($1.6M) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $53K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-02T02:08:27.244Z",
+    "dataVersion": "2026-06-03T00:34:00.684Z",
     "score": {
-      "total": 23,
-      "lobbyScore": 23,
+      "total": 21,
+      "lobbyScore": 21,
       "alignScore": 0,
       "stockScore": 0,
       "legalScore": 0,
-      "totalMoney": 3536154,
+      "totalMoney": 10614138,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-02T02:11:06.456Z"
+      "lastUpdated": "2026-06-03T00:52:17.042Z"
     }
   },
   {
