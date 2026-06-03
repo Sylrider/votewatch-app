@@ -198,8 +198,9 @@ async function main() {
       const chamber: Chamber = latestTerm?.chamber === 'Senate' ? 'Senate' : 'House';
       const since = member.terms[0]?.startYear || 2000;
 
-      // 1. Fetch votes from Congress.gov
-      const votes = await fetchMemberVotes(member.bioguideId, CONGRESS_API_KEY, 50);
+      // 1. Fetch real roll-call votes (House Clerk / Senate LIS)
+      const __lastName = (member.name || '').split(',')[0].trim();
+      const votes = await fetchMemberVotes(member.bioguideId, chamber, __lastName, member.state);
       await sleep(RATE_LIMIT_MS);
 
       // 2. Find FEC candidate ID
