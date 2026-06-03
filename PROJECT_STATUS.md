@@ -574,3 +574,5 @@ PREVENTION RULE (binding): all source files MUST stay pure ASCII. Use ASCII toke
 instead of typographic glyphs/emoji. Never paste multi-byte characters into the web editor.
 
 Result: watchgov.org home, methodology, and lobbies pages all verified 0 mojibake.
+
+(redeploy trigger after Cloudflare build-queue settled)
