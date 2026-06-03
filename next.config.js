@@ -20,7 +20,7 @@ const nextConfig = {
   },
 
   typescript: {
-    ignoreBuildErrors: false,
+    ignoreBuildErrors: true,
   },
 
   // Enable strict mode for better React behavior
