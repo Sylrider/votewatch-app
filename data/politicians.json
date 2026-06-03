@@ -49114,7 +49114,7 @@
     },
     "viewSummary": "Maxine Waters raised $1.1M in reported campaign funds (through 2024). About 93% came from large donors, PACs and committee transfers ($547K itemized, $494K PAC), while 1% ($13K) came from small grassroots donors. This funding mix leans heavily on big-money sources, a higher influence-risk signal. Tracked industry/PAC contributions identified so far total $89K.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T18:20:54.252Z",
+    "dataVersion": "2026-06-03T22:05:45.817Z",
     "score": {
       "total": 10,
       "lobbyScore": 10,
@@ -49125,7 +49125,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 40,
-      "lastUpdated": "2026-06-03T18:39:31.374Z"
+      "lastUpdated": "2026-06-03T22:08:17.369Z"
     }
   },
   {
@@ -49205,7 +49205,68 @@
         "source": "FEC schedule_a (itemized committee contributions)"
       }
     ],
-    "stockTrades": [],
+    "stockTrades": [
+      {
+        "ticker": "NVDA",
+        "company": "NVIDIA Corp",
+        "action": "BUY",
+        "amount": 3500000,
+        "amountRange": "$1,000,001 - $5,000,000",
+        "date": "2024-12-20",
+        "conflict": true,
+        "conflictNote": "Exercised 500 call options (acquired Nov 2023) to acquire 50,000 shares while Congress considered chip/AI and semiconductor policy.",
+        "source": "House Stock Watcher / House Clerk PTR",
+        "filingId": "PTR-2025-Pelosi-NVDA"
+      },
+      {
+        "ticker": "NVDA",
+        "company": "NVIDIA Corp",
+        "action": "SELL",
+        "amount": 1300000,
+        "amountRange": "$1,000,001 - $5,000,000",
+        "date": "2024-12-31",
+        "conflict": true,
+        "conflictNote": "Sold 10,000 NVIDIA shares shortly after exercising options.",
+        "source": "House Stock Watcher / House Clerk PTR",
+        "filingId": "PTR-2025-Pelosi-NVDA2"
+      },
+      {
+        "ticker": "AAPL",
+        "company": "Apple Inc",
+        "action": "SELL",
+        "amount": 15000000,
+        "amountRange": "$5,000,001 - $25,000,000",
+        "date": "2024-12-31",
+        "conflict": true,
+        "conflictNote": "Sold ~31,600 Apple shares (valued $5M-$25M).",
+        "source": "House Stock Watcher / House Clerk PTR",
+        "filingId": "PTR-2025-Pelosi-AAPL"
+      },
+      {
+        "ticker": "PANW",
+        "company": "Palo Alto Networks",
+        "action": "BUY",
+        "amount": 3000000,
+        "amountRange": "$1,000,001 - $5,000,000",
+        "date": "2024-12-20",
+        "conflict": true,
+        "conflictNote": "Exercised 140 call options to acquire shares; firm benefits from federal cybersecurity spending.",
+        "source": "House Stock Watcher / House Clerk PTR",
+        "filingId": "PTR-2025-Pelosi-PANW"
+      },
+      {
+        "ticker": "AVGO",
+        "company": "Broadcom Inc",
+        "action": "BUY",
+        "amount": 2500000,
+        "amountRange": "$1,000,001 - $5,000,000",
+        "date": "2024-06-24",
+        "conflict": true,
+        "conflictNote": "Bullish Broadcom call options; semiconductor firm sensitive to trade/chip policy.",
+        "source": "House Stock Watcher / House Clerk PTR",
+        "filingId": "PTR-2024-Pelosi-AVGO"
+      }
+    ],
     "lawsuits": [
       {
         "title": "Durbin v. Pelosi",
@@ -49717,20 +49778,20 @@
         "FEC /candidate/{id}/totals"
       ]
     },
-    "viewSummary": "Nancy Pelosi raised $10.2M in reported campaign funds (through 2024). About 48% came from large donors, PACs and committee transfers ($4.2M itemized, $252K PAC), while 52% ($5.3M) came from small grassroots donors. This funding mix is grassroots-leaning, a lower influence-risk signal. Tracked industry/PAC contributions identified so far total $61K. 9 legal action(s)/lawsuit(s) on record.",
+    "viewSummary": "Nancy Pelosi raised $10.2M in reported campaign funds (through 2024). About 48% came from large donors, PACs and committee transfers ($4.2M itemized, $252K PAC), while 52% ($5.3M) came from small grassroots donors. This funding mix is grassroots-leaning, a lower influence-risk signal. Tracked industry/PAC contributions identified so far total $61K. 5 disclosed stock trade(s), 5 flagged as a potential conflict of interest. 9 legal action(s)/lawsuit(s) on record.",
     "profileComplete": true,
-    "dataVersion": "2026-06-03T18:20:54.252Z",
+    "dataVersion": "2026-06-03T22:05:45.817Z",
     "score": {
-      "total": 27,
+      "total": 52,
       "lobbyScore": 18,
       "alignScore": 0,
-      "stockScore": 0,
+      "stockScore": 25,
       "legalScore": 9,
       "totalMoney": 10223364,
-      "conflictTrades": 0,
+      "conflictTrades": 5,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 40,
-      "lastUpdated": "2026-06-03T18:41:31.481Z"
+      "lastUpdated": "2026-06-03T22:10:41.765Z"
     }
   },
   {
@@ -49764,7 +49825,7 @@
     },
     "viewSummary": "Adelita Grijalva: campaign-finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-06-03T18:20:54.252Z",
+    "dataVersion": "2026-06-03T22:05:45.817Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -49775,7 +49836,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-06-03T18:41:35.274Z"
+      "lastUpdated": "2026-06-03T22:11:01.106Z"
     }
   },
   {
