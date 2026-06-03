@@ -36,6 +36,29 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Assert source files are pure ASCII (prevent mojibake)
+        run: |
+          node -e '
+            const fs=require("fs"),path=require("path");
+            const exts=[".tsx",".ts",".jsx",".js",".css"];
+            const skip=["node_modules",".next",".git","data"];
+            let bad=[];
+            function walk(d){
+              for(const e of fs.readdirSync(d,{withFileTypes:true})){
+                if(skip.includes(e.name))continue;
+                const p=path.join(d,e.name);
+                if(e.isDirectory())walk(p);
+                else if(exts.includes(path.extname(e.name))){
+                  const t=fs.readFileSync(p,"utf8");
+                  for(let i=0;i<t.length;i++){if(t.codePointAt(i)>126){bad.push(p+" non-ASCII at "+i);break;}}
+                }
+              }
+            }
+            walk(".");
+            if(bad.length){console.error("Non-ASCII in source:\n"+bad.join("\n"));process.exit(1);}
+            console.log("ASCII check passed.");
+          '
+
       - name: Install dependencies
         run: npm install
 
