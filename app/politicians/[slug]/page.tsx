@@ -244,7 +244,7 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
           <h2 className="section-title">Stock Trades While in Office</h2>
           <div className="data-table">
             {p.stockTrades.length === 0
-              ? <div className="p-5 text-sm" style={{ color: '#9ca3af' }}>{p.notApplicable?.stockTrades ? 'Not applicable - executive-branch officials do not file congressional stock disclosures.' : '- No stock trades on record with identifiable conflicts.'}</div>
+              ? <div className="p-5 text-sm" style={{ color: '#9ca3af' }}>{p.notApplicable?.stockTrades ? 'Not applicable - executive-branch officials do not file congressional stock disclosures.' : 'Stock-trade disclosures are not currently available from an authoritative free data source; this section will populate when one is connected.'}</div>
               : p.stockTrades.map((t, i) => (
                 <div key={i} className="data-row grid gap-3 items-start" style={{ gridTemplateColumns: '56px 1fr 90px 100px' }}>
                   <div>
