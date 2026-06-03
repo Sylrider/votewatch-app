@@ -493,3 +493,22 @@ writing, or the next build breaks on a TS error. (Caught in validation before co
   89478+16414. Thune prior 41pct gap now captured as otherMoney 1711236 (reconciles).
 - PROCESS: run the Refresh Data Pipeline workflow in 25-member windows (start=N, count=25, force=1),
   verify reconciliation + Cloudflare success after each, then advance start += 25 through all 229.
+
+
+## FULL ROSTER REFRESH COMPLETE (2026-06-02) - all 9 batches done
+- Processed the entire roster in nine 25-member windows (start=0,25,50,75,100,125,150,175,200; the
+  last used count=29 to cover the tail). Every batch ran with force=1 on the fixed pipeline
+  (2024 cycle + otherMoney bucket).
+- Bot commits: 9650f53, 5c4b375, 70be68e, 6f12bc0, 491c20b, 65ea911, edaed43, 997ff10, 477eb75.
+- WHOLE-DATASET VERIFICATION (commit 477eb75): 230 records total; 214 have FEC funding and ALL
+  reconcile (131 exact, 83 within +/-3 cents of integer rounding, 0 broken). 16 have no funding
+  available (recent special-election members / appointees) and are correctly marked unavailable -
+  NOT fabricated as USD0. 213 are on the 2024 cycle; 1 (gillen-laura-ne) shows a residual 2023
+  filing of USD5 (negligible off-cycle edge case).
+- Independent validation: the pipeline's FEC-sourced Pelosi now yields smallDonorShare 0.522 /
+  bigMoneyShare 0.476, closely matching the authoritative 53.39pct/46.61pct split - confirming the
+  2024-cycle fix and reconciliation are sound.
+- Each batch's bot commit deployed to Cloudflare Pages successfully; live site reflects refreshed
+  funding, votes, lawsuits, stocks and scores for the full federal roster.
+- NOTE: 16 members without funding are mostly recent newcomers with no completed 2024-cycle FEC
+  filings yet; revisit on a future refresh once their committees report.
