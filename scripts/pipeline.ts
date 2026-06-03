@@ -233,6 +233,23 @@ async function main() {
       // Build politician object
       const politicianId = generateId(member.name, member.state, chamber);
 
+      // --- MERGE GUARD: never overwrite existing good data with an empty/failed fetch. ---
+      // Only adopt a freshly fetched array when it actually contains data ("better data").
+      // Otherwise fall back to whatever the previous prod record already had.
+      const __prev = existingById.get(politicianId);
+      const __nonEmpty = (a: unknown): a is unknown[] => Array.isArray(a) && a.length > 0;
+      const __pick = <T,>(fresh: T[] | undefined, old: T[] | undefined): T[] =>
+        __nonEmpty(fresh) ? (fresh as T[]) : (Array.isArray(old) ? old : (Array.isArray(fresh) ? fresh : []));
+      const mVotes = __pick(votes, __prev && __prev.votes);
+      const mStockTrades = __pick(stockTrades, __prev && __prev.stockTrades);
+      const mLawsuits = __pick(lawsuits, __prev && __prev.lawsuits);
+      const mLobbyMoney = __pick(lobbyMoney, __prev && __prev.lobbyMoney);
+      // Funding: keep fresh only if it reports real money raised; else fall back to prior.
+      const __freshRaised = funding && typeof (funding as { totalRaised?: number }).totalRaised === 'number'
+        ? (funding as { totalRaised: number }).totalRaised : 0;
+      const mFunding = __freshRaised > 0 ? funding : ((__prev && __prev.funding) || funding);
+
+
       let politician: Politician = {
         id: politicianId,
         name: formatName(member.name),
@@ -244,19 +261,19 @@ async function main() {
         bioguideId: member.bioguideId,
         fecCandidateId: fecId || undefined,
         imageUrl: member.imageUrl,
-        lobbyMoney,
-        stockTrades,
-        lawsuits,
-        votes,
-        funding,
+        lobbyMoney: mLobbyMoney,
+        stockTrades: mStockTrades,
+        lawsuits: mLawsuits,
+        votes: mVotes,
+        funding: mFunding,
         viewSummary: buildViewSummary({
           name: formatName(member.name),
-          funding,
-          lobbyMoney,
-          stockTrades,
-          lawsuits,
+          funding: mFunding,
+          lobbyMoney: mLobbyMoney,
+          stockTrades: mStockTrades,
+          lawsuits: mLawsuits,
         }),
-        profileComplete: Boolean((Array.isArray(lobbyMoney)&&lobbyMoney.length>0)||(Array.isArray(stockTrades)&&stockTrades.length>0)||(Array.isArray(lawsuits)&&lawsuits.length>0)),
+        profileComplete: Boolean((Array.isArray(mLobbyMoney)&&mLobbyMoney.length>0)||(Array.isArray(mStockTrades)&&mStockTrades.length>0)||(Array.isArray(mLawsuits)&&mLawsuits.length>0)),
         dataVersion: run.startedAt,
         score: {
           total: 0, lobbyScore: 0, alignScore: 0, stockScore: 0, legalScore: 0,
