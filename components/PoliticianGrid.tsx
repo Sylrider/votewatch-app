@@ -84,7 +84,7 @@ export default function PoliticianGrid({ politicians }: { politicians: Politicia
       >
         <input
           type="search"
-          placeholder="Search name or stateâ¦"
+          placeholder="Search name or state..."
           value={search}
           onChange={e => { setSearch(e.target.value); setVisible(PAGE_SIZE); }}
           aria-label="Search politicians"
@@ -97,7 +97,7 @@ export default function PoliticianGrid({ politicians }: { politicians: Politicia
         <Select value={party}   onChange={v => { setParty(v);  setVisible(PAGE_SIZE); }} label="All Parties"
           options={[['all','All Parties'],['R','Republican'],['D','Democrat'],['I','Independent']]} />
         <Select value={sortBy}  onChange={v => setSortBy(v)}  label="Sort"
-          options={[['score','Sort: Risk Score'],['money','Sort: Lobby Money'],['legal','Sort: Legal Actions'],['state','Sort: State AâZ'],['name','Sort: Name AâZ']]} />
+          options={[['score','Sort: Risk Score'],['money','Sort: Lobby Money'],['legal','Sort: Legal Actions'],['state','Sort: State A-Z'],['name','Sort: Name A-Z']]} />
         <span className="ml-auto text-xs self-center" style={{ color: '#64748b' }} aria-live="polite">
           {filtered.length} officials
         </span>
@@ -124,7 +124,7 @@ export default function PoliticianGrid({ politicians }: { politicians: Politicia
               borderRadius: 6, cursor: 'pointer',
             }}
           >
-            Load More â showing {Math.min(visible, filtered.length)} of {filtered.length}
+            Load More - showing {Math.min(visible, filtered.length)} of {filtered.length}
           </button>
         </div>
       )}
@@ -197,7 +197,7 @@ function PoliticianCard({ p }: { p: Politician }) {
                 <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 19, fontWeight: 700, color: '#e2e8f0', lineHeight: 1.15 }} itemProp="name">
                   {p.name}
                 </h2>
-                <p style={{ fontSize: 11, color: '#64748b', marginTop: 2 }}>{p.title} Â· {p.state} Â· since {p.since}</p>
+                <p style={{ fontSize: 11, color: '#64748b', marginTop: 2 }}>{p.title} - {p.state} - since {p.since}</p>
               </div>
             </div>
             <span
@@ -232,8 +232,8 @@ function PoliticianCard({ p }: { p: Politician }) {
               {[
                 { label: 'Lobby $',    val: p.score?.lobbyScore || 0, max: 25, color: '#f97316' },
                 { label: 'Vote Align', val: p.score?.alignScore || 0, max: 35, color: '#ef4444' },
-                { label: 'Stock â¡',   val: p.score?.stockScore || 0, max: 25, color: '#eab308' },
-                { label: 'Legal âï¸',   val: p.score?.legalScore || 0, max: 15, color: '#a855f7' },
+                { label: 'Stock',   val: p.score?.stockScore || 0, max: 25, color: '#eab308' },
+                { label: 'Legal',   val: p.score?.legalScore || 0, max: 15, color: '#a855f7' },
               ].map(item => (
                 <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
                   <span style={{ fontSize: 10, color: '#64748b', width: 66, flexShrink: 0 }}>{item.label}</span>
@@ -270,7 +270,7 @@ function PoliticianCard({ p }: { p: Politician }) {
               <strong style={{ color: '#e2e8f0' }}>{fmtMoney(totalMoney)}</strong> lobby
             </span>
             <span style={{ fontSize: 11, color: '#64748b' }}>
-              <strong style={{ color: conflicts > 0 ? '#f97316' : '#e2e8f0' }}>{conflicts}</strong> stockâ¡
+              <strong style={{ color: conflicts > 0 ? '#f97316' : '#e2e8f0' }}>{conflicts}</strong> stock
             </span>
             <span style={{ fontSize: 11, color: '#64748b' }}>
               <strong style={{ color: legal > 0 ? '#f97316' : '#e2e8f0' }}>{legal}</strong> legal
@@ -281,7 +281,7 @@ function PoliticianCard({ p }: { p: Politician }) {
             letterSpacing: '1.2px', textTransform: 'uppercase', color: '#f59e0b',
             padding: '4px 10px', border: '1px solid rgba(245,158,11,.3)', borderRadius: 4,
             background: 'rgba(245,158,11,.07)',
-          }}>Profile â</span>
+          }}>Profile -></span>
         </div>
       </article>
     </Link>
