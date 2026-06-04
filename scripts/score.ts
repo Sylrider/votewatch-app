@@ -121,7 +121,7 @@ function calcLegalScore(lawsuits: Lawsuit[]): number {
 // --- Vote alignment checker ---
 
 export function isAlignedWithDonors(vote: Vote, donorLobbyIds: Set<string>): boolean {
-  const billLower = (vote.bill || '').toLowerCase();
+  const billLower = ((vote.bill || '') + ' ' + (vote.note || '')).toLowerCase();
 
   for (const [keyword, positions] of Object.entries(LOBBY_POSITIONS)) {
     if (!billLower.includes(keyword)) continue;
