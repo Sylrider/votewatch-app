@@ -315,6 +315,17 @@ async function main() {
 
   // (politicians.json is written by flushAndCommit below, with merged data.)
 
+  // Rescore any existing official not processed this run (e.g. executive seed
+  // and other off-roster records) so score-weight changes apply everywhere
+  // without a full re-fetch. Small, idempotent pass over merged data.
+  {
+    const processedIds = new Set(politicians.map((p) => p.id));
+    for (const [rid, rp] of existingById) {
+      if (processedIds.has(rid)) continue;
+      existingById.set(rid, { ...rp, score: calculateScore(annotateVoteAlignment(rp)) });
+    }
+  }
+
   // Final flush: commit any remaining officials (< BATCH_SIZE).
   await flushAndCommit('final batch', true);
 
