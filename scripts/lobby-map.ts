@@ -112,13 +112,47 @@ const LOBBY_META: Record<string, LobbyClassification> = {
   agribusiness:{ id: 'agribusiness',name: 'Agribusiness (Farm Bureau)',                category: 'Agriculture',                  color: '#84cc16' },
   telecom:     { id: 'telecom',     name: 'Telecommunications Industry',              category: 'Telecom & Media',              color: '#ec4899' },
   crypto:      { id: 'crypto',      name: 'Cryptocurrency Industry',                  category: 'Cryptocurrency',               color: '#f97316' },
+  insurance:   { id: 'insurance',   name: 'Insurance Industry',                       category: 'Insurance',                    color: '#0d9488' },
+  energy:      { id: 'energy',      name: 'Electric Utilities & Energy',              category: 'Utilities / Energy',           color: '#ca8a04' },
+  transport:   { id: 'transport',   name: 'Transportation & Airlines',                category: 'Transportation',               color: '#4f46e5' },
+  lawyers:     { id: 'lawyers',     name: 'Lawyers & Law Firms',                      category: 'Legal / Lawyers',              color: '#9333ea' },
+  retail:      { id: 'retail',      name: 'Retail & Consumer Goods',                  category: 'Retail / Consumer',            color: '#e11d48' },
+  building:    { id: 'building',    name: 'Construction & Building Trades',           category: 'Construction',                 color: '#b45309' },
+  leadership:  { id: 'leadership',  name: 'Leadership PACs & Party Committees',        category: 'Leadership / Party PAC',        color: '#475569' },
+  ideology:    { id: 'ideology',    name: 'Ideological / Single-Issue Groups',        category: 'Ideological / Single-Issue',    color: '#db2777' },
+  othercorp:   { id: 'othercorp',   name: 'Other PAC & Corporate Money',              category: 'Other Organized Money',         color: '#64748b' },
 };
 
+// Second-tier FEC-style sector patterns. Applied only when no specific named
+// archetype above matched, so that the broad universe of PAC money is bucketed
+// into a sector instead of being dropped on the floor.
+const SECTOR_PATTERNS: Array<{ patterns: RegExp[]; lobbyId: string }> = [
+  { patterns: [/insurance/i, /\bins\b.*pac/i, /mutual.*(life|insurance)/i, /property.*casualty/i], lobbyId: 'insurance' },
+  { patterns: [/electric/i, /\butilit/i, /\bpower\b/i, /\benergy\b/i, /edison/i, /duke energy/i, /exelon/i, /southern co/i], lobbyId: 'energy' },
+  { patterns: [/airlin/i, /\bair\b.*(line|transport)/i, /railroad/i, /\brail\b/i, /trucking/i, /freight/i, /\bups\b/i, /fedex/i, /\bdelta\b/i, /united air/i, /maritime/i, /shipping/i], lobbyId: 'transport' },
+  { patterns: [/\blaw\b/i, /attorney/i, /\bllp\b/i, /trial lawyer/i, /litigat/i, /\besq\b/i, /\blegal\b/i], lobbyId: 'lawyers' },
+  { patterns: [/retail/i, /\bstores?\b/i, /walmart/i, /\bamazon\b/i, /restaurant/i, /\bfood\b.*(service|chain)/i, /grocer/i, /consumer/i, /\bmcdonald/i, /\bcoca.?cola/i, /pepsi/i], lobbyId: 'retail' },
+  { patterns: [/construct/i, /\bbuild/i, /contractors?/i, /carpenters?/i, /plumbers?/i, /electricians?/i, /\bcement\b/i, /\bsteel\b.*(work|construct)/i, /engineers?/i], lobbyId: 'building' },
+  { patterns: [/for congress/i, /victory fund/i, /leadership pac/i, /\bfor\b.*\bsenate\b/i, /\bpac\b.*\b(committee|party)\b/i, /republican (national|congressional|senatorial)/i, /democratic (national|congressional|senatorial)/i, /\bdccc\b/i, /\bnrcc\b/i, /\bdscc\b/i, /\bnrsc\b/i], lobbyId: 'leadership' },
+  { patterns: [/\bclub for growth\b/i, /emily.?s list/i, /planned parenthood/i, /right to life/i, /\bsierra club\b/i, /human rights/i, /\baclu\b/i, /conservative/i, /progressive/i, /\bliberty\b/i, /freedom\b.*\b(works|fund|pac)\b/i], lobbyId: 'ideology' },
+];
+
 export function classifyLobby(pacName: string): LobbyClassification | null {
+  // Tier 1: specific named lobby archetypes (NRA, PhRMA, AIPAC, ...).
   for (const { patterns, lobbyId } of PAC_PATTERNS) {
     if (patterns.some(p => p.test(pacName))) {
       return LOBBY_META[lobbyId] || null;
     }
+  }
+  // Tier 2: broad FEC-style sector buckets.
+  for (const { patterns, lobbyId } of SECTOR_PATTERNS) {
+    if (patterns.some(p => p.test(pacName))) {
+      return LOBBY_META[lobbyId] || null;
+    }
+  }
+  // Tier 3: catch-all so no organized PAC money is silently dropped.
+  if (pacName && /\b(pac|committee|fund|association|assn|inc|corp|llc|union|political)\b/i.test(pacName)) {
+    return LOBBY_META['othercorp'] || null;
   }
   return null;
 }
