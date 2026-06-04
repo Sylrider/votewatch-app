@@ -18,11 +18,11 @@ async function get(path: string, key: string, params: Record<string, string> = {
   Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v));
 
   const res = await fetch(url.toString());
-  if (!res.ok) throw new Error(`Congress.gov ${path} â HTTP ${res.status}`);
+  if (!res.ok) throw new Error(`Congress.gov ${path} Ã¢ÂÂ HTTP ${res.status}`);
   return res.json();
 }
 
-// âââ Members ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ Members Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 
 export async function fetchAllMembers(apiKey: string): Promise<CongressMember[]> {
   const members: CongressMember[] = [];
@@ -63,18 +63,12 @@ export async function fetchAllMembers(apiKey: string): Promise<CongressMember[]>
   return members;
 }
 
-// âââ Voting Records âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ Voting Records Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 
 // House roll-call source: clerk.house.gov/evs/{year}/roll{NNN}.xml (name-id == bioguideId)
 // Senate roll-call source: senate.gov LIS vote_menu + per-vote XML (matched by last name + state)
 const HOUSE_MAX_ROLLS = 517;   // 118th Congress, 2nd session (2024) had roll calls 1..517
-const VOTES_PER_MEMBER = 40;
-
-// Subjects where organized donor money tends to take a clear position. Used to
-// give donor-relevant roll calls priority retention so the alignment pillar has
-// real signal instead of only procedural / naming votes.
-const DONOR_TOPIC_RE = /(israel|gaza|aipac|foreign aid|drug pric|prescription|insulin|medicare|medicaid|pharmaceutical|firearm|\bgun\b|second amendment|background check|climate|emission|fossil|drilling|pipeline|offshore|\boil\b|\bgas\b|energy|carbon|minimum wage|union|collective bargain|wall street|dodd.?frank|\bbank\b|crypto|digital asset|securities|tax cut|corporate tax|defense (approp|budget|author)|\bndaa\b|pentagon|tariff|trade agreement|immigration|border|abortion|reproductive)/i;
-   // most-recent roll calls captured per member (keeps JSON sane)
+const VOTES_PER_MEMBER = 40;   // most-recent roll calls captured per member (keeps JSON sane)
 const HOUSE_YEAR = 2024;
 const SENATE_CONGRESS = 118;
 const SENATE_SESSION = 2;
@@ -120,15 +114,7 @@ async function buildHouseCache(): Promise<Map<string, Vote[]>> {
     while ((mm = re.exec(xml)) !== null) {
       const bioguide = mm[1];
       const arr = cache.get(bioguide) || [];
-      const isDonorTopic = DONOR_TOPIC_RE.test(`${desc || ''} ${question || ''} ${billLabel || ''}`);
-      if (arr.length >= VOTES_PER_MEMBER) {
-        // Slots are full. A donor-relevant roll call may still evict the oldest
-        // non-donor vote so the alignment pillar keeps real signal.
-        if (!isDonorTopic) continue;
-        const victim = arr.findIndex(v => !DONOR_TOPIC_RE.test(`${v.note || ''} ${v.bill || ''}`));
-        if (victim === -1) continue;
-        arr.splice(victim, 1);
-      }
+      if (arr.length >= VOTES_PER_MEMBER) continue;
       arr.push({
         bill: billLabel,
         billId: legisNum && legisNum !== 'QUORUM' ? legisNum.replace(/\s+/g, '') : undefined,
@@ -143,6 +129,53 @@ async function buildHouseCache(): Promise<Map<string, Vote[]>> {
     }
     await sleep(60);
   }
+  // Targeted second pass: a curated set of donor-relevant 118th Congress (2024)
+  // House roll calls (Israel security supplementals, carbon, securities, labor,
+  // etc.) that map to organized-donor positions. The most-recent-40 walk above
+  // is procedural-heavy, so these specific votes give the alignment pillar real
+  // signal about whether members vote with the money. Cheap (~12 extra fetches).
+  const DONOR_ROLLS = [38, 44, 97, 133, 141, 142, 152, 156, 189, 216, 217];
+  const DONOR_VOTE_CAP = 14; // max donor votes added on top of the recency set
+  for (const dn of DONOR_ROLLS) {
+    const roll = String(dn).padStart(3, '0');
+    let xml: string;
+    try {
+      const res = await fetch(`https://clerk.house.gov/evs/${HOUSE_YEAR}/roll${roll}.xml`);
+      if (!res.ok) continue;
+      xml = await res.text();
+    } catch {
+      continue;
+    }
+    const legisNum = getTag(xml, 'legis-num');
+    const question = getTag(xml, 'vote-question');
+    const desc = getTag(xml, 'vote-desc');
+    const date = getTag(xml, 'action-date');
+    const billLabel = legisNum ? (legisNum === 'QUORUM' ? legisNum : `${legisNum}`) : (question || `Roll Call ${dn}`);
+    const re = /<recorded-vote>\s*<legislator name-id="([^"]+)"[^>]*>[^<]*<\/legislator>\s*<vote>([^<]*)<\/vote>/g;
+    let mm: RegExpExecArray | null;
+    while ((mm = re.exec(xml)) !== null) {
+      const bioguide = mm[1];
+      const arr = cache.get(bioguide) || [];
+      // Skip if this donor roll is already captured for the member.
+      if (arr.some(v => v.rollCallNumber === dn && v.congressNumber === 118)) continue;
+      const donorCount = arr.filter(v => (v as any).__donor).length;
+      if (donorCount >= DONOR_VOTE_CAP) continue;
+      arr.push({
+        bill: billLabel,
+        billId: legisNum ? (legisNum === 'QUORUM' ? legisNum : legisNum.replace(/\s/g, '')) : undefined,
+        date,
+        vote: normaliseVote(mm[2]),
+        alignsWithDonors: false,
+        note: desc || question,
+        congressNumber: 118,
+        rollCallNumber: dn,
+        __donor: true,
+      } as any);
+      cache.set(bioguide, arr);
+    }
+    await sleep(60);
+  }
+
   __houseCache = cache;
   console.log(`[votes] House cache built: ${cache.size} members from ${HOUSE_YEAR} roll calls.`);
   return cache;
@@ -182,15 +215,7 @@ async function buildSenateCache(): Promise<Map<string, Vote[]>> {
       if (!last || !state) continue;
       const key = `${last}|${state}`;
       const arr = cache.get(key) || [];
-      const isDonorTopic = DONOR_TOPIC_RE.test(`${issue || ''} ${title || ''} ${question || ''}`);
-      if (arr.length >= VOTES_PER_MEMBER) {
-        // Slots are full. A donor-relevant roll call may still evict the oldest
-        // non-donor vote so the alignment pillar keeps real signal.
-        if (!isDonorTopic) continue;
-        const victim = arr.findIndex(v => !DONOR_TOPIC_RE.test(`${v.note || ''} ${v.bill || ''}`));
-        if (victim === -1) continue;
-        arr.splice(victim, 1);
-      }
+      if (arr.length >= VOTES_PER_MEMBER) continue;
       arr.push({
         bill: title || question || `Senate Vote ${n}`,
         billId: undefined,
@@ -248,7 +273,7 @@ export async function fetchMemberVotes(
   }
 }
 
-// âââ Bills ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ Bills Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 
 export async function fetchBillDetails(congress: number, billType: string, billNumber: string, apiKey: string) {
   try {
@@ -259,7 +284,7 @@ export async function fetchBillDetails(congress: number, billType: string, billN
   }
 }
 
-// âââ Helpers âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ Helpers Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 
 function formatBillName(v: any): string {
   if (v.bill?.title) return v.bill.title;
