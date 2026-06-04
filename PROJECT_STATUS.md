@@ -214,6 +214,24 @@ and power statistically overlap; it does NOT assert illegal activity.
 
 ## 13. CHANGELOG (each session: add a dated line here after doing work)
 
+- 2026-06-04 (chrome ext): SCORE REBALANCED to four equal 25% pillars + full-roster recompute.
+  * scripts/score.ts (commit de19e6e): alignment `* 35` -> `* 25`; legal `Math.min(15, total)` ->
+    `Math.min(25, total * (25 / 15))`. Each pillar now caps at 25 (lobby/votes/stock/legal), total 100.
+    This was a 3-line surgical edit - no rewrite. To rebalance in future, change only these caps in score.ts
+    and run the pipeline with force=1; data is preserved by the richer-wins merge guard.
+  * Recomputed ALL 537 officials onto the new weights via force=1 windows (start=0/75/150/228), each run
+    self-commits every 25. Verified: 537/537 scored 2026-06-04, pillars cap at 25, legal can exceed old 15
+    (e.g. Garamendi 17). Data preservation held every batch (Booker/Schumer/McConnell/Grassley/Waters/Crenshaw
+    still 40 votes; Pelosi still 5 stockTrades, total 58).
+  * scripts/pipeline.ts (commit 5419df4): added a small idempotent pass before the final flush that rescoes
+    any EXISTING official not processed this run (e.g. the executive seed, which has no bioguideId and is not
+    in the Congress roster). This brought Donald J. Trump onto the new weights (legal 15->25, total 32->42)
+    and makes weight changes self-maintaining for off-roster records.
+  * Roster confirmed at 537 (full House + Senate + delegates + executive seed), not ~230 as older notes said.
+  * KNOWN ISSUE (pre-existing, NOT caused by rebalance): alignScore = 0 for all members because the FEC
+    itemized-lobby migration changed lobbyId values so they no longer match LOBBY_POSITIONS keys. The votes
+    pillar (now a full 25%) therefore contributes 0 until lobbyIds are remapped to the keyword map. Next task.
+
 - 2026-06-03 (chrome ext): VOTES + LAWSUITS + MERGE-GUARD shipped and VERIFIED (batch 0-25, force=1).
   * MERGE GUARD (scripts/pipeline.ts): per category (votes/stockTrades/lawsuits/lobbyMoney/funding) fresh data
     only overwrites when NON-EMPTY; empty/failed fetch falls back to existing prod record. No destructive wipes.
