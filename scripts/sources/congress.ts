@@ -18,11 +18,11 @@ async function get(path: string, key: string, params: Record<string, string> = {
   Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v));
 
   const res = await fetch(url.toString());
-  if (!res.ok) throw new Error(`Congress.gov ${path} → HTTP ${res.status}`);
+  if (!res.ok) throw new Error(`Congress.gov ${path} â HTTP ${res.status}`);
   return res.json();
 }
 
-// ─── Members ──────────────────────────────────────────────────────────────────
+// âââ Members ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 export async function fetchAllMembers(apiKey: string): Promise<CongressMember[]> {
   const members: CongressMember[] = [];
@@ -63,12 +63,18 @@ export async function fetchAllMembers(apiKey: string): Promise<CongressMember[]>
   return members;
 }
 
-// ─── Voting Records ───────────────────────────────────────────────────────────
+// âââ Voting Records âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 // House roll-call source: clerk.house.gov/evs/{year}/roll{NNN}.xml (name-id == bioguideId)
 // Senate roll-call source: senate.gov LIS vote_menu + per-vote XML (matched by last name + state)
 const HOUSE_MAX_ROLLS = 517;   // 118th Congress, 2nd session (2024) had roll calls 1..517
-const VOTES_PER_MEMBER = 40;   // most-recent roll calls captured per member (keeps JSON sane)
+const VOTES_PER_MEMBER = 40;
+
+// Subjects where organized donor money tends to take a clear position. Used to
+// give donor-relevant roll calls priority retention so the alignment pillar has
+// real signal instead of only procedural / naming votes.
+const DONOR_TOPIC_RE = /(israel|gaza|aipac|foreign aid|drug pric|prescription|insulin|medicare|medicaid|pharmaceutical|firearm|\bgun\b|second amendment|background check|climate|emission|fossil|drilling|pipeline|offshore|\boil\b|\bgas\b|energy|carbon|minimum wage|union|collective bargain|wall street|dodd.?frank|\bbank\b|crypto|digital asset|securities|tax cut|corporate tax|defense (approp|budget|author)|\bndaa\b|pentagon|tariff|trade agreement|immigration|border|abortion|reproductive)/i;
+   // most-recent roll calls captured per member (keeps JSON sane)
 const HOUSE_YEAR = 2024;
 const SENATE_CONGRESS = 118;
 const SENATE_SESSION = 2;
@@ -114,7 +120,15 @@ async function buildHouseCache(): Promise<Map<string, Vote[]>> {
     while ((mm = re.exec(xml)) !== null) {
       const bioguide = mm[1];
       const arr = cache.get(bioguide) || [];
-      if (arr.length >= VOTES_PER_MEMBER) continue;
+      const isDonorTopic = DONOR_TOPIC_RE.test(`${desc || ''} ${question || ''} ${billLabel || ''}`);
+      if (arr.length >= VOTES_PER_MEMBER) {
+        // Slots are full. A donor-relevant roll call may still evict the oldest
+        // non-donor vote so the alignment pillar keeps real signal.
+        if (!isDonorTopic) continue;
+        const victim = arr.findIndex(v => !DONOR_TOPIC_RE.test(`${v.note || ''} ${v.bill || ''}`));
+        if (victim === -1) continue;
+        arr.splice(victim, 1);
+      }
       arr.push({
         bill: billLabel,
         billId: legisNum && legisNum !== 'QUORUM' ? legisNum.replace(/\s+/g, '') : undefined,
@@ -168,7 +182,15 @@ async function buildSenateCache(): Promise<Map<string, Vote[]>> {
       if (!last || !state) continue;
       const key = `${last}|${state}`;
       const arr = cache.get(key) || [];
-      if (arr.length >= VOTES_PER_MEMBER) continue;
+      const isDonorTopic = DONOR_TOPIC_RE.test(`${issue || ''} ${title || ''} ${question || ''}`);
+      if (arr.length >= VOTES_PER_MEMBER) {
+        // Slots are full. A donor-relevant roll call may still evict the oldest
+        // non-donor vote so the alignment pillar keeps real signal.
+        if (!isDonorTopic) continue;
+        const victim = arr.findIndex(v => !DONOR_TOPIC_RE.test(`${v.note || ''} ${v.bill || ''}`));
+        if (victim === -1) continue;
+        arr.splice(victim, 1);
+      }
       arr.push({
         bill: title || question || `Senate Vote ${n}`,
         billId: undefined,
@@ -226,7 +248,7 @@ export async function fetchMemberVotes(
   }
 }
 
-// ─── Bills ────────────────────────────────────────────────────────────────────
+// âââ Bills ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 export async function fetchBillDetails(congress: number, billType: string, billNumber: string, apiKey: string) {
   try {
@@ -237,7 +259,7 @@ export async function fetchBillDetails(congress: number, billType: string, billN
   }
 }
 
-// ─── Helpers ─────────────────────────────────────────────────────────────────
+// âââ Helpers âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 function formatBillName(v: any): string {
   if (v.bill?.title) return v.bill.title;
