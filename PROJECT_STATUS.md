@@ -15,7 +15,7 @@
 > memory. This file is the bridge. The repo is the shared state; this file is the memory.
 > Read first, write last, every time.
 >
-> ;l0Last updated: 2026-06-05 - by: chrome ext (added Sec.14 NEXT STEPS PLAN: 4-axis score relevance + full lobby redo - diagnosis + 6-step plan; no code changes yet)
+> Last updated: 2026-06-05 - by: chrome ext (added Sec.14 NEXT STEPS PLAN: 4-axis score relevance + full lobby redo - diagnosis + 6-step plan; no code changes yet)
 ---
 
 ## 1. WHAT THIS IS
