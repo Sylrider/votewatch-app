@@ -15,8 +15,7 @@
 > memory. This file is the bridge. The repo is the shared state; this file is the memory.
 > Read first, write last, every time.
 >
-> Last updated: 2026-06-02 - by: chrome ext (lawsuits via CourtListener v4 + small-batch rollout)
-
+> ;l0Last updated: 2026-06-05 - by: chrome ext (added Sec.14 NEXT STEPS PLAN: 4-axis score relevance + full lobby redo - diagnosis + 6-step plan; no code changes yet)
 ---
 
 ## 1. WHAT THIS IS
@@ -619,3 +618,56 @@ instead of typographic glyphs/emoji. Never paste multi-byte characters into the 
 Result: watchgov.org home, methodology, and lobbies pages all verified 0 mojibake.
 
 (redeploy trigger after Cloudflare build-queue settled)
+
+
+---
+
+## NEXT STEPS PLAN: 4-AXIS SCORE RELEVANCE + FULL LOBBY REDO [planned 2026-06-05, chrome ext]
+
+GOAL (from user): make all four score axes (lobby/money, votes, lawsuits, stocks) RELEVANT and populated for every politician; do a FULL lobby redo so lobbies align with where politicians actually get money (lobbies/PACs, Super PACs, billionaires/large donors, small donations); ensure each politician shows all 4 scores AND an Independent View summary that reflects the detail of all 4 axes; and surface ALL lobbies (no orphan ids, no missing pages).
+
+### A. DIAGNOSIS (verified live 2026-06-05)
+
+- lobbies.json has ONLY the 9 original seed lobbies (nra, pharma, api, uscc, aipac, finance, defense, labor, nea). Live site renders exactly 9 cards.
+lobby-map.ts classifier (commit 32134ed) now EMITS ~24 lobby ids: the 9 seeds PLUS tech, realestate, health, agribusiness, telecom, crypto, insurance, energy, transport, lawyers, retail, building, leadership, ideology, othercorp. About 15 of these have NO entry in lobbies.json, so money is attached to lobby ids with no page/name/mission. THIS is the "missing lobbies" symptom.
+
+score.ts LOBBY_POSITIONS map only covers ~9 ids (api, pharma, nra, uscc, aipac, defense, finance, telecom). So even when votes are captured, alignment can only fire for politicians whose lobbyMoney maps to one of those ids, so alignScore is 0 for most (Warren 0/40, while Pelosi shows 5/51). Votes pillar is largely irrelevant at scale.
+
+funding model (lib/types.ts) HAS largeDonorMoney, smallDonorMoney, pacMoney, partyMoney, transferMoney, otherMoney, bigMoneyShare, smallDonorShare. It does NOT model Super PAC / outside independent expenditures, nor named billionaire / mega-donors. These two channels the user explicitly wants are absent.
+
+stocks: no live free machine-readable source (Stock Watcher dead / S3 403). stockScore is 0 for everyone except curated (Pelosi 5 conflicts). Pillar largely irrelevant at scale.
+
+lawsuits: CourtListener v4 precision filter works, but most members legitimately have 0 federal named suits, so legalScore is sparse but accurate.
+
+### B. TARGET FUNDING MODEL (the 4 money channels the user named)
+
+Add a top-level funding breakdown on each politician with FOUR money channels, with industry lobbies nested underneath:
+
+Channel 1 Lobbies / PACs: direct PAC + connected-org money (FEC schedule_a by committee), classified into industry lobby ids.
+Channel 2 Super PACs / Outside money: FEC independent expenditures FOR or AGAINST the candidate (schedule_e), by spender and support/oppose. This is the channel that is completely missing today and where AIPAC, crypto Fairshake, etc. actually operate.
+Channel 3 Billionaires / Large donors: itemized individual donations; surface TOP NAMED individual donors (schedule_a is_individual=true, sorted desc), not just an aggregate.
+Channel 4 Small donations: unitemized grassroots (<= $200).
+
+Reconciliation rule stays: large + small + pac + party + transfers + other == receipts. Outside (Super PAC) money is INDEPENDENT spend, tracked separately (NOT part of receipts) and labeled as such.
+
+### C. WORK PLAN (ordered; each step verified then committed)
+
+STEP 1 - Lobby taxonomy redo (data + code share one canonical list). Expand data/lobbies.json to include EVERY id the classifier can emit (add the ~15 missing: tech, realestate, health, agribusiness, telecom, crypto, insurance, energy, transport, lawyers, retail, building, leadership, ideology, othercorp), each with name, shortName, category, color, founded, mission, keyPositions, annualSpend, budget. Make lobby-map.ts LOBBY_META and lobbies.json a single source (generate one from the other) so orphan ids can never recur, and add a check that every classifier id has a lobbies.json entry. Label othercorp as "Other Organized Money" (catch-all, with caveat). ASCII only.
+
+STEP 2 - Make the VOTES axis relevant. Extend score.ts LOBBY_POSITIONS to cover the FULL expanded lobby set (tech, health, crypto, energy, transport, etc.), mapping each to the bills/keywords that lobby actually takes a position on. This is what lets alignment fire beyond the original 9. Confirm vote capture (commit d86ee5e donor-topic retention) feeds enough donor-relevant roll calls, then verify alignScore becomes non-zero for a sample across parties and chambers.
+
+STEP 3 - Make the MONEY axis reflect all 4 channels. Extend types.ts funding with outsideSpending[] (Super PAC IEs: spender, amount, support/oppose, source) and topIndividualDonors[] (name, employer, amount), both clearly labeled and never fabricated (available:false when no data). Add fetchOutsideSpending (FEC schedule_e by candidate) and fetchTopDonors (schedule_a is_individual top N) in fec.ts. Update calcMoneyScore so the score reflects all channels (big-money concentration including outside Super PAC spend), keeping grassroots as a mitigant. Pipeline + FEC_API_KEY only, never DEMO_KEY.
+
+STEP 4 - Make the STOCKS axis relevant. Find a live free machine-readable congressional trades source (House/Senate FD, or a maintained mirror/API; research tab is open). If none is reliable, keep an honest empty state but clearly distinguish "no disclosure source available" from "no trades found" so the pillar does not silently mislead.
+
+STEP 5 - Politician page + 4-axis summary. Ensure every profile renders all 4 pillar scores (already does) AND the funding section shows the 4 channels. Rewrite the viewSummary generator so the Independent View narrates ALL four axes (money mix + named top funders, vote alignment with named donor-aligned bills, stock conflicts, lawsuits), not just finance. Verify lobby detail pages list funded politicians correctly against the new taxonomy.
+
+STEP 6 - Pipeline rerun + verification. Run Refresh Data Pipeline in 25-member windows (start=N, count=25, force=1) across the full roster. The MERGE GUARD must hold (do not wipe curated stocks/votes/lawsuits on an empty fetch). After each batch verify: funding reconciles, alignScore non-zero where expected, no orphan lobby ids, Cloudflare check = success. Spot-check showcase profiles (Pelosi, Trump, Warren, McConnell) end to end.
+
+### D. GUARDRAILS (binding)
+
+ASCII only in all source files (CI guard exists): no em-dash, smart quote, arrow glyph, or emoji. Never fabricate numbers; missing data = available:false / "not applicable", never $0. FEC via pipeline + FEC_API_KEY only, never DEMO_KEY; CourtListener via CL_TOKEN through the pipeline. After EVERY work session: tick Sec.12, add a Sec.13 changelog line, update the Last updated stamp, and commit/push. Assistant is PROHIBITED from creating accounts, entering API keys/secrets, or changing repo permissions; the user must do those.
+
+### E. SUGGESTED COMMIT ORDER
+
+lobbies.json expand, then lobby-map single-source + check, then LOBBY_POSITIONS expand, then types.ts (outsideSpending + topIndividualDonors), then fec.ts fetchers, then score.ts money update, then viewSummary rewrite, then page components, then pipeline force reruns (batched), then full verification.
