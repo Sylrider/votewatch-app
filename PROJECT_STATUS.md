@@ -15,7 +15,7 @@
 > memory. This file is the bridge. The repo is the shared state; this file is the memory.
 > Read first, write last, every time.
 >
-> Last updated: 2026-06-08 - by: chrome ext (verified 25/25/25/25 weighting; redesigned Step 2 to bill-enrichment + topic galaxies; changelog now records the WHY behind choices)
+> Last updated: 2026-06-08 - by: chrome ext (recorded existing repo secrets CONGRESS_API_KEY, FEC_API_KEY, NEXT_PUBLIC_SITE_URL in Sec.11; changelog records the WHY)
 ---
 
 ## 1. WHAT THIS IS
@@ -192,6 +192,13 @@ and power statistically overlap; it does NOT assert illegal activity.
   enters API keys/secrets, makes purchases, anything requiring credentials.
 - No session can enter the user's passwords/payment or run pipelines in a sandbox.
 
+**Repository secrets that ALREADY EXIST (Settings > Secrets and variables > Actions, confirmed 2026-06-08):**
+- `CONGRESS_API_KEY` - Congress.gov / api.data.gov key. Used by the bill-enrichment step to fetch bill titles, CRS summaries, policyArea and legislativeSubjects. EXISTS - do not ask the user to create it again.
+- `FEC_API_KEY` - OpenFEC key for the money axis (committee/candidate finance).
+- `NEXT_PUBLIC_SITE_URL` - public base URL injected at build time.
+- (CL_TOKEN for CourtListener lawsuits is referenced in code; confirm it is also set before the lawsuits step runs.)
+Read every secret in code via process.env.<NAME>; NEVER hardcode a key value. The assistant must never enter or echo secret values - only reference the names.
+
 ---
 
 ## 12. NEXT STEPS (priority order)
@@ -213,6 +220,7 @@ and power statistically overlap; it does NOT assert illegal activity.
 
 ## 13. CHANGELOG (each session: add a dated line here after doing work)
 
+- 2026-06-08 (chrome ext): Recorded the three EXISTING repo secrets (CONGRESS_API_KEY, FEC_API_KEY, NEXT_PUBLIC_SITE_URL) in Sec.11. WHY: avoid re-asking the user to create keys that already exist and make clear the bill-enrichment step can run immediately (CONGRESS_API_KEY confirmed present). Keys are read via process.env, never hardcoded.
 - 2026-06-08 (chrome ext): Verified pillar weighting is correctly 25% each in score.ts (no change needed); documented that align (0.1/25 avg, 525/537 at zero) and stock (536/537 at zero) pillars are flatlined by DATA gaps not weighting. Redesigned Step 2 (see Sec.14) from keyword matching to bill-enrichment (Congress.gov summaries + subject tags, needs CONGRESS_API_KEY user secret) + topic galaxies + honest direction + word-boundary precision fix. Added Sec.15 ENGINEERING HISTORY (what works / what does not / why), including the content-filter workaround (clipboard + synthetic paste event) and large-file aggregation technique. Next: build the bill-enrichment pipeline step and data/bills.json cache.
 
 - 2026-06-08 (chrome ext): STEP 1 COMPLETE (lobby taxonomy redo). Beyond the lobbies.json expansion logged above: exported LOBBY_META from scripts/lobby-map.ts (one-word change, commit on main); added scripts/check-lobby-parity.ts (npx tsx) which fails (exit 1) if LOBBY_META ids and data/lobbies.json ids diverge or duplicate, so orphan ids cannot silently recur; wired npm script "check:lobbies"; fixed a pre-existing em-dash in package.json description to ASCII. Verified: all new lobby pages render live (e.g. watchgov.org/lobbies/energy, /aipac). NOTE for user: scripts/lobby-map.ts contains ~2616 pre-existing non-ASCII chars in its PAC name patterns and package.json had one too - the CI ASCII guard evidently does not scan these files; worth confirming the guards scope. NOTE: the parity check is runnable but NOT yet wired into .github/workflows/deploy.yml (that file is hard to read in this session due to a content filter); wiring it into CI is a quick follow-up the user can do. NEXT: Step 2 - expand score.ts LOBBY_POSITIONS to the full 24-lobby set so vote alignment fires beyond the original 9 (Warren currently 0/40).
