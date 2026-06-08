@@ -15,7 +15,7 @@
 > memory. This file is the bridge. The repo is the shared state; this file is the memory.
 > Read first, write last, every time.
 >
-> Last updated: 2026-06-08 - by: chrome ext (STEP 1 lobby taxonomy: expanded data/lobbies.json to all 24 classifier IDs, fixed non-ASCII dashes)
+> Last updated: 2026-06-08 - by: chrome ext (STEP 1 COMPLETE: lobby taxonomy redo - 24 lobby ids, LOBBY_META exported, parity guard added)
 ---
 
 ## 1. WHAT THIS IS
@@ -212,6 +212,8 @@ and power statistically overlap; it does NOT assert illegal activity.
 ---
 
 ## 13. CHANGELOG (each session: add a dated line here after doing work)
+
+- 2026-06-08 (chrome ext): STEP 1 COMPLETE (lobby taxonomy redo). Beyond the lobbies.json expansion logged above: exported LOBBY_META from scripts/lobby-map.ts (one-word change, commit on main); added scripts/check-lobby-parity.ts (npx tsx) which fails (exit 1) if LOBBY_META ids and data/lobbies.json ids diverge or duplicate, so orphan ids cannot silently recur; wired npm script "check:lobbies"; fixed a pre-existing em-dash in package.json description to ASCII. Verified: all new lobby pages render live (e.g. watchgov.org/lobbies/energy, /aipac). NOTE for user: scripts/lobby-map.ts contains ~2616 pre-existing non-ASCII chars in its PAC name patterns and package.json had one too - the CI ASCII guard evidently does not scan these files; worth confirming the guards scope. NOTE: the parity check is runnable but NOT yet wired into .github/workflows/deploy.yml (that file is hard to read in this session due to a content filter); wiring it into CI is a quick follow-up the user can do. NEXT: Step 2 - expand score.ts LOBBY_POSITIONS to the full 24-lobby set so vote alignment fires beyond the original 9 (Warren currently 0/40).
 
 - 2026-06-08 (chrome ext): STEP 1 lobby taxonomy redo (part 1). Expanded data/lobbies.json from 9 to all 24 ids the classifier emits, adding tech, realestate, health, agribusiness, telecom, crypto, insurance, energy, transport, lawyers, retail, building, leadership, ideology, othercorp. Each new entry name/category/color matched to lobby-map.ts LOBBY_META so no orphan ids remain. Industry annualSpend values labeled as sector estimates; leadership/ideology/othercorp use "Not applicable" budgets with annualSpend 0 (no fabricated dollars). Converted 3 pre-existing en/em-dashes (PhRMA, AIPAC names; finance mission) to ASCII hyphens. lobbies.json now valid JSON, 24 objects, 0 non-ASCII bytes (committed to main). Remaining Step 1: make LOBBY_META + lobbies.json a single source / add an id-parity check; then Step 2 (expand LOBBY_POSITIONS).
 
