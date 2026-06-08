@@ -1,0 +1,74 @@
+name: Enrich Bills (Congress.gov)
+
+on:
+  # Manual trigger from the Actions tab (fully autonomous: I can click "Run workflow")
+  workflow_dispatch:
+    inputs:
+      batch:
+        description: 'Bills per batch (flush cadence). Default 10.'
+        required: false
+        default: '10'
+      limit:
+        description: 'Max bills to fetch this run (0 = all missing). Keeps runs short.'
+        required: false
+        default: '0'
+      force:
+        description: 'Set to 1 to refetch bills already cached.'
+        required: false
+        default: '0'
+      delay:
+        description: 'Milliseconds between API calls (throttle). Default 350.'
+        required: false
+        default: '350'
+  # Weekly refresh, staggered after the data pipeline (Mondays 7am UTC)
+  schedule:
+    - cron: '0 7 * * 1'
+
+jobs:
+  enrich:
+    name: Enrich Bills
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # needed so the job can commit data/bills.json back
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Enrich bills from Congress.gov
+        env:
+          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+        run: |
+          FORCE_FLAG=""
+          if [ "${{ github.event.inputs.force }}" = "1" ]; then FORCE_FLAG="--force"; fi
+          npx tsx scripts/enrich-bills.ts \
+            --batch=${{ github.event.inputs.batch || '10' }} \
+            --limit=${{ github.event.inputs.limit || '0' }} \
+            --delay=${{ github.event.inputs.delay || '350' }} \
+            $FORCE_FLAG
+
+      - name: Assert data/bills.json is pure ASCII
+        run: |
+          if [ -f data/bills.json ]; then
+            if LC_ALL=C grep -qP '[^\x00-\x7F]' data/bills.json; then
+              echo "ERROR: non-ASCII bytes found in data/bills.json"; exit 1;
+            fi
+            echo "OK: data/bills.json is pure ASCII"
+          else
+            echo "No data/bills.json produced (nothing to check)."
+          fi
+
+      - name: Commit enriched bills
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/bills.json || true
+          git diff --staged --quiet || git commit -m "chore: enrich bills cache [$(date -u +%Y-%m-%dT%H:%MZ)]"
+          git push
