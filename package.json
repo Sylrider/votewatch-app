@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "check:lobbies": "npx tsx scripts/check-lobby-parity.ts",
+    "enrich:bills": "tsx scripts/enrich-bills.ts",
     "pipeline": "npx tsx scripts/pipeline.ts",
     "pipeline:test": "npx tsx scripts/pipeline.ts --limit=5",
     "pipeline:senate": "npx tsx scripts/pipeline.ts --chamber=Senate",
