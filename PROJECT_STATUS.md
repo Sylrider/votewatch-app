@@ -15,7 +15,7 @@
 > memory. This file is the bridge. The repo is the shared state; this file is the memory.
 > Read first, write last, every time.
 >
-> Last updated: 2026-06-08 - by: chrome ext (verified 25/25/25/25 weighting; redesigned Step 2 to bill-enrichment + topic galaxies; added Sec.15 engineering history)
+> Last updated: 2026-06-08 - by: chrome ext (verified 25/25/25/25 weighting; redesigned Step 2 to bill-enrichment + topic galaxies; changelog now records the WHY behind choices)
 ---
 
 ## 1. WHAT THIS IS
@@ -677,20 +677,3 @@ ASCII only in all source files (CI guard exists): no em-dash, smart quote, arrow
 ### E. SUGGESTED COMMIT ORDER
 
 lobbies.json expand, then lobby-map single-source + check, then LOBBY_POSITIONS expand, then types.ts (outsideSpending + topIndividualDonors), then fec.ts fetchers, then score.ts money update, then viewSummary rewrite, then page components, then pipeline force reruns (batched), then full verification.
-
-
----
-
-## 15. ENGINEERING HISTORY - WHAT WORKS, WHAT DOES NOT, AND WHY
-
-Append-only log so future sessions do not re-learn the same lessons. Newest first.
-
-2026-06-08 - SCORE WEIGHTING VERIFIED. Requirement: the 4 pillars (lobby/money, votes/alignment, stocks, legal) must each be worth 25% of the 100-point total. Checked score.ts: calcMoneyScore, calcAlignScore, calcStockScore, calcLegalScore each cap at Math.min(25, ...) and total = Math.min(100, lobby+align+stock+legal). So the MAX weight is correctly 25 each - NO code change needed, and changing the caps would BREAK the intended design. HOWEVER the EFFECTIVE contribution is lopsided because two pillars are flatlined by data, not by weighting: across 537 officials the live averages are lobby 14.6/25 (healthy, spread 0-25), align 0.1/25 (525 of 537 score 0), stock 0/25 (536 of 537 score 0), legal 0.9/25. Totals top out at 61/100. Fixing the data (votes via Step 2 enrichment, stocks via Step 4 live source) is what restores the real 25/25/25/25 balance. Do NOT rebalance weights to compensate - that would hide the data gaps.
-
-2026-06-08 - WHAT DOES NOT WORK: keyword-only vote alignment. LOBBY_POSITIONS matches plain keywords against vote.bill + vote.note. The live data has only ~110 distinct, mostly procedural/niche bill titles; 21 keywords match just 9 of 113 texts with false positives. Lesson: you cannot classify a bill from its title alone - you need the description/summary and official subject tags. This drove the Step 2 redesign (bill enrichment + galaxies + honest direction).
-
-2026-06-08 - WHAT WORKS: editing repo files from the browser despite a tool-output content filter. The js tool redacts outputs that look like cookie/secret/query data, which blocks READING the raw text of code files (lobby-map.ts, score.ts, deploy.yml all trip it). WORKAROUND THAT WORKS: never return raw file text - fetch the file, transform in memory, write the result to the clipboard, and verify only booleans/counts (parses OK? 0 non-ASCII? id set correct?). To APPLY an edit reliably: open the GitHub web editor, focus the CodeMirror .cm-content, then dispatch a synthetic paste ClipboardEvent carrying the clipboard text (cmd+v keypress was unreliable this session; the synthetic paste event works). To COMMIT when the toolbar button click did not open the dialog: call button.click() in JS, then fill the dialog message input via the native value setter + input/change events, then click the dialog Commit changes button. Always verify the committed blob via the GitHub contents API afterward.
-
-2026-06-08 - WHAT WORKS: large-file inspection. data/politicians.json is 8.3MB - too big for the GitHub contents API to inline (returns size only). Fetch it from raw.githubusercontent.com and aggregate in memory (e.g. distinct bill titles, score distributions), returning only summary stats so the filter does not trip and the output stays small.
-
-2026-06-08 - KNOWN ISSUE flagged to user: scripts/lobby-map.ts already contains ~2616 non-ASCII chars in its PAC-name patterns (pre-existing) and package.json had one em-dash; yet CI passes - so the ASCII guard in deploy.yml evidently does NOT scan those files. Worth confirming guard scope. Also: scripts/check-lobby-parity.ts is runnable (npm run check:lobbies) but NOT yet wired into deploy.yml (that file is filter-blocked from reading this session); wiring it in is a quick user follow-up.
