@@ -15,7 +15,7 @@
 > memory. This file is the bridge. The repo is the shared state; this file is the memory.
 > Read first, write last, every time.
 >
-> Last updated: 2026-06-05 - by: chrome ext (added Sec.14 NEXT STEPS PLAN: 4-axis score relevance + full lobby redo - diagnosis + 6-step plan; no code changes yet)
+> Last updated: 2026-06-08 - by: chrome ext (STEP 1 lobby taxonomy: expanded data/lobbies.json to all 24 classifier IDs, fixed non-ASCII dashes)
 ---
 
 ## 1. WHAT THIS IS
@@ -212,6 +212,8 @@ and power statistically overlap; it does NOT assert illegal activity.
 ---
 
 ## 13. CHANGELOG (each session: add a dated line here after doing work)
+
+- 2026-06-08 (chrome ext): STEP 1 lobby taxonomy redo (part 1). Expanded data/lobbies.json from 9 to all 24 ids the classifier emits, adding tech, realestate, health, agribusiness, telecom, crypto, insurance, energy, transport, lawyers, retail, building, leadership, ideology, othercorp. Each new entry name/category/color matched to lobby-map.ts LOBBY_META so no orphan ids remain. Industry annualSpend values labeled as sector estimates; leadership/ideology/othercorp use "Not applicable" budgets with annualSpend 0 (no fabricated dollars). Converted 3 pre-existing en/em-dashes (PhRMA, AIPAC names; finance mission) to ASCII hyphens. lobbies.json now valid JSON, 24 objects, 0 non-ASCII bytes (committed to main). Remaining Step 1: make LOBBY_META + lobbies.json a single source / add an id-parity check; then Step 2 (expand LOBBY_POSITIONS).
 
 - 2026-06-04 (chrome ext): SCORE REBALANCED to four equal 25% pillars + full-roster recompute.
   * scripts/score.ts (commit de19e6e): alignment `* 35` -> `* 25`; legal `Math.min(15, total)` ->
