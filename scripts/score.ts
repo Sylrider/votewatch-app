@@ -5,13 +5,47 @@
  * Score = Lobby Score (0-25) + Alignment Score (0-25) + Stock Score (0-25) + Legal Score (0-25). Four equally-weighted 25% pillars.
  */
 
+import fs from 'node:fs';
+import path from 'node:path';
 import type { Politician, TransparencyScore, Vote, LobbyContribution, StockTrade, Lawsuit } from '../lib/types';
+import { classifyBill, voteServesLobby, type EnrichedBill } from './galaxies';
 
-// Known lobby positions on major bills - used to calculate donor-vote alignment
-// Format: { billKeyword: { lobbyId: expectedVote } }
+// --- Enriched bill lookup (data/bills.json), keyed congress:type:number ---
+// Produced by scripts/enrich-bills.ts. Read once, lazily. If absent, alignment
+// gracefully degrades to the legacy keyword model below (never crashes a build).
+let BILLS: Record<string, EnrichedBill> | null = null;
+function loadBills(): Record<string, EnrichedBill> {
+  if (BILLS) return BILLS;
+  try {
+    const p = path.join(process.cwd(), 'data', 'bills.json');
+    BILLS = JSON.parse(fs.readFileSync(p, 'utf8')) as Record<string, EnrichedBill>;
+  } catch {
+    BILLS = {};
+  }
+  return BILLS;
+}
+
+// Parse a vote.bill string (e.g. "H.R. 82", "S.4367", "118 hr 10545") into the
+// bills.json key congress:type:number. Defaults to the 118th Congress when the
+// congress number is not encoded in the string.
+export function billKey(raw: string | undefined): string | null {
+  if (!raw) return null;
+  const s = raw.toLowerCase().replace(/[.\s]+/g, ' ').trim();
+  let congress = 118;
+  const cm = s.match(/^(\d{3})\s+/);
+  let rest = s;
+  if (cm) { congress = parseInt(cm[1], 10); rest = s.slice(cm[0].length); }
+  const m = rest.match(/\b(hr|hres|hconres|hjres|s|sres|sconres|sjres)\b\s*(\d+)/);
+  if (!m) return null;
+  return congress + ':' + m[1] + ':' + m[2];
+}
+
+// --- Legacy keyword positions (fallback only) ---
+// Known lobby positions on major bills - used only when an enriched bill record
+// is unavailable. Kept as a safety net so older curated votes still score.
 const LOBBY_POSITIONS: Record<string, Record<string, 'YEA' | 'NAY'>> = {
   'inflation reduction': { api: 'NAY', pharma: 'NAY', nra: 'NAY', uscc: 'NAY' },
-  'background check':    { nra: 'NAY' },
+  'background check':     { nra: 'NAY' },
   'safer communities':   { nra: 'NAY' },
   'assault weapons':     { nra: 'NAY' },
   'red flag':            { nra: 'NAY' },
@@ -67,7 +101,7 @@ export function calculateScore(politician: Politician): TransparencyScore {
 // --- Component calculators ---
 
 /**
- * Money-Influence Score: 0-25. Driven by REAL FEC funding when available:
+ * Money-Influence Score: 0-25. Driven by REAL FEC funding when available.
  * big-money dollars (large itemized individual + PAC) scaled per $100K, then
  * weighted by the big-money share so a high reliance on large/PAC money raises
  * risk and a grassroots (small-donor) base lowers it. Falls back to tracked
@@ -88,20 +122,33 @@ function calcMoneyScore(
   return Math.min(25, (total / 100_000) * 1.2);
 }
 
-/** Donor-Vote Alignment Score: 0-25 */
+/**
+ * Donor-Vote Alignment Score: 0-25.
+ * A vote counts as donor-aligned ONLY when all three hold:
+ *   1. the bill is enriched and classifies into a lobby topic (galaxies),
+ *   2. that lobby is among the politician's donors,
+ *   3. the bill summary carries a DEFENSIBLE directional cue that the
+ *      politician's YEA/NAY served that lobby (voteServesLobby).
+ * On-topic-but-direction-unknown votes are deliberately NOT counted. We never
+ * guess a direction. The denominator is the count of donor-topic votes (votes
+ * that touch a donor lobby at all), so the score reflects how often a member
+ * sided with a paying lobby among the votes where that lobby had a stake.
+ */
 function calcAlignScore(votes: Vote[], contributions: LobbyContribution[]): number {
   if (votes.length === 0) return 0;
-
   const donorLobbyIds = new Set(contributions.map(c => c.lobbyId));
+
+  let onTopicWithDonor = 0;
   let alignedCount = 0;
 
   for (const vote of votes) {
-    if (isAlignedWithDonors(vote, donorLobbyIds)) {
-      alignedCount++;
-    }
+    const r = alignmentForVote(vote, donorLobbyIds);
+    if (r.onTopicWithDonor) onTopicWithDonor++;
+    if (r.aligned) alignedCount++;
   }
 
-  return (alignedCount / votes.length) * 25;
+  if (onTopicWithDonor === 0) return 0;
+  return (alignedCount / onTopicWithDonor) * 25;
 }
 
 /** Stock Trade Conflict Score: 0-25 */
@@ -120,19 +167,59 @@ function calcLegalScore(lawsuits: Lawsuit[]): number {
 
 // --- Vote alignment checker ---
 
-export function isAlignedWithDonors(vote: Vote, donorLobbyIds: Set<string>): boolean {
-  const billLower = ((vote.bill || '') + ' ' + (vote.note || '')).toLowerCase();
+export type VoteAlignment = {
+  onTopic: boolean;            // bill classifies into any lobby topic
+  onTopicWithDonor: boolean;   // ...and at least one such lobby is a donor
+  aligned: boolean;            // ...and a defensible direction served that donor lobby
+  lobbies: string[];           // donor lobbies the bill is on-topic for
+};
 
-  for (const [keyword, positions] of Object.entries(LOBBY_POSITIONS)) {
-    if (!billLower.includes(keyword)) continue;
+/**
+ * Resolve a vote against the donor lobby set using enriched bills + galaxies.
+ * Falls back to the legacy keyword model only when no enriched record exists.
+ */
+export function alignmentForVote(vote: Vote, donorLobbyIds: Set<string>): VoteAlignment {
+  const empty: VoteAlignment = { onTopic: false, onTopicWithDonor: false, aligned: false, lobbies: [] };
+  const bills = loadBills();
+  const key = billKey(vote.bill);
+  const bill = key ? bills[key] : undefined;
 
-    for (const [lobbyId, expectedVote] of Object.entries(positions)) {
-      if (!donorLobbyIds.has(lobbyId)) continue;
-      if (vote.vote === expectedVote) return true;
+  if (bill && bill.ok) {
+    const matches = classifyBill(bill);
+    if (matches.length === 0) return empty;
+    const donorLobbies = matches.map(m => m.lobby).filter(l => donorLobbyIds.has(l));
+    const onTopicWithDonor = donorLobbies.length > 0;
+    let aligned = false;
+    for (const lobby of donorLobbies) {
+      if (voteServesLobby(bill, lobby, vote.vote) === 'serves-lobby') { aligned = true; break; }
     }
+    return {
+      onTopic: true,
+      onTopicWithDonor,
+      aligned: aligned && onTopicWithDonor,
+      lobbies: donorLobbies,
+    };
   }
 
-  return false;
+  // Legacy fallback (no enriched record): keyword positions.
+  const billLower = ((vote.bill || '') + ' ' + (vote.note || '')).toLowerCase();
+  const lobbies: string[] = [];
+  let aligned = false;
+  for (const [keyword, positions] of Object.entries(LOBBY_POSITIONS)) {
+    if (!billLower.includes(keyword)) continue;
+    for (const [lobbyId, expectedVote] of Object.entries(positions)) {
+      if (!donorLobbyIds.has(lobbyId)) continue;
+      lobbies.push(lobbyId);
+      if (vote.vote === expectedVote) aligned = true;
+    }
+  }
+  const onTopicWithDonor = lobbies.length > 0;
+  return { onTopic: onTopicWithDonor, onTopicWithDonor, aligned: aligned && onTopicWithDonor, lobbies };
+}
+
+/** Back-compat boolean used by older callers and the Vote annotation. */
+export function isAlignedWithDonors(vote: Vote, donorLobbyIds: Set<string>): boolean {
+  return alignmentForVote(vote, donorLobbyIds).aligned;
 }
 
 /** Annotates votes with alignsWithDonors flag. Call after fetching both votes and contributions. */
