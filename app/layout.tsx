@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   },
   description: 'Independent transparency tracker for all U.S. elected officials. Scores based on lobby money, votes, stock trades, and legal records.',
   robots: { index: true, follow: true },
+  verification: { google: 'dwGozQwD9nEkf_viu_qHihxGnGVHRDhjoh637EhDoBk' },
   authors: [{ name: 'WatchGov' }],
   openGraph: {
     siteName: 'WatchGov',
