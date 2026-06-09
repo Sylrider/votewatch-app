@@ -112,7 +112,11 @@ function calcMoneyScore(
   contributions: LobbyContribution[],
 ): number {
   if (funding && funding.available && funding.totalRaised > 0) {
-    const bigMoneyDollars = funding.largeDonorMoney + funding.pacMoney;
+    // Outside / Super PAC independent expenditures (Schedule E) signal concentrated
+    // influence beyond a candidate's own receipts, so they add to the big-money base.
+    // Independent spend is NOT part of receipts, so it does not affect the grassroots share.
+    const outsideTotal = (funding.outsideSpending || []).reduce((s, e) => s + (e.amount || 0), 0);
+    const bigMoneyDollars = funding.largeDonorMoney + funding.pacMoney + outsideTotal;
     const base = Math.min(20, (bigMoneyDollars / 100_000) * 0.8);
     const share = funding.bigMoneyShare == null ? 0.5 : funding.bigMoneyShare;
     const shareMult = 0.6 + share * 0.65;
