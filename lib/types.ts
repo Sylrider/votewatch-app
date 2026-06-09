@@ -126,6 +126,20 @@ export interface Politician {
     pacMoney: number;
     partyMoney: number;
     transferMoney: number;
+    // Super PAC / outside independent expenditures (FEC Schedule E). NOT part of receipts.
+    // Omitted/empty when no data found - never fabricated.
+    outsideSpending?: {
+      spender: string;
+      amount: number;
+      position: "support" | "oppose";
+      source: string;
+    }[];
+    // Named large / mega individual donors (FEC Schedule A, individuals). Never fabricated.
+    topIndividualDonors?: {
+      name: string;
+      employer?: string;
+      amount: number;
+    }[];
     bigMoneyShare: number | null;
     smallDonorShare: number | null;
     confidence: "high" | "medium" | "low";
