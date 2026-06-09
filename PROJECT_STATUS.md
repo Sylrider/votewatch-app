@@ -15,7 +15,7 @@
 > memory. This file is the bridge. The repo is the shared state; this file is the memory.
 > Read first, write last, every time.
 >
-Last updated: 2026-06-09 - by: chrome ext (Step 7 methodology reweight: verified score.ts already computes 25/25/25/25; updated methodology page copy vote 35 to 25 and legal 15 to 25, live + Cloudflare green a97a67d; Sec.7 doc corrected to match)
+Last updated: 2026-06-09 - by: chrome ext (Sec.12 restructured into PLAN: all steps numbered in execution order 1-2-3-7 done, then 5-6-4 pending, with [x] checkmarks per commits + Sec.13)
 ---
 
 ## 1. WHAT THIS IS
@@ -201,20 +201,30 @@ Read every secret in code via process.env.<NAME>; NEVER hardcode a key value. Th
 
 ---
 
-## 12. NEXT STEPS (priority order)
-1. [x] Fix & commit corrected deploy.yml (pipeline-only, workflow_dispatch, npm install)
-2. [x] Trigger Run workflow -> pipeline runs clean for ~540 federal officials
-3. [ ] OPTION A FINISH: run pipeline to COMPLETION (do not cancel) so it commits
-       data/politicians.json. Verify a sample (e.g. Booker S4NJ00185) has real totalReceipts.
-4. [~] OPTION B (DONE - code): buildLobbyContributions now resolves principal committee,
-       donor mapping in fec.ts; populate topDonors + lobby contributions; compute real scores.
-5. [ ] Port hand-built Governor + Mayor dataset into JSON (non-federal, no API).
-6. [ ] Verify all non-API figures against real public sources (no fabricated numbers).
-7. [ ] Confirm scores compute + all ~950 pages generate; check live site.
-8. [x] Finance-model redesign DONE (FundingProfile, big-money share, viewSummary, score recompute,
-   detail-page Campaign Finance section). Running force slices to refresh dataset.
-9. [ ] Commit executive-branch seed (President/VP/Cabinet/agency heads) with chamber=Executive guard.
-10. [ ] Add OpenSecrets secondary-source verification + confidence flags for finance/lawsuits/trades.
+## 12. PLAN
+
+Steps are listed in the ORDER they are done / will be done. [x] = complete (per commits + Sec.13 changelog), [ ] = not yet. Rule: if an earlier step was missed it must be finished before starting a later one. Full step descriptions live in the NEXT STEPS PLAN: 4-AXIS SCORE RELEVANCE block below (after Sec.13).
+
+ACTIVE PLAN (4-AXIS score relevance + full lobby redo):
+1. [x] STEP 1 - Lobby taxonomy redo (data + code share one canonical 24-id list; parity guard).
+2. [x] STEP 2 - Votes axis relevant via bill enrichment + topic galaxies + honest direction (2a/2b/2c/2d).
+3. [x] STEP 3 - Money axis reflects all 4 channels (outsideSpending + topIndividualDonors; 5 prod batches, green).
+4. [x] STEP 7 - Methodology reweight to 25/25/25/25. Verified score.ts already computes it; fixed methodology page copy (vote 35 to 25, legal 15 to 25) + Sec.7 doc. Live, Cloudflare green (a97a67d, fba074c).
+5. [ ] STEP 5 - Politician page 4-axis summary: render the 4 money channels on profiles and rewrite viewSummary to narrate all 4 axes; lobby detail pages list funded politicians vs the new taxonomy.
+6. [ ] STEP 6 - Pipeline rerun verification: Refresh Data Pipeline in 25-member windows (start N, count 25, force 1) across the full roster; merge guard must hold; verify funding/align/orphans; spot-check Pelosi/Trump/Warren/McConnell.
+7. [ ] STEP 4 - Stocks axis (DEFERRED to last per user 2026-06-09; NOT dropped). Find a live free machine-readable congressional trades source; if none, honest empty state distinguishing no-source from no-trades.
+
+EARLIER GROUNDWORK (pre-4-AXIS infra; superseded but kept for history):
+G1. [x] Fixed/committed deploy.yml (pipeline-only, workflow_dispatch, npm install).
+G2. [x] Triggered Run workflow - pipeline runs clean for 540 federal officials.
+G3. [ ] OPTION A: run pipeline to COMPLETION so it commits data/politicians.json; verify a sample has real totalReceipts. (folded into STEP 6)
+G4. [x] OPTION B (code): buildLobbyContributions resolves principal committee; donor mapping in fec.ts; real scores.
+G5. [ ] Port hand-built Governor/Mayor dataset into JSON (non-federal, no API).
+G6. [ ] Verify all non-API figures against real public sources (no fabricated numbers).
+G7. [ ] Confirm scores compute, all ~950 pages generate, check live site. (folded into STEP 6)
+G8. [x] Finance-model redesign (FundingProfile, big-money share, viewSummary, score recompute, detail-page Campaign Finance section).
+G9. [ ] Commit executive-branch seed (President/VP/Cabinet/agency heads) with chamber=Executive guard.
+G10. [ ] Add OpenSecrets secondary-source verification confidence flags for finance/lawsuits/trades.
 
 ---
 
@@ -717,3 +727,5 @@ Cloudflare-green before the next (so a long pipeline run can never start on a br
 - 2026-06-09 (chrome ext): Recorded two user directives into the plan. (1) STEP ORDERING: defer Step 4 (stocks) to AFTER Steps 5 and 6; Step 4 still required, not dropped. (2) Added STEP 7 METHODOLOGY REWEIGHT: rebalance all four pillars (votes, lobby/money, stocks, legal) to 25 pts each (max 100). Today methodology page and per-politician weighting still show vote 35 / legal 15 etc. - must become 25/25/25/25 in score.ts, recompute ALL politicians via pipeline, and update the watchgov.org/methodology page copy to match. No code/scores changed this entry - planning record only.
 
 - 2026-06-09 (chrome ext): STEP 7 METHODOLOGY REWEIGHT (mostly verify + doc + page copy). VERIFIED in score.ts that the four pillars ALREADY compute 25/25/25/25: moneyScore final cap 25 (calcMoneyScore), alignScore (donorAligned/onTopicWithDonor) x 25, stockScore cap 25, legalScore min(25, total * (25/15)); total = min(100, lobby+align+stock+legal). The ONLY gaps were stale COPY: (1) public methodology page app/methodology/page.tsx still listed Vote Alignment 35 pts and Legal Record 15 pts with x35 and capped-at-15 formulas - fixed to 25/25/25/25 (commit a97a67d, Cloudflare green, verified live at watchgov.org/methodology). (2) This Sec.7 doc still described alignScore x35 and legalScore cap 15 - corrected to x25 and cap 25 here. No score recompute was needed for the weights (already live in code); a pipeline rerun (Step 6) will still refresh underlying data. ASCII-only, no fabricated numbers.
+
+- 2026-06-09 (chrome ext): Restructured Sec.12 into PLAN (renamed from NEXT STEPS). Now lists every step by NUMBER in the exact order done/to-be-done with [x]/[ ] checkmarks derived from commits + Sec.13. Active 4-AXIS order: 1 lobby taxonomy [x], 2 votes axis [x], 3 money axis [x], 7 methodology reweight [x], then 5 profile 4-axis summary [ ], 6 pipeline rerun [ ], 4 stocks [ ] (deferred last per user). Earlier pre-4-AXIS infra items kept as G1-G10 with their historical checkmarks so nothing is lost. No earlier active step was skipped: the done prefix (1,2,3,7) is contiguous before the pending 5/6/4. Doc-only change.
