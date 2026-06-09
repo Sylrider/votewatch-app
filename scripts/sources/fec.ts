@@ -165,6 +165,20 @@ export interface FundingProfile {
   smallDonorShare: number | null;
   confidence: "high" | "medium" | "low";
   sources: string[];
+  // Super PAC / outside independent expenditures (Schedule E). Independent spend,
+  // tracked separately from receipts. Omitted/empty when no data - never fabricated.
+  outsideSpending?: Array<{
+    spender: string;
+    amount: number;
+    position: "support" | "oppose";
+    source: string;
+  }>;
+  // Named large individual donors (Schedule A, individuals). Never fabricated.
+  topIndividualDonors?: Array<{
+    name: string;
+    employer?: string;
+    amount: number;
+  }>;
 }
 
 /**
@@ -356,4 +370,101 @@ function getLobbyById(id: string): { name: string; defaultIntent: string } | nul
     crypto: { name: 'Cryptocurrency Industry', defaultIntent: 'Oppose crypto regulation, support blockchain financial deregulation' },
   };
   return LOBBY_INFO[id] || null;
+}
+
+
+/**
+ * Fetch Super PAC / outside independent expenditures FOR or AGAINST a candidate
+ * (FEC Schedule E), aggregated by spender + support/oppose.
+ * Independent spend is NOT part of candidate receipts. Returns [] when no data
+ * (never fabricated). Uses FUNDING_CYCLE so it matches the funding period.
+ */
+export async function fetchOutsideSpending(
+  candidateId: string | null,
+  apiKey: string,
+): Promise<Array<{ spender: string; amount: number; position: "support" | "oppose"; source: string }>> {
+  if (!candidateId) return [];
+  try {
+    const byKey = new Map<string, { spender: string; amount: number; position: "support" | "oppose"; source: string }>();
+    for (let page = 1; page <= MAX_PAGES; page++) {
+      const data = await get(`/schedules/schedule_e/`, apiKey, {
+        candidate_id: candidateId,
+        cycle: FUNDING_CYCLE,
+        per_page: 100,
+        page,
+        sort: "-expenditure_amount",
+      });
+      const results: any[] = data?.results || [];
+      if (results.length === 0) break;
+      for (const r of results) {
+        const amt = Number(r.expenditure_amount) || 0;
+        if (amt <= 0) continue;
+        const support = String(r.support_oppose_indicator || "").toUpperCase();
+        const position: "support" | "oppose" = support === "O" ? "oppose" : "support";
+        const spender = String(r.committee_name || r.spender_name || "Unknown committee").trim();
+        const key = spender + "|" + position;
+        const prev = byKey.get(key);
+        if (prev) prev.amount += amt;
+        else byKey.set(key, { spender, amount: amt, position, source: "FEC Schedule E (independent expenditures)" });
+      }
+      const pages = data?.pagination?.pages || 1;
+      if (page >= pages) break;
+    }
+    return Array.from(byKey.values()).sort((a, b) => b.amount - a.amount).slice(0, 15);
+  } catch (e) {
+    console.warn(`  [fec] outside spending fetch failed for ${candidateId}: ${(e as Error).message}`);
+    return [];
+  }
+}
+
+/**
+ * Fetch named large individual donors to a candidate's principal campaign committee
+ * (FEC Schedule A, is_individual=true), top N by aggregated amount.
+ * Returns [] when no committee/data (never fabricated).
+ */
+export async function fetchTopDonors(
+  candidateId: string | null,
+  apiKey: string,
+): Promise<Array<{ name: string; employer?: string; amount: number }>> {
+  if (!candidateId) return [];
+  try {
+    let committeeId: string | null = null;
+    const cm = await get(`/candidate/${candidateId}/committees/`, apiKey, {
+        designation: "P",
+        per_page: 5,
+      });
+    const committees: any[] = cm?.results || [];
+    if (committees.length > 0) committeeId = committees[0].committee_id || null;
+    if (!committeeId) return [];
+
+    const byName = new Map<string, { name: string; employer?: string; amount: number }>();
+    for (let page = 1; page <= MAX_PAGES; page++) {
+      const data = await get(`/schedules/schedule_a/`, apiKey, {
+        committee_id: committeeId,
+        two_year_transaction_period: FUNDING_CYCLE,
+        is_individual: "true",
+        per_page: 100,
+        page,
+        sort: "-contribution_receipt_amount",
+      });
+      const results: any[] = data?.results || [];
+      if (results.length === 0) break;
+      for (const r of results) {
+        const amt = Number(r.contribution_receipt_amount) || 0;
+        if (amt <= 0) continue;
+        const name = String(r.contributor_name || "").trim();
+        if (!name) continue;
+        const employer = r.contributor_employer ? String(r.contributor_employer).trim() : undefined;
+        const prev = byName.get(name);
+        if (prev) { prev.amount += amt; if (!prev.employer && employer) prev.employer = employer; }
+        else byName.set(name, { name, employer, amount: amt });
+      }
+      const pages = data?.pagination?.pages || 1;
+      if (page >= pages) break;
+    }
+    return Array.from(byName.values()).sort((a, b) => b.amount - a.amount).slice(0, 10);
+  } catch (e) {
+    console.warn(`  [fec] top donors fetch failed for ${candidateId}: ${(e as Error).message}`);
+    return [];
+  }
 }
