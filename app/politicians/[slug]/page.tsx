@@ -196,6 +196,46 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
                 </strong>
               </p>
             )}
+            {p.funding.topIndividualDonors && p.funding.topIndividualDonors.length > 0 && (
+              <div style={{ marginTop: '0.85rem' }}>
+                <h3 style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '0.95rem', fontWeight: 700, letterSpacing: '0.5px', color: '#e2e8f0', marginBottom: '0.35rem' }}>
+                  Top individual donors
+                </h3>
+                <div className="data-table" role="table">
+                  <div className="data-table-head grid gap-2" style={{ gridTemplateColumns: '1fr 120px' }}>
+                    <span>Donor</span><span>Amount</span>
+                  </div>
+                  {p.funding.topIndividualDonors.slice(0, 5).map((d, i) => (
+                    <div key={`${d.name}-${i}`} className="data-table-row grid gap-2" style={{ gridTemplateColumns: '1fr 120px' }}>
+                      <span>{d.name}{d.employer ? ` (${d.employer})` : ''}</span>
+                      <span>{fmtMoney(d.amount)}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            {p.funding.outsideSpending && p.funding.outsideSpending.length > 0 && (
+              <div style={{ marginTop: '0.85rem' }}>
+                <h3 style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '0.95rem', fontWeight: 700, letterSpacing: '0.5px', color: '#e2e8f0', marginBottom: '0.35rem' }}>
+                  Outside spending (independent expenditures)
+                </h3>
+                <p className="text-xs" style={{ color: '#8b94a8', marginBottom: '0.4rem' }}>
+                  Reported by outside groups for or against this official. Separate from money the campaign raised.
+                </p>
+                <div className="data-table" role="table">
+                  <div className="data-table-head grid gap-2" style={{ gridTemplateColumns: '1fr 110px 80px' }}>
+                    <span>Spender</span><span>Amount</span><span>Position</span>
+                  </div>
+                  {p.funding.outsideSpending.slice(0, 5).map((e, i) => (
+                    <div key={`${e.spender}-${i}`} className="data-table-row grid gap-2" style={{ gridTemplateColumns: '1fr 110px 80px' }}>
+                      <span>{e.spender}</span>
+                      <span>{fmtMoney(e.amount)}</span>
+                      <span style={{ color: e.position === 'oppose' ? '#ef4444' : '#22c55e' }}>{e.position}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
             <p className="text-xs" style={{ color: '#475569', marginTop: '0.35rem' }}>
               Source: FEC candidate totals.
             </p>
