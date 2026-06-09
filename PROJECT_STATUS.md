@@ -15,7 +15,7 @@
 > memory. This file is the bridge. The repo is the shared state; this file is the memory.
 > Read first, write last, every time.
 >
-Last updated: 2026-06-09 - by: chrome ext (recorded user directives: defer Step 4 stocks; new Step 7 rebalance all four pillars to 25 pts each, vote 35 to 25, legal 15 to 25, update methodology page + all politicians)
+Last updated: 2026-06-09 - by: chrome ext (Step 7 methodology reweight: verified score.ts already computes 25/25/25/25; updated methodology page copy vote 35 to 25 and legal 15 to 25, live + Cloudflare green a97a67d; Sec.7 doc corrected to match)
 ---
 
 ## 1. WHAT THIS IS
@@ -135,9 +135,9 @@ candidate_id alone). Rate limit ~1000/hr. Plan: candidate -> principal committee
   multiplier (~0.6x grassroots up to ~1.25x big-money). High large-donor/PAC reliance raises
   risk; a grassroots small-donor base lowers it. Falls back to tracked lobby contributions
   when no FEC funding profile is available. totalMoney now reports REAL total raised (receipts).
-- alignScore = (donorAlignedVotes / totalVotes) x 35   [SKIP for non-federal; reweight]
+- alignScore = (donorAlignedVotes / totalVotes) x 25   [SKIP for non-federal; reweight]
 - stockScore = min(25, conflictTrades x 5 + (10 if any single trade >= $500K))
-- legalScore = min(15, Sum severity: high=7, medium=4, low=1)
+- legalScore = min(25, Sum severity: high=7, medium=4, low=1)
 
 Bands: CRITICAL 75-100 (#ef4444) - HIGH 50-74 (#f97316) - ELEVATED 25-49 (#eab308) -
 LOW 0-24 (#22c55e).
@@ -715,3 +715,5 @@ Cloudflare-green before the next (so a long pipeline run can never start on a br
   components to render the new channels, then Step 4 (stocks source) and Step 6 (batched reruns).
 
 - 2026-06-09 (chrome ext): Recorded two user directives into the plan. (1) STEP ORDERING: defer Step 4 (stocks) to AFTER Steps 5 and 6; Step 4 still required, not dropped. (2) Added STEP 7 METHODOLOGY REWEIGHT: rebalance all four pillars (votes, lobby/money, stocks, legal) to 25 pts each (max 100). Today methodology page and per-politician weighting still show vote 35 / legal 15 etc. - must become 25/25/25/25 in score.ts, recompute ALL politicians via pipeline, and update the watchgov.org/methodology page copy to match. No code/scores changed this entry - planning record only.
+
+- 2026-06-09 (chrome ext): STEP 7 METHODOLOGY REWEIGHT (mostly verify + doc + page copy). VERIFIED in score.ts that the four pillars ALREADY compute 25/25/25/25: moneyScore final cap 25 (calcMoneyScore), alignScore (donorAligned/onTopicWithDonor) x 25, stockScore cap 25, legalScore min(25, total * (25/15)); total = min(100, lobby+align+stock+legal). The ONLY gaps were stale COPY: (1) public methodology page app/methodology/page.tsx still listed Vote Alignment 35 pts and Legal Record 15 pts with x35 and capped-at-15 formulas - fixed to 25/25/25/25 (commit a97a67d, Cloudflare green, verified live at watchgov.org/methodology). (2) This Sec.7 doc still described alignScore x35 and legalScore cap 15 - corrected to x25 and cap 25 here. No score recompute was needed for the weights (already live in code); a pipeline rerun (Step 6) will still refresh underlying data. ASCII-only, no fabricated numbers.
