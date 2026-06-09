@@ -24,7 +24,7 @@
 import * as fs from 'fs/promises';
 import * as path from 'path';
 import { fetchAllMembers, fetchMemberVotes } from './sources/congress';
-import { findCandidateId, buildLobbyContributions, fetchFundingProfile } from './sources/fec';
+import { findCandidateId, buildLobbyContributions, fetchFundingProfile, fetchOutsideSpending, fetchTopDonors } from './sources/fec';
 import { fetchSenateTrades, fetchHouseTrades, getTradesForPolitician } from './sources/trades';
 import { searchLawsuits } from './sources/lawsuits';
 import { calculateScore, annotateVoteAlignment } from './score';
@@ -222,6 +222,15 @@ async function main() {
       // 3b. Fetch full campaign-finance profile (real totals, big-money share)
       const funding = await fetchFundingProfile(fecId, FEC_API_KEY);
       await sleep(RATE_LIMIT_MS);
+
+      // 3c. Enrich funding with Super PAC outside spending (Schedule E) and named
+      //     top individual donors (Schedule A). Both empty when no data - never fabricated.
+      if (fecId && funding && funding.available) {
+        funding.outsideSpending = await fetchOutsideSpending(fecId, FEC_API_KEY);
+        await sleep(RATE_LIMIT_MS);
+        funding.topIndividualDonors = await fetchTopDonors(fecId, FEC_API_KEY);
+        await sleep(RATE_LIMIT_MS);
+      }
 
       // 4. Fetch stock trades
       const stockTrades = await getTradesForPolitician(member.name, chamber);
