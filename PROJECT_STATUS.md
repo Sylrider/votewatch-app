@@ -15,7 +15,7 @@
 > memory. This file is the bridge. The repo is the shared state; this file is the memory.
 > Read first, write last, every time.
 >
-> Last updated: 2026-06-08 - by: chrome ext (Step 2c DONE: honest vote-direction in galaxies.ts + wired enriched bills/galaxies into score.ts alignment)
+> Last updated: 2026-06-09 - by: chrome ext (Step 3 DONE: 4-channel money axis - outsideSpending + topIndividualDonors added to types/fec/score/pipeline; all 5 commits Cloudflare-green)
 ---
 
 ## 1. WHAT THIS IS
@@ -689,3 +689,23 @@ ASCII only in all source files (CI guard exists): no em-dash, smart quote, arrow
 ### E. SUGGESTED COMMIT ORDER
 
 lobbies.json expand, then lobby-map single-source + check, then LOBBY_POSITIONS expand, then types.ts (outsideSpending + topIndividualDonors), then fec.ts fetchers, then score.ts money update, then viewSummary rewrite, then page components, then pipeline force reruns (batched), then full verification.
+
+## 2026-06-09 - Step 3 DONE: 4-channel money axis (outside spending + named donors)
+Implemented Step 3 of the 4-AXIS plan (Sec.14.C) in 5 small prod-safe batches, each verified
+Cloudflare-green before the next (so a long pipeline run can never start on a broken build):
+- types.ts (commit e1f5c6f): added optional outsideSpending[] (spender, amount, support/oppose,
+  source) and topIndividualDonors[] (name, employer, amount) to the funding object. Additive only.
+- fec.ts (commit 6e14264): added fetchOutsideSpending (Schedule E independent expenditures,
+  aggregated by spender + support/oppose, top 15) and fetchTopDonors (Schedule A is_individual,
+  aggregated by contributor, top 10). Both return [] on no committee/data - NEVER fabricated.
+  Extended the local FundingProfile interface to match.
+- score.ts (commit d10205f): calcMoneyScore now folds outsideSpending into the big-money base
+  (outsideTotal + largeDonor + pac). Grassroots share multiplier unchanged; outside spend is
+  independent (not part of receipts) so it does not move smallDonorShare.
+- pipeline.ts (commit 5f496df): after fetchFundingProfile, the pipeline now calls the two new
+  fetchers and attaches results to funding (only when fecId + funding.available). Rate-limited.
+- All commits ASCII-only; all 5 Cloudflare Pages builds = success.
+- NOTE: Super PAC / top-donor data will not appear on profiles until a pipeline refresh runs
+  (Step 6) - the code path is live and green but data is pulled on the next Refresh Data Pipeline run.
+- NEXT: Step 5 (viewSummary narrates all 4 axes incl. named outside spenders/donors) + page
+  components to render the new channels, then Step 4 (stocks source) and Step 6 (batched reruns).
