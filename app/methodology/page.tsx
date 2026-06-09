@@ -31,9 +31,9 @@ export default function MethodologyPage() {
         <tbody>
           {[
             ['Lobby Money', '25 pts', 'Total career lobbying contributions received. Scaled per $100K received, capped at 25.'],
-            ['Vote Alignment', '35 pts', 'Percentage of tracked votes that align with the politician\'s top donors\' positions.'],
+            ['Vote Alignment', '25 pts', 'Percentage of tracked votes that align with the politician\'s top donors\' positions.'],
             ['Stock Conflicts', '25 pts', 'Trades made while in office that conflict with committee roles or upcoming legislation. +10 pts for any single trade >= $500K.'],
-            ['Legal Record', '15 pts', 'Lawsuits, ethics investigations, FEC violations. Weighted by severity: High=7, Medium=4, Low=1.'],
+            ['Legal Record', '25 pts', 'Lawsuits, ethics investigations, FEC violations. Weighted by severity: High=7, Medium=4, Low=1.'],
           ].map(([comp, pts, desc]) => (
             <tr key={comp} style={{ borderBottom: '1px solid #252a3a' }}>
               <td style={{ padding: '10px 16px', fontWeight: 600, color: '#e2e8f0', fontSize: 13 }}>{comp}</td>
@@ -47,9 +47,9 @@ export default function MethodologyPage() {
       <div style={{ background: '#0f1117', border: '1px solid #252a3a', borderRadius: 8, padding: '16px 18px', fontFamily: "'Barlow Condensed', sans-serif", fontSize: 14, color: '#f59e0b', margin: '10px 0', lineHeight: 1.9 }}>
         Total Score = Lobby Score + Alignment Score + Stock Score + Legal Score<br /><br />
         Lobby Score &nbsp;&nbsp;&nbsp;= min(25, total_lobby_$ / 100,000 x 1.2)<br />
-        Alignment Score = (donor-aligned votes / total votes) x 35<br />
+        Alignment Score = (donor-aligned votes / total votes) x 25<br />
         Stock Score &nbsp;&nbsp;&nbsp;= (conflict trades x 5) + (10 if any trade >= $500K)<br />
-        Legal Score &nbsp;&nbsp;&nbsp;= Sum severity weights, capped at 15
+        Legal Score &nbsp;&nbsp;&nbsp;= Sum severity weights (High 7, Medium 4, Low 1), rescaled and capped at 25
       </div>
 
       <div style={{ background: 'rgba(245,158,11,.07)', border: '1px solid rgba(245,158,11,.18)', borderRadius: 8, padding: '14px 18px', fontSize: 13, color: '#d4aa60', lineHeight: 1.65, margin: '10px 0' }}>
