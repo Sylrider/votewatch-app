@@ -283,6 +283,7 @@ async function main() {
         stockTrades: mStockTrades,
         lawsuits: mLawsuits,
         votes: mVotes,
+        votes: mVotes,
         funding: mFunding,
         viewSummary: buildViewSummary({
           name: formatName(member.name),
@@ -376,55 +377,92 @@ function fmtMoney(n: number): string {
  */
 function buildViewSummary(input: {
   name: string;
-  funding: import("./sources/fec").FundingProfile;
+  funding: import('./sources/fec').FundingProfile;
   lobbyMoney: Array<{ amount: number }>;
   stockTrades: Array<{ conflict?: boolean }>;
   lawsuits: Array<unknown>;
+  votes?: Array<{ bill: string; alignsWithDonors?: boolean }>;
 }): string {
-  const { name, funding, lobbyMoney, stockTrades, lawsuits } = input;
+  const { name, funding, lobbyMoney, stockTrades, lawsuits, votes } = input;
   const parts: string[] = [];
 
-  if (funding && funding.available && funding.totalRaised > 0) {
-    const yr = funding.periodYear ? ` (through ${funding.periodYear})` : "";
-    parts.push(
-      `${name} raised ${fmtMoney(funding.totalRaised)} in reported campaign funds${yr}.`,
-    );
-    if (funding.bigMoneyShare != null && funding.smallDonorShare != null) {
+  // --- MONEY AXIS ---
+  if (funding && funding.available && funding.totalRaised) {
+    const yr = funding.periodYear ? ` (${funding.periodYear})` : '';
+    parts.push(`${name} raised ${fmtMoney(funding.totalRaised)} in reported campaign funds${yr}.`);
+
+    if (funding.bigMoneyShare !== null && funding.smallDonorShare !== null) {
       const bigPct = Math.round(funding.bigMoneyShare * 100);
       const smallPct = Math.round(funding.smallDonorShare * 100);
       parts.push(
         `About ${bigPct}% came from large donors, PACs and committee transfers ` +
-          `(${fmtMoney(funding.largeDonorMoney)} itemized, ${fmtMoney(funding.pacMoney)} PAC), ` +
-          `while ${smallPct}% (${fmtMoney(funding.smallDonorMoney)}) came from small grassroots donors.`,
+        `(${fmtMoney(funding.largeDonorMoney)} itemized, ${fmtMoney(funding.pacMoney)} PAC), ` +
+        `while ${smallPct}% (${fmtMoney(funding.smallDonorMoney)}) came from small grassroots donors.`
       );
       if (bigPct >= 60) {
-        parts.push("This funding mix leans heavily on big-money sources, a higher influence-risk signal.");
+        parts.push('This funding mix leans heavily on big-money sources, a higher influence-risk signal.');
       } else if (smallPct >= 50) {
-        parts.push("This funding mix is grassroots-leaning, a lower influence-risk signal.");
+        parts.push('This funding mix is grassroots-leaning, a lower influence-risk signal.');
       }
     }
+
+    // Named top individual donors (FEC Schedule A)
+    if (funding.topIndividualDonors && funding.topIndividualDonors.length) {
+      const named = funding.topIndividualDonors.slice(0, 3).map((d) => {
+        const emp = d.employer ? ` (${d.employer})` : '';
+        return `${d.name}${emp} ${fmtMoney(d.amount)}`;
+      });
+      parts.push(`Largest individual donors on record: ${named.join('; ')}.`);
+    }
+
+    // Outside / independent spending (Super PAC IEs, FEC Schedule E)
+    if (funding.outsideSpending && funding.outsideSpending.length) {
+      const ie = funding.outsideSpending;
+      const ieTotal = ie.reduce((s, e) => s + (e.amount || 0), 0);
+      const top = ie.slice(0, 2).map((e) => `${e.spender} ${fmtMoney(e.amount)} (${e.position})`);
+      parts.push(
+        `Outside groups reported ${fmtMoney(ieTotal)} in independent expenditures ` +
+        `for or against ${name}, led by ${top.join('; ')}. This is separate from money the campaign itself raised.`
+      );
+    }
   } else {
-    parts.push(`${name}: campaign-finance totals are unavailable (no matched FEC committee).`);
+    parts.push(`${name}'s campaign finance totals are unavailable (no matched FEC committee).`);
   }
 
-  const trackedLobby = lobbyMoney.reduce((s, l) => s + (l.amount || 0), 0);
+  const trackedLobby = lobbyMoney.reduce((s, l) => s + l.amount, 0);
   if (trackedLobby > 0) {
     parts.push(`Tracked industry/PAC contributions identified so far total ${fmtMoney(trackedLobby)}.`);
   }
 
+  // --- VOTES AXIS ---
+  if (votes && votes.length) {
+    const aligned = votes.filter((v) => v.alignsWithDonors);
+    if (aligned.length) {
+      const bills = aligned.slice(0, 2).map((v) => v.bill).filter(Boolean);
+      const billStr = bills.length ? ` (e.g. ${bills.join('; ')})` : '';
+      parts.push(
+        `${aligned.length} of ${votes.length} tracked votes aligned with the positions of ${name}'s top donors${billStr}.`
+      );
+    } else {
+      parts.push(`None of the ${votes.length} tracked votes aligned with donor-favored positions.`);
+    }
+  }
+
+  // --- STOCKS AXIS ---
   const conflicts = stockTrades.filter((t) => t.conflict).length;
-  if (stockTrades.length > 0) {
+  if (stockTrades.length) {
     parts.push(
       `${stockTrades.length} disclosed stock trade(s)` +
-        (conflicts > 0 ? `, ${conflicts} flagged as a potential conflict of interest.` : "."),
+      (conflicts ? `, ${conflicts} flagged as a potential conflict of interest.` : '.')
     );
   }
 
-  if (lawsuits.length > 0) {
+  // --- LEGAL AXIS ---
+  if (lawsuits.length) {
     parts.push(`${lawsuits.length} legal action(s)/lawsuit(s) on record.`);
   }
 
-  return parts.join(" ");
+  return parts.join(' ');
 }
 
 function generateId(name: string, state: string, chamber: string): string {
