@@ -15,7 +15,7 @@
 > memory. This file is the bridge. The repo is the shared state; this file is the memory.
 > Read first, write last, every time.
 >
-> Last updated: 2026-06-09 - by: chrome ext (Step 3 DONE: 4-channel money axis - outsideSpending + topIndividualDonors added to types/fec/score/pipeline; all 5 commits Cloudflare-green)
+Last updated: 2026-06-09 - by: chrome ext (recorded user directives: defer Step 4 stocks; new Step 7 rebalance all four pillars to 25 pts each, vote 35 to 25, legal 15 to 25, update methodology page + all politicians)
 ---
 
 ## 1. WHAT THIS IS
@@ -682,6 +682,10 @@ STEP 5 - Politician page + 4-axis summary. Ensure every profile renders all 4 pi
 
 STEP 6 - Pipeline rerun + verification. Run Refresh Data Pipeline in 25-member windows (start=N, count=25, force=1) across the full roster. The MERGE GUARD must hold (do not wipe curated stocks/votes/lawsuits on an empty fetch). After each batch verify: funding reconciles, alignScore non-zero where expected, no orphan lobby ids, Cloudflare check = success. Spot-check showcase profiles (Pelosi, Trump, Warren, McConnell) end to end.
 
+STEP ORDERING (user directive 2026-06-09): do STEP 4 (stocks) LATER, after Steps 5/6. Steps proceed 5 then 6 then 4. Step 4 is NOT dropped - it must still be completed eventually.
+
+STEP 7 - METHODOLOGY REWEIGHT (user directive 2026-06-09). User wants EACH of the four pillars (votes, lobby/money, stocks, legal) to weigh 25 pts so the max is 4 x 25 = 100, equally weighted. Current weights (Sec.7) are uneven: money base ~20, alignScore x35, stockScore cap 25, legalScore cap 15. Target: moneyScore cap 25, alignScore (donorAlignedVotes/totalVotes) x25, stockScore cap 25, legalScore cap 25. This applies to EVERY politician (not just the per-politician display) AND the public methodology page at watchgov.org/methodology must be updated to state 25/25/25/25. After the score.ts reweight, ALL politicians must be recomputed (pipeline rerun) so live scores reflect the new weights, and the methodology page copy edited to match. Keep ASCII-only, never fabricate numbers.
+
 ### D. GUARDRAILS (binding)
 
 ASCII only in all source files (CI guard exists): no em-dash, smart quote, arrow glyph, or emoji. Never fabricate numbers; missing data = available:false / "not applicable", never $0. FEC via pipeline + FEC_API_KEY only, never DEMO_KEY; CourtListener via CL_TOKEN through the pipeline. After EVERY work session: tick Sec.12, add a Sec.13 changelog line, update the Last updated stamp, and commit/push. Assistant is PROHIBITED from creating accounts, entering API keys/secrets, or changing repo permissions; the user must do those.
@@ -709,3 +713,5 @@ Cloudflare-green before the next (so a long pipeline run can never start on a br
   (Step 6) - the code path is live and green but data is pulled on the next Refresh Data Pipeline run.
 - NEXT: Step 5 (viewSummary narrates all 4 axes incl. named outside spenders/donors) + page
   components to render the new channels, then Step 4 (stocks source) and Step 6 (batched reruns).
+
+- 2026-06-09 (chrome ext): Recorded two user directives into the plan. (1) STEP ORDERING: defer Step 4 (stocks) to AFTER Steps 5 and 6; Step 4 still required, not dropped. (2) Added STEP 7 METHODOLOGY REWEIGHT: rebalance all four pillars (votes, lobby/money, stocks, legal) to 25 pts each (max 100). Today methodology page and per-politician weighting still show vote 35 / legal 15 etc. - must become 25/25/25/25 in score.ts, recompute ALL politicians via pipeline, and update the watchgov.org/methodology page copy to match. No code/scores changed this entry - planning record only.
