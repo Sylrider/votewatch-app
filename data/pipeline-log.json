@@ -1,10 +1,7 @@
 {
-  "startedAt": "2026-06-10T01:16:34.062Z",
+  "startedAt": "2026-06-10T02:18:30.107Z",
   "version": "1.0.0",
-  "politiciansProcessed": 23,
-  "errors": [
-    "Harrigan, Pat: CourtListener search failed for Harrigan, Pat: HTTP 429",
-    "Dexter, Maxine: CourtListener search failed for Dexter, Maxine: HTTP 429"
-  ],
-  "completedAt": "2026-06-10T01:43:38.506Z"
+  "politiciansProcessed": 5,
+  "errors": [],
+  "completedAt": "2026-06-10T02:20:57.641Z"
 }
