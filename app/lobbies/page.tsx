@@ -36,25 +36,25 @@ export default async function LobbiesPage() {
                 itemScope itemType="https://schema.org/Organization"
                 aria-label={`${lobby.name}: ${lobby.category}`}
               >
-                <div style={{ padding: '18px 18px 14px', borderBottom: '1px solid #e5e9f0' }}>
+                <div style={{ padding: '18px 18px 14px', borderBottom: '1px solid #e6eaed' }}>
                   <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', marginBottom: 8, color: lobby.color }}>
                     {lobby.category}
                   </p>
-                  <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 17, fontWeight: 700, color: '#0f172a', lineHeight: 1.3, marginBottom: 12 }} itemProp="name">
+                  <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 17, fontWeight: 700, color: '#0f1b2d', lineHeight: 1.3, marginBottom: 12 }} itemProp="name">
                     {lobby.name}
                   </h2>
                   <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
                     <div>
-                      <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 26, color: '#f59e0b' }}>{fmtMoney(lobby.annualSpend)}</span>
-                      <span style={{ fontSize: 11, color: '#64748b', marginLeft: 4 }}>/ yr lobbying</span>
+                      <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 26, color: '#0d9488' }}>{fmtMoney(lobby.annualSpend)}</span>
+                      <span style={{ fontSize: 11, color: '#8493a3', marginLeft: 4 }}>/ yr lobbying</span>
                     </div>
                     <div style={{ textAlign: 'right' }}>
-                      <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 24, color: '#0f172a' }}>{recipients.length}</div>
-                      <div style={{ fontSize: 10, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Politicians Funded</div>
+                      <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 24, color: '#0f1b2d' }}>{recipients.length}</div>
+                      <div style={{ fontSize: 10, color: '#8493a3', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Politicians Funded</div>
                     </div>
                   </div>
                 </div>
-                <p style={{ padding: '12px 18px', background: '#f1f5f9', fontSize: 12, color: '#64748b', lineHeight: 1.5,
+                <p style={{ padding: '12px 18px', background: '#f6f8f9', fontSize: 12, color: '#8493a3', lineHeight: 1.5,
                   display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
                   itemProp="description">
                   {lobby.mission}
