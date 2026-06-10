@@ -16,8 +16,8 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: #080a0f;
-  color: #e2e8f0;
+  background: #f4f6fa;
+  color: #0f172a;
   font-family: 'Barlow', system-ui, sans-serif;
   font-weight: 400;
   line-height: 1.5;
@@ -30,8 +30,8 @@ body {
 
 /* -- Hero -------------------------------------------------------------------- */
 .hero {
-  background: linear-gradient(175deg, #0c0f1c 0%, #080a0f 100%);
-  border-bottom: 1px solid #252a3a;
+  background: linear-gradient(175deg, #ffffff 0%, #f8fafc 100%);
+  border-bottom: 1px solid #e5e9f0;
   padding: 56px 24px 44px;
   text-align: center;
 }
@@ -49,7 +49,7 @@ body {
   font-size: clamp(44px, 6.5vw, 84px);
   letter-spacing: 0.05em;
   line-height: 0.94;
-  color: #e2e8f0;
+  color: #0f172a;
   margin-bottom: 18px;
 }
 .hero-h1 em { color: #f59e0b; font-style: normal; }
@@ -66,18 +66,19 @@ body {
 .stats-row {
   display: flex;
   justify-content: center;
-  border: 1px solid #252a3a;
-  border-radius: 8px;
+  border: 1px solid #e5e9f0;
+  border-radius: 12px;
   overflow: hidden;
   max-width: 680px;
   margin: 0 auto;
-  background: #0f1117;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(15,23,42,.06);
 }
 .stat-item {
   flex: 1;
   padding: 14px;
   text-align: center;
-  border-right: 1px solid #252a3a;
+  border-right: 1px solid #e5e9f0;
 }
 .stat-item:last-child { border-right: none; }
 .stat-num {
@@ -96,17 +97,18 @@ body {
 
 /* -- Cards ------------------------------------------------------------------- */
 .card {
-  background: #0f1117;
-  border: 1px solid #252a3a;
-  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
+  box-shadow: 0 1px 3px rgba(15,23,42,.06), 0 1px 2px rgba(15,23,42,.04);
   transition: border-color 0.18s, transform 0.18s, box-shadow 0.18s;
 }
 .card:hover {
   border-color: #f59e0b;
   transform: translateY(-2px);
-  box-shadow: 0 10px 36px rgba(0,0,0,.5);
+  box-shadow: 0 12px 28px rgba(15,23,42,.12), 0 4px 10px rgba(15,23,42,.08);
 }
 
 /* -- Party Badges ------------------------------------------------------------ */
@@ -134,15 +136,16 @@ body {
 
 /* -- Tables ------------------------------------------------------------------ */
 .data-table {
-  background: #0f1117;
-  border: 1px solid #252a3a;
-  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 1px 3px rgba(15,23,42,.05);
 }
 .data-table-head {
-  background: #171b24;
+  background: #f1f5f9;
   padding: 9px 18px;
-  border-bottom: 1px solid #252a3a;
+  border-bottom: 1px solid #e5e9f0;
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 10px;
   font-weight: 700;
@@ -151,12 +154,12 @@ body {
   color: #64748b;
 }
 .data-row {
-  border-bottom: 1px solid #252a3a;
+  border-bottom: 1px solid #e5e9f0;
   padding: 13px 18px;
   transition: background 0.15s;
 }
 .data-row:last-child { border-bottom: none; }
-.data-row:hover { background: #171b24; }
+.data-row:hover { background: #f1f5f9; }
 
 /* -- Vote badges ------------------------------------------------------------- */
 .vote-yea {
@@ -217,29 +220,30 @@ body {
   content: '';
   flex: 1;
   height: 1px;
-  background: #252a3a;
+  background: #e5e9f0;
 }
 
 /* -- Summary blockquote ------------------------------------------------------ */
 .summary-box {
-  background: #0f1117;
-  border: 1px solid #252a3a;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
   border-left: 4px solid #f59e0b;
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 1px 3px rgba(15,23,42,.05);
   padding: 18px 22px;
   font-size: 14px;
   line-height: 1.75;
-  color: #b8c4d4;
+  color: #334155;
   font-style: italic;
 }
 
 /* -- Disclaimer bar ---------------------------------------------------------- */
 .disc-bar {
-  background: #1a110a;
-  border-bottom: 1px solid #3d2a0a;
+  background: #fffbeb;
+  border-bottom: 1px solid #fde68a;
   padding: 5px 24px;
   font-size: 11px;
-  color: #b8892a;
+  color: #92400e;
   text-align: center;
 }
 
