@@ -410,6 +410,7 @@ export async function fetchOutsideSpending(
       const pages = data?.pagination?.pages || 1;
       if (page >= pages) break;
     }
+    console.warn(`fec outsideSpending candidate=${candidateId} aggregated=${byKey.size}`);
     return Array.from(byKey.values()).sort((a, b) => b.amount - a.amount).slice(0, 15);
   } catch (e) {
     console.warn(`  [fec] outside spending fetch failed for ${candidateId}: ${(e as Error).message}`);
@@ -442,7 +443,7 @@ export async function fetchTopDonors(
       const data = await get(`/schedules/schedule_a/`, apiKey, {
         committee_id: committeeId,
         two_year_transaction_period: FUNDING_CYCLE,
-        is_individual: "true",
+        line_number: "F3-11AI",
         per_page: 100,
         page,
         sort: "-contribution_receipt_amount",
@@ -462,6 +463,7 @@ export async function fetchTopDonors(
       const pages = data?.pagination?.pages || 1;
       if (page >= pages) break;
     }
+    console.warn(`fec topDonors committee=${committeeId} aggregated=${byName.size}`);
     return Array.from(byName.values()).sort((a, b) => b.amount - a.amount).slice(0, 10);
   } catch (e) {
     console.warn(`  [fec] top donors fetch failed for ${candidateId}: ${(e as Error).message}`);
