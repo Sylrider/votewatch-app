@@ -16,6 +16,8 @@ import type { FECCandidate, LobbyContribution } from '../../lib/types';
 import { classifyLobby } from '../lobby-map';
 
 const BASE = 'https://api.open.fec.gov/v1';
+const FUNDING_CYCLE = 2024;
+const MAX_PAGES = 8; // up to 800 largest org/PAC contributions
 
 async function get(path: string, apiKey: string, params: Record<string, string | number> = {}) {
   const url = new URL(`${BASE}${path}`);
@@ -210,7 +212,7 @@ export async function fetchFundingProfile(
   try {
     // Use the most-recent COMPLETE election cycle (2024), matching buildLobbyContributions.
     // The in-progress cycle (2026) understates totals and will not reconcile.
-    const FUNDING_CYCLE = 2024;
+    // FUNDING_CYCLE is a module-level constant (see top of file).
     const data = await get(`/candidate/${candidateId}/totals/`, apiKey, {
       cycle: FUNDING_CYCLE,
       per_page: 20,
@@ -290,7 +292,7 @@ export async function buildLobbyContributions(
   // 2. Page through committee/organization contributions (skip individuals),
   //    sorted by amount desc so the meaningful PAC money surfaces first.
   const totals: Record<string, { name: string; amount: number }> = {};
-  const MAX_PAGES = 8; // up to 800 largest org/PAC contributions
+  // MAX_PAGES is a module-level constant (see top of file).
   let lastIndex: string | null = null;
   let lastAmount: string | null = null;
   for (let page = 0; page < MAX_PAGES; page++) {
