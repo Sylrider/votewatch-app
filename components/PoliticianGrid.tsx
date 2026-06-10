@@ -50,7 +50,7 @@ export default function PoliticianGrid({ politicians }: { politicians: Politicia
       {/* Category tabs */}
       <nav
         className="flex overflow-x-auto border-b"
-        style={{ background: '#0f1117', borderColor: '#252a3a' }}
+        style={{ background: '#ffffff', borderColor: '#e5e9f0' }}
         aria-label="Filter by office type"
       >
         {CHAMBERS.map(c => (
@@ -79,7 +79,7 @@ export default function PoliticianGrid({ politicians }: { politicians: Politicia
       {/* Search + filters */}
       <div
         className="flex flex-wrap gap-2 px-6 py-3 border-b"
-        style={{ background: '#171b24', borderColor: '#252a3a' }}
+        style={{ background: '#f1f5f9', borderColor: '#e5e9f0' }}
         role="search"
       >
         <input
@@ -89,8 +89,8 @@ export default function PoliticianGrid({ politicians }: { politicians: Politicia
           onChange={e => { setSearch(e.target.value); setVisible(PAGE_SIZE); }}
           aria-label="Search politicians"
           style={{
-            background: '#0f1117', border: '1px solid #252a3a', borderRadius: 6,
-            padding: '8px 14px', color: '#e2e8f0', fontFamily: 'Barlow, sans-serif',
+            background: '#ffffff', border: '1px solid #e5e9f0', borderRadius: 6,
+            padding: '8px 14px', color: '#0f172a', fontFamily: 'Barlow, sans-serif',
             fontSize: 14, width: 220, outline: 'none',
           }}
         />
@@ -118,7 +118,7 @@ export default function PoliticianGrid({ politicians }: { politicians: Politicia
           <button
             onClick={() => setVisible(v => v + PAGE_SIZE)}
             style={{
-              background: '#0f1117', border: '1px solid #252a3a', color: '#e2e8f0',
+              background: '#ffffff', border: '1px solid #e5e9f0', color: '#0f172a',
               fontFamily: 'Barlow Condensed, sans-serif', fontSize: 14, fontWeight: 700,
               letterSpacing: '1.5px', textTransform: 'uppercase', padding: '10px 32px',
               borderRadius: 6, cursor: 'pointer',
@@ -143,8 +143,8 @@ function Select({ value, onChange, options }: {
       value={value}
       onChange={e => onChange(e.target.value)}
       style={{
-        background: '#0f1117', border: '1px solid #252a3a', borderRadius: 6,
-        padding: '8px 12px', color: '#e2e8f0', fontFamily: 'Barlow, sans-serif',
+        background: '#ffffff', border: '1px solid #e5e9f0', borderRadius: 6,
+        padding: '8px 12px', color: '#0f172a', fontFamily: 'Barlow, sans-serif',
         fontSize: 13, cursor: 'pointer', outline: 'none',
       }}
     >
@@ -190,11 +190,11 @@ function PoliticianCard({ p }: { p: Politician }) {
                   width: 38, height: 38, borderRadius: '50%', display: 'flex',
                   alignItems: 'center', justifyContent: 'center',
                   fontFamily: "'Bebas Neue', sans-serif", fontSize: 15,
-                  background: pc + '22', color: pc, border: '1px solid #252a3a', flexShrink: 0,
+                  background: pc + '22', color: pc, border: '1px solid #e5e9f0', flexShrink: 0,
                 }} aria-hidden="true">{initials}</div>
               )}
               <div>
-                <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 19, fontWeight: 700, color: '#e2e8f0', lineHeight: 1.15 }} itemProp="name">
+                <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 19, fontWeight: 700, color: '#0f172a', lineHeight: 1.15 }} itemProp="name">
                   {p.name}
                 </h2>
                 <p style={{ fontSize: 11, color: '#64748b', marginTop: 2 }}>{p.title} - {p.state} - since {p.since}</p>
@@ -220,7 +220,7 @@ function PoliticianCard({ p }: { p: Politician }) {
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: '1.2px', textTransform: 'uppercase', color }}>{label}</div>
               <div style={{ fontSize: 10, color: '#64748b' }}>Transparency Risk Score</div>
-              <div style={{ height: 3, background: '#1e2333', borderRadius: 2, marginTop: 4, overflow: 'hidden' }}>
+              <div style={{ height: 3, background: '#f1f5f9', borderRadius: 2, marginTop: 4, overflow: 'hidden' }}>
                 <div style={{ height: '100%', width: `${score}%`, background: color, borderRadius: 2 }} />
               </div>
             </div>
@@ -237,7 +237,7 @@ function PoliticianCard({ p }: { p: Politician }) {
               ].map(item => (
                 <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
                   <span style={{ fontSize: 10, color: '#64748b', width: 66, flexShrink: 0 }}>{item.label}</span>
-                  <div style={{ flex: 1, height: 3, background: '#1e2333', borderRadius: 2, overflow: 'hidden' }}>
+                  <div style={{ flex: 1, height: 3, background: '#f1f5f9', borderRadius: 2, overflow: 'hidden' }}>
                     <div style={{ height: '100%', width: `${(item.val / item.max) * 100}%`, background: item.color, borderRadius: 2 }} />
                   </div>
                   <span style={{ fontSize: 10, fontWeight: 700, width: 20, textAlign: 'right', color: item.color }}>{item.val}</span>
@@ -253,7 +253,7 @@ function PoliticianCard({ p }: { p: Politician }) {
                 <span key={l.lobbyId} style={{
                   fontSize: 10, padding: '2px 7px', borderRadius: 4, fontWeight: 700,
                   letterSpacing: '0.5px', textTransform: 'uppercase',
-                  border: '1px solid #252a3a', color: '#64748b', background: '#171b24',
+                  border: '1px solid #e5e9f0', color: '#64748b', background: '#f1f5f9',
                 }}>{l.lobbyId.toUpperCase()}</span>
               ))}
             </div>
@@ -262,18 +262,18 @@ function PoliticianCard({ p }: { p: Politician }) {
 
         {/* Footer */}
         <div style={{
-          background: '#171b24', borderTop: '1px solid #252a3a',
+          background: '#f1f5f9', borderTop: '1px solid #e5e9f0',
           padding: '9px 18px', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
         }}>
           <div style={{ display: 'flex', gap: 12 }}>
             <span style={{ fontSize: 11, color: '#64748b' }}>
-              <strong style={{ color: '#e2e8f0' }}>{fmtMoney(totalMoney)}</strong> lobby
+              <strong style={{ color: '#0f172a' }}>{fmtMoney(totalMoney)}</strong> lobby
             </span>
             <span style={{ fontSize: 11, color: '#64748b' }}>
-              <strong style={{ color: conflicts > 0 ? '#f97316' : '#e2e8f0' }}>{conflicts}</strong> stock
+              <strong style={{ color: conflicts > 0 ? '#f97316' : '#0f172a' }}>{conflicts}</strong> stock
             </span>
             <span style={{ fontSize: 11, color: '#64748b' }}>
-              <strong style={{ color: legal > 0 ? '#f97316' : '#e2e8f0' }}>{legal}</strong> legal
+              <strong style={{ color: legal > 0 ? '#f97316' : '#0f172a' }}>{legal}</strong> legal
             </span>
           </div>
           <span style={{
