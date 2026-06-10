@@ -72,7 +72,7 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
           <Link
             href="/"
             className="text-sm px-4 py-2 rounded border transition-colors"
-            style={{ color: '#64748b', borderColor: '#252a3a' }}
+            style={{ color: '#64748b', borderColor: '#e5e9f0' }}
           >
             - Back to Politicians
           </Link>
@@ -81,7 +81,7 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
         {/* Header card */}
         <header
           className="rounded-xl p-7 mb-5 flex gap-6 flex-wrap"
-          style={{ background: '#0f1117', border: '1px solid #252a3a' }}
+          style={{ background: '#ffffff', border: '1px solid #e5e9f0' }}
         >
           {/* Avatar */}
           {p.imageUrl ? (
@@ -92,12 +92,12 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
               height={80}
               loading="lazy"
               className="w-20 h-20 rounded-full object-cover border-2 flex-shrink-0"
-              style={{ borderColor: '#252a3a' }}
+              style={{ borderColor: '#e5e9f0' }}
             />
           ) : (
             <div
               className="w-20 h-20 rounded-full flex items-center justify-center font-display text-3xl border-2 flex-shrink-0"
-              style={{ background: pc + '22', color: pc, borderColor: '#252a3a' }}
+              style={{ background: pc + '22', color: pc, borderColor: '#e5e9f0' }}
               aria-hidden="true"
             >
               {initials}
@@ -110,7 +110,7 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
             <div className="flex flex-wrap gap-2 mb-3 items-center">
               <span className={`font-cond text-xs font-bold tracking-widest px-3 py-1 rounded-full badge-${ps.toLowerCase()}`}>{ps}</span>
               {[p.chamber, p.state, `Since ${p.since}`, p.title].map(t => (
-                <span key={t} className="text-xs px-3 py-1 rounded font-medium" style={{ background: '#171b24', border: '1px solid #252a3a', color: '#64748b' }}>{t}</span>
+                <span key={t} className="text-xs px-3 py-1 rounded font-medium" style={{ background: '#f1f5f9', border: '1px solid #e5e9f0', color: '#64748b' }}>{t}</span>
               ))}
             </div>
             <p className="text-sm" style={{ color: '#64748b' }}>
@@ -130,7 +130,7 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
             <span className="font-cond text-xs font-bold tracking-widest uppercase" style={{ color }}>{label}</span>
 
             {/* Breakdown bars */}
-            <div className="grid grid-cols-2 gap-2 mt-2 p-4 rounded-lg w-56" style={{ background: '#171b24', border: '1px solid #252a3a' }}>
+            <div className="grid grid-cols-2 gap-2 mt-2 p-4 rounded-lg w-56" style={{ background: '#f1f5f9', border: '1px solid #e5e9f0' }}>
               {[
                 { label: 'Lobby $',      val: p.score.lobbyScore, max: 25, color: '#f97316' },
                 { label: 'Vote Align',   val: p.score.alignScore, max: 35, color: '#ef4444' },
@@ -141,7 +141,7 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
                   <span className="font-cond text-[10px] uppercase tracking-wider" style={{ color: '#64748b' }}>
                     {item.label} <strong style={{ color: item.color }}>{item.val}/{item.max}</strong>
                   </span>
-                  <div className="h-1 rounded overflow-hidden" style={{ background: '#252a3a' }}>
+                  <div className="h-1 rounded overflow-hidden" style={{ background: '#e5e9f0' }}>
                     <div className="h-full rounded" style={{ width: `${(item.val / item.max) * 100}%`, background: item.color }} />
                   </div>
                 </div>
@@ -198,7 +198,7 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
             )}
             {p.funding.topIndividualDonors && p.funding.topIndividualDonors.length > 0 && (
               <div style={{ marginTop: '0.85rem' }}>
-                <h3 style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '0.95rem', fontWeight: 700, letterSpacing: '0.5px', color: '#e2e8f0', marginBottom: '0.35rem' }}>
+                <h3 style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '0.95rem', fontWeight: 700, letterSpacing: '0.5px', color: '#0f172a', marginBottom: '0.35rem' }}>
                   Top individual donors
                 </h3>
                 <div className="data-table" role="table">
@@ -207,7 +207,14 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
                   </div>
                   {p.funding.topIndividualDonors.slice(0, 5).map((d, i) => (
                     <div key={`${d.name}-${i}`} className="data-table-row grid gap-2" style={{ gridTemplateColumns: '1fr 120px' }}>
-                      <span>{d.name}{d.employer ? ` (${d.employer})` : ''}</span>
+                      <span>
+                        {d.name}
+                        {(d.employer || d.occupation) && (
+                          <span style={{ display: 'block', fontSize: '0.7rem', color: '#64748b', marginTop: '1px' }}>
+                            {[d.occupation, d.employer].filter(Boolean).join(' - ')}
+                          </span>
+                        )}
+                      </span>
                       <span>{fmtMoney(d.amount)}</span>
                     </div>
                   ))}
@@ -216,10 +223,10 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
             )}
             {p.funding.outsideSpending && p.funding.outsideSpending.length > 0 && (
               <div style={{ marginTop: '0.85rem' }}>
-                <h3 style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '0.95rem', fontWeight: 700, letterSpacing: '0.5px', color: '#e2e8f0', marginBottom: '0.35rem' }}>
+                <h3 style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '0.95rem', fontWeight: 700, letterSpacing: '0.5px', color: '#0f172a', marginBottom: '0.35rem' }}>
                   Outside spending (independent expenditures)
                 </h3>
-                <p className="text-xs" style={{ color: '#8b94a8', marginBottom: '0.4rem' }}>
+                <p className="text-xs" style={{ color: '#64748b', marginBottom: '0.4rem' }}>
                   Reported by outside groups for or against this official. Separate from money the campaign raised.
                 </p>
                 <div className="data-table" role="table">
@@ -228,7 +235,14 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
                   </div>
                   {p.funding.outsideSpending.slice(0, 5).map((e, i) => (
                     <div key={`${e.spender}-${i}`} className="data-table-row grid gap-2" style={{ gridTemplateColumns: '1fr 110px 80px' }}>
-                      <span>{e.spender}</span>
+                      <span>
+                        {e.spender}
+                        {(e.committeeType || e.orgType || e.party) && (
+                          <span style={{ display: 'block', fontSize: '0.7rem', color: '#64748b', marginTop: '1px' }}>
+                            {[e.committeeType, e.orgType, e.party].filter(Boolean).join(' - ')}
+                          </span>
+                        )}
+                      </span>
                       <span>{fmtMoney(e.amount)}</span>
                       <span style={{ color: e.position === 'oppose' ? '#ef4444' : '#22c55e' }}>{e.position}</span>
                     </div>
@@ -262,9 +276,9 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
                 return (
                   <div key={l.lobbyId} className="data-row grid gap-3 items-center" style={{ gridTemplateColumns: '1fr 90px 1fr' }}>
                     <div className="flex items-center gap-2">
-                      <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: lobby?.color || '#888' }} />
+                      <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: lobby?.color || '#64748b' }} />
                       <div>
-                        <Link href={`/lobbies/${l.lobbyId}`} className="font-semibold text-sm hover:text-amber-400 transition-colors" style={{ color: '#e2e8f0' }}>
+                        <Link href={`/lobbies/${l.lobbyId}`} className="font-semibold text-sm hover:text-amber-400 transition-colors" style={{ color: '#0f172a' }}>
                           {l.lobbyName}
                         </Link>
                         {lobby && <div className="text-xs" style={{ color: '#64748b' }}>{lobby.category}</div>}
@@ -284,7 +298,7 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
           <h2 className="section-title">Stock Trades While in Office</h2>
           <div className="data-table">
             {p.stockTrades.length === 0
-              ? <div className="p-5 text-sm" style={{ color: '#9ca3af' }}>{p.notApplicable?.stockTrades ? 'Not applicable - executive-branch officials do not file congressional stock disclosures.' : 'Stock-trade disclosures are not currently available from an authoritative free data source; this section will populate when one is connected.'}</div>
+              ? <div className="p-5 text-sm" style={{ color: '#64748b' }}>{p.notApplicable?.stockTrades ? 'Not applicable - executive-branch officials do not file congressional stock disclosures.' : 'Stock-trade disclosures are not currently available from an authoritative free data source; this section will populate when one is connected.'}</div>
               : p.stockTrades.map((t, i) => (
                 <div key={i} className="data-row grid gap-3 items-start" style={{ gridTemplateColumns: '56px 1fr 90px 100px' }}>
                   <div>
@@ -293,7 +307,7 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
                     </span>
                   </div>
                   <div>
-                    <div className="font-cond text-base font-bold" style={{ color: '#e2e8f0' }}>{t.ticker}</div>
+                    <div className="font-cond text-base font-bold" style={{ color: '#0f172a' }}>{t.ticker}</div>
                     <div className="text-xs" style={{ color: '#64748b' }}>{t.company}</div>
                     <div className="text-xs mt-1" style={{ color: '#64748b', lineHeight: 1.4 }}>{t.conflictNote}</div>
                     {t.conflict && <div className="conflict-flag">- Conflict of Interest</div>}
@@ -320,7 +334,7 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
                     {l.severity.toUpperCase()}
                   </div>
                   <div>
-                    <div className="font-semibold text-sm mb-1" style={{ color: '#e2e8f0' }}>{l.title}</div>
+                    <div className="font-semibold text-sm mb-1" style={{ color: '#0f172a' }}>{l.title}</div>
                     <div className="font-cond text-xs font-bold uppercase tracking-wide mb-1" style={{ color: '#64748b' }}>{l.type}</div>
                     <div className="text-xs" style={{ color: '#64748b', lineHeight: 1.5 }}>{l.description}</div>
                     {l.courtListenerUrl && (
@@ -351,7 +365,7 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
                     {v.alignsWithDonors && <div className="donor-flag">-  Donor</div>}
                   </div>
                   <div>
-                    <div className="text-sm font-medium mb-1" style={{ color: '#e2e8f0' }}>{v.bill}</div>
+                    <div className="text-sm font-medium mb-1" style={{ color: '#0f172a' }}>{v.bill}</div>
                     <div className="text-xs" style={{ color: '#64748b', lineHeight: 1.4 }}>{v.note}</div>
                   </div>
                   <div className="text-xs text-right" style={{ color: '#64748b' }}>
