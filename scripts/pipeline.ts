@@ -267,6 +267,13 @@ async function main() {
         ? (funding as { totalRaised: number }).totalRaised : 0;
       const mFunding = __freshRaised > 0 ? funding : ((__prev && __prev.funding) || funding);
 
+  // Protect heavy Schedule E / Schedule A enrichment arrays from being wiped
+  // by a rate-limited (HTTP 429) empty fetch: keep whichever side has more records.
+  if (mFunding && __prev && __prev.funding) {
+    mFunding.outsideSpending = __pickRicher(mFunding.outsideSpending, __prev.funding.outsideSpending);
+    mFunding.topIndividualDonors = __pickRicher(mFunding.topIndividualDonors, __prev.funding.topIndividualDonors);
+  }
+
 
       let politician: Politician = {
         id: politicianId,
