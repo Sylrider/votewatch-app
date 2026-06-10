@@ -30,16 +30,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Navigation */}
         <nav
           className="sticky top-0 z-50 flex items-center justify-between px-6 h-[58px] border-b"
-          style={{ background: 'rgba(255,255,255,0.92)', borderColor: '#e5e9f0', backdropFilter: 'blur(16px)', boxShadow: '0 1px 3px rgba(15,23,42,.05)' }}
+          style={{ background: 'rgba(255,255,255,0.92)', borderColor: '#e6eaed', backdropFilter: 'blur(16px)', boxShadow: '0 1px 3px rgba(15,23,42,.05)' }}
           aria-label="Main navigation"
         >
           <Link
             href="/"
             className="font-display text-[26px] tracking-widest"
-            style={{ color: '#f59e0b' }}
+            style={{ color: '#0d9488' }}
             aria-label="WatchGov home"
           >
-            Watch<span style={{ color: '#0f172a' }}>Gov</span>
+            Watch<span style={{ color: '#0f1b2d' }}>Gov</span>
           </Link>
 
           <div className="flex gap-1" role="menubar">
@@ -61,24 +61,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Footer */}
         <footer
           className="border-t mt-16 py-12 px-6"
-          style={{ borderColor: '#e5e9f0', background: '#f8fafc' }}
+          style={{ borderColor: '#e6eaed', background: '#f6f8f9' }}
         >
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <div className="font-display text-2xl tracking-widest mb-3" style={{ color: '#f59e0b' }}>
+              <div className="font-display text-2xl tracking-widest mb-3" style={{ color: '#0d9488' }}>
                 WatchGov
               </div>
-              <p className="text-sm" style={{ color: '#64748b', lineHeight: 1.7 }}>
+              <p className="text-sm" style={{ color: '#8493a3', lineHeight: 1.7 }}>
                 An independent civic transparency project.
                 Not affiliated with any political party or organization.
               </p>
             </div>
 
             <div>
-              <h3 className="font-cond text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#64748b' }}>
+              <h3 className="font-cond text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#8493a3' }}>
                 Data Sources
               </h3>
-              <ul className="space-y-1 text-sm" style={{ color: '#64748b' }}>
+              <ul className="space-y-1 text-sm" style={{ color: '#8493a3' }}>
                 {[
                   ['FEC Campaign Finance', 'https://fec.gov'],
                   ['Congress.gov Voting Records', 'https://congress.gov'],
@@ -102,10 +102,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
 
             <div>
-              <h3 className="font-cond text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#64748b' }}>
+              <h3 className="font-cond text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#8493a3' }}>
                 About
               </h3>
-              <ul className="space-y-1 text-sm" style={{ color: '#64748b' }}>
+              <ul className="space-y-1 text-sm" style={{ color: '#8493a3' }}>
                 <li><Link href="/methodology" className="hover:text-amber-400 transition-colors">Methodology & Scoring</Link></li>
                 <li><a href="https://github.com/votewatch/votewatch" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Open Source on GitHub -></a></li>
                 <li><span>Data updated: {new Date().getFullYear()}</span></li>
@@ -113,7 +113,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
 
-          <div className="max-w-5xl mx-auto mt-8 pt-8 border-t text-xs text-center" style={{ borderColor: '#e5e9f0', color: '#64748b' }}>
+          <div className="max-w-5xl mx-auto mt-8 pt-8 border-t text-xs text-center" style={{ borderColor: '#e6eaed', color: '#8493a3' }}>
             WatchGov is an independent, nonpartisan project. A high Transparency Risk Score does not constitute proof of illegal activity.
             All data is sourced from public government disclosures.
           </div>
@@ -128,7 +128,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
     <Link
       href={href}
       className="font-cond text-[13px] font-bold tracking-widest uppercase px-4 py-2 rounded transition-colors"
-      style={{ color: '#64748b' }}
+      style={{ color: '#8493a3' }}
     >
       {children}
     </Link>
