@@ -72,7 +72,7 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
           <Link
             href="/"
             className="text-sm px-4 py-2 rounded border transition-colors"
-            style={{ color: '#64748b', borderColor: '#e5e9f0' }}
+            style={{ color: '#8493a3', borderColor: '#e6eaed' }}
           >
             - Back to Politicians
           </Link>
@@ -81,7 +81,7 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
         {/* Header card */}
         <header
           className="rounded-xl p-7 mb-5 flex gap-6 flex-wrap"
-          style={{ background: '#ffffff', border: '1px solid #e5e9f0' }}
+          style={{ background: '#ffffff', border: '1px solid #e6eaed' }}
         >
           {/* Avatar */}
           {p.imageUrl ? (
@@ -92,12 +92,12 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
               height={80}
               loading="lazy"
               className="w-20 h-20 rounded-full object-cover border-2 flex-shrink-0"
-              style={{ borderColor: '#e5e9f0' }}
+              style={{ borderColor: '#e6eaed' }}
             />
           ) : (
             <div
               className="w-20 h-20 rounded-full flex items-center justify-center font-display text-3xl border-2 flex-shrink-0"
-              style={{ background: pc + '22', color: pc, borderColor: '#e5e9f0' }}
+              style={{ background: pc + '22', color: pc, borderColor: '#e6eaed' }}
               aria-hidden="true"
             >
               {initials}
@@ -110,14 +110,14 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
             <div className="flex flex-wrap gap-2 mb-3 items-center">
               <span className={`font-cond text-xs font-bold tracking-widest px-3 py-1 rounded-full badge-${ps.toLowerCase()}`}>{ps}</span>
               {[p.chamber, p.state, `Since ${p.since}`, p.title].map(t => (
-                <span key={t} className="text-xs px-3 py-1 rounded font-medium" style={{ background: '#f1f5f9', border: '1px solid #e5e9f0', color: '#64748b' }}>{t}</span>
+                <span key={t} className="text-xs px-3 py-1 rounded font-medium" style={{ background: '#f6f8f9', border: '1px solid #e6eaed', color: '#8493a3' }}>{t}</span>
               ))}
             </div>
-            <p className="text-sm" style={{ color: '#64748b' }}>
-              Total raised: <strong style={{ color: '#f59e0b' }}>{fmtMoney(p.score.totalMoney)}</strong>
-              &ensp; - &ensp;Donor-aligned votes: <strong style={{ color: '#f59e0b' }}>{p.score.donorAlignedVotes}/{p.score.totalTrackedVotes}</strong>
-              &ensp; - &ensp;Stock conflicts: <strong style={{ color: p.score.conflictTrades > 0 ? '#f97316' : '#22c55e' }}>{p.score.conflictTrades}</strong>
-              &ensp; - &ensp;Legal actions: <strong style={{ color: p.lawsuits.length > 0 ? '#f97316' : '#22c55e' }}>{p.lawsuits.length}</strong>
+            <p className="text-sm" style={{ color: '#8493a3' }}>
+              Total raised: <strong style={{ color: '#0d9488' }}>{fmtMoney(p.score.totalMoney)}</strong>
+              &ensp; - &ensp;Donor-aligned votes: <strong style={{ color: '#0d9488' }}>{p.score.donorAlignedVotes}/{p.score.totalTrackedVotes}</strong>
+              &ensp; - &ensp;Stock conflicts: <strong style={{ color: p.score.conflictTrades > 0 ? '#ea580c' : '#059669' }}>{p.score.conflictTrades}</strong>
+              &ensp; - &ensp;Legal actions: <strong style={{ color: p.lawsuits.length > 0 ? '#ea580c' : '#059669' }}>{p.lawsuits.length}</strong>
             </p>
           </div>
 
@@ -125,23 +125,23 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
           <aside className="flex flex-col items-center gap-2 flex-shrink-0" aria-label={`Transparency Risk Score: ${p.score.total}/100`}>
             <div className={`w-24 h-24 rounded-full flex flex-col items-center justify-center border-[3px] ${p.score.total >= 75 ? 'score-critical' : p.score.total >= 50 ? 'score-high' : p.score.total >= 25 ? 'score-elevated' : 'score-low'}`}>
               <span className="font-display text-4xl leading-none" style={{ color }}>{p.score.total}</span>
-              <span className="text-xs" style={{ color: '#64748b' }}>/100</span>
+              <span className="text-xs" style={{ color: '#8493a3' }}>/100</span>
             </div>
             <span className="font-cond text-xs font-bold tracking-widest uppercase" style={{ color }}>{label}</span>
 
             {/* Breakdown bars */}
-            <div className="grid grid-cols-2 gap-2 mt-2 p-4 rounded-lg w-56" style={{ background: '#f1f5f9', border: '1px solid #e5e9f0' }}>
+            <div className="grid grid-cols-2 gap-2 mt-2 p-4 rounded-lg w-56" style={{ background: '#f6f8f9', border: '1px solid #e6eaed' }}>
               {[
-                { label: 'Lobby $',      val: p.score.lobbyScore, max: 25, color: '#f97316' },
-                { label: 'Vote Align',   val: p.score.alignScore, max: 35, color: '#ef4444' },
-                { label: 'Stock Trade',  val: p.score.stockScore, max: 25, color: '#eab308' },
-                { label: 'Legal',        val: p.score.legalScore, max: 15, color: '#a855f7' },
+                { label: 'Lobby $',      val: p.score.lobbyScore, max: 25, color: '#ea580c' },
+                { label: 'Vote Align',   val: p.score.alignScore, max: 35, color: '#e11d48' },
+                { label: 'Stock Trade',  val: p.score.stockScore, max: 25, color: '#d97706' },
+                { label: 'Legal',        val: p.score.legalScore, max: 15, color: '#9333ea' },
               ].map(item => (
                 <div key={item.label} className="flex flex-col gap-1">
-                  <span className="font-cond text-[10px] uppercase tracking-wider" style={{ color: '#64748b' }}>
+                  <span className="font-cond text-[10px] uppercase tracking-wider" style={{ color: '#8493a3' }}>
                     {item.label} <strong style={{ color: item.color }}>{item.val}/{item.max}</strong>
                   </span>
-                  <div className="h-1 rounded overflow-hidden" style={{ background: '#e5e9f0' }}>
+                  <div className="h-1 rounded overflow-hidden" style={{ background: '#e6eaed' }}>
                     <div className="h-full rounded" style={{ width: `${(item.val / item.max) * 100}%`, background: item.color }} />
                   </div>
                 </div>
@@ -162,9 +162,9 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
         {p.funding && p.funding.available ? (
           <section className="mb-5">
             <h2 className="section-title">Campaign Finance</h2>
-            <p className="text-sm" style={{ color: '#64748b', marginBottom: '0.5rem' }}>
+            <p className="text-sm" style={{ color: '#8493a3', marginBottom: '0.5rem' }}>
               Total raised{p.funding.periodYear ? ` (through ${p.funding.periodYear})` : ''}:{' '}
-              <strong style={{ color: '#f59e0b' }}>{fmtMoney(p.funding.totalRaised)}</strong>
+              <strong style={{ color: '#0d9488' }}>{fmtMoney(p.funding.totalRaised)}</strong>
             </p>
             <div className="data-table" role="table">
               <div className="data-table-head grid gap-3" style={{ gridTemplateColumns: '1fr 110px 90px' }}>
@@ -185,20 +185,20 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
               ))}
             </div>
             {p.funding.bigMoneyShare != null && (
-              <p className="text-sm" style={{ color: '#64748b', marginTop: '0.5rem' }}>
+              <p className="text-sm" style={{ color: '#8493a3', marginTop: '0.5rem' }}>
                 Big-money share (large donors + PACs + transfers):{' '}
-                <strong style={{ color: p.funding.bigMoneyShare >= 0.6 ? '#f97316' : '#22c55e' }}>
+                <strong style={{ color: p.funding.bigMoneyShare >= 0.6 ? '#ea580c' : '#059669' }}>
                   {Math.round(p.funding.bigMoneyShare * 100)}%
                 </strong>
                 {' - '}Grassroots share:{' '}
-                <strong style={{ color: '#22c55e' }}>
+                <strong style={{ color: '#059669' }}>
                   {p.funding.smallDonorShare != null ? Math.round(p.funding.smallDonorShare * 100) + '%' : '-'}
                 </strong>
               </p>
             )}
             {p.funding.topIndividualDonors && p.funding.topIndividualDonors.length > 0 && (
               <div style={{ marginTop: '0.85rem' }}>
-                <h3 style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '0.95rem', fontWeight: 700, letterSpacing: '0.5px', color: '#0f172a', marginBottom: '0.35rem' }}>
+                <h3 style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '0.95rem', fontWeight: 700, letterSpacing: '0.5px', color: '#0f1b2d', marginBottom: '0.35rem' }}>
                   Top individual donors
                 </h3>
                 <div className="data-table" role="table">
@@ -210,7 +210,7 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
                       <span>
                         {d.name}
                         {(d.employer || d.occupation) && (
-                          <span style={{ display: 'block', fontSize: '0.7rem', color: '#64748b', marginTop: '1px' }}>
+                          <span style={{ display: 'block', fontSize: '0.7rem', color: '#8493a3', marginTop: '1px' }}>
                             {[d.occupation, d.employer].filter(Boolean).join(' - ')}
                           </span>
                         )}
@@ -223,10 +223,10 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
             )}
             {p.funding.outsideSpending && p.funding.outsideSpending.length > 0 && (
               <div style={{ marginTop: '0.85rem' }}>
-                <h3 style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '0.95rem', fontWeight: 700, letterSpacing: '0.5px', color: '#0f172a', marginBottom: '0.35rem' }}>
+                <h3 style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '0.95rem', fontWeight: 700, letterSpacing: '0.5px', color: '#0f1b2d', marginBottom: '0.35rem' }}>
                   Outside spending (independent expenditures)
                 </h3>
-                <p className="text-xs" style={{ color: '#64748b', marginBottom: '0.4rem' }}>
+                <p className="text-xs" style={{ color: '#8493a3', marginBottom: '0.4rem' }}>
                   Reported by outside groups for or against this official. Separate from money the campaign raised.
                 </p>
                 <div className="data-table" role="table">
@@ -238,26 +238,26 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
                       <span>
                         {e.spender}
                         {(e.committeeType || e.orgType || e.party) && (
-                          <span style={{ display: 'block', fontSize: '0.7rem', color: '#64748b', marginTop: '1px' }}>
+                          <span style={{ display: 'block', fontSize: '0.7rem', color: '#8493a3', marginTop: '1px' }}>
                             {[e.committeeType, e.orgType, e.party].filter(Boolean).join(' - ')}
                           </span>
                         )}
                       </span>
                       <span>{fmtMoney(e.amount)}</span>
-                      <span style={{ color: e.position === 'oppose' ? '#ef4444' : '#22c55e' }}>{e.position}</span>
+                      <span style={{ color: e.position === 'oppose' ? '#e11d48' : '#059669' }}>{e.position}</span>
                     </div>
                   ))}
                 </div>
               </div>
             )}
-            <p className="text-xs" style={{ color: '#475569', marginTop: '0.35rem' }}>
+            <p className="text-xs" style={{ color: '#465465', marginTop: '0.35rem' }}>
               Source: FEC candidate totals.
             </p>
           </section>
         ) : (
           <section className="mb-5">
             <h2 className="section-title">Campaign Finance</h2>
-            <p className="text-sm" style={{ color: '#64748b' }}>
+            <p className="text-sm" style={{ color: '#8493a3' }}>
               Campaign-finance totals are <strong>unavailable</strong> (no matched FEC committee).
             </p>
           </section>
@@ -276,16 +276,16 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
                 return (
                   <div key={l.lobbyId} className="data-row grid gap-3 items-center" style={{ gridTemplateColumns: '1fr 90px 1fr' }}>
                     <div className="flex items-center gap-2">
-                      <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: lobby?.color || '#64748b' }} />
+                      <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: lobby?.color || '#8493a3' }} />
                       <div>
-                        <Link href={`/lobbies/${l.lobbyId}`} className="font-semibold text-sm hover:text-amber-400 transition-colors" style={{ color: '#0f172a' }}>
+                        <Link href={`/lobbies/${l.lobbyId}`} className="font-semibold text-sm hover:text-amber-400 transition-colors" style={{ color: '#0f1b2d' }}>
                           {l.lobbyName}
                         </Link>
-                        {lobby && <div className="text-xs" style={{ color: '#64748b' }}>{lobby.category}</div>}
+                        {lobby && <div className="text-xs" style={{ color: '#8493a3' }}>{lobby.category}</div>}
                       </div>
                     </div>
-                    <div className="font-cond text-lg font-bold" style={{ color: '#f59e0b' }}>{fmtMoney(l.amount)}</div>
-                    <div className="text-xs" style={{ color: '#64748b', lineHeight: 1.4 }}>{l.intent}</div>
+                    <div className="font-cond text-lg font-bold" style={{ color: '#0d9488' }}>{fmtMoney(l.amount)}</div>
+                    <div className="text-xs" style={{ color: '#8493a3', lineHeight: 1.4 }}>{l.intent}</div>
                   </div>
                 );
               })}
@@ -298,7 +298,7 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
           <h2 className="section-title">Stock Trades While in Office</h2>
           <div className="data-table">
             {p.stockTrades.length === 0
-              ? <div className="p-5 text-sm" style={{ color: '#64748b' }}>{p.notApplicable?.stockTrades ? 'Not applicable - executive-branch officials do not file congressional stock disclosures.' : 'Stock-trade disclosures are not currently available from an authoritative free data source; this section will populate when one is connected.'}</div>
+              ? <div className="p-5 text-sm" style={{ color: '#8493a3' }}>{p.notApplicable?.stockTrades ? 'Not applicable - executive-branch officials do not file congressional stock disclosures.' : 'Stock-trade disclosures are not currently available from an authoritative free data source; this section will populate when one is connected.'}</div>
               : p.stockTrades.map((t, i) => (
                 <div key={i} className="data-row grid gap-3 items-start" style={{ gridTemplateColumns: '56px 1fr 90px 100px' }}>
                   <div>
@@ -307,15 +307,15 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
                     </span>
                   </div>
                   <div>
-                    <div className="font-cond text-base font-bold" style={{ color: '#0f172a' }}>{t.ticker}</div>
-                    <div className="text-xs" style={{ color: '#64748b' }}>{t.company}</div>
-                    <div className="text-xs mt-1" style={{ color: '#64748b', lineHeight: 1.4 }}>{t.conflictNote}</div>
+                    <div className="font-cond text-base font-bold" style={{ color: '#0f1b2d' }}>{t.ticker}</div>
+                    <div className="text-xs" style={{ color: '#8493a3' }}>{t.company}</div>
+                    <div className="text-xs mt-1" style={{ color: '#8493a3', lineHeight: 1.4 }}>{t.conflictNote}</div>
                     {t.conflict && <div className="conflict-flag">- Conflict of Interest</div>}
                   </div>
-                  <div className="font-cond text-base font-bold" style={{ color: '#f59e0b' }}>
+                  <div className="font-cond text-base font-bold" style={{ color: '#0d9488' }}>
                     {t.amountRange || fmtMoney(t.amount)}
                   </div>
-                  <div className="text-xs text-right" style={{ color: '#64748b' }}>{t.date}</div>
+                  <div className="text-xs text-right" style={{ color: '#8493a3' }}>{t.date}</div>
                 </div>
               ))
             }
@@ -327,25 +327,25 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
           <h2 className="section-title">Legal Actions &amp; Investigations</h2>
           <div className="data-table">
             {p.lawsuits.length === 0
-              ? <div className="p-5 text-sm" style={{ color: '#22c55e' }}>- No lawsuits, investigations, or legal actions on record.</div>
+              ? <div className="p-5 text-sm" style={{ color: '#059669' }}>- No lawsuits, investigations, or legal actions on record.</div>
               : p.lawsuits.map((l, i) => (
                 <div key={i} className="data-row grid gap-3 items-start" style={{ gridTemplateColumns: '90px 1fr 110px' }}>
                   <div className={`font-cond text-xs font-bold tracking-wide px-2 py-1 rounded text-center sev-${l.severity}`}>
                     {l.severity.toUpperCase()}
                   </div>
                   <div>
-                    <div className="font-semibold text-sm mb-1" style={{ color: '#0f172a' }}>{l.title}</div>
-                    <div className="font-cond text-xs font-bold uppercase tracking-wide mb-1" style={{ color: '#64748b' }}>{l.type}</div>
-                    <div className="text-xs" style={{ color: '#64748b', lineHeight: 1.5 }}>{l.description}</div>
+                    <div className="font-semibold text-sm mb-1" style={{ color: '#0f1b2d' }}>{l.title}</div>
+                    <div className="font-cond text-xs font-bold uppercase tracking-wide mb-1" style={{ color: '#8493a3' }}>{l.type}</div>
+                    <div className="text-xs" style={{ color: '#8493a3', lineHeight: 1.5 }}>{l.description}</div>
                     {l.courtListenerUrl && (
-                      <a href={l.courtListenerUrl} target="_blank" rel="noopener noreferrer" className="text-xs mt-1 inline-block" style={{ color: '#3b82f6' }}>
+                      <a href={l.courtListenerUrl} target="_blank" rel="noopener noreferrer" className="text-xs mt-1 inline-block" style={{ color: '#2563eb' }}>
                         View on CourtListener -
                       </a>
                     )}
                   </div>
                   <div className="text-right">
                     <StatusChip status={l.status} />
-                    <div className="text-xs mt-1" style={{ color: '#64748b' }}>{l.outcome}</div>
+                    <div className="text-xs mt-1" style={{ color: '#8493a3' }}>{l.outcome}</div>
                   </div>
                 </div>
               ))
@@ -365,10 +365,10 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
                     {v.alignsWithDonors && <div className="donor-flag">-  Donor</div>}
                   </div>
                   <div>
-                    <div className="text-sm font-medium mb-1" style={{ color: '#0f172a' }}>{v.bill}</div>
-                    <div className="text-xs" style={{ color: '#64748b', lineHeight: 1.4 }}>{v.note}</div>
+                    <div className="text-sm font-medium mb-1" style={{ color: '#0f1b2d' }}>{v.bill}</div>
+                    <div className="text-xs" style={{ color: '#8493a3', lineHeight: 1.4 }}>{v.note}</div>
                   </div>
-                  <div className="text-xs text-right" style={{ color: '#64748b' }}>
+                  <div className="text-xs text-right" style={{ color: '#8493a3' }}>
                     <time dateTime={v.date}>{v.date}</time>
                   </div>
                 </div>
@@ -383,14 +383,14 @@ export default async function PoliticianPage({ params }: { params: { slug: strin
 
 function StatusChip({ status }: { status: string }) {
   const cls: Record<string, string> = {
-    'DISMISSED':    'background:rgba(34,197,94,.1);color:#22c55e;border:1px solid rgba(34,197,94,.25)',
-    'ONGOING':      'background:rgba(239,68,68,.1);color:#ef4444;border:1px solid rgba(239,68,68,.25)',
-    'SETTLED':      'background:rgba(245,158,11,.1);color:#f59e0b;border:1px solid rgba(245,158,11,.25)',
-    'CONVICTED':    'background:rgba(239,68,68,.13);color:#ef4444;border:1px solid rgba(239,68,68,.28)',
-    'ACQUITTED':    'background:rgba(34,197,94,.1);color:#22c55e;border:1px solid rgba(34,197,94,.25)',
-    'UNDER REVIEW': 'background:rgba(249,115,22,.1);color:#f97316;border:1px solid rgba(249,115,22,.25)',
-    'RESOLVED':     'background:rgba(100,116,139,.1);color:#64748b;border:1px solid rgba(100,116,139,.25)',
-    'CLOSED':       'background:rgba(100,116,139,.1);color:#64748b;border:1px solid rgba(100,116,139,.25)',
+    'DISMISSED':    'background:rgba(34,197,94,.1);color:#059669;border:1px solid rgba(34,197,94,.25)',
+    'ONGOING':      'background:rgba(239,68,68,.1);color:#e11d48;border:1px solid rgba(239,68,68,.25)',
+    'SETTLED':      'background:rgba(245,158,11,.1);color:#0d9488;border:1px solid rgba(245,158,11,.25)',
+    'CONVICTED':    'background:rgba(239,68,68,.13);color:#e11d48;border:1px solid rgba(239,68,68,.28)',
+    'ACQUITTED':    'background:rgba(34,197,94,.1);color:#059669;border:1px solid rgba(34,197,94,.25)',
+    'UNDER REVIEW': 'background:rgba(249,115,22,.1);color:#ea580c;border:1px solid rgba(249,115,22,.25)',
+    'RESOLVED':     'background:rgba(100,116,139,.1);color:#8493a3;border:1px solid rgba(100,116,139,.25)',
+    'CLOSED':       'background:rgba(100,116,139,.1);color:#8493a3;border:1px solid rgba(100,116,139,.25)',
   };
   const style = cls[status] || cls['CLOSED'];
   return (
