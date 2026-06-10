@@ -42,23 +42,23 @@ export default async function LobbyPage({ params }: { params: { slug: string } }
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="max-w-4xl mx-auto px-6 py-6" itemScope itemType="https://schema.org/Organization">
         <nav className="mb-6">
-          <Link href="/lobbies" style={{ color: '#64748b', fontSize: 13, border: '1px solid #252a3a', padding: '6px 14px', borderRadius: 6, textDecoration: 'none' }}>
+          <Link href="/lobbies" style={{ color: '#64748b', fontSize: 13, border: '1px solid #e5e9f0', padding: '6px 14px', borderRadius: 6, textDecoration: 'none' }}>
             &larr; Back to Lobbies
           </Link>
         </nav>
 
         {/* Header */}
-        <header style={{ background: '#0f1117', border: '1px solid #252a3a', borderRadius: 12, padding: 26, marginBottom: 18 }}>
+        <header style={{ background: '#ffffff', border: '1px solid #e5e9f0', borderRadius: 12, padding: 26, marginBottom: 18 }}>
           <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', marginBottom: 8, color: lobby.color }}>{lobby.category}</p>
-          <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 38, letterSpacing: 2, lineHeight: 1, marginBottom: 16, color: '#e2e8f0' }} itemProp="name">{lobby.name}</h1>
-          <div style={{ display: 'flex', border: '1px solid #252a3a', borderRadius: 8, overflow: 'hidden', background: '#171b24', maxWidth: 560 }}>
+          <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 38, letterSpacing: 2, lineHeight: 1, marginBottom: 16, color: '#0f172a' }} itemProp="name">{lobby.name}</h1>
+          <div style={{ display: 'flex', border: '1px solid #e5e9f0', borderRadius: 8, overflow: 'hidden', background: '#f1f5f9', maxWidth: 560 }}>
             {[
               { val: fmtMoney(lobby.annualSpend), key: 'Annual Spend' },
               { val: lobby.founded, key: 'Founded' },
               { val: recipients.length, key: 'Politicians Funded' },
               { val: fmtMoney(totalDonated), key: 'Total Donated' },
             ].map((item, i) => (
-              <div key={i} style={{ flex: 1, padding: '12px 14px', borderRight: i < 3 ? '1px solid #252a3a' : 'none', textAlign: 'center' }}>
+              <div key={i} style={{ flex: 1, padding: '12px 14px', borderRight: i < 3 ? '1px solid #e5e9f0' : 'none', textAlign: 'center' }}>
                 <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 20, color: '#f59e0b', display: 'block' }}>{item.val}</span>
                 <span style={{ fontSize: 10, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{item.key}</span>
               </div>
@@ -78,7 +78,7 @@ export default async function LobbyPage({ params }: { params: { slug: string } }
           <div className="data-table">
             <ul style={{ listStyle: 'none' }}>
               {lobby.keyPositions.map((pos, i) => (
-                <li key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', padding: '12px 18px', borderBottom: i < lobby.keyPositions.length - 1 ? '1px solid #252a3a' : 'none', fontSize: 14, color: '#e2e8f0' }}>
+                <li key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', padding: '12px 18px', borderBottom: i < lobby.keyPositions.length - 1 ? '1px solid #e5e9f0' : 'none', fontSize: 14, color: '#0f172a' }}>
                   <span style={{ color: '#ef4444', fontSize: 15, flexShrink: 0, marginTop: 1 }}>x</span>
                   <span>{pos}</span>
                 </li>
@@ -102,14 +102,14 @@ export default async function LobbyPage({ params }: { params: { slug: string } }
                     <div className="data-row" style={{ display: 'flex', alignItems: 'flex-start', gap: 14, cursor: 'pointer' }}>
                       <div style={{ flex: 1 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 3 }}>
-                          <span style={{ fontWeight: 700, fontSize: 15, color: '#e2e8f0' }}>{p.name}</span>
+                          <span style={{ fontWeight: 700, fontSize: 15, color: '#0f172a' }}>{p.name}</span>
                           <span style={{ fontSize: 10, fontWeight: 700, padding: '2px 8px', borderRadius: 20, background: pc + '22', color: pc, border: `1px solid ${pc}44` }}>
                             {partyShort(p.party)}
                           </span>
                         </div>
                         <div style={{ fontSize: 12, color: '#64748b', marginBottom: entry?.intent ? 4 : 0 }}>{p.title} - {p.state}</div>
                         {entry?.intent && (
-                          <div style={{ fontSize: 11, color: '#8da4c0', lineHeight: 1.4, borderLeft: '2px solid #252a3a', paddingLeft: 8 }}>{entry.intent}</div>
+                          <div style={{ fontSize: 11, color: '#475569', lineHeight: 1.4, borderLeft: '2px solid #e5e9f0', paddingLeft: 8 }}>{entry.intent}</div>
                         )}
                       </div>
                       <div style={{ textAlign: 'right', flexShrink: 0 }}>
