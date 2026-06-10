@@ -174,11 +174,15 @@ export interface FundingProfile {
     amount: number;
     position: "support" | "oppose";
     source: string;
+    committeeType?: string;
+    orgType?: string;
+    party?: string;
   }>;
   // Named large individual donors (Schedule A, individuals). Never fabricated.
   topIndividualDonors?: Array<{
     name: string;
     employer?: string;
+    occupation?: string;
     amount: number;
   }>;
 }
@@ -384,10 +388,10 @@ function getLobbyById(id: string): { name: string; defaultIntent: string } | nul
 export async function fetchOutsideSpending(
   candidateId: string | null,
   apiKey: string,
-): Promise<Array<{ spender: string; amount: number; position: "support" | "oppose"; source: string }>> {
+): Promise<Array<{ spender: string; amount: number; position: "support" | "oppose"; source: string; committeeType?: string; orgType?: string; party?: string }>> {
   if (!candidateId) return [];
   try {
-    const byKey = new Map<string, { spender: string; amount: number; position: "support" | "oppose"; source: string }>();
+    const byKey = new Map<string, { spender: string; amount: number; position: "support" | "oppose"; source: string; committeeType?: string; orgType?: string; party?: string }>();
     for (let page = 1; page <= MAX_PAGES; page++) {
       const data = await get(`/schedules/schedule_e/`, apiKey, {
         candidate_id: candidateId,
@@ -403,11 +407,21 @@ export async function fetchOutsideSpending(
         if (amt <= 0) continue;
         const support = String(r.support_oppose_indicator || "").toUpperCase();
         const position: "support" | "oppose" = support === "O" ? "oppose" : "support";
-        const spender = String(r.committee_name || r.spender_name || "Unknown committee").trim();
+        const cmt = r.committee || {};
+        const spender = String(cmt.name || r.committee_name || r.spender_name || "Unknown committee").trim();
+        const committeeType = cmt.committee_type_full ? String(cmt.committee_type_full).trim() : undefined;
+        const orgType = cmt.organization_type_full ? String(cmt.organization_type_full).trim() : undefined;
+        const party = cmt.party_full ? String(cmt.party_full).trim() : undefined;
         const key = spender + "|" + position;
         const prev = byKey.get(key);
-        if (prev) prev.amount += amt;
-        else byKey.set(key, { spender, amount: amt, position, source: "FEC Schedule E (independent expenditures)" });
+        if (prev) {
+          prev.amount += amt;
+          if (!prev.committeeType && committeeType) prev.committeeType = committeeType;
+          if (!prev.orgType && orgType) prev.orgType = orgType;
+          if (!prev.party && party) prev.party = party;
+        } else {
+          byKey.set(key, { spender, amount: amt, position, source: "FEC Schedule E (independent expenditures)", committeeType, orgType, party });
+        }
       }
       const pages = data?.pagination?.pages || 1;
       if (page >= pages) break;
@@ -428,7 +442,7 @@ export async function fetchOutsideSpending(
 export async function fetchTopDonors(
   candidateId: string | null,
   apiKey: string,
-): Promise<Array<{ name: string; employer?: string; amount: number }>> {
+): Promise<Array<{ name: string; employer?: string; occupation?: string; amount: number }>> {
   if (!candidateId) return [];
   try {
     let committeeId: string | null = null;
@@ -440,7 +454,7 @@ export async function fetchTopDonors(
     if (committees.length > 0) committeeId = committees[0].committee_id || null;
     if (!committeeId) return [];
 
-    const byName = new Map<string, { name: string; employer?: string; amount: number }>();
+    const byName = new Map<string, { name: string; employer?: string; occupation?: string; amount: number }>();
     for (let page = 1; page <= MAX_PAGES; page++) {
       const data = await get(`/schedules/schedule_a/`, apiKey, {
         committee_id: committeeId,
@@ -458,9 +472,15 @@ export async function fetchTopDonors(
         const name = String(r.contributor_name || "").trim();
         if (!name) continue;
         const employer = r.contributor_employer ? String(r.contributor_employer).trim() : undefined;
+        const occupation = r.contributor_occupation ? String(r.contributor_occupation).trim() : undefined;
         const prev = byName.get(name);
-        if (prev) { prev.amount += amt; if (!prev.employer && employer) prev.employer = employer; }
-        else byName.set(name, { name, employer, amount: amt });
+        if (prev) {
+          prev.amount += amt;
+          if (!prev.employer && employer) prev.employer = employer;
+          if (!prev.occupation && occupation) prev.occupation = occupation;
+        } else {
+          byName.set(name, { name, employer, occupation, amount: amt });
+        }
       }
       const pages = data?.pagination?.pages || 1;
       if (page >= pages) break;
