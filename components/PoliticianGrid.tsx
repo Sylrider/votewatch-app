@@ -164,7 +164,7 @@ function PoliticianCard({ p }: { p: Politician }) {
   const legal      = p.lawsuits?.length || 0;
 
   return (
-    <Link href={`/politicians/${p.id}`} style={{ textDecoration: 'none' }}>
+    <Link href={`/politicians/${p.id}`} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
       <article
         className="card"
         aria-label={`${p.name}, ${p.title}, Transparency Risk Score ${score}/100`}
@@ -230,10 +230,10 @@ function PoliticianCard({ p }: { p: Politician }) {
           {p.profileComplete && (
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px 10px', marginBottom: 12 }}>
               {[
-                { label: 'Lobby $',    val: p.score?.lobbyScore || 0, max: 25, color: '#ea580c' },
-                { label: 'Vote Align', val: p.score?.alignScore || 0, max: 35, color: '#e11d48' },
-                { label: 'Stock',   val: p.score?.stockScore || 0, max: 25, color: '#d97706' },
-                { label: 'Legal',   val: p.score?.legalScore || 0, max: 15, color: '#9333ea' },
+                { label: 'Lobby $',    val: p.score?.lobbyScore || 0, max: 25, color: '#0d9488' },
+                { label: 'Vote Align', val: p.score?.alignScore || 0, max: 35, color: '#0d9488' },
+                { label: 'Stock',   val: p.score?.stockScore || 0, max: 25, color: '#0d9488' },
+                { label: 'Legal',   val: p.score?.legalScore || 0, max: 15, color: '#0d9488' },
               ].map(item => (
                 <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
                   <span style={{ fontSize: 10, color: '#8493a3', width: 66, flexShrink: 0 }}>{item.label}</span>
@@ -270,10 +270,10 @@ function PoliticianCard({ p }: { p: Politician }) {
               <strong style={{ color: '#0f1b2d' }}>{fmtMoney(totalMoney)}</strong> lobby
             </span>
             <span style={{ fontSize: 11, color: '#8493a3' }}>
-              <strong style={{ color: conflicts > 0 ? '#ea580c' : '#0f1b2d' }}>{conflicts}</strong> stock
+              <strong style={{ color: conflicts > 0 ? '#e11d48' : '#0f1b2d' }}>{conflicts}</strong> stock
             </span>
             <span style={{ fontSize: 11, color: '#8493a3' }}>
-              <strong style={{ color: legal > 0 ? '#ea580c' : '#0f1b2d' }}>{legal}</strong> legal
+              <strong style={{ color: legal > 0 ? '#e11d48' : '#0f1b2d' }}>{legal}</strong> legal
             </span>
           </div>
           <span style={{
