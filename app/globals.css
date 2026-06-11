@@ -96,7 +96,12 @@ body {
 }
 
 /* -- Cards ------------------------------------------------------------------- */
+.grid { grid-auto-rows: 1fr; }
+
 .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: #ffffff;
   border: 1px solid #e6eaed;
   border-radius: 12px;
