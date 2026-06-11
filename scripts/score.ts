@@ -16,12 +16,17 @@ import { classifyBill, voteServesLobby, type EnrichedBill } from './galaxies';
 let BILLS: Record<string, EnrichedBill> | null = null;
 function loadBills(): Record<string, EnrichedBill> {
   if (BILLS) return BILLS;
+  const p = path.join(process.cwd(), 'data', 'bills.json');
+  let parsed: Record<string, EnrichedBill>;
   try {
-    const p = path.join(process.cwd(), 'data', 'bills.json');
-    BILLS = JSON.parse(fs.readFileSync(p, 'utf8')) as Record<string, EnrichedBill>;
-  } catch {
-    BILLS = {};
+    parsed = JSON.parse(fs.readFileSync(p, 'utf8')) as Record<string, EnrichedBill>;
+  } catch (err) {
+    throw new Error('[score] FATAL: cannot read enriched bills at ' + p + ' (' + (err as Error).message + '). Alignment scoring requires data/bills.json. Run scripts/enrich-bills.ts first. Refusing to silently zero alignment.');
   }
+  if (!parsed || Object.keys(parsed).length === 0) {
+    throw new Error('[score] FATAL: enriched bills file at ' + p + ' is empty. Alignment scoring requires a populated data/bills.json. Run scripts/enrich-bills.ts first. Refusing to silently zero alignment.');
+  }
+  BILLS = parsed;
   return BILLS;
 }
 
