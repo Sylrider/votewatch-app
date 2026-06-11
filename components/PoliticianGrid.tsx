@@ -262,6 +262,7 @@ function PoliticianCard({ p }: { p: Politician }) {
 
         {/* Footer */}
         <div style={{
+          marginTop: 'auto',
           background: '#f6f8f9', borderTop: '1px solid #e6eaed',
           padding: '9px 18px', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
         }}>
