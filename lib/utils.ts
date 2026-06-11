@@ -8,9 +8,9 @@ export function fmtMoney(n: number): string {
 }
 
 export function partyColor(party: string): string {
-  if (party.startsWith('Republican')) return '#ef4444';
-  if (party.startsWith('Democrat'))   return '#3b82f6';
-  return '#a855f7';
+  if (party.startsWith('Republican')) return '#465465';
+  if (party.startsWith('Democrat'))   return '#465465';
+  return '#465465';
 }
 
 export function partyShort(party: string): string {
@@ -20,8 +20,8 @@ export function partyShort(party: string): string {
 }
 
 export function riskLabel(score: number): { label: string; color: string } {
-  if (score >= 75) return { label: 'CRITICAL',  color: '#ef4444' };
-  if (score >= 50) return { label: 'HIGH RISK', color: '#f97316' };
-  if (score >= 25) return { label: 'ELEVATED',  color: '#eab308' };
-  return               { label: 'LOW RISK',   color: '#22c55e' };
+  if (score >= 75) return { label: 'CRITICAL',  color: '#e11d48' };
+  if (score >= 50) return { label: 'HIGH RISK', color: '#e11d48' };
+  if (score >= 25) return { label: 'ELEVATED',  color: '#0d9488' };
+  return               { label: 'LOW RISK',   color: '#0d9488' };
 }
