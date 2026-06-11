@@ -279,8 +279,8 @@ function PoliticianCard({ p }: { p: Politician }) {
           <span style={{
             fontSize: 11, fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700,
             letterSpacing: '1.2px', textTransform: 'uppercase', color: '#0d9488',
-            padding: '4px 10px', border: '1px solid rgba(245,158,11,.3)', borderRadius: 4,
-            background: 'rgba(245,158,11,.07)',
+            padding: '4px 10px', border: '1px solid rgba(13,148,136,.3)', borderRadius: 4,
+            background: 'rgba(13,148,136,.07)',
           }}>Profile -></span>
         </div>
       </article>
