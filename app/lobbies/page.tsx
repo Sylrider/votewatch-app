@@ -30,14 +30,14 @@ export default async function LobbiesPage() {
           const totalDonated = recipients.reduce((s, p) => s + (p.lobbyMoney?.find(l => l.lobbyId === lobby.id)?.amount || 0), 0);
 
           return (
-            <Link key={lobby.id} href={`/lobbies/${lobby.id}`} style={{ textDecoration: 'none' }}>
+            <Link key={lobby.id} href={`/lobbies/${lobby.id}`} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
               <article
                 className="card"
                 itemScope itemType="https://schema.org/Organization"
                 aria-label={`${lobby.name}: ${lobby.category}`}
               >
                 <div style={{ padding: '18px 18px 14px', borderBottom: '1px solid #e6eaed' }}>
-                  <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', marginBottom: 8, color: lobby.color }}>
+                  <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', marginBottom: 8, color: '#0d9488' }}>
                     {lobby.category}
                   </p>
                   <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 17, fontWeight: 700, color: '#0f1b2d', lineHeight: 1.3, marginBottom: 12 }} itemProp="name">
