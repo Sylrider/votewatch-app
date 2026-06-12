@@ -19,7 +19,16 @@ const BASE = 'https://api.open.fec.gov/v1';
 const FUNDING_CYCLE = 2024;
 const MAX_PAGES = 8; // up to 800 largest org/PAC contributions
 
+// Circuit breaker: once FEC signals a long throttle, stop calling it for the
+// rest of this run so we never burn the 90-minute job on multi-minute backoffs.
+// Existing funding data is preserved by the merge guard; next run retries fresh.
+const FEC_BACKOFF_CEILING_S = 60;
+let fecQuotaExhausted = false;
+
 async function get(path: string, apiKey: string, params: Record<string, string | number> = {}) {
+  if (fecQuotaExhausted) {
+    throw new Error(`FEC ${path} - skipped (quota exhausted this run)`);
+  }
   const url = new URL(`${BASE}${path}`);
   url.searchParams.set('api_key', apiKey);
   Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, String(v)));
@@ -33,6 +42,11 @@ async function get(path: string, apiKey: string, params: Record<string, string |
     if (res.ok) return res.json();
     if ((res.status === 429 || res.status >= 500) && attempt < MAX_ATTEMPTS) {
       const retryAfter = Number(res.headers.get('retry-after'));
+      if (res.status === 429 && Number.isFinite(retryAfter) && retryAfter > FEC_BACKOFF_CEILING_S) {
+        fecQuotaExhausted = true;
+        console.warn(`[fec] quota exhausted (retry-after ${retryAfter}s > ${FEC_BACKOFF_CEILING_S}s); skipping FEC for rest of run`);
+        throw new Error(`FEC ${path} - quota exhausted`);
+      }
       const waitMs = Number.isFinite(retryAfter) && retryAfter > 0
         ? retryAfter * 1000
         : Math.min(60000, 2000 * Math.pow(2, attempt - 1));
