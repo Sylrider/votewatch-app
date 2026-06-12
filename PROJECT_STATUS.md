@@ -230,6 +230,7 @@ G7. [ ] Confirm scores compute, all ~950 pages generate, check live site. (folde
 G8. [x] Finance-model redesign (FundingProfile, big-money share, viewSummary, score recompute, detail-page Campaign Finance section).
 G9. [ ] Commit executive-branch seed (President/VP/Cabinet/agency heads) with chamber=Executive guard.
 G10. [ ] Add OpenSecrets secondary-source verification confidence flags for finance/lawsuits/trades.
+G11. [ ] Fix vote->bill key normalization in scripts/score.ts billKey(): strip periods before collapsing whitespace so "H.R. 10545" -> "hr 10545" (not "h r 10545"), and thread vote.congressNumber through alignmentForVote. ROOT CAUSE of "lobby is the only score": the old regex turned H.R. into "h r" and never matched bill keys like 118:hr:10545, so alignment was 0 for almost everyone. Verified fix lifts alignable members from ~28 to ~446 of 538 (16 distinct enriched bills hit). Then re-score all in small batches.
 
 ---
 
