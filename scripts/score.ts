@@ -33,10 +33,10 @@ function loadBills(): Record<string, EnrichedBill> {
 // Parse a vote.bill string (e.g. "H.R. 82", "S.4367", "118 hr 10545") into the
 // bills.json key congress:type:number. Defaults to the 118th Congress when the
 // congress number is not encoded in the string.
-export function billKey(raw: string | undefined): string | null {
+export function billKey(raw: string | undefined, congressNumber?: number): string | null {
   if (!raw) return null;
-  const s = raw.toLowerCase().replace(/[.\s]+/g, ' ').trim();
-  let congress = 118;
+  const s = raw.toLowerCase().replace(/\./g, '').replace(/\s+/g, ' ').trim();
+  let congress = congressNumber || 118;
   const cm = s.match(/^(\d{3})\s+/);
   let rest = s;
   if (cm) { congress = parseInt(cm[1], 10); rest = s.slice(cm[0].length); }
@@ -190,7 +190,7 @@ export type VoteAlignment = {
 export function alignmentForVote(vote: Vote, donorLobbyIds: Set<string>): VoteAlignment {
   const empty: VoteAlignment = { onTopic: false, onTopicWithDonor: false, aligned: false, lobbies: [] };
   const bills = loadBills();
-  const key = billKey(vote.bill);
+  const key = billKey(vote.bill, vote.congressNumber);
   const bill = key ? bills[key] : undefined;
 
   if (bill && bill.ok) {
