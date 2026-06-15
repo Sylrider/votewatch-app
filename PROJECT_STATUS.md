@@ -15,7 +15,7 @@
 > memory. This file is the bridge. The repo is the shared state; this file is the memory.
 > Read first, write last, every time.
 >
-> "Last updated: 2026-06-11 - by: chrome ext: (1) FEC quota circuit breaker added to scripts/sources/fec.ts so the pipeline stops calling FEC after a long 429 backoff instead of burning the 90-min job (commit 42d778b); (2) created app/sitemap.ts generating /sitemap.xml for all 564 routes (home, methodology, lobbies index, 537 politicians, 24 lobbies), live and verified (commit ab6e487). Both Cloudflare green."
+> "Last updated: 2026-06-15 - by: chrome ext: completed the alignment fix rollout. score.ts billKey() now strips periods before collapsing whitespace so \"H.R. 10545\" maps to bill keys like 118:hr:10545 (commit 4e63d63), fixing the long-standing \"lobby is the only score\" bug. Re-scored all 538 officials with the corrected logic (final targeted run 27562654958, commit 8d65959): every member now stamped 2026-06-15, members with alignScore>0 rose from ~28 to 155, funding intact for 503 of 538, merge guard held at 538. Cloudflare green."
 ---
 
 ## 1. WHAT THIS IS
@@ -230,11 +230,13 @@ G7. [ ] Confirm scores compute, all ~950 pages generate, check live site. (folde
 G8. [x] Finance-model redesign (FundingProfile, big-money share, viewSummary, score recompute, detail-page Campaign Finance section).
 G9. [ ] Commit executive-branch seed (President/VP/Cabinet/agency heads) with chamber=Executive guard.
 G10. [ ] Add OpenSecrets secondary-source verification confidence flags for finance/lawsuits/trades.
-G11. [ ] Fix vote->bill key normalization in scripts/score.ts billKey(): strip periods before collapsing whitespace so "H.R. 10545" -> "hr 10545" (not "h r 10545"), and thread vote.congressNumber through alignmentForVote. ROOT CAUSE of "lobby is the only score": the old regex turned H.R. into "h r" and never matched bill keys like 118:hr:10545, so alignment was 0 for almost everyone. Verified fix lifts alignable members from ~28 to ~446 of 538 (16 distinct enriched bills hit). Then re-score all in small batches.
+G11. [x] Fix vote->bill key normalization in scripts/score.ts billKey(): strip periods before collapsing whitespace so "H.R. 10545" -> "hr 10545" (not "h r 10545"), and thread vote.congressNumber through alignmentForVote. ROOT CAUSE of "lobby is the only score": the old regex turned H.R. into "h r" and never matched bill keys like 118:hr:10545, so alignment was 0 for almost everyone. Verified fix lifts alignable members from ~28 to ~446 of 538 (16 distinct enriched bills hit). Then re-score all in small batches. DONE 2026-06-15: applied (commit 4e63d63) and full re-score complete (commit 8d65959); alignScore>0 members 28->155, all 538 refreshed, merge guard held.
 
 ---
 
 ## 13. CHANGELOG (each session: add a dated line here after doing work)
+"- 2026-06-15 chrome ext : resolved the \"lobby is the only score\" bug end to end. Fixed scripts/score.ts billKey() to strip periods before whitespace-collapse (so vote display strings like H.R. 10545 match bill keys 118:hr:10545) and threaded vote.congressNumber through (commit 4e63d63, PLAN G11). Re-scored every official with the corrected logic across batches plus a final targeted run for 48 stragglers (run 27562654958, commit 8d65959): all 538 now stamped 2026-06-15, alignScore>0 members rose from ~28 to 155, FEC funding intact for 503/538, merge guard held at 538. FEC circuit breaker (added earlier this cycle) kept runs from hitting the 90-min timeout. Cloudflare green; prod verified."
+""
 - 2026-06-11 chrome ext : added FEC quota circuit breaker (scripts/sources/fec.ts, commit 42d778b) - on a 429 with retry-after > 60s the pipeline now flips fecQuotaExhausted, skips all further FEC calls for the run, and lets alignment/lobby/legal/stock scoring finish in minutes; existing funding preserved by merge guard, next run retries FEC fresh. Also added app/sitemap.ts (commit ab6e487) producing /sitemap.xml with 564 URLs (3 static + 537 politicians + 24 lobbies); live and verified 200. Submit to Google Search Console pending (auth step, user to do).
 
 - 2026-06-10 chrome ext : pinned the politician card footer row (the block with the lobby/stock/legal stats and the Profile badge) to the bottom of each card by adding marginTop:auto to the footer div in PoliticianGrid.tsx. Because .card is a full-height flex column (grid-auto-rows:1fr), shorter-content cards previously left empty space below the footer; marginTop:auto now pushes the footer flush to the card bottom on every tile. Commit 19b7bff - Cloudflare-green. Verified LIVE on watchgov.org home: for all 24 cards the gap between footer-bottom and card-bottom is a uniform 1px (the card border), i.e. no empty space below the Profile row.
