@@ -1,12 +1,7 @@
 {
-  "startedAt": "2026-06-15T17:02:44.939Z",
+  "startedAt": "2026-06-22T11:58:50.277Z",
   "version": "1.0.0",
-  "politiciansProcessed": 176,
-  "errors": [
-    "Perez, Marie Gluesenkamp: CourtListener search failed for Perez, Marie Gluesenkamp: HTTP 429",
-    "Moran, Nathaniel: CourtListener search failed for Moran, Nathaniel: HTTP 429",
-    "Edwards, Chuck: CourtListener search failed for Edwards, Chuck: HTTP 429",
-    "Davis, Donald G.: CourtListener search failed for Davis, Donald G.: HTTP 429"
-  ],
-  "completedAt": "2026-06-15T17:45:15.179Z"
+  "politiciansProcessed": 7,
+  "errors": [],
+  "completedAt": "2026-06-22T12:01:09.943Z"
 }
