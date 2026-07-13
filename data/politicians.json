@@ -292,7 +292,7 @@
     },
     "viewSummary": "Matt Van Epps's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-07-06T10:25:37.327Z",
+    "dataVersion": "2026-07-13T09:30:03.816Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -303,7 +303,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-07-06T10:28:09.691Z"
+      "lastUpdated": "2026-07-13T09:31:35.209Z"
     }
   },
   {
@@ -1232,7 +1232,7 @@
     },
     "viewSummary": "Analilia Mejia's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-07-06T10:25:37.327Z",
+    "dataVersion": "2026-07-13T09:30:03.816Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -1243,7 +1243,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-07-06T10:28:04.545Z"
+      "lastUpdated": "2026-07-13T09:31:27.437Z"
     }
   },
   {
@@ -1279,7 +1279,7 @@
     },
     "viewSummary": "Clay Fuller's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-07-06T10:25:37.327Z",
+    "dataVersion": "2026-07-13T09:30:03.816Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -1290,7 +1290,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-07-06T10:28:07.293Z"
+      "lastUpdated": "2026-07-13T09:31:31.522Z"
     }
   },
   {
@@ -64128,7 +64128,7 @@
     },
     "viewSummary": "Pablo Hernndez's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-07-06T10:25:37.327Z",
+    "dataVersion": "2026-07-13T09:30:03.816Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -64139,7 +64139,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-07-06T10:28:14.510Z"
+      "lastUpdated": "2026-07-13T09:31:37.432Z"
     }
   },
   {
@@ -272499,7 +272499,18 @@
     "imageUrl": "https://www.congress.gov/img/member/6a29d4f81c6ce0de6fbae1f7_200.jpg",
     "lobbyMoney": [],
     "stockTrades": [],
-    "lawsuits": [],
+    "lawsuits": [
+      {
+        "title": "Victoria Trading Company, LLC, MJR Investments, Ltd, Jana L. Bickham, as Independent of the Estate of Joe P. Pritchett, Jana L. Bickham as Independent of the Estate of Jean Ann, Pritchett, Tom E. Johnson LP, PEC Minerals LP, PEO Permian, LLC, Primexx Resource Development LLC, BPP Acquisition LLC, Blairbax Energy, LLC and Callon Petroleum Company v. Tami Victoria Gurnard, George A. Crain, Kay Sheldon Williamson, Ava Williamson Gallagher, Amalie Williamson Rosenfeld, Arwen Williamson Lee, Darla Duncan Ferguson A/K/A Darla Rue Tigers Duncan Ferguson, North Central Texas Resources, LLC, Rachel Kirkland Goode, Timothy H. Colvin, Steven Randall Allen, William (Bill) Revis Allen, Ann Delores Archer, Holt Archer, a Testamentary Beneficiary and/or Assign of E.H. Archer, Aaron Christopher Brady, Richard James Brady, Grace Brothers",
+        "year": 2026,
+        "type": "Civil",
+        "status": "ONGOING",
+        "outcome": "On the public docket; see CourtListener for disposition.",
+        "description": "Federal court matter naming Gallagher, James.",
+        "severity": "low",
+        "caseId": "08-25-00038-CV"
+      }
+    ],
     "votes": [],
     "funding": {
       "available": false,
@@ -272517,20 +272528,20 @@
       "outsideSpending": [],
       "topIndividualDonors": []
     },
-    "viewSummary": "James Gallagher's campaign finance totals are unavailable (no matched FEC committee).",
-    "profileComplete": false,
-    "dataVersion": "2026-07-06T10:25:37.327Z",
+    "viewSummary": "James Gallagher's campaign finance totals are unavailable (no matched FEC committee). 1 legal action(s)/lawsuit(s) on record.",
+    "profileComplete": true,
+    "dataVersion": "2026-07-13T09:30:03.816Z",
     "score": {
-      "total": 0,
+      "total": 2,
       "lobbyScore": 0,
       "alignScore": 0,
       "stockScore": 0,
-      "legalScore": 0,
+      "legalScore": 2,
       "totalMoney": 0,
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-07-06T10:27:05.748Z"
+      "lastUpdated": "2026-07-13T09:31:22.696Z"
     }
   }
 ]
