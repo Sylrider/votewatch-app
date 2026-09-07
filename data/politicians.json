@@ -292,7 +292,7 @@
     },
     "viewSummary": "Matt Van Epps's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-08-31T12:57:10.174Z",
+    "dataVersion": "2026-09-07T11:48:42.749Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -303,7 +303,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-08-31T12:58:21.244Z"
+      "lastUpdated": "2026-09-07T11:50:44.875Z"
     }
   },
   {
@@ -1232,7 +1232,7 @@
     },
     "viewSummary": "Analilia Mejia's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-08-31T12:57:10.174Z",
+    "dataVersion": "2026-09-07T11:48:42.749Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -1243,7 +1243,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-08-31T12:58:16.710Z"
+      "lastUpdated": "2026-09-07T11:50:39.325Z"
     }
   },
   {
@@ -1279,7 +1279,7 @@
     },
     "viewSummary": "Clay Fuller's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-08-31T12:57:10.174Z",
+    "dataVersion": "2026-09-07T11:48:42.749Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -1290,7 +1290,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-08-31T12:58:19.044Z"
+      "lastUpdated": "2026-09-07T11:50:42.848Z"
     }
   },
   {
@@ -57939,7 +57939,7 @@
     },
     "viewSummary": "Adelita Grijalva's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-08-31T12:57:10.174Z",
+    "dataVersion": "2026-09-07T11:48:42.749Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -57950,7 +57950,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-08-31T12:58:26.239Z"
+      "lastUpdated": "2026-09-07T11:50:47.571Z"
     }
   },
   {
@@ -64128,7 +64128,7 @@
     },
     "viewSummary": "Pablo Hernndez's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-08-31T12:57:10.174Z",
+    "dataVersion": "2026-09-07T11:48:42.749Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -64139,7 +64139,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-08-31T12:58:23.948Z"
+      "lastUpdated": "2026-09-07T11:50:50.256Z"
     }
   },
   {
@@ -272542,6 +272542,95 @@
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
       "lastUpdated": "2026-07-13T09:31:22.696Z"
+    }
+  },
+  {
+    "id": "rep-wahab-aisha-ca",
+    "name": "Aisha Wahab",
+    "state": "California",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2026,
+    "bioguideId": "W000832",
+    "fecCandidateId": "H0CA15213",
+    "lobbyMoney": [],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "funding": {
+      "available": false,
+      "totalRaised": 0,
+      "largeDonorMoney": 0,
+      "smallDonorMoney": 0,
+      "pacMoney": 0,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 0,
+      "bigMoneyShare": null,
+      "smallDonorShare": null,
+      "confidence": "low",
+      "sources": []
+    },
+    "viewSummary": "Aisha Wahab's campaign finance totals are unavailable (no matched FEC committee).",
+    "profileComplete": false,
+    "dataVersion": "2026-09-07T11:48:42.749Z",
+    "score": {
+      "total": 0,
+      "lobbyScore": 0,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 0,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-09-07T11:50:33.336Z"
+    }
+  },
+  {
+    "id": "rep-blair-everton-ge",
+    "name": "Everton Blair",
+    "state": "Georgia",
+    "party": "Democratic",
+    "chamber": "House",
+    "title": "Representative",
+    "since": 2026,
+    "bioguideId": "B001328",
+    "fecCandidateId": "H6GA13062",
+    "imageUrl": "https://www.congress.gov/img/member/6a9869d92a68122e10181e62_200.jpg",
+    "lobbyMoney": [],
+    "stockTrades": [],
+    "lawsuits": [],
+    "votes": [],
+    "funding": {
+      "available": false,
+      "totalRaised": 0,
+      "largeDonorMoney": 0,
+      "smallDonorMoney": 0,
+      "pacMoney": 0,
+      "partyMoney": 0,
+      "transferMoney": 0,
+      "otherMoney": 0,
+      "bigMoneyShare": null,
+      "smallDonorShare": null,
+      "confidence": "low",
+      "sources": []
+    },
+    "viewSummary": "Everton Blair's campaign finance totals are unavailable (no matched FEC committee).",
+    "profileComplete": false,
+    "dataVersion": "2026-09-07T11:48:42.749Z",
+    "score": {
+      "total": 0,
+      "lobbyScore": 0,
+      "alignScore": 0,
+      "stockScore": 0,
+      "legalScore": 0,
+      "totalMoney": 0,
+      "conflictTrades": 0,
+      "donorAlignedVotes": 0,
+      "totalTrackedVotes": 0,
+      "lastUpdated": "2026-09-07T11:50:36.280Z"
     }
   }
 ]
