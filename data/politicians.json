@@ -292,7 +292,7 @@
     },
     "viewSummary": "Matt Van Epps's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-09-07T11:48:42.749Z",
+    "dataVersion": "2026-09-14T12:03:20.033Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -303,7 +303,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-09-07T11:50:44.875Z"
+      "lastUpdated": "2026-09-14T12:06:27.686Z"
     }
   },
   {
@@ -1232,7 +1232,7 @@
     },
     "viewSummary": "Analilia Mejia's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-09-07T11:48:42.749Z",
+    "dataVersion": "2026-09-14T12:03:20.033Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -1243,7 +1243,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-09-07T11:50:39.325Z"
+      "lastUpdated": "2026-09-14T12:06:22.907Z"
     }
   },
   {
@@ -1279,7 +1279,7 @@
     },
     "viewSummary": "Clay Fuller's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-09-07T11:48:42.749Z",
+    "dataVersion": "2026-09-14T12:03:20.033Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -1290,7 +1290,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-09-07T11:50:42.848Z"
+      "lastUpdated": "2026-09-14T12:06:25.183Z"
     }
   },
   {
@@ -57939,7 +57939,7 @@
     },
     "viewSummary": "Adelita Grijalva's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-09-07T11:48:42.749Z",
+    "dataVersion": "2026-09-14T12:03:20.033Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -57950,7 +57950,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-09-07T11:50:47.571Z"
+      "lastUpdated": "2026-09-14T12:06:29.851Z"
     }
   },
   {
@@ -64128,7 +64128,7 @@
     },
     "viewSummary": "Pablo Hernndez's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-09-07T11:48:42.749Z",
+    "dataVersion": "2026-09-14T12:03:20.033Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -64139,7 +64139,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-09-07T11:50:50.256Z"
+      "lastUpdated": "2026-09-14T12:06:32.138Z"
     }
   },
   {
@@ -272554,6 +272554,7 @@
     "since": 2026,
     "bioguideId": "W000832",
     "fecCandidateId": "H0CA15213",
+    "imageUrl": "https://www.congress.gov/img/member/6a986b632a68122e10181e6b_200.jpg",
     "lobbyMoney": [],
     "stockTrades": [],
     "lawsuits": [],
@@ -272570,11 +272571,13 @@
       "bigMoneyShare": null,
       "smallDonorShare": null,
       "confidence": "low",
-      "sources": []
+      "sources": [],
+      "outsideSpending": [],
+      "topIndividualDonors": []
     },
     "viewSummary": "Aisha Wahab's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-09-07T11:48:42.749Z",
+    "dataVersion": "2026-09-14T12:03:20.033Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -272585,7 +272588,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-09-07T11:50:33.336Z"
+      "lastUpdated": "2026-09-14T12:06:17.147Z"
     }
   },
   {
@@ -272615,11 +272618,13 @@
       "bigMoneyShare": null,
       "smallDonorShare": null,
       "confidence": "low",
-      "sources": []
+      "sources": [],
+      "outsideSpending": [],
+      "topIndividualDonors": []
     },
     "viewSummary": "Everton Blair's campaign finance totals are unavailable (no matched FEC committee).",
     "profileComplete": false,
-    "dataVersion": "2026-09-07T11:48:42.749Z",
+    "dataVersion": "2026-09-14T12:03:20.033Z",
     "score": {
       "total": 0,
       "lobbyScore": 0,
@@ -272630,7 +272635,7 @@
       "conflictTrades": 0,
       "donorAlignedVotes": 0,
       "totalTrackedVotes": 0,
-      "lastUpdated": "2026-09-07T11:50:36.280Z"
+      "lastUpdated": "2026-09-14T12:06:20.099Z"
     }
   }
 ]
