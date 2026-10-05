@@ -1,7 +1,10 @@
 {
-  "startedAt": "2026-09-28T13:09:12.033Z",
+  "startedAt": "2026-10-05T13:51:55.946Z",
   "version": "1.0.0",
-  "politiciansProcessed": 6,
-  "errors": [],
-  "completedAt": "2026-09-28T13:11:31.363Z"
+  "politiciansProcessed": 5,
+  "errors": [
+    "Hernández, Pablo Jose: CourtListener search failed for Hernández, Pablo Jose: HTTP 429",
+    "Grijalva, Adelita S.: CourtListener search failed for Grijalva, Adelita S.: HTTP 429"
+  ],
+  "completedAt": "2026-10-05T13:54:21.192Z"
 }
