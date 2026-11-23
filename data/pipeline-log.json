@@ -1,7 +1,24 @@
 {
-  "startedAt": "2026-11-16T15:03:49.797Z",
+  "startedAt": "2026-11-23T17:34:46.882Z",
   "version": "1.0.0",
   "politiciansProcessed": 0,
-  "errors": [],
-  "completedAt": "2026-11-16T15:04:12.498Z"
+  "errors": [
+    "Slotkin, Elissa: CourtListener search failed for Slotkin, Elissa: HTTP 401",
+    "Sheehy, Tim: CourtListener search failed for Sheehy, Tim: HTTP 401",
+    "Schiff, Adam B.: CourtListener search failed for Schiff, Adam B.: HTTP 401",
+    "Risch, James E.: CourtListener search failed for Risch, James E.: HTTP 401",
+    "Moreno, Bernie: CourtListener search failed for Moreno, Bernie: HTTP 401",
+    "Moody, Ashley: CourtListener search failed for Moody, Ashley: HTTP 401",
+    "McCormick, David: CourtListener search failed for McCormick, David: HTTP 401",
+    "Kim, Andy: CourtListener search failed for Kim, Andy: HTTP 401",
+    "Justice, James C.: CourtListener search failed for Justice, James C.: HTTP 401",
+    "Husted, Jon: CourtListener search failed for Husted, Jon: HTTP 401",
+    "Gallego, Ruben: CourtListener search failed for Gallego, Ruben: HTTP 401",
+    "Curtis, John R.: CourtListener search failed for Curtis, John R.: HTTP 401",
+    "Blunt Rochester, Lisa: CourtListener search failed for Blunt Rochester, Lisa: HTTP 401",
+    "Banks, Jim: CourtListener search failed for Banks, Jim: HTTP 401",
+    "Armstrong, Alan: CourtListener search failed for Armstrong, Alan: HTTP 401",
+    "Alsobrooks, Angela D.: CourtListener search failed for Alsobrooks, Angela D.: HTTP 401"
+  ],
+  "completedAt": "2026-11-23T17:47:36.007Z"
 }
